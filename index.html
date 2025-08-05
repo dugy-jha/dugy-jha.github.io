@@ -24,8 +24,8 @@
             color: #e2e8f0; /* Light gray for text */
         }
         .hero-bg {
-            /* You should replace this URL with the actual path to your hero image on your server */
-            background-image: linear-gradient(rgba(2, 6, 23, 0.8), rgba(2, 6, 23, 1)), url('https://raw.githubusercontent.com/dugy-jha/dugy-jha.github.io/main/hero-background.jpg');
+            /* This now uses a relative path, assuming your repo structure */
+            background-image: linear-gradient(rgba(2, 6, 23, 0.8), rgba(2, 6, 23, 1)), url('assets/images/hero-background.jpg');
             background-size: cover;
             background-position: center;
         }
@@ -65,16 +65,15 @@
         <div class="container mx-auto px-6 py-3 flex justify-between items-center">
             <!-- Logo -->
             <a href="#" class="flex items-center space-x-2">
-                <!-- Replace with your actual logo file -->
-                <img src="https://raw.githubusercontent.com/dugy-jha/dugy-jha.github.io/main/Logo-t-removebg-preview.png" alt="ASPL Fusion Logo" class="h-10 w-auto" onerror="this.onerror=null;this.src='https://placehold.co/150x40/020617/ffffff?text=ASPL+Fusion';">
+                <img src="assets/images/logo-saffron-infused.png" alt="ASPL Fusion Logo" class="h-10 w-auto" onerror="this.onerror=null;this.src='https://placehold.co/150x40/020617/ffffff?text=ASPL+Fusion';">
             </a>
             
             <!-- Desktop Navigation -->
             <nav class="hidden md:flex items-center space-x-8">
-                <a href="#technology" class="text-slate-300 hover:text-emerald-400 transition-colors duration-300">Technology</a>
+                <a href="#technology" class="text-slate-300 hover:text-emerald-400 transition-colors duration-300">Our Roadmap</a>
                 <a href="#applications" class="text-slate-300 hover:text-emerald-400 transition-colors duration-300">Applications</a>
-                <a href="#team" class="text-slate-300 hover:text-emerald-400 transition-colors duration-300">Team</a>
-                <a href="#contact" class="bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-2 px-4 rounded-lg transition-colors duration-300">Contact Us</a>
+                <a href="#team" class="text-slate-300 hover:text-emerald-400 transition-colors duration-300">Join Us</a>
+                <a href="#contact" class="bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-2 px-4 rounded-lg transition-colors duration-300">Contact</a>
             </nav>
 
             <!-- Mobile Menu Button -->
@@ -87,10 +86,10 @@
 
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4 space-y-2">
-            <a href="#technology" class="block text-slate-300 hover:text-emerald-400 transition-colors duration-300">Technology</a>
+            <a href="#technology" class="block text-slate-300 hover:text-emerald-400 transition-colors duration-300">Our Roadmap</a>
             <a href="#applications" class="block text-slate-300 hover:text-emerald-400 transition-colors duration-300">Applications</a>
-            <a href="#team" class="block text-slate-300 hover:text-emerald-400 transition-colors duration-300">Team</a>
-            <a href="#contact" class="block bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-2 px-4 rounded-lg transition-colors duration-300 mt-2">Contact Us</a>
+            <a href="#team" class="block text-slate-300 hover:text-emerald-400 transition-colors duration-300">Join Us</a>
+            <a href="#contact" class="block bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-2 px-4 rounded-lg transition-colors duration-300 mt-2">Contact</a>
         </div>
     </header>
 
@@ -99,13 +98,13 @@
         <section id="home" class="hero-bg min-h-screen flex items-center justify-center pt-20">
             <div class="container mx-auto px-6 text-center">
                 <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-4">
-                    Securing <span class="saffron-gradient-text">India's</span> Energy Future
+                    Achieving Energy Independence for <span class="saffron-gradient-text">India</span>
                 </h1>
                 <p class="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto mb-8">
-                    ASPL Fusion is pioneering a pragmatic, phased approach to commercial fusion energy—starting with solutions for India's most critical national needs.
+                    Our mission is to build a scalable, phased pathway to fusion energy by first mastering neutron production for critical industrial and medical applications.
                 </p>
                 <a href="#technology" class="bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3 px-8 rounded-lg text-lg transition-transform hover:scale-105 duration-300">
-                    Explore Our Technology
+                    Discover Our Roadmap
                 </a>
             </div>
         </section>
@@ -113,30 +112,34 @@
         <!-- Mission Pillars Section -->
         <section id="mission" class="py-20 bg-slate-900">
             <div class="container mx-auto px-6">
+                 <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">A Strategy Built for Success</h2>
+                    <p class="text-slate-400 mt-4 max-w-2xl mx-auto">Our three-phase strategy de-risks deep-tech development by generating early revenue, aligning with national priorities, and leveraging superior technology.</p>
+                </div>
                 <div class="grid md:grid-cols-3 gap-8">
                     <!-- Pillar 1: Medical Isotopes -->
                     <div class="glass-effect p-8 rounded-xl text-center">
                         <div class="flex justify-center mb-4">
-                            <svg class="w-12 h-12 text-emerald-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="m12 14 4-2-4-2-4 2 4 2z"></path><path d="M12 14v4"></path><path d="m16 12-4 2"></path><path d="m8 12 4 2"></path></svg>
+                            <svg class="w-12 h-12 text-emerald-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" /></svg>
                         </div>
-                        <h3 class="text-xl font-bold text-white mb-2">Advanced Medical Isotopes</h3>
-                        <p class="text-slate-400">Addressing India's critical supply gap for diagnostic radioisotopes using a reliable, accelerator-based fusion source.</p>
+                        <h3 class="text-xl font-bold text-white mb-2">Near-Term Medical Solutions</h3>
+                        <p class="text-slate-400">Address India's critical supply gap for diagnostic radioisotopes, generating revenue and validating our operational expertise from day one.</p>
                     </div>
                     <!-- Pillar 2: GDT Advantage -->
                     <div class="glass-effect p-8 rounded-xl text-center">
                         <div class="flex justify-center mb-4">
-                            <svg class="w-12 h-12 text-emerald-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a2.4 2.4 0 0 1 0-4.8 2.4 2.4 0 0 1 0 4.8Z"></path><path d="M2.5 7a2.4 2.4 0 0 1 0-4.8 2.4 2.4 0 0 1 0 4.8Z"></path><path d="M21.5 17a2.4 2.4 0 0 1 0-4.8 2.4 2.4 0 0 1 0 4.8Z"></path><path d="M21.5 7a2.4 2.4 0 0 1 0-4.8 2.4 2.4 0 0 1 0 4.8Z"></path><path d="M12 2v20"></path></svg>
+                            <svg class="w-12 h-12 text-emerald-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m.75 12l3 3m0 0l3-3m-3 3v-6m-1.5-9H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" /></svg>
                         </div>
-                        <h3 class="text-xl font-bold text-white mb-2">The GDT Advantage</h3>
-                        <p class="text-slate-400">Developing a state-of-the-art Gas Dynamic Trap (GDT) as a powerful volumetric neutron source for industrial-scale applications.</p>
+                        <h3 class="text-xl font-bold text-white mb-2">Industrial Scale-Up</h3>
+                        <p class="text-slate-400">Develop a state-of-the-art Gas Dynamic Trap (GDT) as a powerful neutron source to serve the nuclear industry and expand our service portfolio.</p>
                     </div>
                     <!-- Pillar 3: Energy for a Nation -->
                     <div class="glass-effect p-8 rounded-xl text-center">
                         <div class="flex justify-center mb-4">
-                            <svg class="w-12 h-12 text-emerald-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg>
+                           <svg class="w-12 h-12 text-emerald-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" /></svg>
                         </div>
-                        <h3 class="text-xl font-bold text-white mb-2">Energy for a Nation</h3>
-                        <p class="text-slate-400">Our ultimate goal: achieving net energy gain to provide clean, safe, and carbon-free baseload power for India's future.</p>
+                        <h3 class="text-xl font-bold text-white mb-2">Ultimate Energy Goal</h3>
+                        <p class="text-slate-400">Achieve net energy gain (Q>1) to provide clean, safe, and carbon-free baseload power, ensuring India's long-term energy security.</p>
                     </div>
                 </div>
             </div>
@@ -145,33 +148,40 @@
         <!-- Technology Section -->
         <section id="technology" class="py-20">
             <div class="container mx-auto px-6">
-                <h2 class="text-3xl md:text-4xl font-bold text-white mb-3 section-title">Our Phased Pathway to Clean Energy</h2>
-                <p class="text-slate-400 max-w-3xl mb-12">Our philosophy mitigates risk through early revenue generation, building a foundation of expertise on a logical path to commercial fusion energy.</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-3 section-title">Our Technology Roadmap</h2>
+                <p class="text-slate-400 max-w-3xl mb-12">Our pragmatic, three-phase model is designed to deliver value at every stage, building momentum towards the ultimate goal of commercial fusion energy.</p>
+
+                <!-- NEW: Global Context Section -->
+                <div class="mb-16 glass-effect p-8 rounded-xl">
+                    <h3 class="text-2xl font-bold text-white mb-4">A Strategic Niche in the Global Fusion Race</h3>
+                    <p class="text-slate-400 mb-4">The global pursuit of fusion is a monumental endeavor, dominated by large-scale, government-funded projects like the international ITER tokamak. These massive efforts are crucial for foundational science but often have multi-decade timelines. ASPL Fusion's strategy is different. By focusing on the architecturally simpler Gas Dynamic Trap (GDT)—a successful evolution of magnetic mirror concepts pioneered at labs like LLNL—we are charting a nimble, commercially-focused path. We aim to master neutron production for near-term industrial and medical markets, building a staircase of technological and commercial milestones towards a cost-effective fusion power plant. This approach allows us to innovate in parallel with, not in competition against, the mainstream efforts, positioning us to deliver value faster.</p>
+                </div>
+
 
                 <div class="relative pl-8 border-l-2 border-slate-700">
                     <!-- Phase 1 -->
                     <div class="relative mb-12 timeline-item">
                         <h3 class="text-2xl font-bold text-emerald-400 mb-2">Phase 1: Foundation on Real-World Solutions</h3>
-                        <p class="text-slate-400">Deploy a commercially standard D-T Accelerator Neutron Source to produce medical radioisotopes (<sup>99</sup>Mo), addressing a critical gap in India's domestic supply chain and generating early revenue.</p>
+                        <p class="text-slate-400">We begin by deploying a commercially standard D-T Accelerator to produce medical radioisotopes, specifically Molybdenum-99 (<sup>99</sup>Mo). This addresses a critical, undersupplied market in India, establishes our operational capabilities, and generates early revenue to fuel further innovation. Our target is to achieve a reliable output of **250 Curies (Ci) per week of Technetium-99m (⁹⁹ᵐTc)** via the clean ⁹⁸Mo(n,γ)⁹⁹Mo activation pathway, which generates only manageable Low-Level Waste (LLW).</p>
                     </div>
                     <!-- Phase 2 -->
                     <div class="relative mb-12 timeline-item">
                         <h3 class="text-2xl font-bold text-emerald-400 mb-2">Phase 2: The GDT Leap for Industrial Scale</h3>
-                        <p class="text-slate-400 mb-4">Develop a volumetric neutron source using a Gas Dynamic Trap (GDT). This scales up isotope production, enables breeding of Uranium-233 from Thorium, and allows transmutation of long-lived nuclear waste.</p>
-                        <div class="glass-effect rounded-lg p-6">
-                            <h4 class="font-semibold text-white mb-2">The GDT Advantage: Simpler, Stable, Scalable</h4>
-                            <p class="text-slate-400 text-sm">Its linear design is easier to engineer and maintain than toroidal devices, and the plasma is inherently more stable, providing an ideal and efficient neutron source.</p>
+                        <p class="text-slate-400 mb-4">This phase marks our technological leap to a volumetric neutron source using a Gas Dynamic Trap (GDT). This powerful device, requiring a D-T fusion power of approximately **1.0 MW** to generate a neutron flux of **~3.4x10¹⁴ n/s**, will drastically scale up isotope production. It also enables high-value services for the nuclear industry, including breeding fissile fuel from Thorium and transmuting long-lived nuclear waste, all within a structure built from advanced Reduced-Activation Ferritic-Martensitic (RAFM) steel.</p>
+                        <div class="glass-effect rounded-lg p-6 mt-4">
+                            <h4 class="font-semibold text-white mb-2">The GDT Advantage: Simpler, More Stable, More Powerful</h4>
+                            <p class="text-slate-400 text-sm">Unlike complex toroidal designs, the GDT's linear architecture is easier to build and scale. Its plasma behaves like a predictable fluid, making it inherently stable and an exceptionally effective source of high-energy neutrons—the engine for our industrial applications.</p>
                         </div>
                     </div>
                      <!-- Phase 2.5 -->
                     <div class="relative mb-12 timeline-item">
-                        <h3 class="text-2xl font-bold text-emerald-400 mb-2">Phase 2.5: Bridge to Commercial Energy</h3>
-                        <p class="text-slate-400">Leverage the GDT as a neutron source to drive a subcritical fission blanket. This hybrid approach multiplies energy output, breeds fuel, transmutes waste, and is inherently safe as the fission process cannot sustain itself without the fusion core.</p>
+                        <h3 class="text-2xl font-bold text-emerald-400 mb-2">Phase 2.5: The Fusion-Fission Hybrid Bridge</h3>
+                        <p class="text-slate-400">We will leverage the GDT's intense neutron flux to drive a subcritical fission blanket. This hybrid approach multiplies energy output by over 10x, provides a pathway to burn nuclear waste, and enhances fuel sustainability for India's nuclear program—all with an inherent safety profile, as the fission process cannot sustain itself without the fusion core.</p>
                     </div>
                     <!-- Phase 3 -->
                     <div class="relative timeline-item">
                         <h3 class="text-2xl font-bold text-emerald-400 mb-2">Phase 3: Delivering Limitless Power for India</h3>
-                        <p class="text-slate-400">Our long-term vision: scaling the GDT technology to a full power plant, achieving net energy gain (Q<sub>fusion</sub> > 1). This will provide clean, carbon-free, 24/7 baseload power to complement renewables and secure India's energy independence.</p>
+                        <p class="text-slate-400">Our ultimate vision is to scale the GDT technology into a standalone fusion power plant. By achieving net energy gain (Q<sub>fusion</sub> > 1), we will deliver clean, carbon-free, 24/7 baseload power, providing the backbone for a renewable-heavy grid and securing India's energy independence for generations to come.</p>
                     </div>
                 </div>
             </div>
@@ -180,68 +190,58 @@
         <!-- Applications Section -->
         <section id="applications" class="py-20 bg-slate-900">
             <div class="container mx-auto px-6">
-                <h2 class="text-3xl md:text-4xl font-bold text-white mb-3 section-title">A Portfolio of High-Value Applications</h2>
-                <p class="text-slate-400 max-w-3xl mb-12">Our technology is capable of producing a wide range of radioisotopes vital for modern medicine and industry, illustrating a significant market opportunity.</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-3 section-title">Applications for National Progress</h2>
+                <p class="text-slate-400 max-w-3xl mb-12">Our technology platform is not a distant promise; it's a source of tangible solutions for India's most pressing societal and economic needs today.</p>
 
-                <!-- Medical Isotopes Table -->
-                <h3 class="text-2xl font-bold text-white mb-4">🧬 Medical Radioisotopes</h3>
+                 <!-- Medical Isotopes Table -->
+                <h3 class="text-2xl font-bold text-white mb-4">🧬 Enhancing India's Healthcare Sovereignty</h3>
+                <p class="text-slate-400 mb-6 max-w-3xl">By establishing a reliable, domestic, reactor-free supply of critical medical isotopes, we insulate India's healthcare system from fragile global supply chains and empower doctors with the tools they need for life-saving diagnostics and therapies. Our initial production target is **250 Ci/week of ⁹⁹ᵐTc**, a significant contribution to meeting national demand.</p>
                 <div class="overflow-x-auto glass-effect rounded-xl">
                     <table class="min-w-full text-left">
                         <thead class="border-b border-slate-700">
                             <tr>
                                 <th class="p-4 text-sm font-semibold text-white">Product Isotope</th>
-                                <th class="p-4 text-sm font-semibold text-white">Half-Life</th>
-                                <th class="p-4 text-sm font-semibold text-white">Use</th>
-                                <th class="p-4 text-sm font-semibold text-white">Global Demand</th>
+                                <th class="p-4 text-sm font-semibold text-white">Primary Use</th>
+                                <th class="p-4 text-sm font-semibold text-white">Market Significance</th>
                             </tr>
                         </thead>
                         <tbody class="divide-y divide-slate-800">
                             <tr>
-                                <td class="p-4">Tc-99m (from Mo-99)</td>
-                                <td class="p-4">6.01 h</td>
-                                <td class="p-4">SPECT imaging (80% of nuclear med)</td>
-                                <td class="p-4">~40 million doses/year</td>
+                                <td class="p-4 font-semibold">Tc-99m (from Mo-99)</td>
+                                <td class="p-4">The workhorse of nuclear medicine, used in ~80% of diagnostic scans.</td>
+                                <td class="p-4">Extremely high demand (~40M doses/year globally) with a vulnerable supply chain.</td>
                             </tr>
                             <tr>
-                                <td class="p-4">Lu-177</td>
-                                <td class="p-4">6.65 days</td>
-                                <td class="p-4">Targeted radionuclide therapy (prostate)</td>
-                                <td class="p-4">~40,000 doses/year (growing fast)</td>
-                            </tr>
-                             <tr>
-                                <td class="p-4">Y-90</td>
-                                <td class="p-4">64.1 h</td>
-                                <td class="p-4">Liver cancer, radioimmunotherapy</td>
-                                <td class="p-4">~100,000 doses/year</td>
+                                <td class="p-4 font-semibold">Lu-177 / Y-90</td>
+                                <td class="p-4">Targeted radionuclide therapy for treating cancers like prostate and liver.</td>
+                                <td class="p-4">Rapidly expanding, high-value market for advanced cancer treatments.</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
 
                 <!-- Industrial Isotopes Table -->
-                <h3 class="text-2xl font-bold text-white mb-4 mt-12">🏭 Industrial Radioisotopes</h3>
+                <h3 class="text-2xl font-bold text-white mb-4 mt-12">🏭 Powering India's Strategic Nuclear Vision</h3>
+                 <p class="text-slate-400 mb-6 max-w-3xl">Our GDT is a powerful tool to support and enhance India's three-stage nuclear power programme, contributing to both energy security and environmental stewardship.</p>
                 <div class="overflow-x-auto glass-effect rounded-xl">
-                    <table class="min-w-full text-left">
+                     <table class="min-w-full text-left">
                         <thead class="border-b border-slate-700">
                             <tr>
-                                <th class="p-4 text-sm font-semibold text-white">Product Isotope</th>
-                                <th class="p-4 text-sm font-semibold text-white">Half-Life</th>
-                                <th class="p-4 text-sm font-semibold text-white">Use</th>
-                                <th class="p-4 text-sm font-semibold text-white">Global Demand</th>
+                                <th class="p-4 text-sm font-semibold text-white">Application</th>
+                                <th class="p-4 text-sm font-semibold text-white">Description</th>
+                                <th class="p-4 text-sm font-semibold text-white">National Impact</th>
                             </tr>
                         </thead>
                         <tbody class="divide-y divide-slate-800">
                             <tr>
-                                <td class="p-4">Co-60</td>
-                                <td class="p-4">5.27 years</td>
-                                <td class="p-4">Radiography, sterilization</td>
-                                <td class="p-4">~15,000 TBq/year</td>
+                                <td class="p-4 font-semibold">Thorium Fuel Breeding</td>
+                                <td class="p-4">Using fusion neutrons to convert India's vast Thorium reserves into fissile Uranium-233.</td>
+                                <td class="p-4">Unlocks a multi-generational domestic fuel source, ensuring energy self-reliance.</td>
                             </tr>
                             <tr>
-                                <td class="p-4">Ir-192</td>
-                                <td class="p-4">73.8 days</td>
-                                <td class="p-4">Non-destructive testing (NDT)</td>
-                                <td class="p-4">~8,000 TBq/year</td>
+                                <td class="p-4 font-semibold">Nuclear Waste Transmutation</td>
+                                <td class="p-4">"Burning" long-lived radioactive waste from existing reactors into shorter-lived, manageable isotopes.</td>
+                                <td class="p-4">Provides a high-tech solution to enhance the sustainability of nuclear power.</td>
                             </tr>
                         </tbody>
                     </table>
@@ -252,9 +252,10 @@
         <!-- Team Section -->
         <section id="team" class="py-20">
             <div class="container mx-auto px-6">
-                <h2 class="text-3xl md:text-4xl font-bold text-white mb-3 section-title">Minds Behind the Mission</h2>
-                <p class="text-slate-400 max-w-3xl mb-12">ASPL Fusion is built on a foundation of world-class intellectual capital. We are assembling a multi-disciplinary team of leading physicists, engineers, and specialists.</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-3 section-title">Join the Minds Behind the Mission</h2>
+                <p class="text-slate-400 max-w-3xl mb-12">Solving fusion requires a convergence of the brightest minds in science and engineering. We are building a culture of relentless innovation, deep collaboration, and shared purpose.</p>
                 
+                <h3 class="text-2xl font-bold text-white mb-6">Core Areas of Expertise We Are Assembling:</h3>
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                     <div class="glass-effect p-6 rounded-lg">
                         <h4 class="font-bold text-emerald-400">Plasma Physics & Fusion Technology</h4>
@@ -287,12 +288,12 @@
         <!-- Contact Section -->
         <section id="contact" class="py-20 bg-slate-900">
             <div class="container mx-auto px-6 text-center">
-                 <h2 class="text-3xl md:text-4xl font-bold text-white mb-3">Solve One of Humanity's Greatest Challenges</h2>
+                 <h2 class="text-3xl md:text-4xl font-bold text-white mb-3">Let's Build the Future of Energy, Together.</h2>
                  <p class="text-slate-400 max-w-2xl mx-auto mb-8">
-                    This isn't just a job. It's a chance to contribute to India's energy independence and build a cleaner future. We welcome inquiries from potential partners, investors, and future team members.
+                    This is more than a job; it's a legacy. If you are a passionate expert, a visionary investor, or a potential strategic partner who shares our commitment to solving one of humanity's greatest challenges, we want to hear from you.
                  </p>
                  <a href="mailto:inquiries@asplfusion.com" class="bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3 px-8 rounded-lg text-lg transition-transform hover:scale-105 duration-300 inline-block">
-                    Contact Us
+                    Get in Touch
                  </a>
             </div>
         </section>
@@ -301,7 +302,7 @@
     <!-- Footer -->
     <footer class="bg-slate-900 border-t border-slate-800">
         <div class="container mx-auto px-6 py-6 text-center text-slate-500">
-             <p>&copy; 2024 Agnira Sanlayan Pvt. Ltd. (ASPL Fusion). All Rights Reserved.</p>
+             <p>&copy; 2025 Agnira Sanlayan Pvt. Ltd. (ASPL Fusion). All Rights Reserved.</p>
         </div>
     </footer>
 
@@ -314,7 +315,7 @@
         });
 
         // Close mobile menu when a link is clicked
-        document.querySelectorAll('#mobile-menu a').forEach(link => {
+        document.querySelectorAll('#mobile-menu a, #mobile-menu button').forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
             });

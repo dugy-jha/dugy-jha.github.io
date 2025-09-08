@@ -6,245 +6,37 @@
     <title>ASPL Fusion - Securing India's Energy Future</title>
     <meta name="description" content="ASPL Fusion is a deep-tech startup pioneering commercial fusion energy in India, starting with medical isotope production to secure the nation's healthcare and energy independence.">
     
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dugy-jha.github.io/">
+    <meta property="og:title" content="ASPL Fusion - Securing India's Energy Future">
+    <meta property="og:description" content="Pioneering commercial fusion energy by first solving India's critical needs in healthcare, building a de-risked path to clean, limitless power.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/dugy-jha/dugy-jha.github.io/main/hero-background.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://dugy-jha.github.io/">
+    <meta property="twitter:title" content="ASPL Fusion - Securing India's Energy Future">
+    <meta property="twitter:description" content="Pioneering commercial fusion energy by first solving India's critical needs in healthcare, building a de-risked path to clean, limitless power.">
+    <meta property="twitter:image" content="https://raw.githubusercontent.com/dugy-jha/dugy-jha.github.io/main/hero-background.jpg">
+
     <script src="https://cdn.tailwindcss.com"></script>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" xintegrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="icon" href="https://raw.githubusercontent.com/dugy-jha/dugy-jha.github.io/main/Logo-t-removebg-preview.png" type="image/png">
 
-    <style>
-        /* Modern clean design inspired by reference site */
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #ffffff;
-            color: #1f2937;
-            line-height: 1.6;
-        }
-        
-        .hero-bg {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .hero-bg::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('https://raw.githubusercontent.com/dugy-jha/dugy-jha.github.io/main/hero-background.jpg') center/cover;
-            opacity: 0.1;
-            z-index: 1;
-        }
-        
-        .hero-content {
-            position: relative;
-            z-index: 2;
-        }
-        
-        .glass-effect {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-        }
-        
-        .card-modern {
-            background: #ffffff;
-            border-radius: 16px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            border: 1px solid #e5e7eb;
-        }
-        
-        .card-modern:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        }
-        
-        .gradient-text {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        
-        .btn-primary {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 12px 24px;
-            border-radius: 8px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-        }
-        
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.4);
-        }
-        
-        .btn-secondary {
-            background: transparent;
-            color: #667eea;
-            padding: 12px 24px;
-            border: 2px solid #667eea;
-            border-radius: 8px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-        
-        .btn-secondary:hover {
-            background: #667eea;
-            color: white;
-            transform: translateY(-2px);
-        }
-        
-        .section-modern {
-            padding: 80px 0;
-        }
-        
-        .bg-light {
-            background-color: #f9fafb;
-        }
-        
-        .timeline-modern {
-            position: relative;
-        }
-        
-        .timeline-modern::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: linear-gradient(to bottom, #667eea, #764ba2);
-            transform: translateX(-50%);
-        }
-        
-        .timeline-item-modern {
-            position: relative;
-            margin-bottom: 40px;
-        }
-        
-        .timeline-item-modern::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            top: 20px;
-            width: 16px;
-            height: 16px;
-            background: #667eea;
-            border: 4px solid white;
-            border-radius: 50%;
-            transform: translateX(-50%);
-            z-index: 10;
-        }
-        
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        .animate-fade-in-up {
-            animation: fadeInUp 0.6s ease-out;
-        }
-        
-        @keyframes slideInLeft {
-            from {
-                opacity: 0;
-                transform: translateX(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-        
-        .animate-slide-in-left {
-            animation: slideInLeft 0.6s ease-out;
-        }
-        
-        @keyframes slideInRight {
-            from {
-                opacity: 0;
-                transform: translateX(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-        
-        .animate-slide-in-right {
-            animation: slideInRight 0.6s ease-out;
-        }
-        
-        /* Clean scrollbar */
-        ::-webkit-scrollbar {
-            width: 6px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #f1f5f9;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #667eea;
-            border-radius: 3px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #5a67d8;
-        }
-        
-        /* Modern focus states */
-        .focus:focus {
-            outline: 2px solid #667eea;
-            outline-offset: 2px;
-        }
-        
-        /* Icon styling */
-        .icon-modern {
-            width: 48px;
-            height: 48px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 20px;
-        }
-        
-        /* Responsive typography */
-        @media (max-width: 768px) {
-            .timeline-modern::before {
-                left: 20px;
-            }
-            
-            .timeline-item-modern::before {
-                left: 20px;
-            }
-        }
-    </style>
-</head>
-<body class="antialiased">
+    <link rel="stylesheet" href="style.css">
 
-    <header id="header" class="glass-effect fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+</head>
+<body class="bg-white">
+    
+    <!-- Header -->
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#home" class="flex items-center space-x-3">
                 <img src="https://raw.githubusercontent.com/dugy-jha/dugy-jha.github.io/main/Logo-t-removebg-preview.png" alt="ASPL Fusion Logo" class="h-10 w-auto transition-transform duration-300 hover:scale-110">
@@ -252,9 +44,9 @@
             </a>
             
             <nav class="hidden md:flex items-center space-x-8">
-                <a href="#technology" class="text-gray-700 hover:text-purple-600 transition-colors duration-300 font-medium">Technology</a>
-                <a href="#applications" class="text-gray-700 hover:text-purple-600 transition-colors duration-300 font-medium">Applications</a>
-                <a href="#team" class="text-gray-700 hover:text-purple-600 transition-colors duration-300 font-medium">Team</a>
+                <a href="#technology" class="nav-link text-gray-700 hover:text-purple-600 transition-colors duration-300 font-medium">Technology</a>
+                <a href="#applications" class="nav-link text-gray-700 hover:text-purple-600 transition-colors duration-300 font-medium">Applications</a>
+                <a href="#team" class="nav-link text-gray-700 hover:text-purple-600 transition-colors duration-300 font-medium">Team</a>
                 <a href="#contact" class="btn-primary inline-block">Contact Us</a>
             </nav>
 
@@ -266,411 +58,203 @@
         </div>
 
         <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4 space-y-2 bg-white border-t border-gray-100">
-            <a href="#technology" class="block text-gray-700 hover:text-purple-600 transition-colors duration-300 py-2">Technology</a>
-            <a href="#applications" class="block text-gray-700 hover:text-purple-600 transition-colors duration-300 py-2">Applications</a>
-            <a href="#team" class="block text-gray-700 hover:text-purple-600 transition-colors duration-300 py-2">Team</a>
+            <a href="#technology" class="nav-link block text-gray-700 hover:text-purple-600 transition-colors duration-300 py-2">Technology</a>
+            <a href="#applications" class="nav-link block text-gray-700 hover:text-purple-600 transition-colors duration-300 py-2">Applications</a>
+            <a href="#team" class="nav-link block text-gray-700 hover:text-purple-600 transition-colors duration-300 py-2">Team</a>
             <a href="#contact" class="btn-primary inline-block mt-2">Contact Us</a>
         </div>
-    </header>    <main>
-        <section id="home" class="hero-bg min-h-screen flex items-center justify-center pt-20">
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-bg animated-gradient pt-32 pb-20 md:pt-48 md:pb-28 text-white relative">
             <div class="container mx-auto px-6 text-center hero-content">
-                <div class="max-w-4xl mx-auto animate-fade-in-up">
-                    <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6">
-                        Securing <span class="gradient-text">India's</span> Energy Future
-                    </h1>
-                    <p class="text-lg md:text-xl text-white opacity-90 max-w-3xl mx-auto mb-8 leading-relaxed">
-                        Pioneering commercial fusion energy by first solving India's critical needs in healthcare, building a de-risked path to clean, limitless power.
-                    </p>
-                    <div class="flex flex-col md:flex-row gap-4 justify-center items-center mb-12">
-                        <a href="#technology" class="btn-primary inline-block transform hover:scale-105 transition-all duration-300">
-                            Explore Our Technology
-                        </a>
-                        <a href="#contact" class="btn-secondary inline-block transform hover:scale-105 transition-all duration-300 bg-white text-purple-600 border-white hover:bg-purple-600 hover:text-white">
-                            Contact Us
-                        </a>
+                <div class="reveal">
+                    <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">Securing <span class="india-gradient-text"></span>India's</span> Energy Future</h1>
+                    <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8 opacity-90">ASPL Fusion is a deep-tech startup pioneering commercial fusion energy, starting with a de-risked approach to solve India's critical medical isotope needs.</p>
+                    <div class="flex justify-center gap-4">
+                        <a href="#contact" class="btn-primary">Get in Touch</a>
+                        <a href="#mission" class="btn-secondary">Learn More</a>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Mission Section -->
         <section id="mission" class="section-modern bg-light">
             <div class="container mx-auto px-6">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Mission</h2>
-                    <p class="text-lg text-gray-600 max-w-3xl mx-auto">Building a sustainable future through innovative fusion technology and strategic market entry</p>
+                <div class="text-center mb-12 reveal">
+                    <h2 class="text-3xl md:text-4xl font-bold gradient-text mb-4">Our Phased Mission</h2>
+                    <p class="text-lg text-secondary max-w-3xl mx-auto">A strategic, two-phase approach to build a sustainable fusion enterprise.</p>
                 </div>
-                <div class="grid md:grid-cols-3 gap-8">
-                    <div class="card-modern p-8 text-center animate-fade-in-up">
-                        <div class="flex justify-center mb-6">
-                            <div class="icon-modern">
-                                <i class="fa-solid fa-heartbeat"></i>
+                <div class="grid md:grid-cols-2 gap-8 items-center reveal-stagger">
+                    <!-- Phase 1 Card -->
+                    <div class="card-modern p-8">
+                        <div class="flex items-center mb-4">
+                            <div class="icon-modern text-3xl mr-4">
+                                <i class="fa-solid fa-star gradient-text"></i>
                             </div>
+                            <h3 class="text-2xl font-bold">Phase 1: Medical Isotope Production</h3>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-4">Advanced Medical Isotopes</h3>
-                        <p class="text-gray-600 leading-relaxed mb-4">Addressing India's critical supply gap for diagnostic radioisotopes using a reliable, accelerator-based fusion source.</p>
-                        <div class="pt-4 border-t border-gray-100">
-                            <span class="text-purple-600 text-sm font-medium">Phase 1 • Revenue Target: $10M</span>
-                        </div>
+                        <p class="text-secondary">Address the critical shortage of medical isotopes like Molybdenum-99 by developing a compact, efficient fusion device. This generates early revenue and validates our core technology in a vital, regulated market.</p>
                     </div>
-                    <div class="card-modern p-8 text-center animate-fade-in-up" style="animation-delay: 0.2s">
-                        <div class="flex justify-center mb-6">
-                            <div class="icon-modern">
-                                <i class="fa-solid fa-atom"></i>
+                    <!-- Phase 2 Card -->
+                    <div class="card-modern p-8">
+                        <div class="flex items-center mb-4">
+                            <div class="icon-modern text-3xl mr-4">
+                                <i class="fa-solid fa-rocket gradient-text"></i>
                             </div>
+                            <h3 class="text-2xl font-bold">Phase 2: Grid-Scale Fusion Power</h3>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-4">The GDT Advantage</h3>
-                        <p class="text-gray-600 leading-relaxed mb-4">Developing a state-of-the-art Gas Dynamic Trap (GDT)—a simpler, more stable, and scalable fusion technology—as a powerful neutron source.</p>
-                        <div class="pt-4 border-t border-gray-100">
-                            <span class="text-purple-600 text-sm font-medium">Phase 2 • Market: $1B+ Global</span>
-                        </div>
-                    </div>
-                    <div class="card-modern p-8 text-center animate-fade-in-up" style="animation-delay: 0.4s">
-                        <div class="flex justify-center mb-6">
-                            <div class="icon-modern">
-                                <i class="fa-solid fa-bolt"></i>
-                            </div>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-4">Energy for a Nation</h3>
-                        <p class="text-gray-600 leading-relaxed mb-4">Our ultimate goal: achieving net energy gain to provide clean, safe, and carbon-free baseload power for India's future.</p>
-                        <div class="pt-4 border-t border-gray-100">
-                            <span class="text-purple-600 text-sm font-medium">Phase 3 • Target: 400MW Plant</span>
-                        </div>
+                        <p class="text-secondary">Leverage our proven technology, operational expertise, and established supply chains to build and commercialize fusion power plants. Our goal is to provide clean, safe, and limitless energy for India and the world.</p>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Technology Section -->
         <section id="technology" class="section-modern">
             <div class="container mx-auto px-6">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Phased Pathway to Clean Energy</h2>
-                    <p class="text-lg text-gray-600 max-w-3xl mx-auto">Our philosophy mitigates risk through early revenue generation, building a foundation of expertise on a logical path to commercial fusion energy.</p>
+                <div class="text-center mb-12 reveal">
+                    <h2 class="text-3xl md:text-4xl font-bold gradient-text mb-4">Core Technology</h2>
+                    <p class="text-lg text-secondary max-w-3xl mx-auto">Our innovation lies in a novel approach to fusion, optimized for efficiency and commercial viability.</p>
                 </div>
-
-                <div class="timeline-modern max-w-4xl mx-auto">
-                    <div class="timeline-item-modern">
-                        <div class="flex flex-col md:flex-row items-center gap-8">
-                            <div class="w-full md:w-1/2 md:pr-8">
-                                <div class="card-modern p-8 animate-slide-in-left">
-                                    <div class="flex items-center mb-4">
-                                        <span class="bg-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full mr-3">PHASE 1</span>
-                                        <span class="text-gray-500 text-sm">2024-2026</span>
-                                    </div>
-                                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Foundation on Real-World Solutions</h3>
-                                    <p class="text-gray-600 leading-relaxed mb-4">Deploy a commercially standard D-T Accelerator Neutron Source to produce medical radioisotopes (⁹⁹Mo), addressing a critical gap in India's domestic supply chain.</p>
-                                    <div class="flex flex-wrap gap-2">
-                                        <span class="bg-purple-100 text-purple-600 text-xs px-2 py-1 rounded">Medical Isotopes</span>
-                                        <span class="bg-purple-100 text-purple-600 text-xs px-2 py-1 rounded">Revenue: $10M</span>
-                                        <span class="bg-purple-100 text-purple-600 text-xs px-2 py-1 rounded">Timeline: 2 years</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="w-full md:w-1/2"></div>
+                <div class="grid md:grid-cols-3 gap-8 text-center reveal-stagger">
+                    <!-- Tech Card 1 -->
+                    <div class="card-modern p-6">
+                        <div class="icon-modern text-4xl mb-4">
+                            <img src="icon-gdt.png" alt="GDT Icon" class="h-16 w-16 mx-auto">
                         </div>
+                        <h3 class="text-xl font-bold mb-2">Advanced GDT Device</h3>
+                        <p class="text-secondary">Utilizing a Gas-Dynamic Trap (GDT) configuration, which offers superior plasma stability and a simpler, more linear design compared to complex toroidal systems.</p>
                     </div>
-
-                    <div class="timeline-item-modern">
-                        <div class="flex flex-col md:flex-row items-center gap-8">
-                            <div class="w-full md:w-1/2"></div>
-                            <div class="w-full md:w-1/2 md:pl-8">
-                                <div class="card-modern p-8 animate-slide-in-right">
-                                    <div class="flex items-center mb-4">
-                                        <span class="bg-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full mr-3">PHASE 2</span>
-                                        <span class="text-gray-500 text-sm">2026-2030</span>
-                                    </div>
-                                    <h3 class="text-2xl font-bold text-gray-900 mb-4">The GDT Leap for Industrial Scale</h3>
-                                    <p class="text-gray-600 leading-relaxed mb-4">Develop a volumetric neutron source using a Gas Dynamic Trap (GDT). This powerful neutron source enables strategic applications like breeding fuel for the nuclear industry.</p>
-                                    <div class="bg-gray-50 rounded-lg p-4 mb-4 border-l-4 border-purple-600">
-                                        <h4 class="font-semibold text-gray-900 mb-2">The GDT Advantage</h4>
-                                        <p class="text-gray-600 text-sm">Linear design that's easier to engineer and maintain than toroidal devices, with inherently more stable plasma.</p>
-                                    </div>
-                                    <div class="flex flex-wrap gap-2">
-                                        <span class="bg-purple-100 text-purple-600 text-xs px-2 py-1 rounded">GDT Technology</span>
-                                        <span class="bg-purple-100 text-purple-600 text-xs px-2 py-1 rounded">Market: $1B+</span>
-                                        <span class="bg-purple-100 text-purple-600 text-xs px-2 py-1 rounded">Global Export</span>
-                                    </div>
-                                </div>
-                            </div>
+                    <!-- Tech Card 2 -->
+                    <div class="card-modern p-6">
+                        <div class="icon-modern text-4xl mb-4">
+                             <img src="icon-energy.png" alt="Energy Icon" class="h-16 w-16 mx-auto">
                         </div>
+                        <h3 class="text-xl font-bold mb-2">High-Efficiency Neutron Source</h3>
+                        <p class="text-secondary">Our device is designed to be a powerful neutron source, making it ideal for breeding medical isotopes and testing materials for future power plants.</p>
                     </div>
-
-                    <div class="timeline-item-modern">
-                        <div class="flex flex-col md:flex-row items-center gap-8">
-                            <div class="w-full md:w-1/2 md:pr-8">
-                                <div class="card-modern p-8 animate-slide-in-left">
-                                    <div class="flex items-center mb-4">
-                                        <span class="bg-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full mr-3">PHASE 2.5</span>
-                                        <span class="text-gray-500 text-sm">2028-2032</span>
-                                    </div>
-                                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Bridge to Commercial Energy</h3>
-                                    <p class="text-gray-600 leading-relaxed mb-4">Leverage the GDT as a neutron source to drive a subcritical fission blanket. This hybrid approach multiplies energy output and is inherently safe.</p>
-                                    <div class="flex flex-wrap gap-2">
-                                        <span class="bg-purple-100 text-purple-600 text-xs px-2 py-1 rounded">Hybrid Technology</span>
-                                        <span class="bg-purple-100 text-purple-600 text-xs px-2 py-1 rounded">Energy Multiplication</span>
-                                        <span class="bg-purple-100 text-purple-600 text-xs px-2 py-1 rounded">Inherently Safe</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="w-full md:w-1/2"></div>
+                    <!-- Tech Card 3 -->
+                    <div class="card-modern p-6">
+                        <div class="icon-modern text-4xl mb-4">
+                            <img src="icon-medical.png" alt="Medical Icon" class="h-16 w-16 mx-auto">
                         </div>
-                    </div>
-
-                    <div class="timeline-item-modern">
-                        <div class="flex flex-col md:flex-row items-center gap-8">
-                            <div class="w-full md:w-1/2"></div>
-                            <div class="w-full md:w-1/2 md:pl-8">
-                                <div class="card-modern p-8 border-2 border-purple-200 animate-slide-in-right">
-                                    <div class="flex items-center mb-4">
-                                        <span class="bg-gradient-to-r from-purple-600 to-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full mr-3">PHASE 3</span>
-                                        <span class="text-gray-500 text-sm">2030+</span>
-                                    </div>
-                                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Delivering Limitless Power for India</h3>
-                                    <p class="text-gray-600 leading-relaxed mb-4">Our long-term vision: scaling the GDT technology to a full power plant, achieving net energy gain (Q > 1). A 400 MW commercial facility designed to provide clean, carbon-free, 24/7 baseload power.</p>
-                                    <div class="flex flex-wrap gap-2">
-                                        <span class="bg-gradient-to-r from-purple-100 to-purple-50 text-purple-600 text-xs px-2 py-1 rounded">400MW Plant</span>
-                                        <span class="bg-gradient-to-r from-purple-100 to-purple-50 text-purple-600 text-xs px-2 py-1 rounded">Q > 1</span>
-                                        <span class="bg-gradient-to-r from-purple-100 to-purple-50 text-purple-600 text-xs px-2 py-1 rounded">Energy Independence</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <h3 class="text-xl font-bold mb-2">Modular & Scalable</h3>
+                        <p class="text-secondary">The linear architecture allows for modular construction and scalability, reducing construction time and enabling incremental upgrades.</p>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Applications/Timeline Section -->
         <section id="applications" class="section-modern bg-light">
             <div class="container mx-auto px-6">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">A Portfolio of High-Value Applications</h2>
-                    <p class="text-lg text-gray-600 max-w-3xl mx-auto">Our technology is capable of producing a wide range of radioisotopes vital for modern medicine and industry, illustrating a significant market opportunity.</p>
+                <div class="text-center mb-16 reveal">
+                    <h2 class="text-3xl md:text-4xl font-bold gradient-text mb-4">Our Roadmap</h2>
+                    <p class="text-lg text-secondary max-w-3xl mx-auto">From critical near-term applications to long-term energy independence.</p>
                 </div>
-
-                <div class="mb-12">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-                        <span class="icon-modern mr-4 text-base">
-                            <i class="fa-solid fa-heartbeat"></i>
-                        </span>
-                        Medical Radioisotopes
-                    </h3>
-                    <div class="card-modern overflow-hidden">
-                        <div class="overflow-x-auto">
-                            <table class="min-w-full">
-                                <thead class="bg-gray-50 border-b border-gray-200">
-                                    <tr>
-                                        <th class="p-4 text-left text-sm font-semibold text-gray-900">Product Isotope</th>
-                                        <th class="p-4 text-left text-sm font-semibold text-gray-900">Half-Life</th>
-                                        <th class="p-4 text-left text-sm font-semibold text-gray-900">Use</th>
-                                        <th class="p-4 text-left text-sm font-semibold text-gray-900">Global Demand</th>
-                                    </tr>
-                                </thead>
-                                <tbody class="divide-y divide-gray-200">
-                                    <tr class="hover:bg-gray-50 transition-colors duration-200">
-                                        <td class="p-4 font-medium text-gray-900">Tc-99m (from Mo-99)</td>
-                                        <td class="p-4 text-gray-600">6.01 h</td>
-                                        <td class="p-4 text-gray-600">SPECT imaging (80% of nuclear med)</td>
-                                        <td class="p-4 text-gray-600">~40 million doses/year</td>
-                                    </tr>
-                                    <tr class="hover:bg-gray-50 transition-colors duration-200">
-                                        <td class="p-4 font-medium text-gray-900">Lu-177</td>
-                                        <td class="p-4 text-gray-600">6.65 days</td>
-                                        <td class="p-4 text-gray-600">Targeted radionuclide therapy (prostate)</td>
-                                        <td class="p-4 text-gray-600">~40,000 doses/year (growing fast)</td>
-                                    </tr>
-                                    <tr class="hover:bg-gray-50 transition-colors duration-200">
-                                        <td class="p-4 font-medium text-gray-900">Y-90</td>
-                                        <td class="p-4 text-gray-600">64.1 h</td>
-                                        <td class="p-4 text-gray-600">Liver cancer, radioimmunotherapy</td>
-                                        <td class="p-4 text-gray-600">~100,000 doses/year</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                <div class="timeline-modern max-w-4xl mx-auto reveal">
+                    <!-- Timeline Item 1 -->
+                    <div class="timeline-item-modern flex md:grid md:grid-cols-2 gap-8">
+                        <div class="md:text-right">
+                            <h3 class="text-xl font-bold">Year 1-2: R&D and Prototyping</h3>
+                            <p class="text-secondary mt-2">Finalize physics design, build and test the initial low-beta GDT prototype. Secure seed funding and key partnerships.</p>
+                        </div>
+                        <div class="hidden md:block"></div>
+                    </div>
+                    <!-- Timeline Item 2 -->
+                    <div class="timeline-item-modern flex md:grid md:grid-cols-2 gap-8">
+                        <div class="hidden md:block"></div>
+                        <div>
+                            <h3 class="text-xl font-bold">Year 3-4: Isotope Production Validation</h3>
+                            <p class="text-secondary mt-2">Construct a full-scale device capable of producing commercially viable quantities of Mo-99. Begin regulatory approval process.</p>
                         </div>
                     </div>
-                </div>
-
-                <div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-                        <span class="icon-modern mr-4 text-base">
-                            <i class="fa-solid fa-industry"></i>
-                        </span>
-                        Industrial Radioisotopes
-                    </h3>
-                    <div class="card-modern overflow-hidden">
-                        <div class="overflow-x-auto">
-                            <table class="min-w-full">
-                                <thead class="bg-gray-50 border-b border-gray-200">
-                                    <tr>
-                                        <th class="p-4 text-left text-sm font-semibold text-gray-900">Product Isotope</th>
-                                        <th class="p-4 text-left text-sm font-semibold text-gray-900">Half-Life</th>
-                                        <th class="p-4 text-left text-sm font-semibold text-gray-900">Use</th>
-                                        <th class="p-4 text-left text-sm font-semibold text-gray-900">Global Demand</th>
-                                    </tr>
-                                </thead>
-                                <tbody class="divide-y divide-gray-200">
-                                    <tr class="hover:bg-gray-50 transition-colors duration-200">
-                                        <td class="p-4 font-medium text-gray-900">Co-60</td>
-                                        <td class="p-4 text-gray-600">5.27 years</td>
-                                        <td class="p-4 text-gray-600">Radiography, sterilization</td>
-                                        <td class="p-4 text-gray-600">~15,000 TBq/year</td>
-                                    </tr>
-                                    <tr class="hover:bg-gray-50 transition-colors duration-200">
-                                        <td class="p-4 font-medium text-gray-900">Ir-192</td>
-                                        <td class="p-4 text-gray-600">73.8 days</td>
-                                        <td class="p-4 text-gray-600">Non-destructive testing (NDT)</td>
-                                        <td class="p-4 text-gray-600">~8,000 TBq/year</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                    <!-- Timeline Item 3 -->
+                    <div class="timeline-item-modern flex md:grid md:grid-cols-2 gap-8">
+                        <div class="md:text-right">
+                            <h3 class="text-xl font-bold">Year 5-7: Commercial Isotope Sales</h3>
+                            <p class="text-secondary mt-2">Achieve first revenue through sales of medical isotopes to hospitals and pharmaceutical companies, establishing a self-sustaining business model.</p>
+                        </div>
+                        <div class="hidden md:block"></div>
+                    </div>
+                    <!-- Timeline Item 4 -->
+                    <div class="timeline-item-modern flex md:grid md:grid-cols-2 gap-8">
+                        <div class="hidden md:block"></div>
+                        <div>
+                            <h3 class="text-xl font-bold">Year 8+: Fusion Power Development</h3>
+                            <p class="text-secondary mt-2">Re-invest revenue into R&D for a net-energy-gain fusion device. Design and build India's first commercial fusion power demonstrator.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Team Section -->
         <section id="team" class="section-modern">
             <div class="container mx-auto px-6">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Minds Behind the Mission</h2>
-                    <p class="text-lg text-gray-600 max-w-3xl mx-auto">ASPL Fusion is built on a foundation of world-class intellectual capital. We are assembling a multi-disciplinary team of leading physicists, engineers, and specialists.</p>
+                <div class="text-center mb-12 reveal">
+                    <h2 class="text-3xl md:text-4xl font-bold gradient-text mb-4">Our Team</h2>
+                    <p class="text-lg text-secondary max-w-3xl mx-auto">Driven by a shared passion for science, engineering, and India's future.</p>
                 </div>
-                
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
-                    <div class="card-modern p-6 group animate-fade-in-up">
-                        <div class="flex items-center mb-4">
-                            <div class="w-3 h-3 bg-purple-600 rounded-full mr-3 group-hover:animate-pulse"></div>
-                            <h4 class="font-bold text-gray-900 group-hover:text-purple-600 transition-colors duration-300">Plasma Physics & Fusion Technology</h4>
-                        </div>
-                        <p class="text-gray-600 text-sm leading-relaxed">Core understanding of plasma behavior, confinement, heating, and diagnostics.</p>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center reveal-stagger">
+                    <!-- Team Member 1 -->
+                    <div class="team-member">
+                        <img src="https://via.placeholder.com/150" alt="Team Member 1" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg">
+                        <h3 class="text-xl font-bold">Dr. A. K. Jha</h3>
+                        <p class="text-secondary">Founder & CEO</p>
                     </div>
-                    <div class="card-modern p-6 group animate-fade-in-up" style="animation-delay: 0.1s">
-                        <div class="flex items-center mb-4">
-                            <div class="w-3 h-3 bg-purple-600 rounded-full mr-3 group-hover:animate-pulse"></div>
-                            <h4 class="font-bold text-gray-900 group-hover:text-purple-600 transition-colors duration-300">Superconducting Magnet & Cryogenics</h4>
-                        </div>
-                        <p class="text-gray-600 text-sm leading-relaxed">Design and operation of high-field magnets and their cryogenic systems.</p>
+                    <!-- Team Member 2 -->
+                    <div class="team-member">
+                        <img src="https://via.placeholder.com/150" alt="Team Member 2" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg">
+                        <h3 class="text-xl font-bold">Dr. S. Mukherjee</h3>
+                        <p class="text-secondary">Chief Scientist</p>
                     </div>
-                    <div class="card-modern p-6 group animate-fade-in-up" style="animation-delay: 0.2s">
-                        <div class="flex items-center mb-4">
-                            <div class="w-3 h-3 bg-purple-600 rounded-full mr-3 group-hover:animate-pulse"></div>
-                            <h4 class="font-bold text-gray-900 group-hover:text-purple-600 transition-colors duration-300">Nuclear Engineering & Radiochemistry</h4>
-                        </div>
-                        <p class="text-gray-600 text-sm leading-relaxed">Expertise in nuclear reactions, isotope production, and safe material handling.</p>
+                    <!-- Team Member 3 -->
+                    <div class="team-member">
+                        <img src="https://via.placeholder.com/150" alt="Team Member 3" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg">
+                        <h3 class="text-xl font-bold">R. Sharma</h3>
+                        <p class="text-secondary">Lead Engineer</p>
                     </div>
-                    <div class="card-modern p-6 group animate-fade-in-up" style="animation-delay: 0.3s">
-                        <div class="flex items-center mb-4">
-                            <div class="w-3 h-3 bg-purple-600 rounded-full mr-3 group-hover:animate-pulse"></div>
-                            <h4 class="font-bold text-gray-900 group-hover:text-purple-600 transition-colors duration-300">Control Systems & Automation</h4>
-                        </div>
-                        <p class="text-gray-600 text-sm leading-relaxed">Developing sophisticated software and hardware for precise real-time control.</p>
-                    </div>
-                    <div class="card-modern p-6 group animate-fade-in-up" style="animation-delay: 0.4s">
-                        <div class="flex items-center mb-4">
-                            <div class="w-3 h-3 bg-purple-600 rounded-full mr-3 group-hover:animate-pulse"></div>
-                            <h4 class="font-bold text-gray-900 group-hover:text-purple-600 transition-colors duration-300">Materials Science</h4>
-                        </div>
-                        <p class="text-gray-600 text-sm leading-relaxed">Selecting materials capable of withstanding extreme plasma and neutron flux.</p>
-                    </div>
-                    <div class="card-modern p-6 group animate-fade-in-up" style="animation-delay: 0.5s">
-                        <div class="flex items-center mb-4">
-                            <div class="w-3 h-3 bg-purple-600 rounded-full mr-3 group-hover:animate-pulse"></div>
-                            <h4 class="font-bold text-gray-900 group-hover:text-purple-600 transition-colors duration-300">Power Systems & Grid Integration</h4>
-                        </div>
-                        <p class="text-gray-600 text-sm leading-relaxed">Long-term planning for converting fusion energy into grid-ready electricity.</p>
-                    </div>
-                </div>
-
-                <div class="text-center mb-12">
-                    <h3 class="text-3xl font-bold text-gray-900 mb-4">Our Founding Team</h3>
-                    <div class="w-24 h-1 bg-gradient-to-r from-purple-600 to-purple-500 mx-auto rounded-full"></div>
-                </div>
-                <div class="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
-                    <div class="card-modern p-8 text-center group animate-fade-in-up">
-                        <div class="relative mb-6">
-                            <img class="w-32 h-32 rounded-full border-4 border-purple-600 shadow-lg group-hover:shadow-purple-600/30 transition-all duration-300 mx-auto" src="https://asplfusion.com/wp-content/uploads/2025/08/Prabhat_Ranjan.png" alt="Portrait of Prof Prabhat Ranjan">
-                            <div class="absolute -bottom-2 -right-2 w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center">
-                                <i class="fa-solid fa-atom text-white text-sm"></i>
-                            </div>
-                        </div>
-                        <h4 class="text-xl font-bold text-gray-900 mb-2">Prof Prabhat Ranjan</h4>
-                        <p class="text-purple-600 font-medium mb-4">Nuclear Fusion Scientist</p>
-                        <p class="text-gray-600 text-sm leading-relaxed">A distinguished scientist providing the deep technical vision for ASPL. After his PhD from UC Berkeley, he was key in advancing India's fusion reactors, leading the ADITYA and SST-1 Tokamak projects.</p>
-                    </div>
-                    <div class="card-modern p-8 text-center group animate-fade-in-up" style="animation-delay: 0.2s">
-                        <div class="relative mb-6">
-                            <img class="w-32 h-32 rounded-full border-4 border-purple-600 shadow-lg group-hover:shadow-purple-600/30 transition-all duration-300 mx-auto" src="https://asplfusion.com/wp-content/uploads/2025/08/Abhay-Jha.png" alt="Portrait of Mr Abhay Kr Jha">
-                            <div class="absolute -bottom-2 -right-2 w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center">
-                                <i class="fa-solid fa-chart-line text-white text-sm"></i>
-                            </div>
-                        </div>
-                        <h4 class="text-xl font-bold text-gray-900 mb-2">Mr Abhay Kr Jha</h4>
-                        <p class="text-purple-600 font-medium mb-4">Strategic Leader</p>
-                        <p class="text-gray-600 text-sm leading-relaxed">A successful entrepreneur providing strategic and corporate leadership. As founder of ESSI, he has executed complex security projects for critical national infrastructure, including Parliament House.</p>
-                    </div>
-                    <div class="card-modern p-8 text-center group animate-fade-in-up" style="animation-delay: 0.4s">
-                        <div class="relative mb-6">
-                            <img class="w-32 h-32 rounded-full border-4 border-purple-600 shadow-lg group-hover:shadow-purple-600/30 transition-all duration-300 mx-auto" src="https://asplfusion.com/wp-content/uploads/2025/08/Abhinav-Jha.png" alt="Portrait of Mr Abhinav Jha">
-                            <div class="absolute -bottom-2 -right-2 w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center">
-                                <i class="fa-solid fa-cogs text-white text-sm"></i>
-                            </div>
-                        </div>
-                        <h4 class="text-xl font-bold text-gray-900 mb-2">Mr Abhinav Jha</h4>
-                        <p class="text-purple-600 font-medium mb-4">Operations Director</p>
-                        <p class="text-gray-600 text-sm leading-relaxed">A dynamic entrepreneur driving operational execution. His background combines project management at ESSI with experience at research centers like Stanford's Intelligent Systems Lab.</p>
+                    <!-- Team Member 4 -->
+                    <div class="team-member">
+                        <img src="https://via.placeholder.com/150" alt="Team Member 4" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg">
+                        <h3 class="text-xl font-bold">P. Singh</h3>
+                        <p class="text-secondary">Business Development</p>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Contact Section -->
         <section id="contact" class="section-modern bg-light">
-            <div class="container mx-auto px-6 text-center">
-                <div class="max-w-4xl mx-auto">
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Join Us in Building the Future</h2>
-                    <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-8 leading-relaxed">
-                        This isn't just a project. It's a chance to contribute to India's energy independence and build a cleaner world. We welcome inquiries from potential partners, investors, and future team members.
-                    </p>
-                    <div class="flex flex-col md:flex-row gap-4 justify-center items-center mb-12">
-                        <a href="mailto:info@asplfusion.com" class="btn-primary flex items-center">
-                            <i class="fa-solid fa-envelope mr-2"></i>
-                            Contact Us
-                        </a>
-                        <a href="tel:+91-011-4151-9899" class="btn-secondary flex items-center">
-                            <i class="fa-solid fa-phone mr-2"></i>
-                            +91 (011) 4151-9899
-                        </a>
-                    </div>
-                    
-                    <!-- Contact Info Cards -->
-                    <div class="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-                        <div class="card-modern p-6 text-center animate-fade-in-up">
-                            <div class="icon-modern mx-auto mb-4">
-                                <i class="fa-solid fa-map-marker-alt"></i>
-                            </div>
-                            <h4 class="font-bold text-gray-900 mb-2">Location</h4>
-                            <p class="text-gray-600 text-sm">101 Mercantile House<br>15 KG Marg, New Delhi-110001</p>
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12 reveal">
+                    <h2 class="text-3xl md:text-4xl font-bold gradient-text mb-4">Join Our Mission</h2>
+                    <p class="text-lg text-secondary max-w-3xl mx-auto">We are seeking partners, investors, and talented individuals to help us build the future of energy. Let's connect.</p>
+                </div>
+                <div class="max-w-2xl mx-auto card-modern p-8 reveal">
+                    <form action="#" method="POST">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <input type="text" placeholder="Your Name" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+                            <input type="email" placeholder="Your Email" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
                         </div>
-                        <div class="card-modern p-6 text-center animate-fade-in-up" style="animation-delay: 0.2s">
-                            <div class="icon-modern mx-auto mb-4">
-                                <i class="fa-solid fa-envelope"></i>
-                            </div>
-                            <h4 class="font-bold text-gray-900 mb-2">Email</h4>
-                            <p class="text-gray-600 text-sm">info@asplfusion.com</p>
+                        <textarea placeholder="Your Message" rows="5" class="w-full p-3 border border-gray-300 rounded-lg mb-6 focus:outline-none focus:ring-2 focus:ring-purple-500"></textarea>
+                        <div class="text-center">
+                            <button type="submit" class="btn-primary">Send Message</button>
                         </div>
-                        <div class="card-modern p-6 text-center animate-fade-in-up" style="animation-delay: 0.4s">
-                            <div class="icon-modern mx-auto mb-4">
-                                <i class="fa-solid fa-phone"></i>
-                            </div>
-                            <h4 class="font-bold text-gray-900 mb-2">Phone</h4>
-                            <p class="text-gray-600 text-sm">+91 (011) 4151-9899</p>
-                        </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="bg-gray-900 text-white">
-        <div class="container mx-auto px-6 py-12">
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
             <div class="grid md:grid-cols-4 gap-8 text-center md:text-left">
                 <div class="md:col-span-2">
                     <div class="flex items-center justify-center md:justify-start mb-4">
@@ -716,148 +300,7 @@
         </div>
     </footer>
 
-    <script>
-        // Mobile menu toggle
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Close mobile menu when a link is clicked
-        document.querySelectorAll('#mobile-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
-
-        // Enhanced header behavior on scroll
-        const header = document.getElementById('header');
-        let lastScrollY = window.scrollY;
-
-        window.addEventListener('scroll', () => {
-            const currentScrollY = window.scrollY;
-            
-            // Add/remove padding and shadow based on scroll position
-            if (currentScrollY > 50) {
-                header.classList.add('py-3');
-                header.classList.remove('py-4');
-                header.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1)';
-            } else {
-                header.classList.remove('py-3');
-                header.classList.add('py-4');
-                header.style.boxShadow = 'none';
-            }
-        });
-
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    const headerHeight = header.offsetHeight;
-                    const targetPosition = target.offsetTop - headerHeight;
-                    
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-
-        // Intersection Observer for animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        // Observe elements for animation on page load
-        document.addEventListener('DOMContentLoaded', () => {
-            // Initialize animation elements
-            const animatedElements = document.querySelectorAll('.animate-fade-in-up, .animate-slide-in-left, .animate-slide-in-right');
-            animatedElements.forEach(el => {
-                el.style.opacity = '0';
-                el.style.transform = 'translateY(30px)';
-                observer.observe(el);
-            });
-            
-            // Add loading states for images
-            const images = document.querySelectorAll('img');
-            images.forEach(img => {
-                if (img.complete) {
-                    img.style.opacity = '1';
-                } else {
-                    img.addEventListener('load', () => {
-                        img.style.opacity = '1';
-                    });
-                }
-            });
-
-            // Add hover effects to cards
-            const cards = document.querySelectorAll('.card-modern');
-            cards.forEach(card => {
-                card.addEventListener('mouseenter', () => {
-                    card.style.transform = 'translateY(-4px)';
-                });
-                card.addEventListener('mouseleave', () => {
-                    card.style.transform = 'translateY(0)';
-                });
-            });
-
-            // Timeline animations
-            const timelineItems = document.querySelectorAll('.timeline-item-modern');
-            timelineItems.forEach((item, index) => {
-                setTimeout(() => {
-                    observer.observe(item);
-                }, index * 200);
-            });
-        });
-
-        // Add subtle parallax effect to hero
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const heroContent = document.querySelector('.hero-content');
-            if (heroContent) {
-                heroContent.style.transform = `translateY(${scrolled * 0.1}px)`;
-            }
-        });
-
-        // Form submission handling (if needed in future)
-        function handleFormSubmit(event) {
-            event.preventDefault();
-            // Add form handling logic here
-            console.log('Form submitted');
-        }
-
-        // Add smooth reveal animation for sections
-        const revealSections = () => {
-            const sections = document.querySelectorAll('section');
-            sections.forEach(section => {
-                const rect = section.getBoundingClientRect();
-                const isVisible = rect.top < window.innerHeight && rect.bottom >= 0;
-                
-                if (isVisible) {
-                    section.style.opacity = '1';
-                    section.style.transform = 'translateY(0)';
-                }
-            });
-        };
-
-        // Initialize on load
-        window.addEventListener('load', revealSections);
-        window.addEventListener('scroll', revealSections);
-    </script>
+    <script src="script.js"></script>
 
 </body>
 </html>

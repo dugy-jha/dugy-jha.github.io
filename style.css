@@ -1,0 +1,242 @@
+/* Modern clean design inspired by reference site */
+:root {
+    --primary-color-start: #667eea;
+    --primary-color-end: #764ba2;
+    --primary-gradient: linear-gradient(135deg, var(--primary-color-start) 0%, var(--primary-color-end) 100%);
+    --text-primary: #1f2937;
+    --text-secondary: #4b5563;
+    --bg-primary: #ffffff;
+    --bg-light: #f9fafb;
+    --border-color: #e5e7eb;
+    --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --card-shadow-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    --gradient-shadow: 0 10px 20px rgba(102, 126, 234, 0.4);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+.hero-bg {
+    background: var(--primary-gradient);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('https://raw.githubusercontent.com/dugy-jha/dugy-jha.github.io/main/hero-background.jpg') center/cover;
+    opacity: 0.1;
+    z-index: 1;
+    animation: zoom-in 20s ease-out infinite;
+}
+
+@keyframes zoom-in {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.glass-effect {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.card-modern {
+    background: var(--bg-primary);
+    border-radius: 16px;
+    box-shadow: var(--card-shadow);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid var(--border-color);
+}
+
+.card-modern:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--card-shadow-hover);
+}
+
+.gradient-text {
+    background: var(--primary-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.india-gradient-text {
+    background: linear-gradient(135deg, rgb(224,110,56) 0%, rgb(18,50,98) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.btn-primary {
+    background: var(--primary-gradient);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--gradient-shadow);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--primary-color-start);
+    padding: 12px 24px;
+    border: 2px solid var(--primary-color-start);
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background: var(--primary-color-start);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.section-modern {
+    padding: 80px 0;
+}
+
+.bg-light {
+    background-color: var(--bg-light);
+}
+
+.timeline-modern {
+    position: relative;
+}
+
+.timeline-modern::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--primary-color-start), var(--primary-color-end));
+    transform: translateX(-50%);
+}
+
+.timeline-item-modern {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.timeline-item-modern::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 20px;
+    width: 16px;
+    height: 16px;
+    background: var(--primary-color-start);
+    border: 4px solid white;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    transition: transform 0.3s ease;
+}
+
+.timeline-item-modern:hover::before {
+    transform: translateX(-50%) scale(1.2);
+}
+
+/* Animations */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.5, 0, 0, 1), transform 0.8s cubic-bezier(0.5, 0, 0, 1);
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Staggered animations */
+.reveal-stagger > * {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.5, 0, 0, 1) 0.2s, transform 0.8s cubic-bezier(0.5, 0, 0, 1) 0.2s;
+}
+
+.reveal-stagger.visible > * {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Clean scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color-start);
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #5a67d8;
+}
+
+/* Active Nav Link */
+.nav-link.active {
+    color: var(--primary-color-start);
+    font-weight: 600;
+}
+
+.nav-link.active::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: var(--primary-gradient);
+    margin-top: 2px;
+}
+
+/* Icon Hover Effect */
+.icon-modern {
+    position: relative;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.icon-modern:hover {
+    transform: scale(1.1);
+}
+
+/* Animated Gradient Background */
+.animated-gradient {
+    background-size: 200% 200%;
+    animation: gradient-animation 10s ease infinite;
+}
+
+@keyframes gradient-animation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}

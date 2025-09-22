@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Content Manager | ASPL Fusion</title>
+  <link rel="icon" href="../Logo-t-removebg-preview.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <style>
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .custom-login-message {
+      max-width: 600px;
+      margin: 100px auto;
+      padding: 40px;
+      text-align: center;
+      border-radius: 8px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      background-color: white;
+    }
+    
+    .custom-login-message img {
+      max-width: 200px;
+      margin-bottom: 20px;
+    }
+    
+    .custom-login-message h1 {
+      color: #1a56db;
+      margin-bottom: 20px;
+    }
+    
+    .custom-login-message p {
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+    
+    .loading-indicator {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 30px;
+    }
+    
+    .loading-indicator i {
+      font-size: 40px;
+      color: #1a56db;
+      animation: spin 1s linear infinite;
+    }
+    
+    .loading-indicator p {
+      margin-top: 15px;
+    }
+    
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <!-- Custom login message that will be shown before CMS loads -->
+  <div class="custom-login-message">
+    <img src="../Logo-t-removebg-preview.png" alt="ASPL Fusion Logo">
+    <h1>ASPL Fusion Content Management</h1>
+    <p>Welcome to the ASPL Fusion content management system. This secure interface allows authorized team members to update the News & Insights section of our website.</p>
+    <p>Please authenticate using your GitHub account to continue.</p>
+    
+    <div class="loading-indicator">
+      <i class="fas fa-spinner"></i>
+      <p>Loading content management system...</p>
+    </div>
+  </div>
+</body>
+</html>

@@ -160,4 +160,241 @@ document.addEventListener('DOMContentLoaded', () => {
             observer.observe(el);
         });
     }
+
+    // FAQ Page Logic
+    const faqContainer = document.querySelector('.faq-main-content');
+    if (faqContainer) {
+        const questions = faqContainer.querySelectorAll('.faq-question');
+        questions.forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const isActive = question.classList.contains('active');
+
+                // Close all other open answers
+                questions.forEach(q => {
+                    q.classList.remove('active');
+                    q.nextElementSibling.style.maxHeight = null;
+                });
+
+                // Open or close the clicked answer
+                if (!isActive) {
+                    question.classList.add('active');
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                }
+            });
+        });
+    }
+
+    // News Page Logic
+    const newsGrid = document.getElementById('news-grid');
+    if (newsGrid) {
+        const articleTemplate = document.getElementById('article-template');
+        const articlePageTemplate = document.getElementById('article-page-template');
+        const categoryFilters = document.querySelectorAll('#category-filters a');
+        let articles = [];
+
+        function formatDate(dateString) {
+            const date = new Date(dateString);
+            return date.toLocaleDateString('en-IN', { 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric' 
+            });
+        }
+
+        function parseFrontMatter(content) {
+            const frontMatterRegex = /---\r?\n([\s\S]*?)\r?\n---/;
+            const match = content.match(frontMatterRegex);
+            
+            if (!match) return { content };
+            
+            const frontMatter = {};
+            const frontMatterText = match[1];
+            
+            const lines = frontMatterText.split('\n');
+            for (const line of lines) {
+                const colonIndex = line.indexOf(':');
+                if (colonIndex !== -1) {
+                    const key = line.slice(0, colonIndex).trim();
+                    let value = line.slice(colonIndex + 1).trim();
+                    
+                    if (value.startsWith('"') && value.endsWith('"')) {
+                        value = value.slice(1, -1);
+                    }
+                    
+                    frontMatter[key] = value;
+                }
+            }
+            
+            const contentWithoutFrontMatter = content.replace(match[0], '').trim();
+            
+            return {
+                ...frontMatter,
+                content: contentWithoutFrontMatter
+            };
+        }
+
+        async function loadArticles() {
+            try {
+                const response = await fetch('https://api.github.com/repos/dugy-jha/dugy-jha.github.io/contents/_posts');
+                if (!response.ok) throw new Error('Failed to fetch articles directory');
+                
+                const files = await response.json();
+                const markdownFiles = files.filter(file => file.name.endsWith('.md'));
+                
+                const articlePromises = markdownFiles.map(async file => {
+                    const fileResponse = await fetch(file.download_url);
+                    if (!fileResponse.ok) throw new Error(`Failed to fetch ${file.name}`);
+                    
+                    const content = await fileResponse.text();
+                    const parsedArticle = parseFrontMatter(content);
+                    
+                    return {
+                        slug: file.name.replace('.md', ''),
+                        title: parsedArticle.title,
+                        date: parsedArticle.date,
+                        author: parsedArticle.author,
+                        image: parsedArticle.image || 'assets/images/placeholder-person.svg',
+                        summary: parsedArticle.summary,
+                        category: parsedArticle.category,
+                        content: parsedArticle.content
+                    };
+                });
+                
+                articles = await Promise.all(articlePromises);
+                articles.sort((a, b) => new Date(b.date) - new Date(a.date));
+                
+                checkForArticleParameter();
+            } catch (error) {
+                console.error('Error loading articles:', error);
+                newsGrid.innerHTML = `
+                    <div class="error-message">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <p>Sorry, we couldn't load the latest articles. Please try again later.</p>
+                    </div>
+                `;
+            }
+        }
+
+        function displayArticles(articlesToShow) {
+            newsGrid.innerHTML = '';
+            
+            if (articlesToShow.length === 0) {
+                newsGrid.innerHTML = `
+                    <div class="no-results">
+                        <i class="fas fa-search"></i>
+                        <p>No articles found in this category. Please check back later.</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            articlesToShow.forEach(article => {
+                const template = document.importNode(articleTemplate.content, true);
+                
+                const link = template.querySelector('.news-link');
+                link.href = `?article=${article.slug}`;
+                
+                const image = template.querySelector('.news-image img');
+                image.src = article.image;
+                image.alt = article.title;
+                
+                const category = template.querySelector('.news-category');
+                category.textContent = article.category;
+                
+                const title = template.querySelector('.news-title');
+                title.textContent = article.title;
+                
+                const date = template.querySelector('.news-date');
+                date.textContent = formatDate(article.date);
+                
+                const author = template.querySelector('.news-author');
+                author.textContent = article.author;
+                
+                const summary = template.querySelector('.news-summary');
+                summary.textContent = article.summary;
+                
+                newsGrid.appendChild(template);
+            });
+        }
+
+        function displayArticlePage(article) {
+            newsGrid.innerHTML = '';
+            
+            const template = document.importNode(articlePageTemplate.content, true);
+            
+            const category = template.querySelector('.article-category');
+            category.textContent = article.category;
+            
+            const title = template.querySelector('.article-title');
+            title.textContent = article.title;
+            
+            const date = template.querySelector('.article-date');
+            date.textContent = formatDate(article.date);
+            
+            const author = template.querySelector('.article-author');
+            author.textContent = article.author;
+            
+            const image = template.querySelector('.article-featured-image img');
+            image.src = article.image;
+            image.alt = article.title;
+            
+            const body = template.querySelector('.article-body');
+            if (window.marked) {
+                body.innerHTML = marked.parse(article.content);
+            } else {
+                body.textContent = article.content;
+            }
+            
+            newsGrid.appendChild(template);
+            document.title = `${article.title} | ASPL Fusion`;
+            document.querySelector('.news-filters').style.display = 'none';
+        }
+
+        function checkForArticleParameter() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const articleSlug = urlParams.get('article');
+            
+            if (articleSlug) {
+                const article = articles.find(a => a.slug === articleSlug);
+                if (article) {
+                    displayArticlePage(article);
+                } else {
+                    newsGrid.innerHTML = `
+                        <div class="error-message">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <p>Sorry, we couldn't find the article you're looking for.</p>
+                            <a href="news.html" class="btn btn-primary">Back to News</a>
+                        </div>
+                    `;
+                }
+            } else {
+                displayArticles(articles);
+            }
+        }
+
+        categoryFilters.forEach(filter => {
+            filter.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                categoryFilters.forEach(f => f.classList.remove('active'));
+                this.classList.add('active');
+                
+                const category = this.getAttribute('data-category');
+                
+                if (category === 'all') {
+                    displayArticles(articles);
+                } else {
+                    const filteredArticles = articles.filter(article => article.category === category);
+                    displayArticles(filteredArticles);
+                }
+            });
+        });
+
+        window.addEventListener('popstate', () => {
+            checkForArticleParameter();
+        });
+
+        loadArticles();
+    }
 });

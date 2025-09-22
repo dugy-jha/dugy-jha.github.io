@@ -1,3 +1,70 @@
+/* Dark mode support */
+.dark {
+    --bg-primary: #18181b;
+    --bg-light: #232336;
+    --text-primary: #f3f4f6;
+    --text-secondary: #a1a1aa;
+    --border-color: #27272a;
+}
+
+body.dark {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+.dark .card-modern {
+    background: #232336;
+    color: #f3f4f6;
+    border-color: #27272a;
+}
+
+.dark .section-modern {
+    background: #18181b;
+}
+
+.dark .bg-light {
+    background: #232336 !important;
+}
+
+.dark .gradient-text {
+    background: linear-gradient(90deg, #a78bfa, #38bdf8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+.dark .btn-primary {
+    background: linear-gradient(90deg, #6366f1, #38bdf8);
+    color: #fff;
+}
+
+.dark .btn-secondary {
+    background: #232336;
+    color: #a1a1aa;
+    border: 1px solid #6366f1;
+}
+/* Mobile menu and timeline improvements */
+@media (max-width: 768px) {
+    #mobile-menu {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 100%;
+        z-index: 100;
+        box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+    }
+    .timeline-modern::before {
+        left: 20px;
+    }
+    .timeline-item-modern::before {
+        left: 20px;
+    }
+    .timeline-item-modern {
+        padding-left: 40px;
+    }
+}
 /* Modern clean design inspired by reference site */
 :root {
     --primary-color-start: #667eea;

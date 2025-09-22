@@ -32,6 +32,18 @@
 
     <link rel="stylesheet" href="style.css">
 
+        <!-- SEO Structured Data -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "ASPL Fusion",
+            "url": "https://dugy-jha.github.io/",
+            "logo": "https://raw.githubusercontent.com/dugy-jha/dugy-jha.github.io/main/Logo-t-removebg-preview.png",
+            "description": "ASPL Fusion is a deep-tech startup pioneering commercial fusion energy in India, starting with medical isotope production to secure the nation's healthcare and energy independence."
+        }
+        </script>
+
 </head>
 <body class="bg-white">
     
@@ -54,12 +66,13 @@
 
             <div class="md:hidden">
                 <button id="mobile-menu-button" class="text-gray-700 focus:outline-none focus:text-purple-600">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    <span class="sr-only">Toggle navigation menu</span>
                 </button>
             </div>
         </div>
 
-        <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4 space-y-2 bg-white border-t border-gray-100">
+    <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4 space-y-2 bg-white border-t border-gray-100" role="menu" aria-label="Mobile navigation menu">
             <a href="#mission" class="nav-link block text-gray-700 hover:text-purple-600 transition-colors duration-300 py-2">Mission</a>
             <a href="#technology" class="nav-link block text-gray-700 hover:text-purple-600 transition-colors duration-300 py-2">Technology</a>
             <a href="#history" class="nav-link block text-gray-700 hover:text-purple-600 transition-colors duration-300 py-2">History</a>
@@ -75,7 +88,7 @@
         <section id="home" class="hero-bg animated-gradient pt-32 pb-20 md:pt-48 md:pb-28 text-white relative">
             <div class="container mx-auto px-6 text-center hero-content">
                 <div class="reveal">
-                    <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">Securing <span class="india-gradient-text"></span>India's</span> Energy Future</h1>
+                    <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">Securing <span class="india-gradient-text">India's</span> Energy Future</h1>
                     <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8 opacity-90">ASPL Fusion is a deep-tech startup pioneering commercial fusion energy, starting with a de-risked approach to solve India's critical medical isotope needs.</p>
                     <div class="flex justify-center gap-4">
                         <a href="#contact" class="btn-primary">Get in Touch</a>
@@ -84,6 +97,64 @@
                 </div>
             </div>
         </section>
+    <!-- FAQ Section -->
+    <section id="faq" class="section-modern bg-light">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12 reveal">
+                <h2 class="text-3xl md:text-4xl font-bold gradient-text mb-4">Frequently Asked Questions</h2>
+                <p class="text-lg text-secondary max-w-3xl mx-auto">Common questions about fusion energy and our approach.</p>
+            </div>
+            <div class="max-w-3xl mx-auto reveal-stagger">
+                <div class="card-modern p-6 mb-4">
+                    <button class="faq-toggle flex justify-between items-center w-full text-left font-bold text-xl" aria-expanded="false" aria-controls="faq1">
+                        <span>What is fusion energy?</span>
+                        <i class="fas fa-plus text-purple-600"></i>
+                    </button>
+                    <div class="faq-content hidden mt-4 text-secondary" id="faq1" role="region" aria-hidden="true">
+                        Fusion is the process that powers the sun and stars. It occurs when atomic nuclei combine to form a heavier nucleus, releasing enormous amounts of energy.
+                    </div>
+                </div>
+                <div class="card-modern p-6 mb-4">
+                    <button class="faq-toggle flex justify-between items-center w-full text-left font-bold text-xl" aria-expanded="false" aria-controls="faq2">
+                        <span>How is ASPL Fusion different from other fusion startups?</span>
+                        <i class="fas fa-plus text-purple-600"></i>
+                    </button>
+                    <div class="faq-content hidden mt-4 text-secondary" id="faq2" role="region" aria-hidden="true">
+                        We focus on a phased, de-risked approach: first solving India's medical isotope needs, then scaling to grid power. Our technology is modular, scalable, and designed for commercial viability from day one.
+                    </div>
+                </div>
+                <div class="card-modern p-6 mb-4">
+                    <button class="faq-toggle flex justify-between items-center w-full text-left font-bold text-xl" aria-expanded="false" aria-controls="faq3">
+                        <span>How can I get involved?</span>
+                        <i class="fas fa-plus text-purple-600"></i>
+                    </button>
+                    <div class="faq-content hidden mt-4 text-secondary" id="faq3" role="region" aria-hidden="true">
+                        We welcome partners, investors, and talent. Please use the contact form above to reach out!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies Section -->
+    <section id="case-studies" class="section-modern">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12 reveal">
+                <h2 class="text-3xl md:text-4xl font-bold gradient-text mb-4">Case Studies</h2>
+                <p class="text-lg text-secondary max-w-3xl mx-auto">Real-world impact of our technology and approach.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8 reveal-stagger">
+                <div class="card-modern p-6">
+                    <h3 class="text-xl font-bold mb-2">Medical Isotope Supply Chain</h3>
+                    <p class="text-secondary">By developing a domestic source of Mo-99, we reduce India's reliance on aging foreign reactors, ensuring a stable supply for cancer diagnostics and treatment.</p>
+                </div>
+                <div class="card-modern p-6">
+                    <h3 class="text-xl font-bold mb-2">Fusion for Clean Energy</h3>
+                    <p class="text-secondary">Our modular GDT device paves the way for scalable, carbon-free power, supporting India's energy independence and climate goals.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
         <!-- Mission Section -->
         <section id="mission" class="section-modern bg-light">
@@ -287,25 +358,25 @@
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center reveal-stagger">
                     <!-- Team Member 1 -->
                     <div class="team-member">
-                        <img src="https://via.placeholder.com/150" alt="Team Member 1" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg">
+                        <img src="https://via.placeholder.com/150.webp?text=Dr.+A.+K.+Jha" alt="Dr. A. K. Jha" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg" loading="lazy">
                         <h3 class="text-xl font-bold">Dr. A. K. Jha</h3>
                         <p class="text-secondary">Founder & CEO</p>
                     </div>
                     <!-- Team Member 2 -->
                     <div class="team-member">
-                        <img src="https://via.placeholder.com/150" alt="Team Member 2" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg">
+                        <img src="https://via.placeholder.com/150.webp?text=Dr.+S.+Mukherjee" alt="Dr. S. Mukherjee" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg" loading="lazy">
                         <h3 class="text-xl font-bold">Dr. S. Mukherjee</h3>
                         <p class="text-secondary">Chief Scientist</p>
                     </div>
                     <!-- Team Member 3 -->
                     <div class="team-member">
-                        <img src="https://via.placeholder.com/150" alt="Team Member 3" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg">
+                        <img src="https://via.placeholder.com/150.webp?text=R.+Sharma" alt="R. Sharma" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg" loading="lazy">
                         <h3 class="text-xl font-bold">R. Sharma</h3>
                         <p class="text-secondary">Lead Engineer</p>
                     </div>
                     <!-- Team Member 4 -->
                     <div class="team-member">
-                        <img src="https://via.placeholder.com/150" alt="Team Member 4" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg">
+                        <img src="https://via.placeholder.com/150.webp?text=P.+Singh" alt="P. Singh" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg" loading="lazy">
                         <h3 class="text-xl font-bold">P. Singh</h3>
                         <p class="text-secondary">Business Development</p>
                     </div>
@@ -321,15 +392,16 @@
                     <p class="text-lg text-secondary max-w-3xl mx-auto">We are seeking partners, investors, and talented individuals to help us build the future of energy. Let's connect.</p>
                 </div>
                 <div class="max-w-2xl mx-auto card-modern p-8 reveal">
-                    <form action="#" method="POST">
+                    <form id="contact-form" action="https://formspree.io/f/mwkgrgqg" method="POST" aria-label="Contact form">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                            <input type="text" placeholder="Your Name" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
-                            <input type="email" placeholder="Your Email" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+                            <input type="text" name="name" placeholder="Your Name" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+                            <input type="email" name="email" placeholder="Your Email" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
                         </div>
-                        <textarea placeholder="Your Message" rows="5" class="w-full p-3 border border-gray-300 rounded-lg mb-6 focus:outline-none focus:ring-2 focus:ring-purple-500"></textarea>
+                        <textarea name="message" placeholder="Your Message" rows="5" required class="w-full p-3 border border-gray-300 rounded-lg mb-6 focus:outline-none focus:ring-2 focus:ring-purple-500"></textarea>
                         <div class="text-center">
-                            <button type="submit" class="btn-primary">Send Message</button>
+                            <button type="submit" class="btn-primary" aria-label="Send message">Send Message</button>
                         </div>
+                        <div id="form-status" class="mt-4 text-center text-sm"></div>
                     </form>
                 </div>
             </div>
@@ -377,12 +449,19 @@
             <div class="mt-12 border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
                 <p class="text-gray-500 text-sm">&copy; 2024 Agnira Sanlayan Pvt. Ltd. (ASPL Fusion). All Rights Reserved.</p>
                 <div class="flex space-x-6 mt-4 md:mt-0">
-                    <a href="#" class="text-gray-500 hover:text-purple-400 text-sm transition-colors duration-300">Privacy Policy</a>
-                    <a href="#" class="text-gray-500 hover:text-purple-400 text-sm transition-colors duration-300">Terms of Service</a>
+                    <a href="privacy.html" class="text-gray-500 hover:text-purple-400 text-sm transition-colors duration-300">Privacy Policy</a>
+                    <a href="terms.html" class="text-gray-500 hover:text-purple-400 text-sm transition-colors duration-300">Terms of Service</a>
                 </div>
             </div>
         </div>
     </footer>
+
+
+    <!-- Dark Mode Toggle Button -->
+    <button id="dark-mode-toggle" class="fixed bottom-4 right-4 p-3 rounded-full bg-gray-200 dark:bg-gray-800 z-50 shadow-lg" aria-label="Toggle dark mode">
+        <i class="fas fa-moon text-gray-700 dark:hidden"></i>
+        <i class="fas fa-sun text-yellow-400 hidden dark:inline"></i>
+    </button>
 
     <script src="script.js"></script>
 

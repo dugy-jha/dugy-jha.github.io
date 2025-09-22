@@ -60,8 +60,9 @@
     </header>    <!-- Main Content -->
     <main>
         <section class="hero">
+            <div id="particle-background"></div>
             <div class="hero-content container">
-                <h1>A Pragmatic Path to India's Energy Sovereignty</h1>
+                <h1 id="hero-headline">A Pragmatic Path to India's Energy Sovereignty</h1>
                 <p class="subtitle">ASPL Fusion is commercializing fusion technology through a disciplined, phased approach that ensures financial viability and systematic de-risking at every stage.</p>
                 <a href="roadmap.html" class="cta-button">Explore Our Strategy</a>
             </div>
@@ -482,6 +483,15 @@
         <i class="fas fa-sun text-yellow-400 hidden dark:inline"></i>
     </button>
 
+    <script type="module">
+        import { createParticleBackground } from './particle-background.js';
+        if (window.innerWidth > 768) {
+            const particleContainer = document.getElementById('particle-background');
+            if (particleContainer) {
+                createParticleBackground(particleContainer);
+            }
+        }
+    </script>
     <script src="script.js"></script>
 
 </body>

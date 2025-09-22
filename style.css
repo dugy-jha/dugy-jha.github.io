@@ -306,18 +306,26 @@ header {
 
 /* 7. Hero Section */
 .hero {
-    height: 100vh;
-    min-height: 600px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('hero-background.jpg');
-    background-size: cover;
-    background-position: center;
-    color: white;
-    display: flex;
-    align-items: center;
-    padding-top: 80px;
+    position: relative;
+    background-color: var(--color-dark);
+    color: var(--color-text-light);
+    padding: 8rem 0;
+    text-align: center;
+    overflow: hidden;
+}
+
+#particle-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
 }
 
 .hero-content {
+    position: relative;
+    z-index: 2;
     text-align: center;
 }
 
@@ -830,6 +838,59 @@ footer {
     font-size: 0.95rem;
     flex-grow: 1;
 }
+
+/* Spotlight Card Effect */
+.spotlight-grid {
+    display: grid;
+    gap: 2.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+.spotlight-card {
+    position: relative;
+    background-color: var(--color-light);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition-default);
+    overflow: hidden; /* Important for the effect */
+}
+
+.spotlight-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(
+        circle at var(--spotlight-x) var(--spotlight-y),
+        rgba(255, 255, 255, 0.2) 0%,
+        rgba(255, 255, 255, 0) 30%
+    );
+    opacity: 0;
+    transition: opacity 0.4s ease-out;
+    pointer-events: none; /* Allows clicking through the overlay */
+}
+
+.dark .spotlight-card::before {
+     background: radial-gradient(
+        circle at var(--spotlight-x) var(--spotlight-y),
+        rgba(255, 255, 255, 0.1) 0%,
+        rgba(255, 255, 255, 0) 40%
+    );
+}
+
+.spotlight-card:hover::before {
+    opacity: 1;
+}
+
+.spotlight-card > * {
+    position: relative;
+    z-index: 2; /* Ensure content is above the spotlight effect */
+}
+
 
 /* 16. Contact Page */
 .contact-grid {

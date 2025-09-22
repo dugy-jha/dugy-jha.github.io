@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Utility to check for mobile viewport
+    const isMobile = () => window.innerWidth <= 768;
+
     // Mobile menu toggle
     const mobileMenuButton = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
@@ -158,6 +161,108 @@ document.addEventListener('DOMContentLoaded', () => {
         
         animatedElements.forEach(el => {
             observer.observe(el);
+        });
+    }
+
+    // Hero headline animation
+    const headline = document.getElementById('hero-headline');
+    if (headline && !isMobile()) { // Disable on mobile
+        const originalText = headline.textContent;
+        const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        let interval = null;
+
+        const animateText = () => {
+            let iteration = 0;
+            clearInterval(interval);
+
+            interval = setInterval(() => {
+                headline.textContent = originalText.split('')
+                    .map((letter, index) => {
+                        if (index < iteration) {
+                            return originalText[index];
+                        }
+                        return chars[Math.floor(Math.random() * chars.length)];
+                    })
+                    .join('');
+
+                if (iteration >= originalText.length) {
+                    clearInterval(interval);
+                }
+
+                iteration += 1 / 3;
+            }, 30);
+        };
+
+        // Re-trigger animation on hover (optional)
+        headline.addEventListener('mouseover', animateText);
+        
+        // Initial animation
+        animateText();
+    }
+
+    // Count-up animation
+    const countUpElements = document.querySelectorAll('.count-up');
+    const countUpObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const el = entry.target;
+                const endValue = parseInt(el.getAttribute('data-value'), 10);
+                const duration = 2000; // 2 seconds
+                let startTime = null;
+
+                function animateCount(timestamp) {
+                    if (!startTime) startTime = timestamp;
+                    const progress = timestamp - startTime;
+                    const current = Math.min(Math.floor(progress / duration * endValue), endValue);
+                    el.textContent = current.toLocaleString();
+
+                    if (progress < duration) {
+                        requestAnimationFrame(animateCount);
+                    } else {
+                        el.textContent = endValue.toLocaleString();
+                    }
+                }
+
+                requestAnimationFrame(animateCount);
+                observer.unobserve(el);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    countUpElements.forEach(el => {
+        countUpObserver.observe(el);
+    });
+
+    // Magnetic button effect
+    if (!isMobile()) { // Disable on mobile
+        const magneticButtons = document.querySelectorAll('.cta-button, .learn-more-button');
+        magneticButtons.forEach(button => {
+            button.addEventListener('mousemove', (e) => {
+                const { clientX, clientY } = e;
+                const { left, top, width, height } = button.getBoundingClientRect();
+                const x = clientX - left - width / 2;
+                const y = clientY - top - height / 2;
+
+                button.style.transform = `translate(${x * 0.15}px, ${y * 0.25}px)`;
+            });
+
+            button.addEventListener('mouseleave', () => {
+                button.style.transform = 'translate(0, 0)';
+            });
+        });
+    }
+
+    // Spotlight card effect
+    if (!isMobile()) { // Disable on mobile
+        const spotlightCards = document.querySelectorAll('.spotlight-card');
+        spotlightCards.forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const { left, top, width, height } = card.getBoundingClientRect();
+                const x = e.clientX - left;
+                const y = e.clientY - top;
+                card.style.setProperty('--spotlight-x', `${x}px`);
+                card.style.setProperty('--spotlight-y', `${y}px`);
+            });
         });
     }
 

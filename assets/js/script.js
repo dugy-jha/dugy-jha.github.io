@@ -434,7 +434,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <div class="error-message">
                             <i class="fas fa-exclamation-triangle"></i>
                             <p>Sorry, we couldn't find the article you're looking for.</p>
-                            <a href="news.html" class="btn btn-primary">Back to News</a>
+                            <a href="pages/news.html" class="btn btn-primary">Back to News</a>
                         </div>
                     `;
                 }
@@ -483,7 +483,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="cookie-banner-content">
                 <div class="cookie-banner-text">
                     <h3>We value your privacy</h3>
-                    <p>We use cookies to enhance your browsing experience and analyze our traffic. By clicking "Accept All", you consent to our use of cookies. Read our <a href="privacy.html">Privacy Policy</a> to learn more.</p>
+                    <p>We use cookies to enhance your browsing experience and analyze our traffic. By clicking "Accept All", you consent to our use of cookies. Read our <a href="pages/privacy.html">Privacy Policy</a> to learn more.</p>
                 </div>
                 <div class="cookie-banner-actions">
                     <button class="cookie-button cookie-button-secondary" onclick="rejectCookies()">Reject All</button>

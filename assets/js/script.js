@@ -525,4 +525,120 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Initialize cookie consent on page load
     initCookieConsent();
+
+    // Scroll to top functionality
+    const scrollToTopBtn = document.getElementById('scroll-to-top');
+    
+    if (scrollToTopBtn) {
+        // Show/hide scroll to top button based on scroll position
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollToTopBtn.classList.add('visible');
+            } else {
+                scrollToTopBtn.classList.remove('visible');
+            }
+        });
+
+        // Scroll to top when button is clicked
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+
+    // Set active navigation state
+    function setActiveNavLink() {
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        const navLinks = document.querySelectorAll('.nav-links a');
+        
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            const linkPage = link.getAttribute('href').split('/').pop();
+            
+            // Handle index.html and pages/index.html cases
+            if ((currentPage === 'index.html' || currentPage === '') && linkPage === 'index.html') {
+                link.classList.add('active');
+            } else if (currentPage === linkPage) {
+                link.classList.add('active');
+            }
+        });
+    }
+
+    // Set active navigation on page load
+    setActiveNavLink();
+
+    // Form validation
+    function validateEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    }
+
+    function validateForm(form) {
+        const inputs = form.querySelectorAll('input[required], textarea[required]');
+        let isValid = true;
+        
+        inputs.forEach(input => {
+            const value = input.value.trim();
+            const fieldName = input.name || input.id || 'field';
+            
+            // Remove existing error styling
+            input.classList.remove('error');
+            const existingError = input.parentNode.querySelector('.error-message');
+            if (existingError) {
+                existingError.remove();
+            }
+            
+            // Check if field is empty
+            if (!value) {
+                showFieldError(input, `${fieldName} is required`);
+                isValid = false;
+                return;
+            }
+            
+            // Email validation
+            if (input.type === 'email' && !validateEmail(value)) {
+                showFieldError(input, 'Please enter a valid email address');
+                isValid = false;
+                return;
+            }
+            
+            // Phone validation (basic)
+            if (input.type === 'tel' && value.length < 10) {
+                showFieldError(input, 'Please enter a valid phone number');
+                isValid = false;
+                return;
+            }
+        });
+        
+        return isValid;
+    }
+
+    function showFieldError(input, message) {
+        input.classList.add('error');
+        const errorDiv = document.createElement('div');
+        errorDiv.className = 'error-message';
+        errorDiv.textContent = message;
+        errorDiv.style.color = '#e74c3c';
+        errorDiv.style.fontSize = '0.875rem';
+        errorDiv.style.marginTop = '0.25rem';
+        input.parentNode.appendChild(errorDiv);
+    }
+
+    // Add form validation to all forms
+    const forms = document.querySelectorAll('form');
+    forms.forEach(form => {
+        form.addEventListener('submit', function(e) {
+            if (!validateForm(this)) {
+                e.preventDefault();
+                // Scroll to first error
+                const firstError = this.querySelector('.error');
+                if (firstError) {
+                    firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    firstError.focus();
+                }
+            }
+        });
+    });
 });

@@ -13,6 +13,39 @@
     <meta name="description" content="ASPL Fusion is commercializing fusion energy through a disciplined, phased strategy to solve critical national challenges in healthcare, industry, and energy security.">
     <link rel="canonical" href="https://dugy-jha.github.io/">
     
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "ASPL Fusion",
+        "alternateName": "Agnira Sanlayan Pvt. Ltd.",
+        "url": "https://dugy-jha.github.io/",
+        "logo": "https://dugy-jha.github.io/assets/images/Logo-t-removebg-preview.png",
+        "description": "ASPL Fusion is commercializing fusion energy through a disciplined, phased strategy to solve critical national challenges in healthcare, industry, and energy security.",
+        "foundingDate": "2024",
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "IN",
+            "addressRegion": "India"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+91-XXX-XXX-XXXX",
+            "contactType": "customer service",
+            "email": "info@asplfusion.com"
+        },
+        "sameAs": [
+            "https://www.linkedin.com/company/aspl-fusion",
+            "https://twitter.com/asplfusion",
+            "https://www.facebook.com/asplfusion",
+            "https://www.instagram.com/asplfusion"
+        ],
+        "industry": "Energy Technology",
+        "keywords": "fusion energy, plasma physics, sustainable power, clean energy, nuclear fusion"
+    }
+    </script>
+    
     <!-- SEO Meta Tags -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://dugy-jha.github.io/">
@@ -50,31 +83,37 @@
     </script>
 </head>
 <body>
+    <!-- Skip Navigation Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
     <header>
         <nav class="navbar">
             <div class="container">
                 <a href="index.html" class="logo">
-                    <img src="assets/images/Logo-t-removebg-preview.png" alt="ASPL Fusion Logo" class="logo-img">
+                    <picture>
+                        <source srcset="assets/images/Logo-t-removebg-preview.webp" type="image/webp">
+                        <img src="assets/images/Logo-t-removebg-preview.png" loading="eager" alt="ASPL Fusion Logo" class="logo-img">
+                    </picture>
                     <span>ASPL<span class="highlight">Fusion</span></span>
                 </a>
                 <button id="mobile-menu-button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
                     <i class="fas fa-bars"></i>
                 </button>
-                <ul class="nav-links" id="mobile-menu" aria-label="Main navigation">
-                    <li><a href="pages/mission.html">Our Mission</a></li>
-                    <li><a href="pages/technology.html">Technology</a></li>
-                    <li><a href="pages/roadmap.html">Roadmap</a></li>
-                    <li><a href="pages/applications.html">Applications</a></li>
-                    <li><a href="pages/casestudies.html">Case Studies</a></li>
-                    <li><a href="pages/team.html">Team</a></li>
-                    <li><a href="pages/news.html">News</a></li>
-                    <li><a href="pages/faq.html">FAQ</a></li>
-                    <li><a href="pages/contact.html" class="cta-button">Contact</a></li>
+                <ul class="nav-links" id="mobile-menu" aria-label="Main navigation" role="menubar">
+                    <li role="none"><a href="pages/mission.html" role="menuitem">Our Mission</a></li>
+                    <li role="none"><a href="pages/technology.html" role="menuitem">Technology</a></li>
+                    <li role="none"><a href="pages/roadmap.html" role="menuitem">Roadmap</a></li>
+                    <li role="none"><a href="pages/applications.html" role="menuitem">Applications</a></li>
+                    <li role="none"><a href="pages/casestudies.html" role="menuitem">Case Studies</a></li>
+                    <li role="none"><a href="pages/team.html" role="menuitem">Team</a></li>
+                    <li role="none"><a href="pages/news.html" role="menuitem">News</a></li>
+                    <li role="none"><a href="pages/faq.html" role="menuitem">FAQ</a></li>
+                    <li role="none"><a href="pages/contact.html" class="cta-button" role="menuitem">Contact</a></li>
                 </ul>
             </div>
         </nav>
     </header>    <!-- Main Content -->
-    <main>
+    <main id="main-content">
         <section class="hero">
             <div id="particle-background"></div>
             <div class="hero-content container">
@@ -226,7 +265,7 @@
                     <!-- Tech Card 1 -->
                     <div class="card-modern p-6">
                         <div class="icon-modern text-4xl mb-4">
-                            <img src="assets/images/icon-gdt.png" alt="GDT Icon" class="h-16 w-16 mx-auto">
+                            <img src="assets/images/icon-gdt.png" loading="lazy" alt="GDT Icon" class="h-16 w-16 mx-auto">
                         </div>
                         <h3 class="text-xl font-bold mb-2">Advanced GDT Device</h3>
                         <p class="text-secondary">Utilizing a Gas-Dynamic Trap (GDT) configuration, which offers superior plasma stability and a simpler, more linear design compared to complex toroidal systems.</p>
@@ -234,7 +273,7 @@
                     <!-- Tech Card 2 -->
                     <div class="card-modern p-6">
                         <div class="icon-modern text-4xl mb-4">
-                             <img src="assets/images/icon-energy.png" alt="Energy Icon" class="h-16 w-16 mx-auto">
+                             <img src="assets/images/icon-energy.png" loading="lazy" alt="Energy Icon" class="h-16 w-16 mx-auto">
                         </div>
                         <h3 class="text-xl font-bold mb-2">High-Efficiency Neutron Source</h3>
                         <p class="text-secondary">Our device is designed to be a powerful neutron source, making it ideal for breeding medical isotopes and testing materials for future power plants.</p>
@@ -242,7 +281,7 @@
                     <!-- Tech Card 3 -->
                     <div class="card-modern p-6">
                         <div class="icon-modern text-4xl mb-4">
-                            <img src="assets/images/icon-medical.png" alt="Medical Icon" class="h-16 w-16 mx-auto">
+                            <img src="assets/images/icon-medical.png" loading="lazy" alt="Medical Icon" class="h-16 w-16 mx-auto">
                         </div>
                         <h3 class="text-xl font-bold mb-2">Modular & Scalable</h3>
                         <p class="text-secondary">The linear architecture allows for modular construction and scalability, reducing construction time and enabling incremental upgrades.</p>
@@ -443,7 +482,10 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <a href="index.html" class="logo">
-                        <img src="assets/images/Logo-t-removebg-preview.png" alt="ASPL Fusion Logo" class="logo-img">
+                        <picture>
+                            <source srcset="assets/images/Logo-t-removebg-preview.webp" type="image/webp">
+                            <img src="assets/images/Logo-t-removebg-preview.png" loading="eager" alt="ASPL Fusion Logo" class="logo-img">
+                        </picture>
                         <span>ASPL<span class="highlight">Fusion</span></span>
                     </a>
                     <p>Agnira Sanlayan Pvt. Ltd.</p>
@@ -492,8 +534,13 @@
         <i class="fas fa-sun"></i>
     </button>
 
-    <script type="module">
-        import { createParticleBackground } from './particle-background.js';
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scroll-to-top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script type="module" defer>
+        import { createParticleBackground } from './assets/js/particle-background.js';
         if (window.innerWidth > 768) {
             const particleContainer = document.getElementById('particle-background');
             if (particleContainer) {
@@ -501,7 +548,7 @@
             }
         }
     </script>
-    <script src="assets/js/script.js"></script>
+    <script src="assets/js/script.js" defer></script>
 
 </body>
 </html>

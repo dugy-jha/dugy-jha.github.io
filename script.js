@@ -168,7 +168,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const headline = document.getElementById('hero-headline');
     if (headline && !isMobile()) { // Disable on mobile
         const originalText = headline.textContent;
-        const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        const chars = 'NuclearFusion543210';
         let interval = null;
 
         const animateText = () => {

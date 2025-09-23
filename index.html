@@ -3,8 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.skypack.dev https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https: blob:; connect-src 'self' https://formspree.io https://api.github.com; frame-src 'self' https://www.google.com;">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
     <title>ASPL Fusion | Powering India's Future</title>
     <meta name="description" content="ASPL Fusion is commercializing fusion energy through a disciplined, phased strategy to solve critical national challenges in healthcare, industry, and energy security.">
+    <link rel="canonical" href="https://dugy-jha.github.io/">
     
     <!-- SEO Meta Tags -->
     <meta property="og:type" content="website">
@@ -18,7 +25,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="icon" href="Logo-t-removebg-preview.png" type="image/png">
+    <link rel="icon" href="Logo-t-removebg-preview.png" type="image/png">    
+    <!-- PWA & Favicon -->
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" sizes="180x180" href="Logo-t-removebg-preview.png">
+    <meta name="theme-color" content="#0055c4">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="ASPL Fusion">
+    <meta name="msapplication-TileImage" content="Logo-t-removebg-preview.png">
+    <meta name="msapplication-TileColor" content="#0055c4">
     <link rel="stylesheet" href="style.css">
     
     <!-- Schema.org structured data -->
@@ -403,11 +419,13 @@
                     <p class="text-lg text-secondary max-w-3xl mx-auto">We are seeking partners, investors, and talented individuals to help us build the future of energy. Let's connect.</p>
                 </div>
                 <div class="max-w-2xl mx-auto card-modern p-8 reveal">
-                    <form id="contact-form" action="https://formspree.io/f/mwkgrgqg" method="POST" aria-label="Contact form">
+                    <form id="homepage-contact-form" action="https://formspree.io/f/mwkgrgqg" method="POST" aria-label="Contact form">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                             <input type="text" name="name" placeholder="Your Name" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
                             <input type="email" name="email" placeholder="Your Email" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
                         </div>
+                        <input type="hidden" name="_subject" value="New contact from ASPL Fusion website">
+                        <input type="hidden" name="_next" value="https://dugy-jha.github.io/index.html?contact=success">
                         <textarea name="message" placeholder="Your Message" rows="5" required class="w-full p-3 border border-gray-300 rounded-lg mb-6 focus:outline-none focus:ring-2 focus:ring-purple-500"></textarea>
                         <div class="text-center">
                             <button type="submit" class="btn-primary" aria-label="Send message">Send Message</button>
@@ -454,8 +472,8 @@
                 <div class="footer-social">
                     <h4>Connect</h4>
                     <div class="social-icons">
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/company/aspl-fusion" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://twitter.com/asplfusion" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -472,15 +490,6 @@
     <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Toggle dark mode">
         <i class="fas fa-moon"></i>
         <i class="fas fa-sun"></i>
-    </button>
-
-    <script src="script.js"></script>
-
-
-    <!-- Dark Mode Toggle Button -->
-    <button id="dark-mode-toggle" class="fixed bottom-4 right-4 p-3 rounded-full bg-gray-200 dark:bg-gray-800 z-50 shadow-lg" aria-label="Toggle dark mode">
-        <i class="fas fa-moon text-gray-700 dark:hidden"></i>
-        <i class="fas fa-sun text-yellow-400 hidden dark:inline"></i>
     </button>
 
     <script type="module">

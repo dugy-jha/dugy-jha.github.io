@@ -502,4 +502,62 @@ document.addEventListener('DOMContentLoaded', () => {
 
         loadArticles();
     }
+    
+    // Cookie Consent Banner
+    function initCookieConsent() {
+        const cookieConsent = localStorage.getItem('cookieConsent');
+        if (!cookieConsent) {
+            showCookieBanner();
+        }
+    }
+    
+    function showCookieBanner() {
+        const banner = document.createElement('div');
+        banner.className = 'cookie-banner';
+        banner.innerHTML = `
+            <div class="cookie-banner-content">
+                <div class="cookie-banner-text">
+                    <h3>We value your privacy</h3>
+                    <p>We use cookies to enhance your browsing experience and analyze our traffic. By clicking "Accept All", you consent to our use of cookies. Read our <a href="privacy.html">Privacy Policy</a> to learn more.</p>
+                </div>
+                <div class="cookie-banner-actions">
+                    <button class="cookie-button cookie-button-secondary" onclick="rejectCookies()">Reject All</button>
+                    <button class="cookie-button cookie-button-primary" onclick="acceptCookies()">Accept All</button>
+                </div>
+            </div>
+        `;
+        document.body.appendChild(banner);
+        
+        // Add show class after a small delay for animation
+        setTimeout(() => {
+            banner.classList.add('show');
+        }, 100);
+    }
+    
+    window.acceptCookies = function() {
+        localStorage.setItem('cookieConsent', 'accepted');
+        localStorage.setItem('cookieConsentDate', new Date().toISOString());
+        hideCookieBanner();
+        // Initialize analytics or other cookie-dependent services here
+    };
+    
+    window.rejectCookies = function() {
+        localStorage.setItem('cookieConsent', 'rejected');
+        localStorage.setItem('cookieConsentDate', new Date().toISOString());
+        hideCookieBanner();
+        // Disable analytics or other cookie-dependent services here
+    };
+    
+    function hideCookieBanner() {
+        const banner = document.querySelector('.cookie-banner');
+        if (banner) {
+            banner.classList.remove('show');
+            setTimeout(() => {
+                banner.remove();
+            }, 300);
+        }
+    }
+    
+    // Initialize cookie consent on page load
+    initCookieConsent();
 });

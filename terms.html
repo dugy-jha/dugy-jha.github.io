@@ -1,30 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Terms of Service - ASPL Fusion</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.skypack.dev https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https: blob:; connect-src 'self' https://formspree.io https://api.github.com; frame-src 'self' https://www.google.com;">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <title>Terms of Service | ASPL Fusion</title>
+    <meta name="description" content="ASPL Fusion's Terms of Service - Understand your rights and obligations when using our website and services.">
+    <link rel="canonical" href="https://dugy-jha.github.io/terms.html">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" href="Logo-t-removebg-preview.png" type="image/png">    
+    <!-- PWA & Favicon -->
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" sizes="180x180" href="Logo-t-removebg-preview.png">
+    <meta name="theme-color" content="#0055c4">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="ASPL Fusion">
+    <meta name="msapplication-TileImage" content="Logo-t-removebg-preview.png">
+    <meta name="msapplication-TileColor" content="#0055c4">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-white">
-  <main class="container mx-auto px-6 py-12">
-    <h1 class="text-3xl font-bold mb-6">Terms of Service</h1>
-    <p class="mb-4">By using the ASPL Fusion website, you agree to the following terms and conditions:</p>
-    <h2 class="text-xl font-semibold mt-8 mb-2">Use of Site</h2>
-    <ul class="list-disc ml-6 mb-4">
-      <li>You may use this site for lawful purposes only.</li>
-      <li>You may not attempt to gain unauthorized access to any part of the site or its systems.</li>
-    </ul>
-    <h2 class="text-xl font-semibold mt-8 mb-2">Intellectual Property</h2>
-    <p class="mb-4">All content on this site is the property of ASPL Fusion or its licensors. You may not reproduce or distribute content without permission.</p>
-    <h2 class="text-xl font-semibold mt-8 mb-2">Disclaimer</h2>
-    <p class="mb-4">This site is provided "as is" without warranties of any kind. We do not guarantee the accuracy or completeness of information on this site.</p>
-    <h2 class="text-xl font-semibold mt-8 mb-2">Limitation of Liability</h2>
-    <p class="mb-4">ASPL Fusion is not liable for any damages arising from your use of this site.</p>
-    <h2 class="text-xl font-semibold mt-8 mb-2">Changes to Terms</h2>
-    <p class="mb-4">We may update these terms at any time. Continued use of the site constitutes acceptance of the new terms.</p>
-    <h2 class="text-xl font-semibold mt-8 mb-2">Contact</h2>
-    <p>If you have questions about these Terms, please contact us at <a href="mailto:info@asplfusion.com" class="text-purple-600 underline">info@asplfusion.com</a>.</p>
-  </main>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <a href="index.html" class="logo">
+                    <img src="Logo-t-removebg-preview.png" alt="ASPL Fusion Logo" class="logo-img">
+                    <span>ASPL<span class="highlight">Fusion</span></span>
+                </a>
+                <button id="mobile-menu-button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-links" id="mobile-menu" aria-label="Main navigation">
+                    <li><a href="mission.html">Our Mission</a></li>
+                    <li><a href="technology.html">Technology</a></li>
+                    <li><a href="roadmap.html">Roadmap</a></li>
+                    <li><a href="applications.html">Applications</a></li>
+                    <li><a href="casestudies.html">Case Studies</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html" class="cta-button">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Terms of Service</h1>
+                <p class="subtitle">Please read these terms carefully before using our website</p>
+            </div>
+        </section>
+        
+        <section class="content-section">
+            <div class="container">
+                <div class="legal-content">
+                    <p class="last-updated">Last Updated: September 23, 2025</p>
+                    
+                    <h2>1. Acceptance of Terms</h2>
+                    <p>By accessing and using the website https://dugy-jha.github.io (the "Site") operated by Agnira Sanlayan Private Limited ("ASPL Fusion," "Company," "we," "us," or "our"), you accept and agree to be bound by the terms and provision of these Terms of Service ("Terms"). If you do not agree to these Terms, please do not use our Site.</p>
+                    
+                    <h2>2. Use of the Site</h2>
+                    
+                    <h3>2.1 Eligibility</h3>
+                    <p>You must be at least 16 years old to use this Site. By using this Site, you represent and warrant that you meet this eligibility requirement.</p>
+                    
+                    <h3>2.2 Permitted Use</h3>
+                    <p>You may use the Site for lawful purposes only and in accordance with these Terms. You agree not to use the Site:</p>
+                    <ul>
+                        <li>In any way that violates any applicable federal, state, local, or international law or regulation</li>
+                        <li>To transmit, or procure the sending of, any advertising or promotional material, including any "junk mail," "chain letter," "spam," or any other similar solicitation</li>
+                        <li>To impersonate or attempt to impersonate the Company, a Company employee, another user, or any other person or entity</li>
+                        <li>In any way that infringes upon the rights of others, or in any way is illegal, threatening, fraudulent, or harmful</li>
+                        <li>To engage in any other conduct that restricts or inhibits anyone's use or enjoyment of the Site</li>
+                    </ul>
+                    
+                    <h3>2.3 Prohibited Activities</h3>
+                    <p>You may not:</p>
+                    <ul>
+                        <li>Use any robot, spider, or other automatic device, process, or means to access the Site</li>
+                        <li>Use any manual process to monitor or copy any of the material on the Site without our prior written consent</li>
+                        <li>Use any device, software, or routine that interferes with the proper working of the Site</li>
+                        <li>Introduce any viruses, trojan horses, worms, logic bombs, or other material that is malicious or technologically harmful</li>
+                        <li>Attempt to gain unauthorized access to, interfere with, damage, or disrupt any parts of the Site</li>
+                        <li>Attack the Site via a denial-of-service attack or a distributed denial-of-service attack</li>
+                    </ul>
+                    
+                    <h2>3. Intellectual Property Rights</h2>
+                    
+                    <h3>3.1 Site Content</h3>
+                    <p>The Site and its entire contents, features, and functionality (including but not limited to all information, software, text, displays, images, video, and audio, and the design, selection, and arrangement thereof) are owned by ASPL Fusion, its licensors, or other providers of such material and are protected by Indian and international copyright, trademark, patent, trade secret, and other intellectual property or proprietary rights laws.</p>
+                    
+                    <h3>3.2 License to Use</h3>
+                    <p>We grant you a limited, non-exclusive, non-transferable, revocable license to access and use the Site for your personal, non-commercial use. This license does not include any resale or commercial use of the Site or its contents.</p>
+                    
+                    <h3>3.3 Trademarks</h3>
+                    <p>The ASPL Fusion name, logo, and all related names, logos, product and service names, designs, and slogans are trademarks of ASPL Fusion or its affiliates or licensors. You must not use such marks without our prior written permission.</p>
+                    
+                    <h2>4. User Contributions</h2>
+                    
+                    <h3>4.1 User Content</h3>
+                    <p>The Site may contain message boards, chat rooms, personal web pages or profiles, forums, bulletin boards, and other interactive features that allow users to post, submit, publish, display, or transmit content or materials (collectively, "User Contributions") on or through the Site.</p>
+                    
+                    <h3>4.2 Your Representations</h3>
+                    <p>By providing any User Contribution, you represent and warrant that:</p>
+                    <ul>
+                        <li>You own or control all rights in and to the User Contributions</li>
+                        <li>Your User Contributions do not violate the rights of any other person or entity</li>
+                        <li>Your User Contributions are not false, inaccurate, or misleading</li>
+                        <li>Your User Contributions do not violate any applicable law, regulation, or these Terms</li>
+                    </ul>
+                    
+                    <h2>5. Privacy</h2>
+                    <p>Your use of the Site is also governed by our Privacy Policy, which is incorporated by reference into these Terms. Please review our Privacy Policy, which also governs the Site and informs users of our data collection practices.</p>
+                    
+                    <h2>6. Disclaimers</h2>
+                    
+                    <h3>6.1 Information Accuracy</h3>
+                    <p>The information presented on or through the Site is made available solely for general information purposes. We do not warrant the accuracy, completeness, or usefulness of this information. Any reliance you place on such information is strictly at your own risk.</p>
+                    
+                    <h3>6.2 No Professional Advice</h3>
+                    <p>The Site is not intended to provide investment, legal, accounting, tax, or other professional advice. You should consult your own professional advisors for such advice.</p>
+                    
+                    <h3>6.3 Forward-Looking Statements</h3>
+                    <p>The Site may contain forward-looking statements about our business, technology development, and future plans. These statements are based on current expectations and are subject to risks and uncertainties. Actual results may differ materially from those projected.</p>
+                    
+                    <h2>7. Limitation of Liability</h2>
+                    <p>TO THE FULLEST EXTENT PROVIDED BY LAW, IN NO EVENT WILL ASPL FUSION, ITS AFFILIATES, OR THEIR LICENSORS, SERVICE PROVIDERS, EMPLOYEES, AGENTS, OFFICERS, OR DIRECTORS BE LIABLE FOR DAMAGES OF ANY KIND, UNDER ANY LEGAL THEORY, ARISING OUT OF OR IN CONNECTION WITH YOUR USE, OR INABILITY TO USE, THE SITE, ANY WEBSITES LINKED TO IT, ANY CONTENT ON THE SITE OR SUCH OTHER WEBSITES, INCLUDING ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES.</p>
+                    
+                    <h2>8. Indemnification</h2>
+                    <p>You agree to defend, indemnify, and hold harmless ASPL Fusion, its affiliates, licensors, and service providers, and its and their respective officers, directors, employees, contractors, agents, licensors, suppliers, successors, and assigns from and against any claims, liabilities, damages, judgments, awards, losses, costs, expenses, or fees (including reasonable attorneys' fees) arising out of or relating to your violation of these Terms or your use of the Site.</p>
+                    
+                    <h2>9. Third-Party Links and Content</h2>
+                    <p>The Site may contain links to third-party websites or resources. We provide these links only as a convenience and are not responsible for the content, products, or services on or available from those websites or resources. You acknowledge sole responsibility for and assume all risk arising from your use of any third-party websites or resources.</p>
+                    
+                    <h2>10. Termination</h2>
+                    <p>We may terminate or suspend your access to all or part of the Site at any time, with or without cause, with or without notice, effective immediately. If you wish to terminate these Terms, you may simply discontinue using the Site.</p>
+                    
+                    <h2>11. Governing Law and Jurisdiction</h2>
+                    <p>These Terms shall be governed by and construed in accordance with the laws of India, without regard to its conflict of law provisions. You agree that any dispute arising out of or relating to these Terms or the Site shall be subject to the exclusive jurisdiction of the courts located in New Delhi, India.</p>
+                    
+                    <h2>12. Severability</h2>
+                    <p>If any provision of these Terms is held to be unenforceable or invalid, such provision will be changed and interpreted to accomplish the objectives of such provision to the greatest extent possible under applicable law, and the remaining provisions will continue in full force and effect.</p>
+                    
+                    <h2>13. Entire Agreement</h2>
+                    <p>These Terms constitute the sole and entire agreement between you and ASPL Fusion regarding the Site and supersede all prior and contemporaneous understandings, agreements, representations, and warranties, both written and oral, regarding the Site.</p>
+                    
+                    <h2>14. Changes to Terms of Service</h2>
+                    <p>We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material, we will provide at least 30 days' notice prior to any new terms taking effect by posting a notice on our Site.</p>
+                    
+                    <h2>15. Contact Information</h2>
+                    <p>Questions about the Terms of Service should be sent to us at:</p>
+                    <div class="contact-info-box">
+                        <p><strong>Agnira Sanlayan Private Limited (ASPL Fusion)</strong><br>
+                        101 Mercantile House<br>
+                        15 Kasturba Gandhi Marg<br>
+                        New Delhi - 110001, India<br>
+                        Email: <a href="mailto:info@asplfusion.com">info@asplfusion.com</a><br>
+                        Phone: <a href="tel:+9101141519899">+91 (011)-4151-9899</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <img src="Logo-t-removebg-preview.png" alt="ASPL Fusion Logo" class="logo-img">
+                        <span>ASPL<span class="highlight">Fusion</span></span>
+                    </a>
+                    <p>Agnira Sanlayan Pvt. Ltd.</p>
+                    <p>Powering India's future through fusion innovation.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="mission.html">Our Mission</a></li>
+                        <li><a href="technology.html">Technology</a></li>
+                        <li><a href="roadmap.html">Roadmap</a></li>
+                        <li><a href="applications.html">Applications</a></li>
+                        <li><a href="casestudies.html">Case Studies</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:info@asplfusion.com">info@asplfusion.com</a></p>
+                    <p><i class="fas fa-phone"></i> <a href="tel:+9101141519899">+91 (011)-4151-9899</a></p>
+                    <p><i class="fas fa-map-marker-alt"></i> 101 Mercantile House, 15 Kasturba Gandhi Marg, New Delhi - 110001, India</p>
+                </div>
+                <div class="footer-social">
+                    <h4>Connect</h4>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/company/aspl-fusion" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://twitter.com/asplfusion" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.facebook.com/asplfusion" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/asplfusion" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Agnira Sanlayan Pvt. Ltd. (ASPL Fusion). All Rights Reserved.</p>
+                <div class="legal-links">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Dark Mode Toggle Button -->
+    <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Toggle dark mode">
+        <i class="fas fa-moon"></i>
+        <i class="fas fa-sun"></i>
+    </button>
+
+    <script src="script.js"></script>
 </body>
 </html>

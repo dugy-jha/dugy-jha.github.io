@@ -164,41 +164,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Hero headline animation
-    const headline = document.getElementById('hero-headline');
-    if (headline && !isMobile()) { // Disable on mobile
-        const originalText = headline.textContent;
-        const chars = 'NuclearFusion543210';
-        let interval = null;
-
-        const animateText = () => {
-            let iteration = 0;
-            clearInterval(interval);
-
-            interval = setInterval(() => {
-                headline.textContent = originalText.split('')
-                    .map((letter, index) => {
-                        if (index < iteration) {
-                            return originalText[index];
-                        }
-                        return chars[Math.floor(Math.random() * chars.length)];
-                    })
-                    .join('');
-
-                if (iteration >= originalText.length) {
-                    clearInterval(interval);
-                }
-
-                iteration += 1 / 3;
-            }, 30);
-        };
-
-        // Re-trigger animation on hover (optional)
-        headline.addEventListener('mouseover', animateText);
-        
-        // Initial animation
-        animateText();
-    }
 
     // Count-up animation
     const countUpElements = document.querySelectorAll('.count-up');

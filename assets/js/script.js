@@ -600,6 +600,34 @@ document.addEventListener('DOMContentLoaded', () => {
         initLiquidEther();
     }
 
+    // Initialize Gooey Nav effect
+    const navContainer = document.getElementById('mobile-menu');
+    if (navContainer && typeof GooeyNav !== 'undefined') {
+        // Determine initial active index based on current page
+        let initialActiveIndex = 0;
+        const currentPath = window.location.pathname;
+        const navLinks = navContainer.querySelectorAll('nav ul li a');
+        
+        navLinks.forEach((link, index) => {
+            const href = link.getAttribute('href');
+            if (currentPath.includes('index.html') || currentPath === '/' || currentPath === '') {
+                initialActiveIndex = -1; // No active item on homepage
+            } else if (href && currentPath.includes(href.replace('pages/', ''))) {
+                initialActiveIndex = index;
+            }
+        });
+
+        const gooeyNav = new GooeyNav(navContainer, {
+            animationTime: 600,
+            particleCount: 15,
+            particleDistances: [90, 10],
+            particleR: 100,
+            timeVariance: 300,
+            colors: [1, 2, 3, 1, 2, 3, 1, 4],
+            initialActiveIndex: initialActiveIndex
+        });
+    }
+
     // FAQ Toggle Functionality
     const faqToggles = document.querySelectorAll('.faq-toggle');
     

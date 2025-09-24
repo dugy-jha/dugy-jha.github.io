@@ -839,6 +839,37 @@ button:focus {
 .flex { display: flex; }
 .grid { display: grid; }
 .hidden { display: none; }
+
+/* FAQ Styles */
+.faq-content {
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    max-height: 0;
+}
+
+.faq-content:not(.hidden) {
+    max-height: 500px;
+}
+
+.faq-toggle {
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    text-align: left;
+    width: 100%;
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+.faq-toggle:hover {
+    color: var(--color-primary);
+}
+
+.faq-toggle i {
+    transition: transform 0.3s ease;
+}
 .block { display: block; }
 .items-center { align-items: center; }
 .justify-between { justify-content: space-between; }

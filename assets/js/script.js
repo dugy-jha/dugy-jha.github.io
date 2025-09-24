@@ -569,6 +569,36 @@ document.addEventListener('DOMContentLoaded', () => {
     // Set active navigation on page load
     setActiveNavLink();
 
+    // FAQ Toggle Functionality
+    const faqToggles = document.querySelectorAll('.faq-toggle');
+    
+    faqToggles.forEach(toggle => {
+        toggle.addEventListener('click', function() {
+            const content = this.nextElementSibling;
+            const icon = this.querySelector('i');
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            
+            // Toggle expanded state
+            this.setAttribute('aria-expanded', !isExpanded);
+            content.setAttribute('aria-hidden', isExpanded);
+            
+            // Toggle content visibility
+            if (!isExpanded) {
+                content.classList.remove('hidden');
+                content.style.maxHeight = content.scrollHeight + 'px';
+                icon.classList.remove('fa-plus');
+                icon.classList.add('fa-minus');
+            } else {
+                content.style.maxHeight = '0';
+                setTimeout(() => {
+                    content.classList.add('hidden');
+                }, 300);
+                icon.classList.remove('fa-minus');
+                icon.classList.add('fa-plus');
+            }
+        });
+    });
+
     // Counter animation for stats
     function animateCounters() {
         const counters = document.querySelectorAll('.count-up');

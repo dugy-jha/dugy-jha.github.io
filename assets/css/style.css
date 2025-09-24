@@ -326,6 +326,10 @@ header {
 .hero {
     position: relative;
     background-color: var(--color-dark);
+    background-image: url('../images/placeholder-hero-bg.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: var(--color-text-light);
     padding: 12rem 0 8rem; /* Increased top padding to account for fixed navbar */
     text-align: center;
@@ -346,7 +350,7 @@ header {
 
 .hero-content {
     position: relative;
-    z-index: 2;
+    z-index: 10;
     text-align: center;
 }
 
@@ -660,9 +664,28 @@ button:focus {
 .electric-border-content {
     background: var(--color-bg);
     border-radius: 6px;
-    padding: 1rem;
+    padding: 1rem 2rem;
     position: relative;
     z-index: 1;
+    display: inline-block;
+    color: var(--color-text);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.cta-button.electric-border {
+    display: inline-block;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.cta-button.electric-border:hover {
+    transform: translateY(-2px);
+}
+
+.learn-more-button.electric-border {
+    display: inline-block;
+    margin-top: 1rem;
 }
 
 @keyframes electricFlow {
@@ -707,9 +730,10 @@ button:focus {
     left: -50%;
     width: 200%;
     height: 200%;
-    background: radial-gradient(circle, rgba(0, 85, 196, 0.1) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(0, 85, 196, 0.3) 0%, transparent 70%);
     animation: liquidFlow 8s ease-in-out infinite;
     z-index: 1;
+    pointer-events: none;
 }
 
 .liquid-ether::after {
@@ -719,9 +743,10 @@ button:focus {
     right: -30%;
     width: 160%;
     height: 160%;
-    background: radial-gradient(circle, rgba(0, 255, 255, 0.05) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(0, 255, 255, 0.2) 0%, transparent 70%);
     animation: liquidFlow 12s ease-in-out infinite reverse;
     z-index: 1;
+    pointer-events: none;
 }
 
 @keyframes liquidFlow {
@@ -779,6 +804,137 @@ button:focus {
     color: var(--color-text-secondary);
     text-transform: uppercase;
     letter-spacing: 1px;
+}
+
+/* Utility Classes (Tailwind-like) */
+.mx-auto { margin-left: auto; margin-right: auto; }
+.px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+.p-6 { padding: 1.5rem; }
+.p-8 { padding: 2rem; }
+.mb-2 { margin-bottom: 0.5rem; }
+.mb-4 { margin-bottom: 1rem; }
+.mb-12 { margin-bottom: 3rem; }
+.mt-2 { margin-top: 0.5rem; }
+.mt-4 { margin-top: 1rem; }
+.ml-4 { margin-left: 1rem; }
+.mr-4 { margin-right: 1rem; }
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
+.text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+.text-2xl { font-size: 1.5rem; line-height: 2rem; }
+.text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+.text-lg { font-size: 1.125rem; line-height: 1.75rem; }
+.text-sm { font-size: 0.875rem; line-height: 1.25rem; }
+.font-bold { font-weight: 700; }
+.font-semibold { font-weight: 600; }
+.max-w-3xl { max-width: 48rem; }
+.max-w-4xl { max-width: 56rem; }
+.w-full { width: 100%; }
+.h-16 { height: 4rem; }
+.w-16 { width: 4rem; }
+.h-64 { height: 16rem; }
+.object-contain { object-fit: contain; }
+.mb-16 { margin-bottom: 4rem; }
+.flex { display: flex; }
+.grid { display: grid; }
+.hidden { display: none; }
+.block { display: block; }
+.items-center { align-items: center; }
+.justify-between { justify-content: space-between; }
+.gap-8 { gap: 2rem; }
+.bg-light { background-color: var(--color-light); }
+.text-primary { color: var(--color-primary); }
+.text-secondary { color: var(--color-text-secondary); }
+.text-purple-600 { color: #9333ea; }
+.gradient-text { 
+    background: linear-gradient(135deg, var(--color-primary), #00ffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+@media (min-width: 768px) {
+    .md\\:text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+    .md\\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .md\\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .md\\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .md\\:text-right { text-align: right; }
+    .md\\:block { display: block; }
+    .md\\:grid { display: grid; }
+}
+
+/* Section Styles */
+.section-modern {
+    padding: 4rem 0;
+}
+
+/* Card Styles */
+.card-modern {
+    background: var(--color-bg);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.card-modern:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Icon Styles */
+.icon-modern {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Timeline Styles */
+.timeline-modern {
+    position: relative;
+    padding: 2rem 0;
+}
+
+.timeline-item-modern {
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.timeline-item-modern::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background: var(--color-primary);
+    opacity: 0.3;
+}
+
+/* Animation Classes */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: reveal 0.8s forwards;
+}
+
+.reveal-stagger > * {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: reveal 0.8s forwards;
+}
+
+.reveal-stagger > *:nth-child(1) { animation-delay: 0.1s; }
+.reveal-stagger > *:nth-child(2) { animation-delay: 0.2s; }
+.reveal-stagger > *:nth-child(3) { animation-delay: 0.3s; }
+.reveal-stagger > *:nth-child(4) { animation-delay: 0.4s; }
+.reveal-stagger > *:nth-child(5) { animation-delay: 0.5s; }
+.reveal-stagger > *:nth-child(6) { animation-delay: 0.6s; }
+
+@keyframes reveal {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* 12. Mission Page */

@@ -569,68 +569,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Set active navigation on page load
     setActiveNavLink();
 
-    // Initialize Liquid Ether effect on homepage
-    const liquidEtherContainer = document.getElementById('liquid-ether-container');
-    if (liquidEtherContainer && typeof LiquidEther !== 'undefined') {
-        // Wait for Three.js to load
-        const initLiquidEther = () => {
-            if (typeof THREE !== 'undefined') {
-                const liquidEther = new LiquidEther(liquidEtherContainer, {
-                    colors: ['#5227FF', '#FF9FFC', '#B19EEF'],
-                    mouseForce: 20,
-                    cursorSize: 100,
-                    resolution: 0.5,
-                    dt: 0.014,
-                    BFECC: true,
-                    isViscous: false,
-                    viscous: 30,
-                    iterationsViscous: 32,
-                    iterationsPoisson: 32,
-                    isBounce: false,
-                    autoDemo: true,
-                    autoSpeed: 0.5,
-                    autoIntensity: 2.2,
-                    takeoverDuration: 0.25,
-                    autoResumeDelay: 1000,
-                    autoRampDuration: 0.6,
-                    className: '',
-                    style: {}
-                });
-            } else {
-                // Retry if Three.js isn't loaded yet
-                setTimeout(initLiquidEther, 100);
-            }
-        };
-        initLiquidEther();
-    }
-
-    // Initialize Gooey Nav effect
-    const navContainer = document.getElementById('mobile-menu');
-    if (navContainer && typeof GooeyNav !== 'undefined') {
-        // Determine initial active index based on current page
-        let initialActiveIndex = 0;
-        const currentPath = window.location.pathname;
-        const navLinks = navContainer.querySelectorAll('nav ul li a');
-        
-        navLinks.forEach((link, index) => {
-            const href = link.getAttribute('href');
-            if (currentPath.includes('index.html') || currentPath === '/' || currentPath === '') {
-                initialActiveIndex = -1; // No active item on homepage
-            } else if (href && currentPath.includes(href.replace('pages/', ''))) {
-                initialActiveIndex = index;
-            }
-        });
-
-        const gooeyNav = new GooeyNav(navContainer, {
-            animationTime: 600,
-            particleCount: 15,
-            particleDistances: [90, 10],
-            particleR: 100,
-            timeVariance: 300,
-            colors: [1, 2, 3, 1, 2, 3, 1, 4],
-            initialActiveIndex: initialActiveIndex
-        });
-    }
 
     // FAQ Toggle Functionality
     const faqToggles = document.querySelectorAll('.faq-toggle');

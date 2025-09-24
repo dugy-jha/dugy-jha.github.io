@@ -4,24 +4,66 @@
 class LiquidEther {
     constructor(container, options = {}) {
         this.container = container;
+        
+        // Default options with proper types and descriptions
         this.options = {
-            mouseForce: 20,
-            cursorSize: 100,
-            isViscous: false,
-            viscous: 30,
-            iterationsViscous: 32,
-            iterationsPoisson: 32,
-            dt: 0.014,
-            BFECC: true,
-            resolution: 0.5,
-            isBounce: false,
+            // Array of hex color stops used to build the velocity-to-color palette
             colors: ['#5227FF', '#FF9FFC', '#B19EEF'],
+            
+            // Strength multiplier applied to mouse/touch movement when injecting velocity
+            mouseForce: 20,
+            
+            // Radius (in pixels at base resolution) of the force brush
+            cursorSize: 100,
+            
+            // Simulation texture scale relative to canvas size (lower = better performance, more blur)
+            resolution: 0.5,
+            
+            // Fixed simulation timestep used inside the advection/diffusion passes
+            dt: 0.014,
+            
+            // Enable BFECC advection (error-compensated) for crisper flow; disable for slight performance gain
+            BFECC: true,
+            
+            // Toggle iterative viscosity solve (smoother, thicker motion when enabled)
+            isViscous: false,
+            
+            // Viscosity coefficient used when isViscous is true
+            viscous: 30,
+            
+            // Number of Gauss-Seidel iterations for viscosity (higher = smoother, slower)
+            iterationsViscous: 32,
+            
+            // Number of pressure Poisson iterations to enforce incompressibility
+            iterationsPoisson: 32,
+            
+            // If true, shows bounce boundaries (velocity clamped at edges)
+            isBounce: false,
+            
+            // Enable idle auto-driving of the pointer when no user interaction
             autoDemo: true,
+            
+            // Speed (normalized units/sec) for auto pointer motion
             autoSpeed: 0.5,
+            
+            // Multiplier applied to velocity delta while in auto mode
             autoIntensity: 2.2,
+            
+            // Seconds to interpolate from auto pointer to real cursor when user moves mouse
             takeoverDuration: 0.25,
-            autoResumeDelay: 3000,
+            
+            // Milliseconds of inactivity before auto mode resumes
+            autoResumeDelay: 1000,
+            
+            // Seconds to ramp auto movement speed from 0 to full after activation
             autoRampDuration: 0.6,
+            
+            // Optional class for the root container
+            className: '',
+            
+            // Inline styles applied to the root container
+            style: {},
+            
             ...options
         };
 
@@ -59,6 +101,16 @@ class LiquidEther {
         // Set container styles
         this.container.style.position = 'relative';
         this.container.style.overflow = 'hidden';
+        
+        // Apply custom className if provided
+        if (this.options.className) {
+            this.container.classList.add(this.options.className);
+        }
+        
+        // Apply custom inline styles if provided
+        if (this.options.style && typeof this.options.style === 'object') {
+            Object.assign(this.container.style, this.options.style);
+        }
 
         // Initialize Three.js
         this.renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });

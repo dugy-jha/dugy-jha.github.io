@@ -579,18 +579,22 @@ document.addEventListener('DOMContentLoaded', () => {
                     colors: ['#5227FF', '#FF9FFC', '#B19EEF'],
                     mouseForce: 20,
                     cursorSize: 100,
+                    resolution: 0.5,
+                    dt: 0.014,
+                    BFECC: true,
                     isViscous: false,
                     viscous: 30,
                     iterationsViscous: 32,
                     iterationsPoisson: 32,
-                    resolution: 0.5,
                     isBounce: false,
                     autoDemo: true,
                     autoSpeed: 0.5,
                     autoIntensity: 2.2,
                     takeoverDuration: 0.25,
-                    autoResumeDelay: 3000,
-                    autoRampDuration: 0.6
+                    autoResumeDelay: 1000,
+                    autoRampDuration: 0.6,
+                    className: '',
+                    style: {}
                 });
             } else {
                 // Retry if Three.js isn't loaded yet

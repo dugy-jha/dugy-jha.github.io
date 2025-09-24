@@ -2,14 +2,33 @@
 class GooeyNav {
     constructor(container, options = {}) {
         this.container = container;
+        
+        // Default options with proper types and descriptions
         this.options = {
+            // Array of navigation items (not used in vanilla implementation - items come from HTML)
+            // items: [],
+            
+            // Duration (ms) of the main animation
             animationTime: 600,
+            
+            // Number of bubble particles per transition
             particleCount: 15,
+            
+            // [Outer, Inner] distances of bubble spread
             particleDistances: [90, 10],
+            
+            // Radius factor influencing random particle rotation
             particleR: 100,
+            
+            // Random time variance (ms) for particle animations
             timeVariance: 300,
+            
+            // Color indices used when creating bubble particles
             colors: [1, 2, 3, 1, 2, 3, 1, 4],
+            
+            // Which item is selected on mount
             initialActiveIndex: 0,
+            
             ...options
         };
 

@@ -1,0 +1,239 @@
+/* Roadmap Page Styles */
+.roadmap-page {
+  min-height: 100vh;
+}
+
+/* Roadmap Intro */
+.roadmap-intro {
+  background-color: var(--color-bg);
+}
+
+.intro-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.intro-content h2 {
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+}
+
+.intro-content p {
+  color: var(--color-text-light);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+/* Roadmap Phases */
+.roadmap-phases {
+  position: relative;
+}
+
+.roadmap-phase {
+  padding: 4rem 0;
+  position: relative;
+}
+
+.roadmap-phase:nth-child(odd) {
+  background-color: var(--color-bg);
+}
+
+.roadmap-phase:nth-child(even) {
+  background-color: var(--color-bg-secondary);
+}
+
+/* Phase Header */
+.phase-header {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.phase-number {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1.25rem;
+  box-shadow: 0 4px 20px rgba(0, 85, 196, 0.3);
+}
+
+.phase-header h2 {
+  flex: 1;
+  margin: 0;
+  font-size: 2rem;
+}
+
+.phase-timeframe {
+  background: rgba(0, 255, 255, 0.1);
+  color: var(--color-accent);
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
+  font-weight: 600;
+  border: 1px solid var(--color-accent);
+}
+
+/* Phase Content */
+.phase-content {
+  display: grid;
+  gap: 3rem;
+}
+
+.phase-description {
+  max-width: 800px;
+}
+
+.phase-description p {
+  color: var(--color-text-light);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+/* Milestones */
+.phase-milestones {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.phase-milestones h3 {
+  color: var(--color-primary);
+  margin-bottom: 1.5rem;
+}
+
+.milestone-list {
+  list-style: none;
+  padding: 0;
+}
+
+.milestone-list li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: var(--transition-default);
+}
+
+.milestone-list li:last-child {
+  border-bottom: none;
+}
+
+.milestone-list li:hover {
+  padding-left: 1rem;
+  color: var(--color-primary);
+}
+
+.milestone-date {
+  background: var(--color-primary);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  min-width: 60px;
+  text-align: center;
+}
+
+/* Phase Outcomes */
+.phase-outcomes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.outcome {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 1.5rem;
+  height: 100%;
+}
+
+.outcome i {
+  font-size: 2rem;
+  color: var(--color-accent);
+  flex-shrink: 0;
+}
+
+.outcome h4 {
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.outcome p {
+  color: var(--color-text-light);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* Timeline Connector */
+.roadmap-phases::before {
+  content: '';
+  position: absolute;
+  left: 50px;
+  top: 100px;
+  bottom: 100px;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    var(--color-primary),
+    var(--color-secondary),
+    var(--color-accent)
+  );
+  z-index: 0;
+}
+
+/* CTA Section */
+.roadmap-cta {
+  background: linear-gradient(135deg, var(--color-bg) 0%, var(--color-bg-secondary) 100%);
+  text-align: center;
+}
+
+.roadmap-cta h2 {
+  margin-bottom: 1rem;
+}
+
+.cta-text {
+  font-size: 1.25rem;
+  color: var(--color-text-light);
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .phase-header {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+  
+  .phase-outcomes {
+    grid-template-columns: 1fr;
+  }
+  
+  .roadmap-phases::before {
+    left: 20px;
+  }
+  
+  .phase-milestones {
+    padding: 1.5rem;
+  }
+  
+  .milestone-list li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}

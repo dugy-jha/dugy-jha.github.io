@@ -1,0 +1,25 @@
+/* 404 Page Styles */
+.not-found-page {
+  min-height: 100vh;
+}
+
+.not-found-content {
+  background-color: var(--color-bg);
+}
+
+.not-found-message {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.not-found-message h2 {
+  margin-bottom: 1.5rem;
+  font-size: 2.5rem;
+}
+
+.not-found-message p {
+  color: var(--color-text-light);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}

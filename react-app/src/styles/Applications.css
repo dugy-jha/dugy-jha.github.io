@@ -1,0 +1,481 @@
+/* Applications Page Styles */
+.applications-page {
+  min-height: 100vh;
+}
+
+/* Applications Intro */
+.applications-intro {
+  background-color: var(--color-bg);
+}
+
+.intro-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.intro-content h2 {
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+}
+
+.intro-content p {
+  color: var(--color-text-light);
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* Section Titles */
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: var(--color-primary);
+}
+
+/* Application Content Layout */
+.application-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.application-content.reverse {
+  direction: rtl;
+}
+
+.application-content.reverse > * {
+  direction: ltr;
+}
+
+.application-text h3 {
+  color: var(--color-primary);
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+.application-text p {
+  color: var(--color-text-light);
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+/* Medical Isotopes Section */
+.medical-isotopes {
+  background-color: var(--color-bg-secondary);
+}
+
+.key-benefits {
+  background: rgba(0, 85, 196, 0.1);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  margin-top: 2rem;
+}
+
+.key-benefits h4 {
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.key-benefits ul {
+  list-style: none;
+  padding: 0;
+}
+
+.key-benefits li {
+  padding: 0.5rem 0 0.5rem 2rem;
+  position: relative;
+  color: var(--color-text-light);
+}
+
+.key-benefits li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--color-success);
+  font-weight: bold;
+}
+
+.application-stats {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.stat-box {
+  text-align: center;
+  padding: 2rem;
+}
+
+.stat-value {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  margin-bottom: 0.5rem;
+}
+
+.stat-description {
+  color: var(--color-text-light);
+  font-size: 0.95rem;
+}
+
+/* Industrial Heat Section */
+.industrial-heat {
+  background-color: var(--color-bg);
+}
+
+.industry-applications {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.industry-card {
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.industry-card i {
+  font-size: 2.5rem;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.industry-card h4 {
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.industry-card p {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Temperature Chart */
+.temperature-chart {
+  background: var(--color-bg-secondary);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+}
+
+.temperature-chart h4 {
+  color: var(--color-primary);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.temp-bars {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.temp-bar {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 1rem;
+  align-items: center;
+}
+
+.temp-bar .industry {
+  font-weight: 600;
+  color: var(--color-text);
+  text-align: right;
+}
+
+.bar-container {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  height: 30px;
+}
+
+.bar {
+  background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 1rem;
+  transition: width 1s ease;
+}
+
+.bar .temp {
+  color: white;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+/* Hydrogen Production Section */
+.hydrogen-production {
+  background-color: var(--color-bg-secondary);
+}
+
+.hydrogen-uses {
+  margin-top: 2rem;
+}
+
+.hydrogen-uses h4 {
+  color: var(--color-primary);
+  margin-bottom: 1.5rem;
+}
+
+.uses-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.use-case {
+  display: flex;
+  gap: 1rem;
+  align-items: start;
+}
+
+.use-case i {
+  font-size: 1.5rem;
+  color: var(--color-accent);
+  flex-shrink: 0;
+}
+
+.use-case h5 {
+  margin-bottom: 0.25rem;
+  color: var(--color-primary);
+}
+
+.use-case p {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Comparison Table */
+.hydrogen-comparison {
+  background: var(--color-bg);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+}
+
+.hydrogen-comparison h4 {
+  color: var(--color-primary);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.comparison-table th {
+  background: var(--color-primary);
+  color: white;
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+.comparison-table td {
+  padding: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.comparison-table tr.highlight {
+  background: rgba(0, 85, 196, 0.1);
+}
+
+.comparison-table tr.highlight td {
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+/* Grid Electricity Section */
+.grid-electricity {
+  background-color: var(--color-bg);
+}
+
+.electricity-advantages {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.advantage {
+  display: flex;
+  gap: 1rem;
+  padding: 1.5rem;
+  align-items: start;
+}
+
+.advantage i {
+  font-size: 2rem;
+  color: var(--color-accent);
+  flex-shrink: 0;
+}
+
+.advantage h4 {
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.advantage p {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Power Comparison */
+.power-comparison {
+  background: var(--color-bg-secondary);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+}
+
+.power-comparison h4 {
+  color: var(--color-primary);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.density-chart {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.density-item {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 1rem;
+  align-items: center;
+}
+
+.density-item .source {
+  font-weight: 600;
+  color: var(--color-text);
+  font-size: 0.9rem;
+}
+
+.energy-bar {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.density-item.fusion .energy-bar {
+  background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+}
+
+.density-item.coal .energy-bar {
+  background: rgba(100, 100, 100, 0.5);
+  max-width: 50px;
+}
+
+.density-item.natural-gas .energy-bar {
+  background: rgba(150, 150, 150, 0.5);
+  max-width: 60px;
+}
+
+.energy-bar .value {
+  color: white;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+/* Market Opportunity Section */
+.market-opportunity {
+  background: linear-gradient(135deg, var(--color-bg) 0%, var(--color-bg-secondary) 100%);
+}
+
+.market-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.market-stat {
+  text-align: center;
+  padding: 2rem;
+}
+
+.market-stat h3 {
+  font-size: 2.5rem;
+  color: var(--color-accent);
+  margin-bottom: 0.5rem;
+}
+
+.market-stat p {
+  color: var(--color-text-light);
+  font-size: 1rem;
+}
+
+/* CTA Section */
+.applications-cta {
+  background-color: var(--color-bg-secondary);
+  text-align: center;
+}
+
+.applications-cta h2 {
+  margin-bottom: 1rem;
+}
+
+.cta-text {
+  font-size: 1.25rem;
+  color: var(--color-text-light);
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .application-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .application-content.reverse {
+    direction: ltr;
+  }
+  
+  .industry-applications {
+    grid-template-columns: 1fr;
+  }
+  
+  .uses-grid,
+  .electricity-advantages {
+    grid-template-columns: 1fr;
+  }
+  
+  .temp-bar {
+    grid-template-columns: 80px 1fr;
+  }
+  
+  .density-item {
+    grid-template-columns: 120px 1fr;
+  }
+  
+  .market-stats {
+    grid-template-columns: 1fr;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+}

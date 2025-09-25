@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <rect width="800" height="600" fill="#f3f4f6"/>
+  <circle cx="400" cy="300" r="150" stroke="#0055c4" stroke-width="3" fill="none"/>
+  <circle cx="400" cy="300" r="120" stroke="#00a6ff" stroke-width="2" fill="none"/>
+  <circle cx="400" cy="300" r="90" stroke="#00ffff" stroke-width="2" fill="none"/>
+  <circle cx="400" cy="300" r="60" fill="#0055c4" opacity="0.2"/>
+  <path d="M250 300 L550 300 M400 150 L400 450" stroke="#0055c4" stroke-width="2"/>
+  <text x="400" y="480" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#666">Fusion Reactor Concept</text>
+  <g transform="translate(400,300)">
+    <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="360 0 0" dur="20s" repeatCount="indefinite"/>
+    <path d="M0,-140 L20,-120 L0,-100 L-20,-120 Z" fill="#00ffff" opacity="0.6"/>
+    <path d="M140,0 L120,20 L100,0 L120,-20 Z" fill="#00ffff" opacity="0.6"/>
+    <path d="M0,140 L-20,120 L0,100 L20,120 Z" fill="#00ffff" opacity="0.6"/>
+    <path d="M-140,0 L-120,-20 L-100,0 L-120,20 Z" fill="#00ffff" opacity="0.6"/>
+  </g>
+</svg>

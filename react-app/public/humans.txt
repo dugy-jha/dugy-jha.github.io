@@ -1,0 +1,15 @@
+/* TEAM */
+    Company: ASPL Fusion (Agnira Sanlayan Private Limited)
+    Site: https://dugy-jha.github.io
+    Email: info@asplfusion.com
+    Location: New Delhi, India
+
+/* THANKS */
+    Name: Our investors, partners, and supporters who believe in clean energy for India
+
+/* SITE */
+    Last update: 2025/09/23
+    Language: English
+    Standards: HTML5, CSS3, JavaScript ES6
+    Components: Font Awesome, Three.js, Formspree
+    Software: GitHub Pages, Decap CMS

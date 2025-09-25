@@ -1,0 +1,140 @@
+:root {
+  --electric-border-width: 2px;
+  --electric-glow-intensity: 1;
+  --electric-animation-speed: 2s;
+  --electric-color: #00ffff;
+}
+
+.electric-border {
+  position: relative;
+  display: inline-block;
+  background: transparent;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.electric-border::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(
+    45deg,
+    transparent 30%,
+    var(--electric-color) 50%,
+    transparent 70%
+  );
+  background-size: 200% 200%;
+  animation: electricFlow var(--electric-animation-speed) linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+  filter: blur(calc(var(--electric-border-width) * var(--electric-glow-intensity)));
+}
+
+.electric-border::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    45deg,
+    var(--electric-color) 0%,
+    transparent 40%,
+    transparent 60%,
+    var(--electric-color) 100%
+  );
+  padding: var(--electric-border-width);
+  mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask-composite: destination-out;
+  animation: electricRotate calc(var(--electric-animation-speed) * 2) linear infinite;
+  opacity: 0.8;
+}
+
+.electric-border:hover::before {
+  opacity: 0.8;
+}
+
+.electric-border:hover::after {
+  opacity: 1;
+}
+
+.electric-border-content {
+  position: relative;
+  z-index: 1;
+  display: block;
+  background: var(--color-bg, #000);
+  padding: 1rem 2rem;
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.electric-border:hover .electric-border-content {
+  transform: translateY(-2px);
+  text-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+}
+
+/* Button specific styles */
+button.electric-border,
+a.electric-border {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+button.electric-border .electric-border-content,
+a.electric-border .electric-border-content {
+  background: var(--color-primary, #0055c4);
+  border-radius: 25px;
+}
+
+button.electric-border:hover .electric-border-content,
+a.electric-border:hover .electric-border-content {
+  background: var(--color-primary-dark, #003d8c);
+}
+
+/* Card specific styles */
+.card-electric {
+  --electric-color: #5227FF;
+  --electric-border-width: 1px;
+  cursor: pointer;
+}
+
+.card-electric .electric-border-content {
+  background: var(--color-bg, #000);
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+.card-electric:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(82, 39, 255, 0.3);
+}
+
+@keyframes electricFlow {
+  0% {
+    background-position: -100% -100%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+@keyframes electricRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

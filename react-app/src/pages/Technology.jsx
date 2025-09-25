@@ -2,7 +2,8 @@ import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import ElectricBorder from '../components/ElectricBorder';
 import CounterAnimation from '../components/CounterAnimation';
-import fusionReactorImg from '../assets/images/placeholder-fusion-reactor.png';
+// Using absolute path from public folder for better Vercel compatibility
+const fusionReactorImg = '/placeholder-fusion-reactor.png';
 import '../styles/Technology.css';
 
 function Technology() {

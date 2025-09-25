@@ -3,8 +3,9 @@ import { Link, useNavigate } from 'react-router-dom';
 import LiquidEther from '../components/LiquidEther';
 import ElectricBorder from '../components/ElectricBorder';
 import CounterAnimation from '../components/CounterAnimation';
-import fusionReactorImg from '../assets/images/placeholder-fusion-reactor.png';
-import isotopeImg from '../assets/images/placeholder-isotope.png';
+// Using absolute paths from public folder for better Vercel compatibility
+const fusionReactorImg = '/placeholder-fusion-reactor.png';
+const isotopeImg = '/placeholder-isotope.png';
 import medicalIcon from '../assets/images/icon-medical.png';
 import energyIcon from '../assets/images/icon-energy.png';
 import gdtIcon from '../assets/images/icon-gdt.png';

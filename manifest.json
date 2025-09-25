@@ -1,0 +1,26 @@
+{
+  "name": "ASPL Fusion - Powering India's Future",
+  "short_name": "ASPL Fusion",
+  "description": "ASPL Fusion is commercializing fusion energy through a disciplined, phased strategy to solve critical national challenges in healthcare, industry, and energy security.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0055c4",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "Logo-t-removebg-preview.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "Logo-t-removebg-preview.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["business", "education", "technology"],
+  "lang": "en-US",
+  "dir": "ltr"
+}

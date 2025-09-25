@@ -30,6 +30,16 @@
   --shadow-hover: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
+/* Dark mode variables */
+.dark {
+  --color-bg: #000000;
+  --color-bg-secondary: #0a0a0a;
+  --color-text: #ffffff;
+  --color-text-light: #b0b0b0;
+  --shadow-default: 0 4px 6px rgba(0, 0, 0, 0.3);
+  --shadow-hover: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
 /* Reset and Base Styles */
 * {
   margin: 0;

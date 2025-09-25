@@ -74,7 +74,7 @@ function Contact() {
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const newErrors = validateForm();
     
@@ -84,7 +84,36 @@ function Contact() {
     }
 
     setIsSubmitting(true);
-    // Form will be submitted to Formspree
+    
+    try {
+      const response = await fetch('https://formspree.io/f/mwkgrgqg', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          _subject: 'New Contact Form Submission'
+        })
+      });
+
+      if (response.ok) {
+        setShowSuccess(true);
+        setFormData({ name: '', email: '', subject: '', message: '' });
+        // Clean up URL
+        window.history.replaceState({}, document.title, window.location.pathname);
+      } else {
+        throw new Error('Form submission failed');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('There was an error submitting your message. Please try again or contact us directly at info@asplfusion.com');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -116,12 +145,8 @@ function Contact() {
               
               <form 
                 className="contact-form"
-                action="https://formspree.io/f/mwkgrgqg"
-                method="POST"
                 onSubmit={handleSubmit}
               >
-                <input type="hidden" name="_subject" value="New Contact Form Submission" />
-                <input type="hidden" name="_next" value={`${window.location.origin}/contact?success=true`} />
                 
                 <div className="form-group">
                   <label htmlFor="name">Name *</label>

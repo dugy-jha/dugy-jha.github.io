@@ -369,9 +369,10 @@ function Home() {
           <p className="contact-intro text-center mb-8">
             Join us in building India's energy future. Whether you're an investor, partner, or simply curious about our technology, we'd love to hear from you.
           </p>
-          <form id="homepage-contact-form" className="contact-form" action="https://formspree.io/f/mwkgrgqg" method="POST">
-            <input type="hidden" name="_subject" value="New inquiry from ASPL Fusion website" />
-            <input type="hidden" name="_next" value="https://dugy-jha.github.io/?success=true" />
+          <form id="homepage-contact-form" className="contact-form" onSubmit={(e) => {
+            e.preventDefault();
+            alert('Thank you for your interest! Please use the Contact page to send us a message.');
+          }}>
             <div className="form-group">
               <label htmlFor="name">Name</label>
               <input type="text" id="name" name="name" required />

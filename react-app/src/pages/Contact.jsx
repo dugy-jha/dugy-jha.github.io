@@ -196,6 +196,7 @@ function Contact() {
                 <FontAwesomeIcon icon={faPhone} className="info-icon" />
                 <h3>Phone</h3>
                 <a href="tel:+919876543210">+91 98765 43210</a>
+                <small style={{color: '#ff6b6b', display: 'block', marginTop: '5px'}}>⚠️ Replace with actual business phone number</small>
               </ElectricBorder>
 
               <ElectricBorder className="info-card" as="div">
@@ -206,6 +207,7 @@ function Contact() {
 
               <div className="social-section">
                 <h3>Follow Us</h3>
+                <small style={{color: '#ff6b6b', display: 'block', marginBottom: '10px'}}>⚠️ Social media accounts need to be created</small>
                 <div className="social-links">
                   <a href="https://www.linkedin.com/company/aspl-fusion" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                     <FontAwesomeIcon icon={faLinkedin} />

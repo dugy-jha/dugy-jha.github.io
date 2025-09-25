@@ -3,8 +3,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import LiquidEther from '../components/LiquidEther';
 import ElectricBorder from '../components/ElectricBorder';
 import CounterAnimation from '../components/CounterAnimation';
-import fusionReactorImg from '../assets/images/placeholder-fusion-reactor.svg';
-import isotopeImg from '../assets/images/placeholder-isotope.svg';
+import fusionReactorImg from '../assets/images/placeholder-fusion-reactor.png';
+import isotopeImg from '../assets/images/placeholder-isotope.png';
 import medicalIcon from '../assets/images/icon-medical.png';
 import energyIcon from '../assets/images/icon-energy.png';
 import gdtIcon from '../assets/images/icon-gdt.png';
@@ -344,7 +344,7 @@ function Home() {
           <p className="contact-intro text-center mb-8">
             Join us in building India's energy future. Whether you're an investor, partner, or simply curious about our technology, we'd love to hear from you.
           </p>
-          <form id="homepage-contact-form" className="contact-form" action="https://formspree.io/f/xldpdbrg" method="POST">
+          <form id="homepage-contact-form" className="contact-form" action="https://formspree.io/f/mwkgrgqg" method="POST">
             <input type="hidden" name="_subject" value="New inquiry from ASPL Fusion website" />
             <input type="hidden" name="_next" value="https://dugy-jha.github.io/?success=true" />
             <div className="form-group">

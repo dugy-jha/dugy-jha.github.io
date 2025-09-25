@@ -51,8 +51,32 @@ function Home() {
 
   const handleSearch = (e) => {
     e.preventDefault();
-    // Implement search functionality
-    console.log('Searching for:', searchQuery);
+    if (!searchQuery.trim()) return;
+    
+    const query = searchQuery.toLowerCase().trim();
+    
+    // Simple keyword-based navigation
+    if (query.includes('fusion') || query.includes('reactor') || query.includes('technology')) {
+      navigate('/technology');
+    } else if (query.includes('mission') || query.includes('strategy') || query.includes('approach')) {
+      navigate('/mission');
+    } else if (query.includes('roadmap') || query.includes('timeline') || query.includes('phase')) {
+      navigate('/roadmap');
+    } else if (query.includes('application') || query.includes('isotope') || query.includes('medical')) {
+      navigate('/applications');
+    } else if (query.includes('team') || query.includes('career') || query.includes('job')) {
+      navigate('/team');
+    } else if (query.includes('news') || query.includes('update') || query.includes('announcement')) {
+      navigate('/news');
+    } else if (query.includes('contact') || query.includes('email') || query.includes('phone')) {
+      navigate('/contact');
+    } else if (query.includes('faq') || query.includes('question') || query.includes('help')) {
+      navigate('/faq');
+    } else {
+      // Default: show a message or navigate to a general page
+      alert(`Searching for "${searchQuery}"... Redirecting to our technology page for more information.`);
+      navigate('/technology');
+    }
   };
 
   const handleNewsletterSubmit = (e) => {
@@ -92,7 +116,7 @@ function Home() {
             <div className="search-input-group">
               <input
                 type="text"
-                placeholder="Search our technology, applications, or news..."
+                placeholder="Try: 'fusion technology', 'medical isotopes', 'team', 'contact'..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="search-input"

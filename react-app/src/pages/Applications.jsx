@@ -54,14 +54,14 @@ function Applications() {
               
               <ElectricBorder className="stat-box" as="div">
                 <div className="stat-value">
-                  <CounterAnimation end={100} suffix="%" duration={2000} />
+                  <CounterAnimation end={85} suffix="%" duration={2000} />
                 </div>
                 <div className="stat-description">Import dependence for medical isotopes in India</div>
               </ElectricBorder>
               
               <ElectricBorder className="stat-box" as="div">
                 <div className="stat-value">
-                  <CounterAnimation end={25} suffix="%" duration={2000} />
+                  <CounterAnimation end={12} suffix="%" duration={2000} />
                 </div>
                 <div className="stat-description">Annual growth in nuclear medicine</div>
               </ElectricBorder>
@@ -192,7 +192,7 @@ function Applications() {
                   <tr className="highlight">
                     <td>Fusion Thermochemical</td>
                     <td>75-80%</td>
-                    <td>$1.50-2.00</td>
+                    <td>$2.00-3.00</td>
                     <td>Zero</td>
                   </tr>
                   <tr>
@@ -282,12 +282,12 @@ function Applications() {
           <h2 className="text-center mb-12">Market Opportunity</h2>
           <div className="market-stats">
             <ElectricBorder className="market-stat" as="div">
-              <h3>$2.5 Trillion</h3>
+              <h3>>$3 Trillion</h3>
               <p>Global energy market size</p>
             </ElectricBorder>
             
             <ElectricBorder className="market-stat" as="div">
-              <h3>$150 Billion</h3>
+              <h3>$25-45 Billion</h3>
               <p>Annual industrial heat market</p>
             </ElectricBorder>
             

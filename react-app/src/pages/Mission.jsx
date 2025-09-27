@@ -44,7 +44,7 @@ function Mission() {
             
             <div className="mission-stats">
               <div className="stat-box">
-                <h4><span className="count-up" data-value="85">85</span>%</h4>
+                <h4><span className="count-up" data-value="88">88</span>%</h4>
                 <p>Of India's oil is imported, creating economic and strategic vulnerabilities</p>
               </div>
               <div className="stat-box">
@@ -52,7 +52,7 @@ function Mission() {
                 <p>Projected increase in India's energy demand by 2050</p>
               </div>
               <div className="stat-box">
-                <h4>₹<span className="count-up" data-value="12">12</span>+ Trillion</h4>
+                <h4>₹<span className="count-up" data-value="13">13</span>+ Trillion</h4>
                 <p>Annual cost of energy imports to India's economy</p>
               </div>
             </div>

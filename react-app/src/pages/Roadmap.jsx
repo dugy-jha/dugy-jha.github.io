@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 import ElectricBorder from '../components/ElectricBorder';
 import '../styles/Roadmap.css';
 
@@ -214,7 +214,7 @@ function Roadmap() {
         <div className="container text-center">
           <h2>Join Our Journey</h2>
           <p className="cta-text">Partner with us as we build the future of clean energy, one milestone at a time</p>
-          <ElectricBorder as="a" href="/contact" className="cta-button">
+          <ElectricBorder as={Link} to="/contact" className="cta-button">
             Explore Partnership Opportunities
           </ElectricBorder>
         </div>

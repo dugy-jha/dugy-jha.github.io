@@ -72,6 +72,30 @@
   color: #b8860b;
 }
 
+/* reCAPTCHA loading indicator */
+.recaptcha-loading {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 1rem 0;
+  color: var(--color-text-light);
+  font-size: 0.9rem;
+}
+
+.recaptcha-loading i {
+  font-size: 1rem;
+  color: var(--color-primary);
+}
+
+/* Light mode reCAPTCHA loading */
+.light .recaptcha-loading {
+  color: #6b7280;
+}
+
+.light .recaptcha-loading i {
+  color: var(--color-primary);
+}
+
 .contact-form {
   display: grid;
   gap: 1.5rem;

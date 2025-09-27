@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faEnvelope, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faTwitter, faFacebook, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import ElectricBorder from '../components/ElectricBorder';
-import Captcha from '../components/Captcha';
+import { useRecaptcha } from '../hooks/useRecaptcha';
 import { canSubmitForm, recordFormSubmission, getRemainingCooldown, formatRemainingTime, checkRateLimit, recordSubmission } from '../utils/formUtils';
 import '../styles/Contact.css';
 
@@ -18,9 +18,11 @@ function Contact() {
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
-  const [captchaVerified, setCaptchaVerified] = useState(false);
   const [formBlocked, setFormBlocked] = useState(false);
   const [remainingTime, setRemainingTime] = useState(0);
+  
+  // reCAPTCHA hook
+  const { isLoaded: recaptchaLoaded, isLoading: recaptchaLoading, executeRecaptchaAction } = useRecaptcha('contact_form');
 
   useEffect(() => {
     // Check for success query parameter (from form redirect)
@@ -106,12 +108,6 @@ function Contact() {
       return;
     }
 
-    // Check captcha
-    if (!captchaVerified) {
-      alert('Please complete the security verification');
-      return;
-    }
-
     // Check form cooldown
     if (!canSubmitForm('contact')) {
       const remaining = getRemainingCooldown('contact');
@@ -129,6 +125,9 @@ function Contact() {
     setIsSubmitting(true);
     
     try {
+      // Execute reCAPTCHA
+      const recaptchaToken = await executeRecaptchaAction();
+      
       const response = await fetch('https://formspree.io/f/xldpdbrg', {
         method: 'POST',
         headers: {
@@ -139,7 +138,8 @@ function Contact() {
           email: formData.email,
           subject: formData.subject,
           message: formData.message,
-          _subject: 'New Contact Form Submission'
+          _subject: 'New Contact Form Submission',
+          'g-recaptcha-response': recaptchaToken
         })
       });
 
@@ -150,7 +150,6 @@ function Contact() {
         
         setShowSuccess(true);
         setFormData({ name: '', email: '', subject: '', message: '' });
-        setCaptchaVerified(false);
         
         // Hide form after success
         setTimeout(() => {
@@ -258,11 +257,6 @@ function Contact() {
                   {errors.message && <span className="error-message">{errors.message}</span>}
                 </div>
 
-                <Captcha 
-                  onVerify={(verified) => setCaptchaVerified(verified)}
-                  onError={(error) => console.log('Captcha error:', error)}
-                />
-
                 {formBlocked && (
                   <div className="form-blocked-message">
                     <i className="fas fa-clock"></i>
@@ -275,13 +269,20 @@ function Contact() {
                   </div>
                 )}
 
+                {!recaptchaLoaded && (
+                  <div className="recaptcha-loading">
+                    <i className="fas fa-spinner fa-spin"></i>
+                    <span>Loading security verification...</span>
+                  </div>
+                )}
+
                 <ElectricBorder 
                   as="button" 
                   type="submit" 
                   className="submit-button" 
-                  disabled={isSubmitting || !captchaVerified || formBlocked}
+                  disabled={isSubmitting || !recaptchaLoaded || formBlocked || recaptchaLoading}
                 >
-                  {isSubmitting ? 'Sending...' : 'Send Message'}
+                  {isSubmitting ? 'Sending...' : recaptchaLoading ? 'Verifying...' : 'Send Message'}
                 </ElectricBorder>
               </form>
             </div>

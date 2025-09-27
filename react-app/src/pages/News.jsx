@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import ElectricBorder from '../components/ElectricBorder';
-import Captcha from '../components/Captcha';
+import { useRecaptcha } from '../hooks/useRecaptcha';
 import { canSubmitForm, recordFormSubmission, getRemainingCooldown, formatRemainingTime, checkRateLimit, recordSubmission } from '../utils/formUtils';
 import '../styles/News.css';
 
@@ -10,9 +10,11 @@ function News() {
   const [selectedArticle, setSelectedArticle] = useState(null);
   const [newsletterEmail, setNewsletterEmail] = useState('');
   const [newsletterSubmitted, setNewsletterSubmitted] = useState(false);
-  const [newsletterCaptchaVerified, setNewsletterCaptchaVerified] = useState(false);
   const [newsletterBlocked, setNewsletterBlocked] = useState(false);
   const [newsletterRemainingTime, setNewsletterRemainingTime] = useState(0);
+  
+  // reCAPTCHA hook for newsletter
+  const { isLoaded: newsletterRecaptchaLoaded, isLoading: newsletterRecaptchaLoading, executeRecaptchaAction: executeNewsletterRecaptcha } = useRecaptcha('newsletter_subscribe');
 
   useEffect(() => {
     // Simulate loading news data
@@ -94,19 +96,13 @@ function News() {
     checkNewsletterCooldown();
   }, []);
 
-  const handleNewsletterSubmit = (e) => {
+  const handleNewsletterSubmit = async (e) => {
     e.preventDefault();
     
     // Check rate limiting
     const rateLimitCheck = checkRateLimit();
     if (!rateLimitCheck.allowed) {
       alert(rateLimitCheck.message);
-      return;
-    }
-
-    // Check captcha
-    if (!newsletterCaptchaVerified) {
-      alert('Please complete the security verification');
       return;
     }
 
@@ -118,20 +114,27 @@ function News() {
     }
 
     if (newsletterEmail) {
-      // Record successful submission
-      recordFormSubmission('newsletter');
-      recordSubmission();
-      
-      setNewsletterSubmitted(true);
-      setNewsletterEmail('');
-      setNewsletterCaptchaVerified(false);
-      
-      // Hide form after success
-      setTimeout(() => {
-        setNewsletterBlocked(true);
-      }, 2000);
-      
-      setTimeout(() => setNewsletterSubmitted(false), 3000);
+      try {
+        // Execute reCAPTCHA
+        const recaptchaToken = await executeNewsletterRecaptcha();
+        
+        // Record successful submission
+        recordFormSubmission('newsletter');
+        recordSubmission();
+        
+        setNewsletterSubmitted(true);
+        setNewsletterEmail('');
+        
+        // Hide form after success
+        setTimeout(() => {
+          setNewsletterBlocked(true);
+        }, 2000);
+        
+        setTimeout(() => setNewsletterSubmitted(false), 3000);
+      } catch (error) {
+        console.error('Newsletter submission error:', error);
+        alert('There was an error subscribing to our newsletter. Please try again.');
+      }
     }
   };
 
@@ -223,16 +226,18 @@ function News() {
               as="button" 
               type="submit" 
               className="newsletter-button"
-              disabled={!newsletterCaptchaVerified || newsletterBlocked}
+              disabled={!newsletterRecaptchaLoaded || newsletterBlocked || newsletterRecaptchaLoading}
             >
-              Subscribe
+              {newsletterRecaptchaLoading ? 'Verifying...' : 'Subscribe'}
             </ElectricBorder>
           </form>
           
-          <Captcha 
-            onVerify={(verified) => setNewsletterCaptchaVerified(verified)}
-            onError={(error) => console.log('Newsletter captcha error:', error)}
-          />
+          {!newsletterRecaptchaLoaded && (
+            <div className="recaptcha-loading">
+              <i className="fas fa-spinner fa-spin"></i>
+              <span>Loading security verification...</span>
+            </div>
+          )}
 
           {newsletterBlocked && (
             <div className="form-blocked-message">

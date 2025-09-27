@@ -1,7 +1,7 @@
 // Google reCAPTCHA v3 utility functions
 
-// Note: Replace with your actual reCAPTCHA site key
-const RECAPTCHA_SITE_KEY = '6LfXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+// reCAPTCHA site key
+const RECAPTCHA_SITE_KEY = '6LcTxNYrAAAAAO_ZV-YjEK9fZAlf7N04CWAnWZqO';
 
 // Initialize reCAPTCHA
 export const initializeRecaptcha = () => {

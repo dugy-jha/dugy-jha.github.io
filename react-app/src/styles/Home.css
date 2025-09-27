@@ -26,6 +26,14 @@
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
+/* Light mode search input group styling */
+.light .search-input-group {
+  background: #ffffff;
+  border: 1px solid #d1d5db;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  backdrop-filter: none;
+}
+
 .search-input {
   flex: 1;
   background: none;
@@ -38,6 +46,24 @@
 
 .search-input::placeholder {
   color: rgba(255, 255, 255, 0.7);
+}
+
+/* Light mode search input styling */
+.light .search-input {
+  color: #333333;
+}
+
+.light .search-input::placeholder {
+  color: #9ca3af;
+}
+
+.search-input:focus {
+  outline: none;
+}
+
+.light .search-input-group:focus-within {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(0, 85, 196, 0.3);
 }
 
 .search-button {

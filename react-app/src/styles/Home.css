@@ -235,6 +235,27 @@
 .stat-card {
   text-align: center;
   padding: 2rem;
+  background: var(--color-bg-secondary);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-default);
+  transition: var(--transition-default);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* Light mode stat card styling */
+.light .stat-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.light .stat-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .stat-number {
@@ -263,10 +284,24 @@
   padding: 2rem;
   transition: var(--transition-default);
   cursor: pointer;
+  box-shadow: var(--shadow-default);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .case-study-card:hover {
   transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* Light mode case study card styling */
+.light .case-study-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.light .case-study-card:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .case-study-card h3 {
@@ -296,6 +331,27 @@
   text-align: center;
   padding: 2rem;
   cursor: pointer;
+  background: var(--color-bg-secondary);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-default);
+  transition: var(--transition-default);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mission-phase-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* Light mode mission phase card styling */
+.light .mission-phase-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.light .mission-phase-card:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .phase-icon {
@@ -316,6 +372,27 @@
   text-align: center;
   padding: 1.5rem;
   cursor: pointer;
+  background: var(--color-bg-secondary);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-default);
+  transition: var(--transition-default);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tech-feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* Light mode tech feature card styling */
+.light .tech-feature-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.light .tech-feature-card:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .tech-feature-card img {
@@ -334,8 +411,106 @@
 }
 
 .showcase-item {
+  background: var(--color-bg-secondary);
+  border-radius: var(--border-radius);
+  padding: 2rem;
   text-align: center;
+  box-shadow: var(--shadow-default);
+  transition: var(--transition-default);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
+
+.showcase-item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.showcase-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+  margin-bottom: 1rem;
+}
+
+.showcase-item h3 {
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.showcase-item p {
+  color: var(--color-text-light);
+  line-height: 1.6;
+}
+
+/* Light mode showcase item styling */
+.light .showcase-item {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.light .showcase-item:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* FAQ Section Styling */
+.faq-item {
+  background: var(--color-bg-secondary);
+  border-radius: var(--border-radius);
+  margin-bottom: 1rem;
+  overflow: hidden;
+  transition: var(--transition-default);
+  box-shadow: var(--shadow-default);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.faq-toggle {
+  width: 100%;
+  padding: 1.5rem;
+  background: transparent;
+  border: none;
+  color: var(--color-text);
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  transition: var(--transition-default);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-toggle:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.faq-content {
+  padding: 0 1.5rem 1.5rem;
+  color: var(--color-text-light);
+  line-height: 1.6;
+}
+
+.faq-icon {
+  transition: transform 0.3s ease;
+}
+
+.faq-item.expanded .faq-icon {
+  transform: rotate(180deg);
+}
+
+/* Light mode FAQ styling */
+.light .faq-item {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.light .faq-toggle:hover {
+  background: #f3f4f6;
+}
+
 
 .showcase-item img {
   width: 100%;

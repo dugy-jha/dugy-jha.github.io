@@ -22,6 +22,95 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+  background: var(--color-bg-secondary);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-default);
+  transition: var(--transition-default);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* Light mode team card styling */
+.light .team-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.light .team-card:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Advisor Cards */
+.advisor-card {
+  text-align: center;
+  padding: 2rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-bg-secondary);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-default);
+  transition: var(--transition-default);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.advisor-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.advisor-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin: 0 auto 1.5rem;
+  object-fit: cover;
+  border: 3px solid var(--color-secondary);
+}
+
+.advisor-info h3 {
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.advisor-info .position {
+  color: var(--color-secondary);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.advisor-info .bio {
+  color: var(--color-text-light);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.linkedin-link {
+  color: var(--color-accent);
+  font-size: 1.5rem;
+  transition: var(--transition-default);
+}
+
+.linkedin-link:hover {
+  color: var(--color-primary);
+  transform: scale(1.1);
+}
+
+/* Light mode advisor card styling */
+.light .advisor-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.light .advisor-card:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .team-photo {

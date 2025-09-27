@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 import CardNav from './CardNav';
 import DarkModeToggle from './DarkModeToggle';
+import HistoryTest from './HistoryTest';
 import logoImg from '../assets/images/Logo-t-removebg-preview.png';
 import '../styles/Layout.css';
 
@@ -114,6 +115,7 @@ function Layout({ children }) {
 
               <DarkModeToggle />
               <CardNav />
+              <HistoryTest />
             </>
           );
         }

@@ -56,11 +56,14 @@ function Layout({ children }) {
                 <a href="https://twitter.com/asplfusion" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
                   <i className="fab fa-twitter"></i>
                 </a>
-                <a href="https://www.facebook.com/asplfusion" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <a href="https://www.facebook.com/share/1N7RyhjZhC/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                   <i className="fab fa-facebook"></i>
                 </a>
                 <a href="https://www.instagram.com/asplfusion" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                   <i className="fab fa-instagram"></i>
+                </a>
+                <a href="https://youtube.com/@asplfusion?si=QSXdbbvycjZsuaet" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                  <i className="fab fa-youtube"></i>
                 </a>
               </div>
             </div>

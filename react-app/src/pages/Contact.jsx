@@ -232,7 +232,6 @@ function Contact() {
 
               <div className="social-section">
                 <h3>Follow Us</h3>
-                <small style={{color: '#ff6b6b', display: 'block', marginBottom: '10px'}}>⚠️ Social media accounts need to be created</small>
                 <div className="social-links">
                   <a href="https://www.linkedin.com/company/aspl-fusion" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                     <FontAwesomeIcon icon={faLinkedin} />
@@ -240,13 +239,13 @@ function Contact() {
                   <a href="https://twitter.com/asplfusion" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
                     <FontAwesomeIcon icon={faTwitter} />
                   </a>
-                  <a href="https://www.facebook.com/asplfusion" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                  <a href="https://www.facebook.com/share/1N7RyhjZhC/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                     <FontAwesomeIcon icon={faFacebook} />
                   </a>
                   <a href="https://www.instagram.com/asplfusion" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                     <FontAwesomeIcon icon={faInstagram} />
                   </a>
-                  <a href="https://www.youtube.com/asplfusion" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                  <a href="https://youtube.com/@asplfusion?si=QSXdbbvycjZsuaet" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
                     <FontAwesomeIcon icon={faYoutube} />
                   </a>
                 </div>

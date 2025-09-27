@@ -87,7 +87,7 @@ function Layout({ children }) {
             
             <div className="footer-section">
               <h3>Contact</h3>
-              <p>E-309, Road No.16 V.K.I. Area,<br />Jaipur Rajasthan 302013</p>
+              <p>102 Mercantile House, 15 KG Marg,<br />New Delhi 110001 INDIA</p>
               <p>Email: <a href="mailto:info@asplfusion.com">info@asplfusion.com</a></p>
               <p>Phone: <a href="tel:+9101141519899">+91 (011)-4151-9899</a></p>
             </div>

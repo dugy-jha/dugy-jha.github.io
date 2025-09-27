@@ -227,7 +227,7 @@ function Contact() {
               <ElectricBorder className="info-card" as="div">
                 <FontAwesomeIcon icon={faMapMarkerAlt} className="info-icon" />
                 <h3>Location</h3>
-                <p>New Delhi, India</p>
+                <p>102 Mercantile House, 15 KG Marg,<br />New Delhi 110001 INDIA</p>
               </ElectricBorder>
 
               <div className="social-section">

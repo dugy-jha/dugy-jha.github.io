@@ -265,6 +265,50 @@
   white-space: nowrap;
 }
 
+/* Form blocked message for newsletter */
+.newsletter-form + .form-blocked-message {
+  background: rgba(255, 193, 7, 0.1);
+  border: 1px solid #ffc107;
+  border-radius: var(--border-radius);
+  padding: 1rem;
+  margin: 1rem auto;
+  max-width: 500px;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #ffc107;
+  font-weight: 500;
+}
+
+.newsletter-form + .form-blocked-message i {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.newsletter-form + .form-blocked-message p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* Light mode form blocked message */
+.light .newsletter-form + .form-blocked-message {
+  background: rgba(255, 193, 7, 0.1);
+  border-color: #ffc107;
+  color: #b8860b;
+}
+
+/* Newsletter success message */
+.newsletter-success {
+  margin-top: 1.5rem;
+  text-align: center;
+  color: var(--color-success);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
   .news-grid {

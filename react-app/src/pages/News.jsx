@@ -1,11 +1,18 @@
 import { useState, useEffect } from 'react';
 import ElectricBorder from '../components/ElectricBorder';
+import Captcha from '../components/Captcha';
+import { canSubmitForm, recordFormSubmission, getRemainingCooldown, formatRemainingTime, checkRateLimit, recordSubmission } from '../utils/formUtils';
 import '../styles/News.css';
 
 function News() {
   const [news, setNews] = useState([]);
   const [loading, setLoading] = useState(true);
   const [selectedArticle, setSelectedArticle] = useState(null);
+  const [newsletterEmail, setNewsletterEmail] = useState('');
+  const [newsletterSubmitted, setNewsletterSubmitted] = useState(false);
+  const [newsletterCaptchaVerified, setNewsletterCaptchaVerified] = useState(false);
+  const [newsletterBlocked, setNewsletterBlocked] = useState(false);
+  const [newsletterRemainingTime, setNewsletterRemainingTime] = useState(0);
 
   useEffect(() => {
     // Simulate loading news data
@@ -66,6 +73,66 @@ function News() {
   const formatDate = (dateString) => {
     const options = { year: 'numeric', month: 'long', day: 'numeric' };
     return new Date(dateString).toLocaleDateString(undefined, options);
+  };
+
+  useEffect(() => {
+    // Check newsletter form cooldown
+    const checkNewsletterCooldown = () => {
+      if (!canSubmitForm('newsletter')) {
+        setNewsletterBlocked(true);
+        const remaining = getRemainingCooldown('newsletter');
+        setNewsletterRemainingTime(remaining);
+        
+        if (remaining > 0) {
+          setTimeout(checkNewsletterCooldown, 1000);
+        } else {
+          setNewsletterBlocked(false);
+        }
+      }
+    };
+
+    checkNewsletterCooldown();
+  }, []);
+
+  const handleNewsletterSubmit = (e) => {
+    e.preventDefault();
+    
+    // Check rate limiting
+    const rateLimitCheck = checkRateLimit();
+    if (!rateLimitCheck.allowed) {
+      alert(rateLimitCheck.message);
+      return;
+    }
+
+    // Check captcha
+    if (!newsletterCaptchaVerified) {
+      alert('Please complete the security verification');
+      return;
+    }
+
+    // Check form cooldown
+    if (!canSubmitForm('newsletter')) {
+      const remaining = getRemainingCooldown('newsletter');
+      alert(`Please wait ${formatRemainingTime(remaining)} before subscribing again.`);
+      return;
+    }
+
+    if (newsletterEmail) {
+      // Record successful submission
+      recordFormSubmission('newsletter');
+      recordSubmission();
+      
+      setNewsletterSubmitted(true);
+      setNewsletterEmail('');
+      setNewsletterCaptchaVerified(false);
+      
+      // Hide form after success
+      setTimeout(() => {
+        setNewsletterBlocked(true);
+      }, 2000);
+      
+      setTimeout(() => setNewsletterSubmitted(false), 3000);
+    }
   };
 
   return (
@@ -143,17 +210,48 @@ function News() {
         <div className="container text-center">
           <h2>Stay Updated</h2>
           <p>Subscribe to our newsletter for the latest fusion energy news and updates.</p>
-          <form className="newsletter-form">
+          <form className="newsletter-form" onSubmit={handleNewsletterSubmit}>
             <input 
               type="email" 
               placeholder="Enter your email" 
               className="newsletter-input"
+              value={newsletterEmail}
+              onChange={(e) => setNewsletterEmail(e.target.value)}
               required
             />
-            <ElectricBorder as="button" type="submit" className="newsletter-button">
+            <ElectricBorder 
+              as="button" 
+              type="submit" 
+              className="newsletter-button"
+              disabled={!newsletterCaptchaVerified || newsletterBlocked}
+            >
               Subscribe
             </ElectricBorder>
           </form>
+          
+          <Captcha 
+            onVerify={(verified) => setNewsletterCaptchaVerified(verified)}
+            onError={(error) => console.log('Newsletter captcha error:', error)}
+          />
+
+          {newsletterBlocked && (
+            <div className="form-blocked-message">
+              <i className="fas fa-clock"></i>
+              <p>
+                {newsletterRemainingTime > 0 
+                  ? `Please wait ${formatRemainingTime(newsletterRemainingTime)} before subscribing again.`
+                  : 'Newsletter form is temporarily blocked. Please refresh the page to try again.'
+                }
+              </p>
+            </div>
+          )}
+
+          {newsletterSubmitted && (
+            <div className="newsletter-success">
+              <i className="fas fa-check-circle"></i>
+              <span>Thank you for subscribing!</span>
+            </div>
+          )}
         </div>
       </section>
     </div>

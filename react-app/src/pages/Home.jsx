@@ -3,6 +3,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import LiquidEther from '../components/LiquidEther';
 import ElectricBorder from '../components/ElectricBorder';
 import CounterAnimation from '../components/CounterAnimation';
+import Captcha from '../components/Captcha';
+import { canSubmitForm, recordFormSubmission, getRemainingCooldown, formatRemainingTime, checkRateLimit, recordSubmission } from '../utils/formUtils';
 // Using absolute paths from public folder for better Vercel compatibility
 const fusionReactorImg = '/placeholder-fusion-reactor.png';
 const isotopeImg = '/placeholder-isotope.png';
@@ -17,6 +19,9 @@ function Home() {
   const [searchQuery, setSearchQuery] = useState('');
   const [newsletterEmail, setNewsletterEmail] = useState('');
   const [newsletterSubmitted, setNewsletterSubmitted] = useState(false);
+  const [newsletterCaptchaVerified, setNewsletterCaptchaVerified] = useState(false);
+  const [newsletterBlocked, setNewsletterBlocked] = useState(false);
+  const [newsletterRemainingTime, setNewsletterRemainingTime] = useState(0);
 
   const faqs = [
     {
@@ -79,10 +84,62 @@ function Home() {
     }
   };
 
+  useEffect(() => {
+    // Check newsletter form cooldown
+    const checkNewsletterCooldown = () => {
+      if (!canSubmitForm('newsletter')) {
+        setNewsletterBlocked(true);
+        const remaining = getRemainingCooldown('newsletter');
+        setNewsletterRemainingTime(remaining);
+        
+        if (remaining > 0) {
+          setTimeout(checkNewsletterCooldown, 1000);
+        } else {
+          setNewsletterBlocked(false);
+        }
+      }
+    };
+
+    checkNewsletterCooldown();
+  }, []);
+
   const handleNewsletterSubmit = (e) => {
     e.preventDefault();
+    
+    // Check rate limiting
+    const rateLimitCheck = checkRateLimit();
+    if (!rateLimitCheck.allowed) {
+      alert(rateLimitCheck.message);
+      return;
+    }
+
+    // Check captcha
+    if (!newsletterCaptchaVerified) {
+      alert('Please complete the security verification');
+      return;
+    }
+
+    // Check form cooldown
+    if (!canSubmitForm('newsletter')) {
+      const remaining = getRemainingCooldown('newsletter');
+      alert(`Please wait ${formatRemainingTime(remaining)} before subscribing again.`);
+      return;
+    }
+
     if (newsletterEmail) {
+      // Record successful submission
+      recordFormSubmission('newsletter');
+      recordSubmission();
+      
       setNewsletterSubmitted(true);
+      setNewsletterEmail('');
+      setNewsletterCaptchaVerified(false);
+      
+      // Hide form after success
+      setTimeout(() => {
+        setNewsletterBlocked(true);
+      }, 2000);
+      
       setTimeout(() => setNewsletterSubmitted(false), 3000);
     }
   };
@@ -348,10 +405,33 @@ function Home() {
                   className="newsletter-input"
                   required
                 />
-                <ElectricBorder as="button" type="submit" className="newsletter-button">
+                <ElectricBorder 
+                  as="button" 
+                  type="submit" 
+                  className="newsletter-button"
+                  disabled={!newsletterCaptchaVerified || newsletterBlocked}
+                >
                   Subscribe
                 </ElectricBorder>
               </div>
+              
+              <Captcha 
+                onVerify={(verified) => setNewsletterCaptchaVerified(verified)}
+                onError={(error) => console.log('Newsletter captcha error:', error)}
+              />
+
+              {newsletterBlocked && (
+                <div className="form-blocked-message">
+                  <i className="fas fa-clock"></i>
+                  <p>
+                    {newsletterRemainingTime > 0 
+                      ? `Please wait ${formatRemainingTime(newsletterRemainingTime)} before subscribing again.`
+                      : 'Newsletter form is temporarily blocked. Please refresh the page to try again.'
+                    }
+                  </p>
+                </div>
+              )}
+
               {newsletterSubmitted && (
                 <div className="newsletter-success">
                   <i className="fas fa-check-circle"></i>

@@ -3,6 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faEnvelope, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faTwitter, faFacebook, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import ElectricBorder from '../components/ElectricBorder';
+import Captcha from '../components/Captcha';
+import { canSubmitForm, recordFormSubmission, getRemainingCooldown, formatRemainingTime, checkRateLimit, recordSubmission } from '../utils/formUtils';
 import '../styles/Contact.css';
 
 function Contact() {
@@ -16,6 +18,9 @@ function Contact() {
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
+  const [captchaVerified, setCaptchaVerified] = useState(false);
+  const [formBlocked, setFormBlocked] = useState(false);
+  const [remainingTime, setRemainingTime] = useState(0);
 
   useEffect(() => {
     // Check for success query parameter (from form redirect)
@@ -25,6 +30,23 @@ function Contact() {
       // Clean up URL
       window.history.replaceState({}, document.title, window.location.pathname);
     }
+
+    // Check form submission cooldown
+    const checkCooldown = () => {
+      if (!canSubmitForm('contact')) {
+        setFormBlocked(true);
+        const remaining = getRemainingCooldown('contact');
+        setRemainingTime(remaining);
+        
+        if (remaining > 0) {
+          setTimeout(checkCooldown, 1000);
+        } else {
+          setFormBlocked(false);
+        }
+      }
+    };
+
+    checkCooldown();
   }, []);
 
   const validateEmail = (email) => {
@@ -76,6 +98,27 @@ function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    
+    // Check rate limiting
+    const rateLimitCheck = checkRateLimit();
+    if (!rateLimitCheck.allowed) {
+      alert(rateLimitCheck.message);
+      return;
+    }
+
+    // Check captcha
+    if (!captchaVerified) {
+      alert('Please complete the security verification');
+      return;
+    }
+
+    // Check form cooldown
+    if (!canSubmitForm('contact')) {
+      const remaining = getRemainingCooldown('contact');
+      alert(`Please wait ${formatRemainingTime(remaining)} before submitting again.`);
+      return;
+    }
+
     const newErrors = validateForm();
     
     if (Object.keys(newErrors).length > 0) {
@@ -101,8 +144,19 @@ function Contact() {
       });
 
       if (response.ok) {
+        // Record successful submission
+        recordFormSubmission('contact');
+        recordSubmission();
+        
         setShowSuccess(true);
         setFormData({ name: '', email: '', subject: '', message: '' });
+        setCaptchaVerified(false);
+        
+        // Hide form after success
+        setTimeout(() => {
+          setFormBlocked(true);
+        }, 2000);
+        
         // Clean up URL
         window.history.replaceState({}, document.title, window.location.pathname);
       } else {
@@ -204,7 +258,29 @@ function Contact() {
                   {errors.message && <span className="error-message">{errors.message}</span>}
                 </div>
 
-                <ElectricBorder as="button" type="submit" className="submit-button" disabled={isSubmitting}>
+                <Captcha 
+                  onVerify={(verified) => setCaptchaVerified(verified)}
+                  onError={(error) => console.log('Captcha error:', error)}
+                />
+
+                {formBlocked && (
+                  <div className="form-blocked-message">
+                    <i className="fas fa-clock"></i>
+                    <p>
+                      {remainingTime > 0 
+                        ? `Please wait ${formatRemainingTime(remainingTime)} before submitting again.`
+                        : 'Form is temporarily blocked. Please refresh the page to try again.'
+                      }
+                    </p>
+                  </div>
+                )}
+
+                <ElectricBorder 
+                  as="button" 
+                  type="submit" 
+                  className="submit-button" 
+                  disabled={isSubmitting || !captchaVerified || formBlocked}
+                >
                   {isSubmitting ? 'Sending...' : 'Send Message'}
                 </ElectricBorder>
               </form>

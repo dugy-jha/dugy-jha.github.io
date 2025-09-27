@@ -41,6 +41,37 @@
 
 /* Success message styling moved to global App.css */
 
+/* Form blocked message */
+.form-blocked-message {
+  background: rgba(255, 193, 7, 0.1);
+  border: 1px solid #ffc107;
+  border-radius: var(--border-radius);
+  padding: 1rem;
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #ffc107;
+  font-weight: 500;
+}
+
+.form-blocked-message i {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.form-blocked-message p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* Light mode form blocked message */
+.light .form-blocked-message {
+  background: rgba(255, 193, 7, 0.1);
+  border-color: #ffc107;
+  color: #b8860b;
+}
+
 .contact-form {
   display: grid;
   gap: 1.5rem;

@@ -444,6 +444,37 @@
   text-align: center;
 }
 
+/* Form blocked message for newsletter */
+.newsletter-form .form-blocked-message {
+  background: rgba(255, 193, 7, 0.1);
+  border: 1px solid #ffc107;
+  border-radius: var(--border-radius);
+  padding: 1rem;
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #ffc107;
+  font-weight: 500;
+}
+
+.newsletter-form .form-blocked-message i {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.newsletter-form .form-blocked-message p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* Light mode form blocked message */
+.light .newsletter-form .form-blocked-message {
+  background: rgba(255, 193, 7, 0.1);
+  border-color: #ffc107;
+  color: #b8860b;
+}
+
 /* Contact Section */
 .contact-section {
   background-color: var(--color-bg-secondary);

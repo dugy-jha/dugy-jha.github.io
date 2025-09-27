@@ -216,7 +216,7 @@ function News() {
           <form className="newsletter-form" onSubmit={handleNewsletterSubmit}>
             <input 
               type="email" 
-              placeholder="Enter your email" 
+              placeholder="your.email@example.com" 
               className="newsletter-input"
               value={newsletterEmail}
               onChange={(e) => setNewsletterEmail(e.target.value)}

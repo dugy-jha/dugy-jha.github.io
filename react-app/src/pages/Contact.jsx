@@ -207,6 +207,7 @@ function Contact() {
                     type="text"
                     id="name"
                     name="name"
+                    placeholder="Your full name"
                     value={formData.name}
                     onChange={handleChange}
                     className={errors.name ? 'error' : ''}
@@ -221,6 +222,7 @@ function Contact() {
                     type="email"
                     id="email"
                     name="email"
+                    placeholder="your.email@example.com"
                     value={formData.email}
                     onChange={handleChange}
                     className={errors.email ? 'error' : ''}
@@ -235,6 +237,7 @@ function Contact() {
                     type="text"
                     id="subject"
                     name="subject"
+                    placeholder="Brief description of your inquiry"
                     value={formData.subject}
                     onChange={handleChange}
                     className={errors.subject ? 'error' : ''}
@@ -249,6 +252,7 @@ function Contact() {
                     id="message"
                     name="message"
                     rows="5"
+                    placeholder="Please provide details about your inquiry, interest, or question..."
                     value={formData.message}
                     onChange={handleChange}
                     className={errors.message ? 'error' : ''}

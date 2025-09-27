@@ -176,7 +176,7 @@ function Home() {
             <div className="search-input-group">
               <input
                 type="text"
-                placeholder="Try: 'fusion technology', 'medical isotopes', 'team', 'contact'..."
+                placeholder="Search for fusion technology, medical isotopes, team, contact..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="search-input"
@@ -402,7 +402,7 @@ function Home() {
               <div className="newsletter-input-group">
                 <input
                   type="email"
-                  placeholder="Enter your email address"
+                  placeholder="your.email@example.com"
                   value={newsletterEmail}
                   onChange={(e) => setNewsletterEmail(e.target.value)}
                   className="newsletter-input"
@@ -459,21 +459,38 @@ function Home() {
             alert('Thank you for your interest! Please use the Contact page to send us a message.');
           }}>
             <div className="form-group">
-              <label htmlFor="name">Name</label>
-              <input type="text" id="name" name="name" required />
+              <label htmlFor="name">Name *</label>
+              <input 
+                type="text" 
+                id="name" 
+                name="name" 
+                placeholder="Your full name"
+                required 
+              />
             </div>
             <div className="form-group">
-              <label htmlFor="email">Email</label>
-              <input type="email" id="email" name="email" required />
+              <label htmlFor="email">Email *</label>
+              <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                placeholder="your.email@example.com"
+                required 
+              />
             </div>
             <div className="form-group">
               <label htmlFor="organization">Organization</label>
-              <input type="text" id="organization" name="organization" />
+              <input 
+                type="text" 
+                id="organization" 
+                name="organization" 
+                placeholder="Your company or institution"
+              />
             </div>
             <div className="form-group">
               <label htmlFor="interest">Area of Interest</label>
               <select id="interest" name="interest" required>
-                <option value="">Select an area</option>
+                <option value="">Select an area of interest</option>
                 <option value="investment">Investment Opportunities</option>
                 <option value="partnership">Strategic Partnership</option>
                 <option value="careers">Career Opportunities</option>
@@ -483,8 +500,14 @@ function Home() {
               </select>
             </div>
             <div className="form-group">
-              <label htmlFor="message">Message</label>
-              <textarea id="message" name="message" rows="5" required></textarea>
+              <label htmlFor="message">Message *</label>
+              <textarea 
+                id="message" 
+                name="message" 
+                rows="5" 
+                placeholder="Tell us about your interest in fusion technology..."
+                required
+              ></textarea>
             </div>
             <button type="submit" className="cta-button electric-border">
               <span className="electric-border-content">Send Message</span>

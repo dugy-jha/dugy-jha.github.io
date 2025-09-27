@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 import CardNav from './CardNav';
 import DarkModeToggle from './DarkModeToggle';
-import logoImg from '../assets/images/Logo-t-removebg-preview.png';
+import logoImg from '../assets/images/ASPL-Logo-SVG.svg';
 import '../styles/Layout.css';
 
 function Layout({ children }) {

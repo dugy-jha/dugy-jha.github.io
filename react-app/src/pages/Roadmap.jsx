@@ -1,10 +1,11 @@
 import { useEffect } from 'react';
-import { useLocation, Link } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import ElectricBorder from '../components/ElectricBorder';
 import '../styles/Roadmap.css';
 
 function Roadmap() {
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (location.hash) {
@@ -214,7 +215,7 @@ function Roadmap() {
         <div className="container text-center">
           <h2>Join Our Journey</h2>
           <p className="cta-text">Partner with us as we build the future of clean energy, one milestone at a time</p>
-          <ElectricBorder as={Link} to="/contact" className="cta-button">
+          <ElectricBorder as="button" onClick={() => navigate('/contact')} className="cta-button">
             Explore Partnership Opportunities
           </ElectricBorder>
         </div>

@@ -9,7 +9,8 @@ const ElectricBorder = ({
   glowIntensity = 1,
   animationSpeed = 2,
   color = '#00ffff',
-  style = {}
+  style = {},
+  ...props
 }) => {
   const elementRef = useRef(null);
   const Component = as;
@@ -29,6 +30,7 @@ const ElectricBorder = ({
       ref={elementRef} 
       className={`electric-border ${className}`}
       style={style}
+      {...props}
     >
       <span className="electric-border-content">
         {children}

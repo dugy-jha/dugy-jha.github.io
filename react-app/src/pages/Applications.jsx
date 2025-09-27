@@ -282,7 +282,7 @@ function Applications() {
           <h2 className="text-center mb-12">Market Opportunity</h2>
           <div className="market-stats">
             <ElectricBorder className="market-stat" as="div">
-              <h3>>$3 Trillion</h3>
+              <h3>&gt;$3 Trillion</h3>
               <p>Global energy market size</p>
             </ElectricBorder>
             

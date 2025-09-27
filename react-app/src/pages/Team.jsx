@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import ElectricBorder from '../components/ElectricBorder';
 import personImg from '../assets/images/placeholder-person.svg';
 import '../styles/Team.css';
@@ -28,7 +29,7 @@ function Team() {
       image: personImg,
       linkedin: "https://www.linkedin.com/company/aspl-fusion"
     },
-    /*{
+    {
       id: 4,
       name: "Dr. Meera Gupta",
       position: "Head of Plasma Physics",
@@ -55,27 +56,30 @@ function Team() {
   ];
 
   const advisors = [
-   /* {
+    {
       id: 1,
       name: "Prof. S. Chandrasekhar",
       position: "Scientific Advisor",
       bio: "Former Director of Institute for Plasma Research. Pioneer in Indian fusion research.",
-      image: personImg
+      image: personImg,
+      linkedin: "https://www.linkedin.com/company/aspl-fusion"
     },
     {
       id: 2,
       name: "Dr. Rachel Chen",
       position: "International Advisor",
       bio: "Former fusion program lead at ITER. Expert in international collaborations.",
-      image: personImg
+      image: personImg,
+      linkedin: "https://www.linkedin.com/company/aspl-fusion"
     },
     {
       id: 3,
       name: "Arjun Malhotra",
       position: "Business Advisor",
       bio: "Serial entrepreneur and investor in deep tech. Co-founder of multiple unicorns.",
-      image: personImg
-    } */
+      image: personImg,
+      linkedin: "https://www.linkedin.com/company/aspl-fusion"
+    }
   ];
 
   return (
@@ -118,14 +122,22 @@ function Team() {
           <h2 className="text-center mb-12">Advisory Board</h2>
           <div className="advisors-grid">
             {advisors.map(advisor => (
-              <div key={advisor.id} className="advisor-card">
+              <ElectricBorder key={advisor.id} className="advisor-card" as="div">
                 <img src={advisor.image} alt={advisor.name} className="advisor-photo" />
                 <div className="advisor-info">
                   <h3>{advisor.name}</h3>
                   <p className="position">{advisor.position}</p>
                   <p className="bio">{advisor.bio}</p>
+                  <a 
+                    href={advisor.linkedin} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="linkedin-link"
+                  >
+                    <i className="fab fa-linkedin"></i>
+                  </a>
                 </div>
-              </div>
+              </ElectricBorder>
             ))}
           </div>
         </div>
@@ -138,7 +150,7 @@ function Team() {
             We're always looking for exceptional talent to join our team. If you're passionate about fusion energy 
             and want to make a real impact, we'd love to hear from you.
           </p>
-          <ElectricBorder as="a" href="/careers" className="cta-button">
+          <ElectricBorder as={Link} to="/careers" className="cta-button">
             View Open Positions
           </ElectricBorder>
         </div>

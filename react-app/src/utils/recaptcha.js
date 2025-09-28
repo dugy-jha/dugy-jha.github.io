@@ -1,17 +1,19 @@
 // Google reCAPTCHA v3 utility functions
 
-// reCAPTCHA site key
-const RECAPTCHA_SITE_KEY = '6LcTxNYrAAAAAO_ZV-YjEK9fZAlf7N04CWAnWZqO';
+// reCAPTCHA site key - use environment variable with fallback
+const RECAPTCHA_SITE_KEY = import.meta.env.VITE_RECAPTCHA_SITE_KEY || '6LcTxNYrAAAAAO_ZV-YjEK9fZAlf7N04CWAnWZqO';
 
 // Initialize reCAPTCHA
 export const initializeRecaptcha = () => {
   return new Promise((resolve, reject) => {
     if (typeof window.grecaptcha === 'undefined') {
+      console.error('reCAPTCHA not loaded. Check if script is properly included.');
       reject(new Error('reCAPTCHA not loaded'));
       return;
     }
     
     window.grecaptcha.ready(() => {
+      console.log('reCAPTCHA initialized successfully');
       resolve();
     });
   });
@@ -20,15 +22,19 @@ export const initializeRecaptcha = () => {
 // Execute reCAPTCHA and get token
 export const executeRecaptcha = async (action = 'submit') => {
   try {
+    console.log(`Executing reCAPTCHA for action: ${action}`);
     await initializeRecaptcha();
     
     const token = await window.grecaptcha.execute(RECAPTCHA_SITE_KEY, {
       action: action
     });
     
+    console.log('reCAPTCHA token generated successfully');
     return token;
   } catch (error) {
     console.error('reCAPTCHA execution failed:', error);
+    console.error('Site key used:', RECAPTCHA_SITE_KEY);
+    console.error('Current domain:', window.location.hostname);
     throw error;
   }
 };

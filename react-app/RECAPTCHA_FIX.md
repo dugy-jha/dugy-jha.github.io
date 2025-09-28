@@ -17,10 +17,11 @@ The reCAPTCHA is broken on Vercel because the domain configuration doesn't match
 4. In the "Domains" section, add these domains:
    ```
    localhost
-   *.vercel.app
    dugy-jha-github-io.vercel.app
    asplfusion.com
    ```
+   
+   **Note**: You cannot use wildcards like `*.vercel.app`. You need to add each specific Vercel domain.
 5. Click "Save"
 
 ### **Step 2: Alternative - Use Environment Variables**
@@ -42,11 +43,11 @@ Create different reCAPTCHA sites for development and production:
 - **Site Key**: `6LcTxNYrAAAAAO_ZV-YjEK9fZAlf7N04CWAnWZqO` (current)
 
 #### **Production reCAPTCHA Site**
-- **Domains**: `*.vercel.app`, `asplfusion.com`
+- **Domains**: `dugy-jha-github-io.vercel.app`, `asplfusion.com`
 - **Site Key**: New production site key
 
 ### **Option 2: Update Current Site (Recommended)**
-Simply add `*.vercel.app` to the current reCAPTCHA site domains.
+Simply add the specific Vercel domain to the current reCAPTCHA site domains.
 
 ## 🔧 **Code Changes Needed**
 

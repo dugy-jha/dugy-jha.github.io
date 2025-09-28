@@ -1,0 +1,121 @@
+/* Hero Background Images for Different Pages */
+
+/* Homepage Hero */
+.hero-bg-home {
+  background-image: url('../assets/images/hero-bg-home-placeholder.svg');
+}
+
+/* Mission Page Hero */
+.hero-bg-mission {
+  background-image: url('../assets/images/hero-bg-mission-placeholder.svg');
+}
+
+/* Technology Page Hero */
+.hero-bg-technology {
+  background-image: url('../assets/images/hero-bg-technology-placeholder.svg');
+}
+
+/* Applications Page Hero */
+.hero-bg-applications {
+  background-image: url('../assets/images/hero-bg-applications-placeholder.svg');
+}
+
+/* Roadmap Page Hero */
+.hero-bg-roadmap {
+  background-image: url('../assets/images/hero-bg-roadmap-placeholder.svg');
+}
+
+/* Team Page Hero */
+.hero-bg-team {
+  background-image: url('../assets/images/hero-bg-team-placeholder.svg');
+}
+
+/* Careers Page Hero */
+.hero-bg-careers {
+  background-image: url('../assets/images/hero-bg-careers-placeholder.svg');
+}
+
+/* News Page Hero */
+.hero-bg-news {
+  background-image: url('../assets/images/hero-bg-news-placeholder.svg');
+}
+
+/* Contact Page Hero */
+.hero-bg-contact {
+  background-image: url('../assets/images/hero-bg-contact-placeholder.svg');
+}
+
+/* About Page Hero */
+.hero-bg-about {
+  background-image: url('../assets/images/hero-bg-about-placeholder.svg');
+}
+
+/* FAQ Page Hero */
+.hero-bg-faq {
+  background-image: url('../assets/images/hero-bg-faq-placeholder.svg');
+}
+
+/* Case Studies Page Hero */
+.hero-bg-casestudies {
+  background-image: url('../assets/images/hero-bg-casestudies-placeholder.svg');
+}
+
+/* Fallback for when images don't load */
+.hero-bg-home,
+.hero-bg-mission,
+.hero-bg-technology,
+.hero-bg-applications,
+.hero-bg-roadmap,
+.hero-bg-team,
+.hero-bg-careers,
+.hero-bg-news,
+.hero-bg-contact,
+.hero-bg-about,
+.hero-bg-faq,
+.hero-bg-casestudies {
+  background-color: var(--color-bg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-bg-home,
+  .hero-bg-mission,
+  .hero-bg-technology,
+  .hero-bg-applications,
+  .hero-bg-roadmap,
+  .hero-bg-team,
+  .hero-bg-careers,
+  .hero-bg-news,
+  .hero-bg-contact,
+  .hero-bg-about,
+  .hero-bg-faq,
+  .hero-bg-casestudies {
+    background-attachment: scroll;
+  }
+}
+
+/* Light mode adjustments */
+.light .hero-bg-home,
+.light .hero-bg-mission,
+.light .hero-bg-technology,
+.light .hero-bg-applications,
+.light .hero-bg-roadmap,
+.light .hero-bg-team,
+.light .hero-bg-careers,
+.light .hero-bg-news,
+.light .hero-bg-contact,
+.light .hero-bg-about,
+.light .hero-bg-faq,
+.light .hero-bg-casestudies {
+  background-color: var(--color-bg);
+}
+
+/* Enhanced overlay for light mode */
+.light .hero::before,
+.light .page-hero::after {
+  background: rgba(255, 255, 255, 0.1);
+}

@@ -6,7 +6,7 @@ import '../styles/Applications.css';
 function Applications() {
   return (
     <div className="applications-page">
-      <section className="page-hero">
+      <section className="page-hero hero-bg-applications">
         <div className="container">
           <h1 className="gradient-text">Applications</h1>
           <p className="hero-subtitle">

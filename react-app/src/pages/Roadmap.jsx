@@ -18,7 +18,7 @@ function Roadmap() {
 
   return (
     <div className="roadmap-page">
-      <section className="page-hero">
+      <section className="page-hero hero-bg-roadmap">
         <div className="container">
           <h1 className="gradient-text">Our Development Roadmap</h1>
           <p className="hero-subtitle">

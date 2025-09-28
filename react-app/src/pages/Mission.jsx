@@ -17,7 +17,7 @@ function Mission() {
 
   return (
     <div className="mission-page">
-      <section className="page-hero">
+      <section className="page-hero hero-bg-mission">
         <div className="container">
           <h1 className="gradient-text">Our Mission</h1>
           <p className="hero-subtitle">

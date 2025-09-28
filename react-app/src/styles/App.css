@@ -545,10 +545,27 @@ a:hover {
 /* Page Hero Styles */
 .page-hero {
   background: linear-gradient(135deg, var(--color-bg) 0%, var(--color-bg-secondary) 100%);
+  background-image: url('../assets/images/hero-bg-mission-placeholder.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   padding: 6rem 0 4rem;
   text-align: center;
   position: relative;
   overflow: hidden;
+}
+
+/* Hero background overlay for better text readability */
+.page-hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
 }
 
 .page-hero::before {
@@ -571,7 +588,7 @@ a:hover {
   font-size: clamp(2.5rem, 5vw, 4rem);
   margin-bottom: 1rem;
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 .hero-subtitle {
@@ -580,7 +597,7 @@ a:hover {
   max-width: 600px;
   margin: 0 auto;
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 /* Section Padding */
@@ -604,6 +621,28 @@ a:hover {
 /* Utility Classes */
 .text-center { text-align: center; }
 .text-left { text-align: left; }
+
+/* Responsive Hero Backgrounds */
+@media (max-width: 768px) {
+  .hero,
+  .page-hero {
+    background-attachment: scroll;
+    background-size: cover;
+  }
+  
+  .hero::before,
+  .page-hero::after {
+    background: rgba(0, 0, 0, 0.6);
+  }
+}
+
+@media (max-width: 480px) {
+  .hero,
+  .page-hero {
+    background-size: cover;
+    background-position: center;
+  }
+}
 .text-right { text-align: right; }
 
 .mt-1 { margin-top: 0.5rem; }

@@ -10,6 +10,7 @@ import emailMarketingManager from './utils/emailMarketing';
 import analyticsManager from './utils/analytics';
 import seoManager from './utils/seo';
 import './styles/App.css';
+import './styles/HeroBackgrounds.css';
 
 // Lazy load pages for better performance
 const Home = lazy(() => import('./pages/Home'));

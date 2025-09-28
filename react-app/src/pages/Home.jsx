@@ -148,7 +148,7 @@ function Home() {
 
   return (
     <>
-      <section className="hero" id="hero-section">
+      <section className="hero hero-bg-home" id="hero-section">
         <LiquidEther
           colors={['#5227FF', '#FF9FFC', '#B19EEF']}
           mouseForce={20}

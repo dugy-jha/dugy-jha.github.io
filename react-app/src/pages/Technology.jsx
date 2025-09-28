@@ -21,7 +21,7 @@ function Technology() {
 
   return (
     <div className="technology-page">
-      <section className="page-hero">
+      <section className="page-hero hero-bg-technology">
         <div className="container">
           <h1 className="gradient-text">A Smarter, Simpler Path to Fusion</h1>
           <p className="hero-subtitle">

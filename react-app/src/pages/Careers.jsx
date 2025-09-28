@@ -136,6 +136,34 @@ function Careers() {
                   </ul>
                   <a href="mailto:info@asplfusion.com?subject=Application: Project Manager" className="apply-button">Apply Now</a>
                 </ElectricBorder>
+                
+                <ElectricBorder className="job-card" as="div">
+                  <div className="job-header">
+                    <h4>Regulatory & Operations Analyst (Licensing & Imports)</h4>
+                    <span className="job-location">Remote</span>
+                  </div>
+                  <p>Derisk AERB licensing and import execution via a traceable roadmap for accelerators and enriched targets.</p>
+                  <ul className="job-requirements">
+                    <li>Nuclear Engg., Radiological Safety, Chemical Engg., Regulatory Affairs, Industrial Engg.</li>
+                    <li>Exposure to AERB/eLORA, DGFT, customs; comfort with Gantt/Risk tools</li>
+                    <li>Experience with regulatory compliance and project management methodologies</li>
+                  </ul>
+                  <a href="mailto:info@asplfusion.com?subject=Application: Regulatory & Operations Analyst" className="apply-button">Apply Now</a>
+                </ElectricBorder>
+                
+                <ElectricBorder className="job-card" as="div">
+                  <div className="job-header">
+                    <h4>CDSCO Regulatory Affairs Analyst (Radiopharma Manufacturing)</h4>
+                    <span className="job-location">Remote</span>
+                  </div>
+                  <p>Chart and prosecute the CDSCO approvals pathway for radiopharmaceutical manufacturing, aligned with AERB safety requirements.</p>
+                  <ul className="job-requirements">
+                    <li>Pharmaceutical Sciences/Pharmacy, Regulatory Affairs, Chemical/Industrial Engg., Biotechnology</li>
+                    <li>Familiar with Indian drug regulations (CDSCO/DCGI), GMP/Schedule M, and dossier assembly</li>
+                    <li>Knowledge of radiopharmaceutical manufacturing and quality control processes</li>
+                  </ul>
+                  <a href="mailto:info@asplfusion.com?subject=Application: CDSCO Regulatory Affairs Analyst" className="apply-button">Apply Now</a>
+                </ElectricBorder>
               </div>
             </div>
             
@@ -169,6 +197,49 @@ function Careers() {
                   </ul>
                   <a href="mailto:info@asplfusion.com?subject=Application: Strategic Partnerships Lead" className="apply-button">Apply Now</a>
                 </ElectricBorder>
+                
+                <ElectricBorder className="job-card" as="div">
+                  <div className="job-header">
+                    <h4>Market & Strategy Analyst (Isotopes)</h4>
+                    <span className="job-location">Remote</span>
+                  </div>
+                  <p>Validate demand and craft a credible GTM strategy to reach 25-30% market share in 3 years for medical isotopes.</p>
+                  <ul className="job-requirements">
+                    <li>Final-year/recent grad in Pharmacy, Biotech, Chemistry, Economics, MBA (Healthcare/Strategy) or Operations Research</li>
+                    <li>Comfort with market sizing, patient-journey modeling, and pricing/reimbursement</li>
+                    <li>Can read regulatory/clinical docs; strong with spreadsheets and data sourcing</li>
+                    <li>Strong analytical skills and ability to work with complex datasets</li>
+                  </ul>
+                  <a href="mailto:info@asplfusion.com?subject=Application: Market & Strategy Analyst (Isotopes)" className="apply-button">Apply Now</a>
+                </ElectricBorder>
+                
+                <ElectricBorder className="job-card" as="div">
+                  <div className="job-header">
+                    <h4>Energy & PPA Analyst (Tariffs & Offtake)</h4>
+                    <span className="job-location">Remote</span>
+                  </div>
+                  <p>Model tariff competitiveness and draft a bankable PPA strategy for future fusion output.</p>
+                  <ul className="job-requirements">
+                    <li>Energy Economics/Policy, Electrical Engg., Operations Research, MBA (Finance)</li>
+                    <li>Exposure to PPAs (thermal, nuclear, renewable, hybrid), DISCOM structures, levelized cost modeling</li>
+                    <li>Proficiency in financial modeling and energy market analysis</li>
+                  </ul>
+                  <a href="mailto:info@asplfusion.com?subject=Application: Energy & PPA Analyst" className="apply-button">Apply Now</a>
+                </ElectricBorder>
+                
+                <ElectricBorder className="job-card" as="div">
+                  <div className="job-header">
+                    <h4>Strategic Finance & Data Room Analyst</h4>
+                    <span className="job-location">Remote</span>
+                  </div>
+                  <p>Produce investor-grade financials and a diligence-ready virtual data room.</p>
+                  <ul className="job-requirements">
+                    <li>Finance/Accounting, IB/PE Analyst, Consulting, Quant Econ (strong Excel/Sheets)</li>
+                    <li>Comfort with three-statement modeling, scenario analysis, cohort/funnel math, and data rooms</li>
+                    <li>Experience with investor relations and due diligence processes</li>
+                  </ul>
+                  <a href="mailto:info@asplfusion.com?subject=Application: Strategic Finance & Data Room Analyst" className="apply-button">Apply Now</a>
+                </ElectricBorder>
               </div>
             </div>
             
@@ -188,22 +259,25 @@ function Careers() {
                   </ul>
                   <a href="mailto:info@asplfusion.com?subject=Application: AI/ML Engineer" className="apply-button">Apply Now</a>
                 </ElectricBorder>
+                
+                <ElectricBorder className="job-card" as="div">
+                  <div className="job-header">
+                    <h4>Technology Benchmarking & IP Analyst</h4>
+                    <span className="job-location">Remote</span>
+                  </div>
+                  <p>Position ASPL tech vs tokamaks, stellarators, and WHAM-class concepts; craft IP defense strategy.</p>
+                  <ul className="job-requirements">
+                    <li>Physics/Plasma/EE/ME undergrad/masters; reads academic papers comfortably</li>
+                    <li>Familiar with fusion devices (tokamak/stellarator/mirror), RF/heating, superconducting magnets</li>
+                    <li>Interest in IP strategy (claims drafting, prior art, trade secrets)</li>
+                    <li>Strong research and technical writing capabilities</li>
+                  </ul>
+                  <a href="mailto:info@asplfusion.com?subject=Application: Technology Benchmarking & IP Analyst" className="apply-button">Apply Now</a>
+                </ElectricBorder>
               </div>
             </div>
           </div>
           
-          <div className="internship-section">
-            <h2>Internships & Research Positions</h2>
-            <p>We offer limited internship positions for exceptional graduate students in:</p>
-            <ul>
-              <li>Plasma Physics & Fusion Engineering</li>
-              <li>Nuclear Engineering & Radiochemistry</li>
-              <li>Materials Science (Superconductors)</li>
-              <li>Computational Physics & Modeling</li>
-              <li>Business Strategy & Market Analysis</li>
-            </ul>
-            <p>Internships are typically 3-6 months with potential for full-time conversion. Send your CV and research interests to <a href="mailto:info@asplfusion.com">info@asplfusion.com</a>.</p>
-          </div>
           
           <div className="culture-section">
             <h2>Our Culture & Values</h2>

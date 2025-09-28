@@ -4,21 +4,26 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.9);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
   z-index: 1000;
   transition: var(--transition-default);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .navbar {
-  padding: 1rem 0;
+  padding: 0.5rem 0;
+  min-height: 60px;
 }
 
 .navbar .container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
 .logo {
@@ -30,20 +35,37 @@ header {
   color: white;
   text-decoration: none;
   transition: var(--transition-default);
+  z-index: 1001;
+  height: 50px; /* Constrain logo container height */
+  overflow: hidden; /* Clip oversized content */
 }
 
 .logo:hover {
-  transform: translateY(-2px);
+  transform: translateY(-1px);
   color: white;
 }
 
+.logo:hover .logo-img {
+  transform: scale(1.05);
+}
+
 .logo-img {
-  height: 40px;
+  height: 80px;
   width: auto;
+  transition: var(--transition-default);
+  object-fit: contain; /* Maintain aspect ratio within container */
 }
 
 .logo .highlight {
   color: var(--color-primary);
+}
+
+/* Navigation Actions */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  z-index: 1001;
 }
 
 /* Mobile Menu Button */
@@ -51,16 +73,25 @@ header {
   display: none;
   background: none;
   border: none;
-  color: white;
-  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.1rem;
   cursor: pointer;
   padding: 0.5rem;
   transition: var(--transition-default);
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;
 }
 
 .mobile-menu-button:hover {
-  color: var(--color-primary);
+  color: white;
+  opacity: 1;
+  transform: scale(1.1);
 }
+
 
 /* Navigation Links */
 .nav-links {
@@ -194,8 +225,23 @@ footer {
 
 /* Responsive Styles */
 @media (max-width: 768px) {
+  .navbar .container {
+    padding: 0 1rem;
+  }
+  
+  .logo {
+    font-size: 1.25rem;
+  }
+  
+  .logo-img {
+    height: 64px;
+  }
+  
   .mobile-menu-button {
-    display: block;
+    display: flex;
+    width: 28px;
+    height: 28px;
+    font-size: 0.9rem;
   }
 
   .nav-links {

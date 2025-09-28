@@ -2,8 +2,8 @@ import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import ElectricBorder from '../components/ElectricBorder';
 import CounterAnimation from '../components/CounterAnimation';
-// Using absolute path from public folder for better Vercel compatibility
-const fusionReactorImg = '/placeholder-fusion-reactor.png';
+// Using real fusion reactor image
+import fusionReactorImg from '../assets/images/fusion-reactor.webp';
 import '../styles/Technology.css';
 
 function Technology() {
@@ -23,9 +23,9 @@ function Technology() {
     <div className="technology-page">
       <section className="page-hero">
         <div className="container">
-          <h1 className="gradient-text">Our Technology</h1>
+          <h1 className="gradient-text">A Smarter, Simpler Path to Fusion</h1>
           <p className="hero-subtitle">
-            Revolutionary magnetic mirror fusion design optimized for commercial applications
+            Our Advanced Magnetic Mirror technology represents a strategic departure from mainstream approaches, engineered for superior stability, easier maintenance, and a faster path to commercial viability.
           </p>
         </div>
       </section>
@@ -33,8 +33,11 @@ function Technology() {
       <section className="tech-overview p-8">
         <div className="container">
           <div className="tech-intro">
-            <h2>Breaking Through Complexity</h2>
-            <p>ASPL Fusion is pioneering advanced magnetic mirror technology that represents a compelling alternative to traditional tokamak designs. By leveraging recent advances in superconducting magnets, plasma physics, and digital control systems, our approach offers significant advantages in constructability, maintainability, and scalability.</p>
+            <h2>The ASPL Fusion Advantage: Why the Advanced Magnetic Mirror?</h2>
+            <p>The global pursuit of fusion has largely focused on complex, toroidal (donut-shaped) devices like the tokamak. At ASPL Fusion, we have made a deliberate and strategic choice to pursue a different path: the Advanced Magnetic Mirror.</p>
+            <p>This decision is rooted in a deep understanding of fusion history and cutting-edge technology. While the U.S. deprioritized linear mirror systems in the 1980s, research continued to mature in Russia and Japan, successfully overcoming many of the early challenges related to plasma stability and leakage. Devices like the Gas Dynamic Trap (GDT) in Russia demonstrated stable, high-pressure plasma, proving the fundamental viability of the concept.</p>
+            <p>Today, we are supercharging this matured technology with modern breakthroughs, chiefly the use of High-Temperature Superconducting (HTS) magnets. This allows us to achieve powerful magnetic fields (&gt;25 T) that dramatically improve plasma confinement and overall performance, creating a system that is inherently more stable than its predecessors.</p>
+            <p>Our approach is not about reviving an old technology, but about capitalizing on a proven one that others overlooked. By combining decades of international progress with 21st-century materials and control systems, we are building a fusion platform that is potentially simpler to construct, more reliable to operate, and faster to commercialize.</p>
           </div>
 
           {/* Technology Tabs */}
@@ -69,21 +72,16 @@ function Technology() {
             <div className="tab-content">
               {activeTab === 'overview' && (
                 <div className="tab-panel">
-                  <h3>Technology Overview</h3>
-                  <p>Our magnetic mirror approach leverages decades of fusion research combined with recent breakthroughs in superconducting magnets, plasma physics, and computational modeling.</p>
-                  <div className="tech-stats">
-                    <div className="tech-stat">
-                      <CounterAnimation end={75} suffix="%" duration={2000} />
-                      <span>Construction Cost Reduction</span>
-                    </div>
-                    <div className="tech-stat">
-                      <CounterAnimation end={90} suffix="%" duration={2000} />
-                      <span>Maintenance Time Reduction</span>
-                    </div>
-                    <div className="tech-stat">
-                      <CounterAnimation end={3} suffix="x" duration={2000} />
-                      <span>Faster Deployment</span>
-                    </div>
+                  <h3>Engineered for Commercial Reality</h3>
+                  <p>Our technology is designed with the end goal in mind: reliable, cost-effective energy production. The linear geometry of our Advanced Magnetic Mirror avoids the immense engineering complexity of toroidal devices, leading to a system that is easier to build, access, and maintain. This focus on practical execution is central to our mission of making fusion a commercial reality for India.</p>
+                  
+                  <div className="strategic-targets">
+                    <h4>Strategic Targets:</h4>
+                    <ul>
+                      <li><strong>Reduced Complexity:</strong> Targeting a significant reduction in manufacturing and construction complexity compared to toroidal designs.</li>
+                      <li><strong>Enhanced Maintainability:</strong> A linear architecture allows for direct access to components, targeting higher plant availability and lower operational costs.</li>
+                      <li><strong>Faster Deployment:</strong> A modular, scalable design enables a more rapid and flexible deployment timeline.</li>
+                    </ul>
                   </div>
                 </div>
               )}
@@ -95,22 +93,22 @@ function Technology() {
                     <div className="component-item">
                       <i className="fas fa-magnet"></i>
                       <div>
-                        <h4>Superconducting Magnets</h4>
-                        <p>High-temperature superconducting magnets for efficient plasma confinement</p>
+                        <h4>High-Temperature Superconducting (HTS) Magnets</h4>
+                        <p>We utilize state-of-the-art HTS magnets to generate the powerful fields required for stable plasma confinement. This technology allows for a more compact and efficient magnet system compared to traditional superconductors.</p>
                       </div>
                     </div>
                     <div className="component-item">
                       <i className="fas fa-fire"></i>
                       <div>
-                        <h4>Plasma Heating Systems</h4>
-                        <p>Advanced neutral beam injection and RF heating systems</p>
+                        <h4>Advanced Plasma Heating Systems</h4>
+                        <p>Our system employs high-power Neutral Beam Injection (NBI) to heat the plasma to fusion temperatures (&gt;100 million °C) and sustain its high performance.</p>
                       </div>
                     </div>
                     <div className="component-item">
                       <i className="fas fa-cogs"></i>
                       <div>
-                        <h4>Control Systems</h4>
-                        <p>AI-powered real-time plasma control and optimization</p>
+                        <h4>AI-Powered Control Systems</h4>
+                        <p>We are integrating advanced artificial intelligence and machine learning algorithms to provide real-time plasma control, ensuring optimal stability and performance second by second.</p>
                       </div>
                     </div>
                   </div>
@@ -122,16 +120,16 @@ function Technology() {
                   <h3>Key Advantages</h3>
                   <div className="advantages-list">
                     <ElectricBorder className="advantage-item" as="div">
-                      <h4>Modular Design</h4>
-                      <p>Linear geometry enables straightforward assembly and maintenance</p>
+                      <h4>Inherent Stability</h4>
+                      <p>The physics of magnetic mirror confinement provides a high degree of plasma stability, a major challenge for many other fusion approaches.</p>
                     </ElectricBorder>
                     <ElectricBorder className="advantage-item" as="div">
-                      <h4>Scalable Architecture</h4>
-                      <p>Incremental capacity additions through linear extension</p>
+                      <h4>Modular & Scalable</h4>
+                      <p>The linear design is inherently modular. Capacity can be scaled incrementally by extending the central core, offering a flexible path from pilot plants to large-scale commercial facilities.</p>
                     </ElectricBorder>
                     <ElectricBorder className="advantage-item" as="div">
-                      <h4>Multi-Application Platform</h4>
-                      <p>Versatile neutron production for diverse commercial applications</p>
+                      <h4>Versatile Neutron Source</h4>
+                      <p>The high flux of neutrons produced by our device makes it a versatile platform capable of serving multiple high-value applications, from producing medical isotopes to breeding fuel and transmuting waste.</p>
                     </ElectricBorder>
                   </div>
                 </div>
@@ -139,27 +137,36 @@ function Technology() {
 
               {activeTab === 'timeline' && (
                 <div className="tab-panel">
-                  <h3>Development Timeline</h3>
+                  <h3>Our Development Pathway</h3>
+                  <p>Our technology development follows our disciplined, four-phase commercialization strategy. Each phase is designed to systematically advance our technology's readiness level (TRL), from proven commercial applications in Phase 1 to a fully operational, grid-scale power plant in Phase 4.</p>
+                  
                   <div className="timeline">
                     <div className="timeline-item">
-                      <div className="timeline-year">2025-2026</div>
+                      <div className="timeline-year">Phase 1</div>
                       <div className="timeline-content">
-                        <h4>Prototype Development</h4>
-                        <p>Complete engineering design and begin construction</p>
+                        <h4>Commercial Neutron Source</h4>
+                        <p>Deploying commercial neutron source technology (TRL 8-9) for medical isotope production</p>
                       </div>
                     </div>
                     <div className="timeline-item">
-                      <div className="timeline-year">2027-2028</div>
+                      <div className="timeline-year">Phase 2</div>
                       <div className="timeline-content">
-                        <h4>Technology Validation</h4>
-                        <p>Achieve first plasma and demonstrate neutron production</p>
+                        <h4>Advanced Magnetic Mirror Prototype</h4>
+                        <p>Demonstrating our Advanced Magnetic Mirror prototype (TRL 6-7)</p>
                       </div>
                     </div>
                     <div className="timeline-item">
-                      <div className="timeline-year">2029-2032</div>
+                      <div className="timeline-year">Phase 3</div>
                       <div className="timeline-content">
-                        <h4>Commercial Deployment</h4>
-                        <p>Scale up to commercial isotope production</p>
+                        <h4>Complete Power Plant System</h4>
+                        <p>Qualifying our complete power plant system (TRL 8)</p>
+                      </div>
+                    </div>
+                    <div className="timeline-item">
+                      <div className="timeline-year">Phase 4</div>
+                      <div className="timeline-content">
+                        <h4>Fleet Operation</h4>
+                        <p>Achieving proven fleet operation in a commercial environment (TRL 9)</p>
                       </div>
                     </div>
                   </div>
@@ -193,7 +200,7 @@ function Technology() {
           
           <div className="tech-diagram">
             <img src={fusionReactorImg} alt="Magnetic Mirror System Diagram" className="full-width-image" />
-            <p className="image-caption">Conceptual diagram of ASPL Fusion's magnetic mirror system with key components labeled</p>
+            <p className="image-caption">Artistic rendering of ASPL Fusion's magnetic mirror system</p>
           </div>
         </div>
       </section>

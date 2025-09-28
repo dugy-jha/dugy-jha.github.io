@@ -19,7 +19,7 @@ function Applications() {
         <div className="container">
           <div className="intro-content">
             <h2>Beyond Electricity: The Power of Versatility</h2>
-            <p>While most fusion companies focus solely on electricity generation, ASPL Fusion's magnetic mirror technology enables multiple high-value applications. This versatility allows us to generate revenue years before grid-scale power, systematically de-risking our technology while addressing critical national needs.</p>
+            <p>Our technology is a versatile neutron source with multiple high-value applications. Our strategy is to generate revenue years before producing grid-scale power by addressing critical national needs in healthcare, heavy industry, and clean fuels.</p>
           </div>
         </div>
       </section>
@@ -29,17 +29,16 @@ function Applications() {
           <h2 className="section-title">Medical Isotope Production</h2>
           <div className="application-content">
             <div className="application-text">
-              <h3>Securing Healthcare's Critical Infrastructure</h3>
-              <p>Medical isotopes are essential for diagnosing and treating cancer, heart disease, and other critical conditions. India imports 100% of these isotopes, creating supply vulnerabilities and higher costs for patients.</p>
-              <p>ASPL Fusion's neutron-rich environment is ideal for producing Mo-99, the precursor to Tc-99m used in over 80% of nuclear medicine procedures. Our technology can also produce other critical isotopes like Lu-177 for targeted cancer therapy.</p>
+              <h3>Securing India's Healthcare Infrastructure</h3>
+              <p>India is largely import-dependent for critical medical isotopes like Molybdenum-99 (Mo-99), creating a significant vulnerability in the nation's healthcare supply chain.</p>
+              <p>Our technology enables reliable, domestic production of Mo-99, the parent isotope for Technetium-99m, which is used in over 80% of all nuclear medicine procedures.</p>
               
               <div className="key-benefits">
                 <h4>Key Benefits</h4>
                 <ul>
-                  <li>Domestic production ensures supply security</li>
-                  <li>Lower costs through elimination of import logistics</li>
-                  <li>Fresher isotopes with higher specific activity</li>
-                  <li>Scalable production to meet growing demand</li>
+                  <li>Ensures a secure domestic supply for hospitals and patients</li>
+                  <li>Reduces costs by eliminating complex import logistics</li>
+                  <li>Provides fresher, higher-quality isotopes to clinicians</li>
                 </ul>
               </div>
             </div>
@@ -63,7 +62,7 @@ function Applications() {
                 <div className="stat-value">
                   <CounterAnimation end={12} suffix="%" duration={2000} />
                 </div>
-                <div className="stat-description">Annual growth in nuclear medicine</div>
+                <div className="stat-description">Projected annual growth in the nuclear medicine market</div>
               </ElectricBorder>
             </div>
           </div>
@@ -76,14 +75,14 @@ function Applications() {
           <div className="application-content reverse">
             <div className="application-text">
               <h3>Decarbonizing Heavy Industry</h3>
-              <p>Industries like steel, cement, and chemicals require temperatures exceeding 1000°C—currently achievable only through fossil fuel combustion. These sectors represent over 20% of global carbon emissions.</p>
-              <p>ASPL Fusion's technology can provide clean, high-temperature process heat, enabling these industries to eliminate fossil fuel dependence while maintaining competitiveness.</p>
+              <p>Foundational industries like steel, cement, and chemicals require ultra-high-temperature process heat (above 1000°C), which is currently generated almost exclusively by burning fossil fuels.</p>
+              <p>Fusion provides a source of clean, continuous, high-grade heat, enabling these "hard-to-abate" sectors to decarbonize without compromising production.</p>
               
               <div className="industry-applications">
                 <ElectricBorder className="industry-card" as="div">
                   <i className="fas fa-industry"></i>
                   <h4>Steel Production</h4>
-                  <p>Direct reduced iron process using hydrogen from fusion heat</p>
+                  <p>Direct reduced iron process using hydrogen</p>
                 </ElectricBorder>
                 
                 <ElectricBorder className="industry-card" as="div">
@@ -146,9 +145,9 @@ function Applications() {
           <h2 className="section-title">Hydrogen Production</h2>
           <div className="application-content">
             <div className="application-text">
-              <h3>Enabling the Hydrogen Economy</h3>
-              <p>Green hydrogen is essential for decarbonizing transportation, fertilizer production, and steel manufacturing. Current electrolysis methods are energy-intensive and expensive.</p>
-              <p>ASPL Fusion's high-temperature reactors enable thermochemical water splitting—a process that's 3x more efficient than electrolysis, producing hydrogen at costs competitive with fossil fuels.</p>
+              <h3>Enabling the Green Hydrogen Economy</h3>
+              <p>Current green hydrogen production via electrolysis is energy-intensive and expensive.</p>
+              <p>Fusion can power high-efficiency thermochemical water-splitting cycles, which have the potential to be significantly more efficient than electrolysis, producing green hydrogen at a competitive cost.</p>
               
               <div className="hydrogen-uses">
                 <h4>Key Applications</h4>
@@ -191,8 +190,8 @@ function Applications() {
                 <tbody>
                   <tr className="highlight">
                     <td>Fusion Thermochemical</td>
-                    <td>75-80%</td>
-                    <td>$2.00-3.00</td>
+                    <td>75-80% (Target)</td>
+                    <td>$2.00-3.00 (Projected)</td>
                     <td>Zero</td>
                   </tr>
                   <tr>
@@ -220,34 +219,14 @@ function Applications() {
           <div className="application-content reverse">
             <div className="application-text">
               <h3>The Ultimate Goal: Unlimited Clean Power</h3>
-              <p>While electricity generation is our Phase 4 target, it represents the most transformative application of fusion technology. Clean, abundant baseload power that can replace fossil fuels entirely.</p>
-              <p>Our phased approach means we'll have proven technology, established supply chains, and operational expertise before entering the electricity market—significantly de-risking the investment.</p>
+              <p>Advantages:</p>
+              <ul>
+                <li><strong>Zero Carbon:</strong> No greenhouse gas emissions during operation</li>
+                <li><strong>Abundant Fuel:</strong> Deuterium from seawater and lithium from the earth's crust provide a fuel supply for millennia</li>
+                <li><strong>Inherently Safe:</strong> A runaway reaction is physically impossible, and no long-lived radioactive waste is produced</li>
+                <li><strong>Baseload Power:</strong> Provides 24/7 reliable electricity, independent of weather, to stabilize a grid with high shares of renewables</li>
+              </ul>
               
-              <div className="electricity-advantages">
-                <ElectricBorder className="advantage" as="div">
-                  <i className="fas fa-leaf"></i>
-                  <h4>Zero Carbon</h4>
-                  <p>No greenhouse gas emissions during operation</p>
-                </ElectricBorder>
-                
-                <ElectricBorder className="advantage" as="div">
-                  <i className="fas fa-infinity"></i>
-                  <h4>Unlimited Fuel</h4>
-                  <p>Deuterium from seawater can power civilization for millions of years</p>
-                </ElectricBorder>
-                
-                <ElectricBorder className="advantage" as="div">
-                  <i className="fas fa-shield-alt"></i>
-                  <h4>Inherently Safe</h4>
-                  <p>No risk of meltdown or long-lived radioactive waste</p>
-                </ElectricBorder>
-                
-                <ElectricBorder className="advantage" as="div">
-                  <i className="fas fa-chart-line"></i>
-                  <h4>Baseload Power</h4>
-                  <p>24/7 reliable electricity independent of weather</p>
-                </ElectricBorder>
-              </div>
             </div>
             
             <div className="power-comparison">
@@ -283,22 +262,22 @@ function Applications() {
           <div className="market-stats">
             <ElectricBorder className="market-stat" as="div">
               <h3>&gt;$3 Trillion</h3>
-              <p>Global energy market size</p>
+              <p>Global Energy Market</p>
             </ElectricBorder>
             
             <ElectricBorder className="market-stat" as="div">
               <h3>$25-45 Billion</h3>
-              <p>Annual industrial heat market</p>
+              <p>Annual Industrial Heat Market (Equipment)</p>
             </ElectricBorder>
             
             <ElectricBorder className="market-stat" as="div">
-              <h3>$10 Billion</h3>
-              <p>Medical isotope market by 2030</p>
+              <h3>~$10 Billion</h3>
+              <p>Medical Isotope Market by 2030</p>
             </ElectricBorder>
             
             <ElectricBorder className="market-stat" as="div">
-              <h3>$500 Billion</h3>
-              <p>Projected hydrogen economy by 2030</p>
+              <h3>~$500 Billion</h3>
+              <p>Projected Hydrogen Economy by 2030 (High-End Estimate)</p>
             </ElectricBorder>
           </div>
         </div>

@@ -30,63 +30,61 @@ function Mission() {
         <div className="container">
           <div className="mission-intro">
             <h2>Energy Independence Through Innovation</h2>
-            <p>ASPL Fusion is committed to pioneering a pragmatic path to commercial fusion energy, focusing first on critical applications that generate near-term value while progressively advancing toward clean, abundant power for India and beyond.</p>
+            <p>Our mission is to commercialize fusion technology through a pragmatic, phased approach that ensures financial viability and systematic de-risking at every stage. We are building a profitable, high-impact enterprise that solves critical challenges in both healthcare and energy, culminating in a dominant market position in the defining industry of the 21st century.</p>
             
             <div className="mission-quote">
               <blockquote>
-                "We believe that securing India's energy future requires both technological ambition and commercial realism. Our phased approach ensures that every milestone delivers real value to stakeholders."
+                "Fusion energy has long been a grand scientific challenge. At ASPL, our mission is to transform it into a viable commercial reality for India by building a pragmatic, value-driven path from near-term applications to long-term energy sovereignty."
               </blockquote>
-              <cite>— Dr. A. K. Jha, Founder & CEO</cite>
+              <cite>— Prof. Prabhat Ranjan, Director</cite>
             </div>
             
-            <h3>Energy Independence for India</h3>
-            <p>As India's economy grows exponentially, so does our energy demand. Despite ambitious renewable energy targets, our nation will continue to rely heavily on imported fossil fuels for decades without transformative technologies. Fusion energy represents the ultimate solution—clean, safe, and virtually limitless power that can be generated domestically, freeing India from energy dependencies and the volatility of global energy markets.</p>
+            <h3>Powering India's Future</h3>
+            <p>India's exponential economic growth is fueling an unprecedented rise in energy demand. This growth, coupled with a heavy reliance on imported fossil fuels, creates significant economic and strategic vulnerabilities. Domestic fusion energy offers a definitive path to energy sovereignty, providing the clean, safe, and abundant baseload power needed to secure India's future.</p>
             
             <div className="mission-stats">
               <div className="stat-box">
-                <h4><span className="count-up" data-value="88">88</span>%</h4>
-                <p>Of India's oil is imported, creating economic and strategic vulnerabilities</p>
+                <h4>~<span className="count-up" data-value="89">89</span>%</h4>
+                <p>Of India's oil is imported, exposing the economy to global price volatility</p>
               </div>
               <div className="stat-box">
                 <h4><span className="count-up" data-value="3">3</span>×</h4>
-                <p>Projected increase in India's energy demand by 2050</p>
+                <p>Projected increase in India's energy demand by 2050, the fastest growth of any major economy</p>
               </div>
               <div className="stat-box">
                 <h4>₹<span className="count-up" data-value="13">13</span>+ Trillion</h4>
-                <p>Annual cost of energy imports to India's economy</p>
+                <p>Annual cost of energy imports, a significant drain on the national economy</p>
               </div>
             </div>
             
-            <h3>A Disciplined Approach to Innovation</h3>
-            <p>Unlike many fusion startups that focus solely on the long-term goal of electricity production, ASPL Fusion has developed a four-phase strategy that builds value at each stage:</p>
-            
+            <h3>Our Four-Phase Strategy</h3>
             <div className="mission-phases">
               <div className="phase" id="phase1">
                 <div className="phase-number">1</div>
                 <div className="phase-content">
                   <h4>Medical Isotope Production</h4>
-                  <p>Addressing critical shortages in medical diagnostics and treatment while validating our core technology</p>
+                  <p>Achieve near-term profitability and establish a secure domestic supply of critical medical isotopes, funding our core fusion R&D.</p>
                 </div>
               </div>
               <div className="phase" id="phase2">
                 <div className="phase-number">2</div>
                 <div className="phase-content">
                   <h4>Industrial Heat Applications</h4>
-                  <p>Providing clean process heat for industries like steel, cement, and chemicals</p>
+                  <p>Validate our fusion technology at scale while providing the clean, high-temperature process heat needed to decarbonize India's 'hard-to-abate' heavy industries.</p>
                 </div>
               </div>
               <div className="phase" id="phase3">
                 <div className="phase-number">3</div>
                 <div className="phase-content">
                   <h4>Hydrogen Production</h4>
-                  <p>Generating green hydrogen at scale for transportation and industrial applications</p>
+                  <p>Leverage our high-efficiency heat source to become a key enabler of India's green hydrogen economy, providing clean fuel for transport and industry.</p>
                 </div>
               </div>
               <div className="phase" id="phase4">
                 <div className="phase-number">4</div>
                 <div className="phase-content">
                   <h4>Grid-Scale Electricity</h4>
-                  <p>Delivering clean, baseload power to accelerate India's transition to sustainable energy</p>
+                  <p>Deliver on the ultimate promise of fusion: clean, safe, and abundant 24/7 baseload power for the nation.</p>
                 </div>
               </div>
             </div>

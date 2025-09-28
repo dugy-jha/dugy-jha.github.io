@@ -1,85 +1,66 @@
 import { Link } from 'react-router-dom';
 import ElectricBorder from '../components/ElectricBorder';
-import personImg from '../assets/images/placeholder-person.svg';
+// Using WebP format for better performance and optimization
+import prabhatImg from '../assets/images/Dr-Prabhat-Ranjan.webp';
+import abhayImg from '../assets/images/Abhay-K-Jha.webp';
+import abhinavImg from '../assets/images/Abhinav-Jha.webp';
+import saxenaImg from '../assets/images/Yogesh-Saxena.webp';
 import '../styles/Team.css';
 
 function Team() {
   const teamMembers = [
     {
       id: 1,
-      name: "Dr. Prabhat Ranjan",
-      position: "Director",
-      bio: "Visionary leader with 20+ years in fusion research and commercialization. Previously led fusion programs at leading national laboratories.",
-      image: personImg,
-      linkedin: "https://www.linkedin.com/company/aspl-fusion"
+      name: "Prof. Prabhat Ranjan",
+      position: "Nuclear Fusion Scientist",
+      bio: "A distinguished nuclear fusion scientist who provides the deep technical vision for ASPL. After receiving his PhD from UC Berkeley, he was key in improving India's nuclear fusion reactors. He was Project leader of ADITYA Tokamak and SST-1 Tokamak Operation and Control Group.",
+      image: prabhatImg,
+      linkedin: "https://www.linkedin.com/in/profprabhatranjan/"
     },
     {
       id: 2,
-      name: "Abhay Kumar Jha",
-      position: "Director",
-      bio: "Expert in magnetic confinement fusion with pioneering work in mirror configurations. PhD from IIT Delhi, postdoc at MIT.",
-      image: personImg,
-      linkedin: "https://www.linkedin.com/company/aspl-fusion"
+      name: "Mr. Abhay K. Jha",
+      position: "Strategic Leader",
+      bio: "A successful entrepreneur with a proven track record, providing strategic and corporate leadership for ASPL. Founder of ESSI Security and Defence, he has executed complex projects for critical national infrastructure including Parliament House and the Reserve Bank of India.",
+      image: abhayImg,
+      linkedin: "https://www.linkedin.com/in/abhay-jha-61ab9a159/"
     },
     {
       id: 3,
-      name: "Abhinav Jha",
-      position: "Director",
-      bio: "15+ years experience in advanced manufacturing and superconducting magnet systems. Led engineering teams at major aerospace companies.",
-      image: personImg,
-      linkedin: "https://www.linkedin.com/company/aspl-fusion"
-    },
-    {
-      id: 4,
-      name: "Dr. Meera Gupta",
-      position: "Head of Plasma Physics",
-      bio: "Leading researcher in plasma stability and control. Published 50+ papers on fusion plasma physics. Former BARC scientist.",
-      image: personImg,
-      linkedin: "https://www.linkedin.com/company/aspl-fusion"
-    },
-    {
-      id: 5,
-      name: "Vikram Singh",
-      position: "CFO",
-      bio: "Seasoned financial executive with expertise in deep tech ventures. Previously CFO at renewable energy unicorn.",
-      image: personImg,
-      linkedin: "https://www.linkedin.com/company/aspl-fusion"
-    },
-    {
-      id: 6,
-      name: "Dr. Anjali Reddy",
-      position: "Head of Applications",
-      bio: "Expert in nuclear medicine and isotope production. Leading our medical isotope commercialization strategy.",
-      image: personImg,
-      linkedin: "https://www.linkedin.com/company/aspl-fusion"
+      name: "Mr. Abhinav Jha",
+      position: "Operations Director",
+      bio: "A dynamic entrepreneur who drives the operational execution of ASPL's ambitious roadmap. His background combines hands-on project management at ESSI with experience at cutting-edge research centers like Stanford Intelligent Systems Lab and UCLA's Condensed Matter Physics lab.",
+      image: abhinavImg,
+      linkedin: "https://www.linkedin.com/in/acejack/"
     }
   ];
 
   const advisors = [
     {
       id: 1,
-      name: "Prof. S. Chandrasekhar",
+      name: "Prof. Y.C. Saxena",
       position: "Scientific Advisor",
-      bio: "Former Director of Institute for Plasma Research. Pioneer in Indian fusion research.",
-      image: personImg,
-      linkedin: "https://www.linkedin.com/company/aspl-fusion"
-    },
-    {
-      id: 2,
-      name: "Dr. Rachel Chen",
-      position: "International Advisor",
-      bio: "Former fusion program lead at ITER. Expert in international collaborations.",
-      image: personImg,
-      linkedin: "https://www.linkedin.com/company/aspl-fusion"
-    },
-    {
-      id: 3,
-      name: "Arjun Malhotra",
-      position: "Business Advisor",
-      bio: "Serial entrepreneur and investor in deep tech. Co-founder of multiple unicorns.",
-      image: personImg,
-      linkedin: "https://www.linkedin.com/company/aspl-fusion"
+      bio: "Retired Senior Professor of Institute for Plasma Research (IPR), Gandhinagar. One of the founder members of IPR. As a faculty member at Physical Research Laboratory (PRL), Ahmedabad, he was instrumental in starting Experimental Plasma Physics research at PRL. He did his Ph.D. in cosmic rays under the supervision of Dr. Bibha Chowdhuri. He is a member, past President and Secretary of Plasma Science Society of India, Fellow of Gujarat Science Academy, and past General Secretary of Asian Plasma & Fusion Association.",
+      image: saxenaImg,
+      linkedin: "https://www.linkedin.com/in/yogesh-chandra-saxena-23815a57/"
     }
+    // TODO: Add more advisors when available
+    // {
+    //   id: 2,
+    //   name: "Dr. Rachel Chen",
+    //   position: "International Advisor",
+    //   bio: "Former fusion program lead at ITER. Expert in international collaborations.",
+    //   image: personImg,
+    //   linkedin: "https://www.linkedin.com/company/aspl-fusion"
+    // },
+    // {
+    //   id: 3,
+    //   name: "Arjun Malhotra",
+    //   position: "Business Advisor",
+    //   bio: "Serial entrepreneur and investor in deep tech. Co-founder of multiple unicorns.",
+    //   image: personImg,
+    //   linkedin: "https://www.linkedin.com/company/aspl-fusion"
+    // }
   ];
 
   return (

@@ -3,24 +3,31 @@ import { Link, useNavigate } from 'react-router-dom';
 import LiquidEther from '../components/LiquidEther';
 import ElectricBorder from '../components/ElectricBorder';
 import CounterAnimation from '../components/CounterAnimation';
+import EnhancedSearch from '../components/EnhancedSearch';
+import SkeletonLoader, { FAQSkeleton } from '../components/SkeletonLoader';
 import { useRecaptcha } from '../hooks/useRecaptcha';
 import { canSubmitForm, recordFormSubmission, getRemainingCooldown, formatRemainingTime, checkRateLimit, recordSubmission } from '../utils/formUtils';
-// Using absolute paths from public folder for better Vercel compatibility
-const fusionReactorImg = '/placeholder-fusion-reactor.png';
-const isotopeImg = '/placeholder-isotope.png';
-import medicalIcon from '../assets/images/icon-medical.png';
-import energyIcon from '../assets/images/icon-energy.png';
-import gdtIcon from '../assets/images/icon-gdt.png';
+import emailMarketingManager from '../utils/emailMarketing';
+import analyticsManager from '../utils/analytics';
+// Using WebP format for better performance and optimization
+import fusionReactorImg from '../assets/images/fusion-reactor.webp';
+import isotopeImg from '../assets/images/isotope.webp';
+import medicalIcon from '../assets/images/icon-medical.webp';
+import energyIcon from '../assets/images/icon-energy.webp';
+import gdtIcon from '../assets/images/icon-gdt.webp';
+// Unique placeholders to avoid image reuse
+import gdtDeviceIcon from '../assets/images/icon-gdt-device.webp';
+import medicalModularIcon from '../assets/images/icon-medical-modular.webp';
 import '../styles/Home.css';
 
 function Home() {
   const navigate = useNavigate();
   const [expandedFAQ, setExpandedFAQ] = useState(null);
-  const [searchQuery, setSearchQuery] = useState('');
   const [newsletterEmail, setNewsletterEmail] = useState('');
   const [newsletterSubmitted, setNewsletterSubmitted] = useState(false);
   const [newsletterBlocked, setNewsletterBlocked] = useState(false);
   const [newsletterRemainingTime, setNewsletterRemainingTime] = useState(0);
+  const [isLoading, setIsLoading] = useState(true);
   
   // reCAPTCHA hook for newsletter
   const { isLoaded: newsletterRecaptchaLoaded, isLoading: newsletterRecaptchaLoading, executeRecaptchaAction: executeNewsletterRecaptcha } = useRecaptcha('newsletter_subscribe');
@@ -28,27 +35,27 @@ function Home() {
   const faqs = [
     {
       question: "What makes ASPL Fusion's approach unique?",
-      answer: "Unlike conventional fusion startups focused solely on electricity generation, we pursue a phased commercialization strategy. Our initial focus on medical isotope production provides immediate revenue while systematically de-risking our path to grid-scale fusion power."
+      answer: "Our core differentiator is our pragmatic, phased commercialization strategy. Unlike ventures focused solely on the long-term goal of electricity, we are targeting profitable, near-term markets—starting with medical isotope production—to generate revenue and systematically de-risk our technology at every stage. This business-first approach builds a financially robust company while advancing toward the ultimate goal of clean energy."
     },
     {
-      question: "When will ASPL Fusion achieve commercial fusion energy?",
-      answer: "Our roadmap targets medical isotope production by 2028, industrial heat applications by 2032, hydrogen production by 2035, and grid-scale electricity by 2040. Each phase generates revenue and validates our technology progressively."
+      question: "What is the timeline for commercial fusion energy?",
+      answer: "Our development is structured in four distinct, milestone-driven phases. Phase 1 is focused on achieving commercial sales of medical isotopes within the first few years of operation. This builds the financial and technical foundation for our subsequent phases: industrial heat applications, green hydrogen production, and ultimately, grid-scale electricity. This disciplined progression allows us to deliver value to stakeholders long before the first kilowatt-hour is supplied to the grid."
     },
     {
       question: "How does magnetic mirror technology differ from tokamaks?",
-      answer: "Magnetic mirrors offer simpler linear geometry compared to tokamaks' complex toroidal design. This enables easier construction, maintenance, and scalability while achieving fusion conditions suitable for our phased applications."
+      answer: "Magnetic mirror technology uses a linear, modular geometry, which contrasts with the complex toroidal (donut-shaped) design of a tokamak. This fundamental difference provides significant engineering advantages, including simpler construction, more direct access for maintenance, and greater potential for modular scalability."
     },
     {
       question: "What are the investment opportunities with ASPL Fusion?",
-      answer: "We offer strategic partnerships across our development phases. Early investors benefit from our near-term revenue streams while positioning for the transformative potential of commercial fusion energy. Contact us to discuss investment opportunities."
+      answer: "An investment in ASPL Fusion supports a deep-tech venture with a clear, de-risked path to near-term revenue. Our phased strategy is designed to create value at each step, from capturing the profitable medical isotope market to serving the industrial heat and hydrogen sectors. This provides a unique opportunity to invest in a company poised for both immediate market impact and transformative long-term growth in the clean energy sector."
     },
     {
       question: "How does ASPL Fusion contribute to India's energy security?",
-      answer: "By developing domestic fusion capabilities, we reduce India's dependence on imported fossil fuels and provide a path to energy sovereignty. Our technology will enable India to lead in the global clean energy transition."
+      answer: "By developing a domestic, commercially viable fusion energy source, ASPL Fusion directly supports India's national vision of 'Aatmanirbhar Bharat' (self-reliant India). Our technology will reduce the nation's heavy dependence on imported fossil fuels, providing a secure, sovereign, and sustainable energy supply to power future economic growth."
     },
     {
-      question: "What safety measures are implemented in fusion technology?",
-      answer: "Fusion is inherently safe - reactions stop immediately if conditions aren't maintained, producing no long-lived radioactive waste. Our facilities incorporate multiple safety systems exceeding international standards for radiation protection."
+      question: "How safe is fusion energy?",
+      answer: "Fusion energy is inherently safe. The fundamental physics of the process makes a runaway chain reaction or a fission-type meltdown physically impossible. Any disruption to the precise operating conditions causes the reaction to stop immediately. Furthermore, fusion does not produce high-level, long-lived radioactive waste."
     }
   ];
 
@@ -56,37 +63,12 @@ function Home() {
     setExpandedFAQ(expandedFAQ === index ? null : index);
   };
 
-  const handleSearch = (e) => {
-    e.preventDefault();
-    if (!searchQuery.trim()) return;
-    
-    const query = searchQuery.toLowerCase().trim();
-    
-    // Simple keyword-based navigation
-    if (query.includes('fusion') || query.includes('reactor') || query.includes('technology')) {
-      navigate('/technology');
-    } else if (query.includes('mission') || query.includes('strategy') || query.includes('approach')) {
-      navigate('/mission');
-    } else if (query.includes('roadmap') || query.includes('timeline') || query.includes('phase')) {
-      navigate('/roadmap');
-    } else if (query.includes('application') || query.includes('isotope') || query.includes('medical')) {
-      navigate('/applications');
-    } else if (query.includes('team') || query.includes('career') || query.includes('job')) {
-      navigate('/team');
-    } else if (query.includes('news') || query.includes('update') || query.includes('announcement')) {
-      navigate('/news');
-    } else if (query.includes('contact') || query.includes('email') || query.includes('phone')) {
-      navigate('/contact');
-    } else if (query.includes('faq') || query.includes('question') || query.includes('help')) {
-      navigate('/faq');
-    } else {
-      // Default: show a message or navigate to a general page
-      alert(`Searching for "${searchQuery}"... Redirecting to our technology page for more information.`);
-      navigate('/technology');
-    }
-  };
-
   useEffect(() => {
+    // Simulate initial loading
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+
     // Check newsletter form cooldown
     const checkNewsletterCooldown = () => {
       if (!canSubmitForm('newsletter')) {
@@ -103,6 +85,8 @@ function Home() {
     };
 
     checkNewsletterCooldown();
+
+    return () => clearTimeout(timer);
   }, []);
 
   const handleNewsletterSubmit = async (e) => {
@@ -127,19 +111,34 @@ function Home() {
         // Execute reCAPTCHA
         const recaptchaToken = await executeNewsletterRecaptcha();
         
-        // Record successful submission
-        recordFormSubmission('newsletter');
-        recordSubmission();
+        // Subscribe to email marketing
+        const result = await emailMarketingManager.subscribeToNewsletter(
+          newsletterEmail,
+          ['website', 'homepage'],
+          { source: 'homepage', timestamp: new Date().toISOString() }
+        );
         
-        setNewsletterSubmitted(true);
-        setNewsletterEmail('');
-        
-        // Hide form after success
-        setTimeout(() => {
-          setNewsletterBlocked(true);
-        }, 2000);
-        
-        setTimeout(() => setNewsletterSubmitted(false), 3000);
+        if (result.success) {
+          // Track engagement
+          emailMarketingManager.trackEngagement('newsletter_subscribe');
+          analyticsManager.trackNewsletterSubscription('homepage');
+          
+          // Record successful submission
+          recordFormSubmission('newsletter');
+          recordSubmission();
+          
+          setNewsletterSubmitted(true);
+          setNewsletterEmail('');
+          
+          // Hide form after success
+          setTimeout(() => {
+            setNewsletterBlocked(true);
+          }, 2000);
+          
+          setTimeout(() => setNewsletterSubmitted(false), 3000);
+        } else {
+          throw new Error(result.message || 'Subscription failed');
+        }
       } catch (error) {
         console.error('Newsletter submission error:', error);
         alert('There was an error subscribing to our newsletter. Please try again.');
@@ -171,25 +170,15 @@ function Home() {
           <h1 id="hero-headline">A Pragmatic Path to India's Energy Sovereignty</h1>
           <p className="subtitle">ASPL Fusion is commercializing fusion technology through a disciplined, phased approach that ensures financial viability and systematic de-risking at every stage.</p>
           
-          {/* Search Bar */}
-          <form className="hero-search" onSubmit={handleSearch}>
-            <div className="search-input-group">
-              <input
-                type="text"
-                placeholder="Search for fusion technology, medical isotopes, team, contact..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="search-input"
-              />
-              <button type="submit" className="search-button">
-                <i className="fas fa-search"></i>
-              </button>
-            </div>
-          </form>
+          {/* Enhanced Search Bar */}
+          <EnhancedSearch 
+            placeholder="Search for fusion technology, medical isotopes, team, contact..."
+            className="hero-search"
+          />
           
           <ElectricBorder>
             <Link to="/roadmap" className="cta-button">
-              Explore Our Strategy
+              Discover Our Strategy
             </Link>
           </ElectricBorder>
         </div>
@@ -199,12 +188,11 @@ function Home() {
         <div className="container">
           <div className="content-wrapper">
             <div className="content-text">
-              <h2>Solving Critical National Challenges</h2>
-              <p>India faces converging crises in healthcare, energy, and industrial competitiveness. ASPL Fusion's phased approach addresses each systematically, generating value while advancing toward our ultimate goal of clean, abundant fusion power.</p>
-              <p>Our technology platform enables multiple revenue streams across medical isotopes, industrial heat, hydrogen production, and eventually grid-scale electricity—each phase funding the next while serving critical national needs.</p>
+              <h2>Solving India's Critical National Imperatives</h2>
+              <p>India stands at a pivotal moment, facing the triple challenge of securing its energy future, strengthening its healthcare infrastructure, and decarbonizing its industrial base. ASPL Fusion's strategy is uniquely designed to address these imperatives simultaneously, creating a powerful engine for national progress.</p>
               <ElectricBorder>
                 <Link to="/applications" className="learn-more-button">
-                  Explore Applications
+                  Explore Our Applications
                 </Link>
               </ElectricBorder>
             </div>
@@ -222,9 +210,8 @@ function Home() {
               <img src={gdtIcon} alt="Fusion Technology" />
             </div>
             <div className="content-text">
-              <h2>Revolutionary Technology, Practical Execution</h2>
-              <p>Our magnetic mirror approach offers distinct advantages over traditional tokamak designs—simpler construction, easier maintenance, and modular scalability. This enables us to start small, prove viability, and scale systematically.</p>
-              <p>By focusing on near-term applications that don't require electricity generation, we can validate our technology, generate revenue, and build operational expertise years before our competitors.</p>
+              <h2>A Smarter Path to Commercial Fusion</h2>
+              <p>Our strategic choice is the Advanced Magnetic Mirror—a technology matured through decades of international research. By avoiding the immense complexity of mainstream tokamak designs, we are pursuing a path that is potentially simpler to build, easier to maintain, and faster to commercialize.</p>
               <ElectricBorder>
                 <Link to="/technology" className="learn-more-button">
                   Learn About Our Technology
@@ -238,8 +225,11 @@ function Home() {
       <section className="faq-section p-8">
         <div className="container">
           <h2 className="text-center mb-12">Frequently Asked Questions</h2>
-          <div className="faq-grid">
-            {faqs.map((faq, index) => (
+          {isLoading ? (
+            <FAQSkeleton />
+          ) : (
+            <div className="faq-grid">
+              {faqs.map((faq, index) => (
               <div key={index} className="faq-item card-electric">
                 <button
                   className="faq-toggle"
@@ -254,7 +244,8 @@ function Home() {
                 </div>
               </div>
             ))}
-          </div>
+            </div>
+          )}
         </div>
       </section>
 
@@ -350,7 +341,7 @@ function Home() {
               className="tech-feature-card card-electric"
               onClick={() => navigate('/technology')}
             >
-              <img src={gdtIcon} alt="GDT Device" />
+              <img src={gdtDeviceIcon} alt="GDT Device" />
               <h3>Magnetic Mirror Design</h3>
               <p>Simpler linear geometry enabling easier construction and maintenance</p>
             </div>
@@ -366,7 +357,7 @@ function Home() {
               className="tech-feature-card card-electric"
               onClick={() => navigate('/technology')}
             >
-              <img src={medicalIcon} alt="Modular Design" />
+              <img src={medicalModularIcon} alt="Modular Design" />
               <h3>Modular Scalability</h3>
               <p>Progressive scaling from pilot plants to commercial facilities</p>
             </div>

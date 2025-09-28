@@ -20,9 +20,9 @@ function Roadmap() {
     <div className="roadmap-page">
       <section className="page-hero">
         <div className="container">
-          <h1 className="gradient-text">Development Roadmap</h1>
+          <h1 className="gradient-text">Our Development Roadmap</h1>
           <p className="hero-subtitle">
-            A pragmatic path from proof-of-concept to commercial fusion power
+            A Pragmatic, Phase-Driven Path from Near-Term Revenue to Commercial Fusion Power
           </p>
         </div>
       </section>
@@ -31,8 +31,7 @@ function Roadmap() {
         <div className="container">
           <div className="intro-content">
             <h2>Building Value at Every Stage</h2>
-            <p>ASPL Fusion has developed a pragmatic roadmap that balances technological ambition with commercial viability. Our four-phase strategy is designed to generate value at each stage while systematically de-risking our path to grid-scale fusion power.</p>
-            <p>This approach allows us to build a sustainable business model, establish operational expertise, and develop supply chains while progressively advancing our core technology.</p>
+            <p>Our four-phase approach balances technological ambition with commercial viability. This strategy is designed to generate value at each stage while systematically de-risking the path to grid-scale fusion power, building a robust business on a foundation of tangible milestones and market success.</p>
           </div>
         </div>
       </section>
@@ -47,17 +46,16 @@ function Roadmap() {
             </div>
             <div className="phase-content">
               <div className="phase-description">
-                <p>Our initial focus is on developing fusion-based neutron sources for producing critical medical isotopes, particularly Molybdenum-99 (Mo-99), the precursor to Technetium-99m used in over 40 million medical procedures annually worldwide.</p>
-                <p>India currently imports 100% of its medical isotopes, creating vulnerabilities in the healthcare system. Our technology will establish domestic production capability, ensuring a stable supply for cancer diagnostics and treatment.</p>
+                <p>Establish a profitable enterprise by addressing India's critical need for a secure domestic supply of medical isotopes.</p>
+                <p><strong>Technology:</strong> Deploy a commercial-grade, accelerator-based neutron source to produce Molybdenum-99 (Mo-99) and other high-value isotopes.</p>
               </div>
               <div className="phase-milestones">
                 <h3>Key Milestones</h3>
                 <ul className="milestone-list">
-                  <li><span className="milestone-date">2025</span> Complete proof-of-concept prototype</li>
-                  <li><span className="milestone-date">2026</span> Achieve first neutron production</li>
-                  <li><span className="milestone-date">2027</span> Demonstrate Mo-99 production</li>
-                  <li><span className="milestone-date">2028</span> Secure regulatory approvals</li>
-                  <li><span className="milestone-date">2028</span> Begin commercial isotope sales</li>
+                  <li>Complete proof-of-concept prototype</li>
+                  <li>Achieve first neutron production</li>
+                  <li>Demonstrate consistent Mo-99 production at target purity and yield</li>
+                  <li>Secure all necessary regulatory approvals for commercial sales</li>
                 </ul>
               </div>
               <div className="phase-outcomes">
@@ -65,21 +63,21 @@ function Roadmap() {
                   <i className="fas fa-check-circle"></i>
                   <div>
                     <h4>Technology Validation</h4>
-                    <p>Demonstrate our magnetic mirror fusion concept in a commercial application</p>
+                    <p>Validate core neutron source technology and operational protocols</p>
                   </div>
                 </ElectricBorder>
                 <ElectricBorder className="outcome" as="div">
                   <i className="fas fa-check-circle"></i>
                   <div>
-                    <h4>Initial Revenue</h4>
-                    <p>Establish sustainable business model with recurring revenue stream</p>
+                    <h4>Early Revenue</h4>
+                    <p>Establish a sustainable, profitable business model to fund future R&D</p>
                   </div>
                 </ElectricBorder>
                 <ElectricBorder className="outcome" as="div">
                   <i className="fas fa-check-circle"></i>
                   <div>
-                    <h4>Strategic Value</h4>
-                    <p>Secure India's medical isotope supply chain for critical healthcare needs</p>
+                    <h4>National Impact</h4>
+                    <p>Create a secure domestic supply chain for India's healthcare system</p>
                   </div>
                 </ElectricBorder>
               </div>
@@ -91,21 +89,21 @@ function Roadmap() {
           <div className="container">
             <div className="phase-header">
               <div className="phase-number">Phase 2</div>
-              <h2>Industrial Heat Applications</h2>
+              <h2>Industrial Heat & Strategic Applications</h2>
               <div className="phase-timeframe">2029-2032</div>
             </div>
             <div className="phase-content">
               <div className="phase-description">
-                <p>Building on our neutron source technology, Phase 2 focuses on providing clean, high-temperature process heat for industrial applications. Industries like steel, cement, and chemicals require temperatures above 1000°C, currently achievable only through fossil fuel combustion.</p>
-                <p>Our fusion technology can provide this heat without carbon emissions, helping heavy industries meet their decarbonization goals while maintaining competitiveness.</p>
+                <p>Develop and demonstrate our proprietary Advanced Magnetic Mirror fusion device at a sub-grid scale.</p>
+                <p><strong>Technology:</strong> Build a scaled-up fusion device capable of providing clean, high-temperature process heat and serving strategic national applications.</p>
               </div>
               <div className="phase-milestones">
                 <h3>Key Milestones</h3>
                 <ul className="milestone-list">
-                  <li><span className="milestone-date">2029</span> Scale up fusion reactor design</li>
-                  <li><span className="milestone-date">2030</span> Pilot deployment with industrial partner</li>
-                  <li><span className="milestone-date">2031</span> Demonstrate economic viability</li>
-                  <li><span className="milestone-date">2032</span> Commercial deployments begin</li>
+                  <li>Finalize the engineering design of the Advanced Magnetic Mirror device</li>
+                  <li>Achieve stable, high-performance plasma operation</li>
+                  <li>Demonstrate effective tritium breeding in a test blanket module</li>
+                  <li>Secure pilot deployment with a major industrial partner for process heat</li>
                 </ul>
               </div>
               <div className="phase-outcomes">
@@ -113,14 +111,21 @@ function Roadmap() {
                   <i className="fas fa-industry"></i>
                   <div>
                     <h4>Industrial Decarbonization</h4>
-                    <p>Enable heavy industries to eliminate fossil fuel dependence</p>
+                    <p>Provide a viable path for heavy industry to eliminate fossil fuels</p>
+                  </div>
+                </ElectricBorder>
+                <ElectricBorder className="outcome" as="div">
+                  <i className="fas fa-shield-alt"></i>
+                  <div>
+                    <h4>Fuel Self-Sufficiency</h4>
+                    <p>Prove the technology for tritium breeding, a critical step for energy independence</p>
                   </div>
                 </ElectricBorder>
                 <ElectricBorder className="outcome" as="div">
                   <i className="fas fa-chart-line"></i>
                   <div>
                     <h4>Market Expansion</h4>
-                    <p>Establish presence in multi-billion dollar industrial heat market</p>
+                    <p>Open multi-billion dollar markets in industrial heat and strategic services</p>
                   </div>
                 </ElectricBorder>
               </div>
@@ -132,35 +137,36 @@ function Roadmap() {
           <div className="container">
             <div className="phase-header">
               <div className="phase-number">Phase 3</div>
-              <h2>Hydrogen Production</h2>
+              <h2>Grid-Scale Prototype Plant</h2>
               <div className="phase-timeframe">2033-2035</div>
             </div>
             <div className="phase-content">
               <div className="phase-description">
-                <p>Phase 3 leverages our high-temperature fusion systems to produce green hydrogen through thermochemical water splitting. This process is significantly more efficient than electrolysis and can produce hydrogen at costs competitive with fossil fuel-derived hydrogen.</p>
-                <p>Green hydrogen is essential for decarbonizing transportation, fertilizer production, and steel manufacturing—sectors that represent over 20% of global emissions.</p>
+                <p>Construct and operate India's first commercial-scale, pure-fusion power plant.</p>
+                <p><strong>Technology:</strong> Build a First-of-a-Kind (FOAK) 400 MW power plant based on our validated Advanced Magnetic Mirror technology.</p>
               </div>
               <div className="phase-milestones">
                 <h3>Key Milestones</h3>
                 <ul className="milestone-list">
-                  <li><span className="milestone-date">2033</span> Integrate hydrogen production systems</li>
-                  <li><span className="milestone-date">2034</span> Achieve target production costs</li>
-                  <li><span className="milestone-date">2035</span> Scale to commercial volumes</li>
+                    <li>Complete the design for a net-energy-gain (Q&gt;10) fusion power core</li>
+                  <li>Achieve grid connection and successful testing phases</li>
+                  <li>Demonstrate a competitive Levelized Cost of Electricity (LCOE)</li>
+                  <li>Achieve full commercial operational status</li>
                 </ul>
               </div>
               <div className="phase-outcomes">
                 <ElectricBorder className="outcome" as="div">
-                  <i className="fas fa-leaf"></i>
+                  <i className="fas fa-bolt"></i>
                   <div>
-                    <h4>Green Fuel Economy</h4>
-                    <p>Enable transition to hydrogen-based transportation and industry</p>
+                    <h4>Energy Independence</h4>
+                    <p>Provide clean, abundant, 24/7 baseload power to India's grid</p>
                   </div>
                 </ElectricBorder>
                 <ElectricBorder className="outcome" as="div">
-                  <i className="fas fa-globe"></i>
+                  <i className="fas fa-trophy"></i>
                   <div>
-                    <h4>Export Potential</h4>
-                    <p>Position India as a global green hydrogen exporter</p>
+                    <h4>Global Leadership</h4>
+                    <p>Establish India as a world leader in commercial fusion technology</p>
                   </div>
                 </ElectricBorder>
               </div>
@@ -172,37 +178,35 @@ function Roadmap() {
           <div className="container">
             <div className="phase-header">
               <div className="phase-number">Phase 4</div>
-              <h2>Grid-Scale Electricity</h2>
+              <h2>National Fleet Deployment</h2>
               <div className="phase-timeframe">2036-2040</div>
             </div>
             <div className="phase-content">
               <div className="phase-description">
-                <p>Our ultimate goal: clean, abundant electricity generation. By Phase 4, we will have proven our technology across multiple applications, established supply chains, developed operational expertise, and built customer relationships.</p>
-                <p>Grid-scale fusion power represents the holy grail of clean energy—providing reliable baseload power without carbon emissions, radioactive waste, or resource constraints.</p>
+                <p>Achieve national-scale impact through the standardized deployment of multiple power plants.</p>
+                <p><strong>Technology:</strong> Implement a "factory model" for manufacturing Nth-of-a-Kind (NOAK) 400 MW plants, driving down costs through economies of scale and supply chain optimization.</p>
               </div>
               <div className="phase-milestones">
                 <h3>Key Milestones</h3>
                 <ul className="milestone-list">
-                  <li><span className="milestone-date">2036</span> Complete demonstration plant</li>
-                  <li><span className="milestone-date">2037</span> Grid connection and testing</li>
-                  <li><span className="milestone-date">2038</span> Achieve competitive LCOE</li>
-                  <li><span className="milestone-date">2039</span> First commercial plant operational</li>
-                  <li><span className="milestone-date">2040</span> Multiple deployments underway</li>
+                  <li>Establish a domestic manufacturing ecosystem with Indian heavy engineering partners</li>
+                  <li>Achieve significant cost reductions on subsequent plant deployments</li>
+                  <li>Deploy a fleet of power plants to become a cornerstone of India's clean energy infrastructure</li>
                 </ul>
               </div>
               <div className="phase-outcomes">
                 <ElectricBorder className="outcome" as="div">
-                  <i className="fas fa-bolt"></i>
+                  <i className="fas fa-leaf"></i>
                   <div>
-                    <h4>Energy Independence</h4>
-                    <p>Provide India with unlimited clean baseload power</p>
+                    <h4>Massive Decarbonization</h4>
+                    <p>Make a substantial contribution to India's net-zero goals</p>
                   </div>
                 </ElectricBorder>
                 <ElectricBorder className="outcome" as="div">
-                  <i className="fas fa-trophy"></i>
+                  <i className="fas fa-industry"></i>
                   <div>
-                    <h4>Global Leadership</h4>
-                    <p>Establish India as a fusion technology leader</p>
+                    <h4>Economic Growth</h4>
+                    <p>Create a new, high-tech manufacturing industry in India</p>
                   </div>
                 </ElectricBorder>
               </div>

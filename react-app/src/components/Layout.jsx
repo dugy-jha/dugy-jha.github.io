@@ -3,12 +3,16 @@ import { Link, useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 import CardNav from './CardNav';
-import DarkModeToggle from './DarkModeToggle';
-import logoImg from '../assets/images/ASPL-Logo-SVG.svg';
+import Settings from './Settings';
+import ConsentBanner from './ConsentBanner';
+import logoImg from '../assets/images/ASPL-SVG-Logo.svg';
 import '../styles/Layout.css';
 
 function Layout({ children }) {
   const [showScrollTop, setShowScrollTop] = useState(false);
+  const [consentPreferences, setConsentPreferences] = useState(() => {
+    return cookieManager.loadPreferences();
+  });
   const location = useLocation();
 
   useEffect(() => {
@@ -24,6 +28,28 @@ function Layout({ children }) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  // Handle consent changes from both banner and settings
+  const handleConsentChange = (newPreferences) => {
+    setConsentPreferences(newPreferences);
+    cookieManager.savePreferences(newPreferences);
+    
+    // Initialize or clear services based on new preferences
+    if (newPreferences.analytics) {
+      cookieManager.initializeAnalytics();
+    }
+    if (newPreferences.advertising) {
+      cookieManager.initializeAdvertising();
+    }
+    if (newPreferences.personalization) {
+      cookieManager.initializePersonalization();
+    }
+    
+    // Clear non-necessary cookies if they're disabled
+    if (!newPreferences.analytics || !newPreferences.advertising || !newPreferences.personalization) {
+      cookieManager.clearNonNecessaryCookies();
+    }
+  };
+
   return (
     <>
       <a href="#main-content" className="skip-link">Skip to main content</a>
@@ -35,6 +61,12 @@ function Layout({ children }) {
               <img src={logoImg} alt="ASPL Fusion Logo" className="logo-img" />
               <span>ASPL<span className="highlight">Fusion</span></span>
             </Link>
+            
+            <div className="nav-actions">
+              <button className="mobile-menu-button" aria-label="Toggle menu">
+                <i className="fas fa-bars"></i>
+              </button>
+            </div>
           </div>
         </nav>
       </header>
@@ -115,10 +147,11 @@ function Layout({ children }) {
         <FontAwesomeIcon icon={faArrowUp} />
       </button>
 
-              <DarkModeToggle />
-              <CardNav />
-            </>
-          );
-        }
+      <Settings onConsentChange={handleConsentChange} />
+      <ConsentBanner onConsentChange={handleConsentChange} />
+      <CardNav />
+    </>
+  );
+}
 
 export default Layout;

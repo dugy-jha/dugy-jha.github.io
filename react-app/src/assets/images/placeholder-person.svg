@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
-  <rect width="800" height="800" fill="#e2e8f0"/>
-  <circle cx="400" cy="300" r="150" fill="#94a3b8"/>
-  <circle cx="400" cy="800" r="350" fill="#94a3b8"/>
-  <text x="400" y="450" font-family="Arial" font-size="60" text-anchor="middle" fill="#475569">Team Member</text>
-</svg>

@@ -364,6 +364,61 @@ a:hover {
   background-color: #f3f4f6;
 }
 
+/* Fix light mode button text colors */
+.light .btn-primary {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.light .btn-primary:hover:not(:disabled) {
+  background-color: var(--color-primary-dark);
+  color: white;
+}
+
+.light .btn-secondary {
+  background-color: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.light .btn-secondary:hover:not(:disabled) {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.light .btn-accent {
+  background-color: var(--color-accent);
+  color: var(--color-bg);
+}
+
+.light .btn-accent:hover:not(:disabled) {
+  background-color: #00e6e6;
+  color: var(--color-bg);
+}
+
+/* Fix light mode CTA button */
+.light .cta-button {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.light .cta-button:hover {
+  background-color: var(--color-primary-dark);
+  color: white;
+}
+
+/* Fix light mode learn more button */
+.light .learn-more-button {
+  background-color: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.light .learn-more-button:hover {
+  background-color: var(--color-primary);
+  color: white;
+}
+
 /* Forms */
 .form-group {
   margin-bottom: 2rem;
@@ -403,8 +458,53 @@ a:hover {
 .light .form-textarea {
   background-color: #ffffff;
   border: 1px solid #d1d5db;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  color: #333333;
 }
+
+.light .form-group input:focus,
+.light .form-group textarea:focus,
+.light .form-group select:focus,
+.light .form-input:focus,
+.light .form-textarea:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(0, 85, 196, 0.3);
+  outline: none;
+}
+
+/* Form button styling */
+.form-button {
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  padding: 1rem 2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition-default);
+  min-height: 48px;
+}
+
+.form-button:hover:not(:disabled) {
+  background-color: var(--color-primary-dark);
+  transform: translateY(-2px);
+}
+
+.form-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+.light .form-button {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.light .form-button:hover:not(:disabled) {
+  background-color: var(--color-primary-dark);
+  color: white;
+}
+
 
 .form-textarea {
   resize: vertical;
@@ -616,6 +716,18 @@ a:hover {
 
 .bg-dark {
   background-color: var(--color-bg);
+}
+
+/* Hide Google reCAPTCHA logo */
+.grecaptcha-badge {
+  visibility: hidden !important;
+  opacity: 0 !important;
+  display: none !important;
+}
+
+/* Alternative method to hide reCAPTCHA badge */
+iframe[src*="recaptcha"] {
+  display: none !important;
 }
 
 /* Utility Classes */

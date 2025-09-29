@@ -610,6 +610,35 @@
   box-shadow: 0 0 0 3px rgba(0, 85, 196, 0.3);
 }
 
+/* Fix newsletter button in light mode */
+.newsletter-button {
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 1rem 2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition-default);
+  white-space: nowrap;
+}
+
+.newsletter-button:hover {
+  background: var(--color-primary-dark);
+  transform: translateY(-2px);
+}
+
+.light .newsletter-button {
+  background: var(--color-primary);
+  color: white;
+}
+
+.light .newsletter-button:hover {
+  background: var(--color-primary-dark);
+  color: white;
+  box-shadow: 0 0 0 3px rgba(0, 85, 196, 0.3);
+}
+
 .newsletter-input::placeholder {
   color: var(--color-text-light);
 }

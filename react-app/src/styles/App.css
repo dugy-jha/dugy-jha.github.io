@@ -645,7 +645,7 @@ a:hover {
 /* Page Hero Styles */
 .page-hero {
   background: linear-gradient(135deg, var(--color-bg) 0%, var(--color-bg-secondary) 100%);
-  background-image: url('../assets/images/hero-bg-mission-placeholder.svg');
+  background-image: url('../assets/images/hero-bg-mission.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

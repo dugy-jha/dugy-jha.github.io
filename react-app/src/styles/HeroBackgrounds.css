@@ -2,62 +2,62 @@
 
 /* Homepage Hero */
 .hero-bg-home {
-  background-image: url('../assets/images/hero-bg-home-placeholder.svg');
+  background-image: url('../assets/images/hero-bg-home.png');
 }
 
 /* Mission Page Hero */
 .hero-bg-mission {
-  background-image: url('../assets/images/hero-bg-mission-placeholder.svg');
+  background-image: url('../assets/images/hero-bg-mission.png');
 }
 
 /* Technology Page Hero */
 .hero-bg-technology {
-  background-image: url('../assets/images/hero-bg-technology-placeholder.svg');
+  background-image: url('../assets/images/hero-bg-technology.png');
 }
 
 /* Applications Page Hero */
 .hero-bg-applications {
-  background-image: url('../assets/images/hero-bg-applications-placeholder.svg');
+  background-image: url('../assets/images/hero-bg-applications.png');
 }
 
 /* Roadmap Page Hero */
 .hero-bg-roadmap {
-  background-image: url('../assets/images/hero-bg-roadmap-placeholder.svg');
+  background-image: url('../assets/images/hero-bg-roadmap.png');
 }
 
 /* Team Page Hero */
 .hero-bg-team {
-  background-image: url('../assets/images/hero-bg-team-placeholder.svg');
+  background-image: url('../assets/images/hero-bg-team.png');
 }
 
 /* Careers Page Hero */
 .hero-bg-careers {
-  background-image: url('../assets/images/hero-bg-careers-placeholder.svg');
+  background-image: url('../assets/images/hero-bg-careers.png');
 }
 
 /* News Page Hero */
 .hero-bg-news {
-  background-image: url('../assets/images/hero-bg-news-placeholder.svg');
+  background-image: url('../assets/images/hero-bg-news.png');
 }
 
 /* Contact Page Hero */
 .hero-bg-contact {
-  background-image: url('../assets/images/hero-bg-contact-placeholder.svg');
+  background-image: url('../assets/images/hero-bg-contact.png');
 }
 
 /* About Page Hero */
 .hero-bg-about {
-  background-image: url('../assets/images/hero-bg-about-placeholder.svg');
+  background-image: url('../assets/images/hero-bg-about.png');
 }
 
 /* FAQ Page Hero */
 .hero-bg-faq {
-  background-image: url('../assets/images/hero-bg-faq-placeholder.svg');
+  background-image: url('../assets/images/hero-bg-faq.png');
 }
 
 /* Case Studies Page Hero */
 .hero-bg-casestudies {
-  background-image: url('../assets/images/hero-bg-casestudies-placeholder.svg');
+  background-image: url('../assets/images/hero-bg-casestudies.png');
 }
 
 /* Fallback for when images don't load */

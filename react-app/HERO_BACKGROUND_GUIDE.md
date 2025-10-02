@@ -6,73 +6,73 @@ This guide provides specifications for creating hero background images for all p
 ## 🎯 **Pages Requiring Hero Backgrounds**
 
 ### **1. Homepage (`/`)**
-- **File**: `hero-bg-home.webp`
+- **File**: `hero-bg-home.png`
 - **Theme**: Fusion energy visualization, energy sovereignty
 - **Colors**: Primary blue (#0055c4), accent cyan (#00ffff)
 - **Content**: Fusion reactor, energy grid, India's energy future
 
 ### **2. Mission (`/mission`)**
-- **File**: `hero-bg-mission.webp`
+- **File**: `hero-bg-mission.png`
 - **Theme**: Mission and vision, national impact
 - **Colors**: Secondary blue (#00a6ff), gradient effects
 - **Content**: India's energy landscape, mission statement visuals
 
 ### **3. Technology (`/technology`)**
-- **File**: `hero-bg-technology.webp`
+- **File**: `hero-bg-technology.png`
 - **Theme**: Advanced Magnetic Mirror technology
 - **Colors**: Cyan accent (#00ffff), tech blue
 - **Content**: Magnetic mirror system, plasma visualization, HTS magnets
 
 ### **4. Applications (`/applications`)**
-- **File**: `hero-bg-applications.webp`
+- **File**: `hero-bg-applications.png`
 - **Theme**: Multiple applications, versatility
 - **Colors**: Purple accent (#5227FF), multi-color
 - **Content**: Medical isotopes, industrial heat, hydrogen production
 
 ### **5. Roadmap (`/roadmap`)**
-- **File**: `hero-bg-roadmap.webp`
+- **File**: `hero-bg-roadmap.png`
 - **Theme**: Timeline, progression, phases
 - **Colors**: Pink accent (#FF9FFC), gradient
 - **Content**: Four-phase timeline, development milestones
 
 ### **6. Team (`/team`)**
-- **File**: `hero-bg-team.webp`
+- **File**: `hero-bg-team.png`
 - **Theme**: Team, collaboration, expertise
 - **Colors**: Team blue, professional
 - **Content**: Team collaboration, scientific expertise
 
 ### **7. Careers (`/careers`)**
-- **File**: `hero-bg-careers.webp`
+- **File**: `hero-bg-careers.png`
 - **Theme**: Career opportunities, growth
 - **Colors**: Career green, opportunity
 - **Content**: Career growth, innovation, joining the team
 
 ### **8. News (`/news`)**
-- **File**: `hero-bg-news.webp`
+- **File**: `hero-bg-news.png`
 - **Theme**: Latest updates, progress
 - **Colors**: News blue, information
 - **Content**: News updates, progress reports
 
 ### **9. Contact (`/contact`)**
-- **File**: `hero-bg-contact.webp`
+- **File**: `hero-bg-contact.png`
 - **Theme**: Connection, communication
 - **Colors**: Contact blue, connection
 - **Content**: Global connection, communication
 
 ### **10. About (`/about`)**
-- **File**: `hero-bg-about.webp`
+- **File**: `hero-bg-about.png`
 - **Theme**: Company story, values
 - **Colors**: About blue, story
 - **Content**: Company history, values, story
 
 ### **11. FAQ (`/faq`)**
-- **File**: `hero-bg-faq.webp`
+- **File**: `hero-bg-faq.png`
 - **Theme**: Questions, answers, support
 - **Colors**: FAQ blue, support
 - **Content**: Question marks, support, help
 
 ### **12. Case Studies (`/casestudies`)**
-- **File**: `hero-bg-casestudies.webp`
+- **File**: `hero-bg-casestudies.png`
 - **Theme**: Success stories, examples
 - **Colors**: Success green, examples
 - **Content**: Case study examples, success stories
@@ -85,20 +85,20 @@ This guide provides specifications for creating hero background images for all p
 - **Mobile**: 768x432px (16:9 aspect ratio)
 
 ### **File Formats**
-- **Primary**: WebP (best compression, modern browsers)
-- **Fallback**: JPG (universal compatibility)
+- **Primary**: PNG (universal compatibility, good quality)
+- **Fallback**: JPG (smaller file size if needed)
 - **Vector**: SVG (for simple graphics, scalable)
 
 ### **File Naming Convention**
 ```
-hero-bg-[page-name].webp
-hero-bg-[page-name].jpg (fallback)
+hero-bg-[page-name].png
+hero-bg-[page-name].jpg (fallback if needed)
 ```
 
 ### **File Sizes (Target)**
-- **WebP**: 150-300KB per image
-- **JPG**: 200-400KB per image
-- **Total**: Under 2MB for all hero images
+- **PNG**: 300-600KB per image (optimized)
+- **JPG**: 200-400KB per image (fallback)
+- **Total**: Under 4MB for all hero images
 
 ## 🎨 **Design Guidelines**
 
@@ -124,13 +124,13 @@ hero-bg-[page-name].jpg (fallback)
 
 ### **Step 1: Create Images**
 1. Design each hero background image according to specifications
-2. Export in WebP format (primary) and JPG (fallback)
-3. Optimize file sizes while maintaining quality
+2. Export in PNG format (primary) and JPG (fallback if needed)
+3. Optimize PNG files using compression tools
 4. Test on different screen sizes
 
 ### **Step 2: Add to Assets**
 1. Place images in `src/assets/images/` directory
-2. Follow naming convention: `hero-bg-[page-name].webp`
+2. Follow naming convention: `hero-bg-[page-name].png`
 3. Ensure all files are properly optimized
 
 ### **Step 3: Update CSS**
@@ -199,14 +199,14 @@ hero-bg-[page-name].jpg (fallback)
 ### **CSS Background Properties**
 ```css
 .hero {
-  background-image: url('../assets/images/hero-bg-home.webp');
+  background-image: url('../assets/images/hero-bg-home.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
 
-/* Fallback for older browsers */
+/* Fallback for smaller file size if needed */
 .hero {
   background-image: url('../assets/images/hero-bg-home.jpg');
 }
@@ -226,9 +226,9 @@ hero-bg-[page-name].jpg (fallback)
 
 ### **Loading Strategy**
 - Lazy load hero images
-- Use WebP with JPG fallback
+- Use PNG with JPG fallback if needed
 - Implement progressive loading
-- Optimize file sizes
+- Optimize PNG file sizes with compression
 
 ### **Caching**
 - Set appropriate cache headers
@@ -245,17 +245,17 @@ hero-bg-[page-name].jpg (fallback)
 - **Canva**: Quick design templates
 
 ### **For Optimization**
-- **TinyPNG**: Image compression
+- **TinyPNG**: PNG compression and optimization
 - **Squoosh**: Google's image optimization tool
 - **ImageOptim**: Mac image optimization
-- **WebP Converter**: Format conversion
+- **PNG Compressor**: Online PNG optimization tools
 
 ## 📋 **Checklist**
 
 ### **Before Implementation**
-- [ ] All 12 hero images created
-- [ ] Images optimized for web
-- [ ] WebP and JPG versions ready
+- [ ] All 12 hero images created in PNG format
+- [ ] Images optimized for web (compressed PNG)
+- [ ] PNG files under 600KB each
 - [ ] Tested on different screen sizes
 - [ ] Text readability verified
 

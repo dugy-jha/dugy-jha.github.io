@@ -14,6 +14,9 @@ class PerformanceManager {
     this.observeResourceTiming();
     this.observeNavigationTiming();
     this.observeLongTasks();
+    this.observeMemoryUsage();
+    this.observeNetworkInformation();
+    this.setupErrorTracking();
   }
 
   // Monitor Core Web Vitals
@@ -198,6 +201,204 @@ class PerformanceManager {
     }
   }
 
+  // Monitor memory usage
+  observeMemoryUsage() {
+    if ('memory' in performance) {
+      const checkMemory = () => {
+        const memory = performance.memory;
+        this.metrics.memory = {
+          used: memory.usedJSHeapSize,
+          total: memory.totalJSHeapSize,
+          limit: memory.jsHeapSizeLimit,
+          usage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100
+        };
+        
+        // Report high memory usage
+        if (this.metrics.memory.usage > 80) {
+          console.warn('High memory usage detected:', this.metrics.memory);
+          this.reportMetric('high_memory_usage', this.metrics.memory.usage);
+        }
+      };
+      
+      // Check memory every 30 seconds
+      setInterval(checkMemory, 30000);
+      checkMemory(); // Initial check
+    }
+  }
+
+  // Monitor network information
+  observeNetworkInformation() {
+    if ('connection' in navigator) {
+      const connection = navigator.connection;
+      this.metrics.network = {
+        effectiveType: connection.effectiveType,
+        downlink: connection.downlink,
+        rtt: connection.rtt,
+        saveData: connection.saveData
+      };
+      
+      // Report network changes
+      connection.addEventListener('change', () => {
+        this.metrics.network = {
+          effectiveType: connection.effectiveType,
+          downlink: connection.downlink,
+          rtt: connection.rtt,
+          saveData: connection.saveData
+        };
+        this.reportMetric('network_change', connection.effectiveType);
+      });
+    }
+  }
+
+  // Setup error tracking
+  setupErrorTracking() {
+    // JavaScript errors
+    window.addEventListener('error', (event) => {
+      this.reportError('javascript_error', {
+        message: event.message,
+        filename: event.filename,
+        lineno: event.lineno,
+        colno: event.colno,
+        stack: event.error?.stack
+      });
+    });
+
+    // Unhandled promise rejections
+    window.addEventListener('unhandledrejection', (event) => {
+      this.reportError('unhandled_promise_rejection', {
+        reason: event.reason,
+        stack: event.reason?.stack
+      });
+    });
+
+    // Resource loading errors
+    window.addEventListener('error', (event) => {
+      if (event.target !== window) {
+        this.reportError('resource_error', {
+          type: event.target.tagName,
+          src: event.target.src || event.target.href,
+          message: event.message
+        });
+      }
+    }, true);
+  }
+
+  // Report errors
+  reportError(type, details) {
+    const errorData = {
+      type,
+      details,
+      timestamp: Date.now(),
+      url: window.location.href,
+      userAgent: navigator.userAgent
+    };
+
+    // Send to analytics
+    if (window.gtag) {
+      window.gtag('event', 'exception', {
+        description: `${type}: ${details.message || 'Unknown error'}`,
+        fatal: false,
+        custom_parameter_1: type
+      });
+    }
+
+    // Log to console in development
+    if (import.meta.env.DEV) {
+      console.error('Performance Error:', errorData);
+    }
+
+    // Store locally
+    if (!this.metrics.errors) {
+      this.metrics.errors = [];
+    }
+    this.metrics.errors.push(errorData);
+  }
+
+  // Monitor user interactions
+  observeUserInteractions() {
+    const interactions = ['click', 'scroll', 'keydown', 'touchstart'];
+    
+    interactions.forEach(eventType => {
+      let interactionCount = 0;
+      let lastInteraction = 0;
+      
+      document.addEventListener(eventType, () => {
+        interactionCount++;
+        lastInteraction = Date.now();
+        
+        // Report interaction metrics every 10 interactions
+        if (interactionCount % 10 === 0) {
+          this.reportMetric(`${eventType}_count`, interactionCount);
+        }
+      }, { passive: true });
+    });
+  }
+
+  // Monitor page visibility
+  observePageVisibility() {
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) {
+        this.metrics.pageHidden = Date.now();
+      } else {
+        this.metrics.pageVisible = Date.now();
+        
+        // Report time away from page
+        if (this.metrics.pageHidden) {
+          const timeAway = Date.now() - this.metrics.pageHidden;
+          this.reportMetric('time_away_from_page', timeAway);
+        }
+      }
+    });
+  }
+
+  // Get comprehensive performance report
+  getComprehensiveReport() {
+    const report = {
+      ...this.getPerformanceSummary(),
+      userAgent: navigator.userAgent,
+      viewport: {
+        width: window.innerWidth,
+        height: window.innerHeight
+      },
+      timestamp: Date.now(),
+      url: window.location.href
+    };
+
+    // Add memory info if available
+    if ('memory' in performance) {
+      report.memory = this.metrics.memory;
+    }
+
+    // Add network info if available
+    if ('connection' in navigator) {
+      report.network = this.metrics.network;
+    }
+
+    // Add error count
+    if (this.metrics.errors) {
+      report.errorCount = this.metrics.errors.length;
+    }
+
+    return report;
+  }
+
+  // Send performance report to server
+  async sendPerformanceReport() {
+    const report = this.getComprehensiveReport();
+    
+    try {
+      await fetch('/api/performance', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(report)
+      });
+    } catch (error) {
+      console.warn('Failed to send performance report:', error);
+    }
+  }
+
   // Cleanup observers
   cleanup() {
     this.observers.forEach((observer) => {
@@ -215,6 +416,13 @@ if (typeof window !== 'undefined') {
   window.addEventListener('load', () => {
     performanceManager.initialize();
     performanceManager.optimizeImages();
+    performanceManager.observeUserInteractions();
+    performanceManager.observePageVisibility();
+    
+    // Send performance report after 5 seconds
+    setTimeout(() => {
+      performanceManager.sendPerformanceReport();
+    }, 5000);
   });
 }
 

@@ -1,0 +1,162 @@
+/* LazyImage Component Styles */
+
+.lazy-image-container {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.lazy-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.lazy-image.loaded {
+  opacity: 1;
+}
+
+.lazy-image.loading {
+  opacity: 0;
+}
+
+/* Placeholder Styles */
+.lazy-image-placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-bg-secondary);
+  border-radius: var(--border-radius);
+}
+
+.lazy-image-skeleton {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    var(--color-bg-secondary) 25%,
+    var(--color-bg-tertiary) 50%,
+    var(--color-bg-secondary) 75%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s infinite;
+  border-radius: var(--border-radius);
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Loading Spinner */
+.lazy-image-loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-bg-secondary);
+  border-radius: var(--border-radius);
+}
+
+.lazy-image-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--color-bg-tertiary);
+  border-top: 3px solid var(--color-primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Error State */
+.lazy-image-error {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-bg-secondary);
+  border: 2px dashed var(--color-text-muted);
+  border-radius: var(--border-radius);
+  color: var(--color-text-muted);
+  text-align: center;
+  padding: 1rem;
+}
+
+.lazy-image-error-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.lazy-image-error-text {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* Light mode adjustments */
+.light .lazy-image-placeholder,
+.light .lazy-image-loading,
+.light .lazy-image-error {
+  background: #f8f9fa;
+}
+
+.light .lazy-image-skeleton {
+  background: linear-gradient(
+    90deg,
+    #f8f9fa 25%,
+    #e9ecef 50%,
+    #f8f9fa 75%
+  );
+  background-size: 200% 100%;
+}
+
+.light .lazy-image-spinner {
+  border-color: #e9ecef;
+  border-top-color: var(--color-primary);
+}
+
+.light .lazy-image-error {
+  background: #f8f9fa;
+  border-color: #dee2e6;
+  color: #6c757d;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .lazy-image-spinner {
+    width: 30px;
+    height: 30px;
+    border-width: 2px;
+  }
+  
+  .lazy-image-error-icon {
+    font-size: 1.5rem;
+  }
+  
+  .lazy-image-error-text {
+    font-size: 0.75rem;
+  }
+}

@@ -9,8 +9,10 @@ import performanceManager from './utils/performance';
 import emailMarketingManager from './utils/emailMarketing';
 import analyticsManager from './utils/analytics';
 import seoManager from './utils/seo';
+import { initializeAccessibility } from './utils/accessibility';
 import './styles/App.css';
 import './styles/HeroBackgrounds.css';
+import './styles/Accessibility.css';
 
 // Lazy load pages for better performance
 const Home = lazy(() => import('./pages/Home'));
@@ -39,6 +41,7 @@ function App() {
       performanceManager.initialize();
       analyticsManager.initialize();
       seoManager.initializeDefaultSEO();
+      initializeAccessibility();
       
       // Track page visit
       emailMarketingManager.trackEngagement('page_visit');

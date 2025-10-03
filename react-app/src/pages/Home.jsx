@@ -5,10 +5,15 @@ import ElectricBorder from '../components/ElectricBorder';
 import CounterAnimation from '../components/CounterAnimation';
 import EnhancedSearch from '../components/EnhancedSearch';
 import SkeletonLoader, { FAQSkeleton } from '../components/SkeletonLoader';
+import PageErrorBoundary from '../components/PageErrorBoundary';
+import LazyImage from '../components/LazyImage';
 import { useRecaptcha } from '../hooks/useRecaptcha';
 import { canSubmitForm, recordFormSubmission, getRemainingCooldown, formatRemainingTime, checkRateLimit, recordSubmission } from '../utils/formUtils';
 import emailMarketingManager from '../utils/emailMarketing';
 import analyticsManager from '../utils/analytics';
+import seoManager from '../utils/seo';
+import { createFormValidator, FORM_CONFIGS } from '../utils/formValidation';
+import '../styles/FormValidation.css';
 // Using WebP format for better performance and optimization
 import fusionReactorImg from '../assets/images/fusion-reactor.webp';
 import isotopeImg from '../assets/images/isotope.webp';
@@ -28,6 +33,8 @@ function Home() {
   const [newsletterBlocked, setNewsletterBlocked] = useState(false);
   const [newsletterRemainingTime, setNewsletterRemainingTime] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
+  const [contactFormValidator, setContactFormValidator] = useState(null);
+  const [newsletterFormValidator, setNewsletterFormValidator] = useState(null);
   
   // reCAPTCHA hook for newsletter
   const { isLoaded: newsletterRecaptchaLoaded, isLoading: newsletterRecaptchaLoading, executeRecaptchaAction: executeNewsletterRecaptcha } = useRecaptcha('newsletter_subscribe');
@@ -64,6 +71,18 @@ function Home() {
   };
 
   useEffect(() => {
+    // Setup SEO for homepage
+    seoManager.setupPageSEO({
+      title: "A Pragmatic Path to India's Energy Sovereignty",
+      description: "ASPL Fusion is commercializing fusion technology through a disciplined, phased approach that ensures financial viability and systematic de-risking at every stage.",
+      keywords: "fusion energy, clean energy, India, medical isotopes, nuclear fusion, sustainable energy, ASPL Fusion, energy sovereignty",
+      structuredData: [
+        seoManager.getOrganizationStructuredData(),
+        seoManager.getWebsiteStructuredData(),
+        seoManager.getFAQStructuredData(faqs)
+      ]
+    });
+
     // Simulate initial loading
     const timer = setTimeout(() => {
       setIsLoading(false);
@@ -86,7 +105,47 @@ function Home() {
 
     checkNewsletterCooldown();
 
-    return () => clearTimeout(timer);
+    // Initialize form validators
+    const contactForm = document.getElementById('contact-form');
+    const newsletterForm = document.getElementById('newsletter-form');
+    
+    if (contactForm) {
+      const contactConfig = {
+        name: {
+          validators: ['required', 'name'],
+          required: true
+        },
+        email: {
+          validators: ['required', 'email'],
+          required: true
+        },
+        organization: {
+          validators: ['company'],
+          required: false
+        },
+        interest: {
+          validators: ['required'],
+          required: true
+        },
+        message: {
+          validators: ['required', 'message'],
+          required: true
+        }
+      };
+      const validator = createFormValidator(contactForm, contactConfig);
+      setContactFormValidator(validator);
+    }
+    
+    if (newsletterForm) {
+      const validator = createFormValidator(newsletterForm, FORM_CONFIGS.newsletter);
+      setNewsletterFormValidator(validator);
+    }
+
+    return () => {
+      clearTimeout(timer);
+      if (contactFormValidator) contactFormValidator.destroy();
+      if (newsletterFormValidator) newsletterFormValidator.destroy();
+    };
   }, []);
 
   const handleNewsletterSubmit = async (e) => {
@@ -147,8 +206,9 @@ function Home() {
   };
 
   return (
-    <>
-      <section className="hero hero-bg-home" id="hero-section">
+    <PageErrorBoundary pageName="Home">
+      <main id="main-content">
+        <section className="hero hero-bg-home" id="hero-section" aria-label="Hero section">
         <LiquidEther
           colors={['#5227FF', '#FF9FFC', '#B19EEF']}
           mouseForce={20}
@@ -197,7 +257,7 @@ function Home() {
               </ElectricBorder>
             </div>
             <div className="content-image">
-              <img src={medicalIcon} alt="Medical Isotope Production" />
+              <LazyImage src={medicalIcon} alt="Medical Isotope Production" />
             </div>
           </div>
         </div>
@@ -207,7 +267,7 @@ function Home() {
         <div className="container">
           <div className="content-wrapper">
             <div className="content-image">
-              <img src={gdtIcon} alt="Fusion Technology" />
+              <LazyImage src={gdtIcon} alt="Fusion Technology" />
             </div>
             <div className="content-text">
               <h2>A Smarter Path to Commercial Fusion</h2>
@@ -222,9 +282,9 @@ function Home() {
         </div>
       </section>
 
-      <section className="faq-section p-8">
+      <section className="faq-section p-8" aria-labelledby="faq-heading">
         <div className="container">
-          <h2 className="text-center mb-12">Frequently Asked Questions</h2>
+          <h2 id="faq-heading" className="text-center mb-12">Frequently Asked Questions</h2>
           {isLoading ? (
             <FAQSkeleton />
           ) : (
@@ -235,11 +295,18 @@ function Home() {
                   className="faq-toggle"
                   onClick={() => toggleFAQ(index)}
                   aria-expanded={expandedFAQ === index}
+                  aria-controls={`faq-answer-${index}`}
+                  id={`faq-question-${index}`}
                 >
                   <h3>{faq.question}</h3>
                   <i className={`fas fa-${expandedFAQ === index ? 'minus' : 'plus'}`}></i>
                 </button>
-                <div className={`faq-content ${expandedFAQ === index ? '' : 'hidden'}`}>
+                <div 
+                  className={`faq-content ${expandedFAQ === index ? '' : 'hidden'}`}
+                  id={`faq-answer-${index}`}
+                  aria-labelledby={`faq-question-${index}`}
+                  role="region"
+                >
                   <p>{faq.answer}</p>
                 </div>
               </div>
@@ -341,7 +408,7 @@ function Home() {
               className="tech-feature-card card-electric"
               onClick={() => navigate('/technology')}
             >
-              <img src={gdtDeviceIcon} alt="GDT Device" />
+              <LazyImage src={gdtDeviceIcon} alt="GDT Device" />
               <h3>Magnetic Mirror Design</h3>
               <p>Simpler linear geometry enabling easier construction and maintenance</p>
             </div>
@@ -349,7 +416,7 @@ function Home() {
               className="tech-feature-card card-electric"
               onClick={() => navigate('/technology')}
             >
-              <img src={energyIcon} alt="Neutron Source" />
+              <LazyImage src={energyIcon} alt="Neutron Source" />
               <h3>Versatile Neutron Source</h3>
               <p>Multiple applications from medical isotopes to transmutation</p>
             </div>
@@ -357,7 +424,7 @@ function Home() {
               className="tech-feature-card card-electric"
               onClick={() => navigate('/technology')}
             >
-              <img src={medicalModularIcon} alt="Modular Design" />
+              <LazyImage src={medicalModularIcon} alt="Modular Design" />
               <h3>Modular Scalability</h3>
               <p>Progressive scaling from pilot plants to commercial facilities</p>
             </div>
@@ -370,12 +437,12 @@ function Home() {
           <h2 className="text-center mb-12">Visualizing the Future</h2>
           <div className="showcase-grid">
             <div className="showcase-item card-electric">
-              <img src={fusionReactorImg} alt="Fusion Reactor Visualization" />
+              <LazyImage src={fusionReactorImg} alt="Fusion Reactor Visualization" />
               <h3>Next-Generation Fusion Reactor</h3>
               <p>Our magnetic mirror design represents a breakthrough in fusion engineering</p>
             </div>
             <div className="showcase-item card-electric">
-              <img src={isotopeImg} alt="Medical Isotope Production" />
+              <LazyImage src={isotopeImg} alt="Medical Isotope Production" />
               <h3>Medical Isotope Production</h3>
               <p>Reliable domestic production of critical medical radioisotopes</p>
             </div>
@@ -389,10 +456,11 @@ function Home() {
           <div className="newsletter-content">
             <h2>Stay Updated</h2>
             <p>Get the latest news and updates about fusion technology and ASPL Fusion's progress.</p>
-            <form className="newsletter-form" onSubmit={handleNewsletterSubmit}>
+            <form id="newsletter-form" className="newsletter-form" onSubmit={handleNewsletterSubmit}>
               <div className="newsletter-input-group">
                 <input
                   type="email"
+                  name="email"
                   placeholder="your.email@example.com"
                   value={newsletterEmail}
                   onChange={(e) => setNewsletterEmail(e.target.value)}
@@ -445,7 +513,7 @@ function Home() {
           <p className="contact-intro text-center mb-8">
             Join us in building India's energy future. Whether you're an investor, partner, or simply curious about our technology, we'd love to hear from you.
           </p>
-          <form id="homepage-contact-form" className="contact-form" onSubmit={(e) => {
+          <form id="contact-form" className="contact-form" onSubmit={(e) => {
             e.preventDefault();
             alert('Thank you for your interest! Please use the Contact page to send us a message.');
           }}>
@@ -506,7 +574,8 @@ function Home() {
           </form>
         </div>
       </section>
-    </>
+      </main>
+    </PageErrorBoundary>
   );
 }
 

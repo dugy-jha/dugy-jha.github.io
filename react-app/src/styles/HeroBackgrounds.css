@@ -1,117 +1,63 @@
 /* Hero Background Images for Different Pages */
 
 /* Homepage Hero */
-.hero-bg-home {
-  background-image: url('../assets/images/hero-bg-home.png');
+.hero.hero-bg-home {
+  background-image: url('../assets/images/hero-bg-home.png') !important;
 }
 
 /* Mission Page Hero */
-.hero-bg-mission {
-  background-image: url('../assets/images/hero-bg-mission.png');
+.page-hero.hero-bg-mission {
+  background-image: url('../assets/images/hero-bg-mission.png') !important;
 }
 
 /* Technology Page Hero */
-.hero-bg-technology {
-  background-image: url('../assets/images/hero-bg-technology.png');
+.page-hero.hero-bg-technology {
+  background-image: url('../assets/images/hero-bg-technology.png') !important;
 }
 
 /* Applications Page Hero */
-.hero-bg-applications {
-  background-image: url('../assets/images/hero-bg-applications.png');
+.page-hero.hero-bg-applications {
+  background-image: url('../assets/images/hero-bg-applications.png') !important;
 }
 
 /* Roadmap Page Hero */
-.hero-bg-roadmap {
-  background-image: url('../assets/images/hero-bg-roadmap.png');
+.page-hero.hero-bg-roadmap {
+  background-image: url('../assets/images/hero-bg-roadmap.png') !important;
 }
 
 /* Team Page Hero */
-.hero-bg-team {
-  background-image: url('../assets/images/hero-bg-team.png');
+.page-hero.hero-bg-team {
+  background-image: url('../assets/images/hero-bg-team.png') !important;
 }
 
 /* Careers Page Hero */
-.hero-bg-careers {
-  background-image: url('../assets/images/hero-bg-careers.png');
+.page-hero.hero-bg-careers {
+  background-image: url('../assets/images/hero-bg-careers.png') !important;
 }
 
 /* News Page Hero */
-.hero-bg-news {
-  background-image: url('../assets/images/hero-bg-news.png');
+.page-hero.hero-bg-news {
+  background-image: url('../assets/images/hero-bg-news.png') !important;
 }
 
 /* Contact Page Hero */
-.hero-bg-contact {
-  background-image: url('../assets/images/hero-bg-contact.png');
+.page-hero.hero-bg-contact {
+  background-image: url('../assets/images/hero-bg-contact.png') !important;
 }
 
 /* About Page Hero */
-.hero-bg-about {
-  background-image: url('../assets/images/hero-bg-about.png');
+.page-hero.hero-bg-about {
+  background-image: url('../assets/images/hero-bg-about.png') !important;
 }
 
 /* FAQ Page Hero */
-.hero-bg-faq {
-  background-image: url('../assets/images/hero-bg-faq.png');
+.page-hero.hero-bg-faq {
+  background-image: url('../assets/images/hero-bg-faq.png') !important;
 }
 
 /* Case Studies Page Hero */
-.hero-bg-casestudies {
-  background-image: url('../assets/images/hero-bg-casestudies.png');
-}
-
-/* Fallback for when images don't load */
-.hero-bg-home,
-.hero-bg-mission,
-.hero-bg-technology,
-.hero-bg-applications,
-.hero-bg-roadmap,
-.hero-bg-team,
-.hero-bg-careers,
-.hero-bg-news,
-.hero-bg-contact,
-.hero-bg-about,
-.hero-bg-faq,
-.hero-bg-casestudies {
-  background-color: var(--color-bg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .hero-bg-home,
-  .hero-bg-mission,
-  .hero-bg-technology,
-  .hero-bg-applications,
-  .hero-bg-roadmap,
-  .hero-bg-team,
-  .hero-bg-careers,
-  .hero-bg-news,
-  .hero-bg-contact,
-  .hero-bg-about,
-  .hero-bg-faq,
-  .hero-bg-casestudies {
-    background-attachment: scroll;
-  }
-}
-
-/* Light mode adjustments */
-.light .hero-bg-home,
-.light .hero-bg-mission,
-.light .hero-bg-technology,
-.light .hero-bg-applications,
-.light .hero-bg-roadmap,
-.light .hero-bg-team,
-.light .hero-bg-careers,
-.light .hero-bg-news,
-.light .hero-bg-contact,
-.light .hero-bg-about,
-.light .hero-bg-faq,
-.light .hero-bg-casestudies {
-  background-color: var(--color-bg);
+.page-hero.hero-bg-casestudies {
+  background-image: url('../assets/images/hero-bg-casestudies.png') !important;
 }
 
 /* Enhanced overlay for light mode */

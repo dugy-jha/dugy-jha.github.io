@@ -3,6 +3,161 @@
   'use strict';
 
   // ================================================================
+  // PARTICLE BACKGROUND (lightweight canvas, no Three.js)
+  // ================================================================
+
+  (function initParticles() {
+    var canvas = document.getElementById('particle-canvas');
+    if (!canvas) return;
+
+    // Respect reduced motion preference
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    var ctx = canvas.getContext('2d');
+    var particles = [];
+    var PARTICLE_COUNT = 80;
+    var CONNECTION_DIST = 160;
+    var mouseX = -9999;
+    var mouseY = -9999;
+    var raf;
+
+    function resize() {
+      var hero = canvas.closest('.hero') || canvas.parentElement;
+      canvas.width = hero.clientWidth;
+      canvas.height = hero.clientHeight;
+      canvas.style.width = hero.clientWidth + 'px';
+      canvas.style.height = hero.clientHeight + 'px';
+    }
+
+    function createParticle() {
+      return {
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        vx: (Math.random() - 0.5) * 0.4,
+        vy: (Math.random() - 0.5) * 0.4,
+        r: Math.random() * 2.2 + 0.8,
+        opacity: Math.random() * 0.5 + 0.3
+      };
+    }
+
+    function init() {
+      resize();
+      particles = [];
+      for (var i = 0; i < PARTICLE_COUNT; i++) {
+        particles.push(createParticle());
+      }
+    }
+
+    function draw() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // Draw connections
+      for (var i = 0; i < particles.length; i++) {
+        for (var j = i + 1; j < particles.length; j++) {
+          var dx = particles[i].x - particles[j].x;
+          var dy = particles[i].y - particles[j].y;
+          var dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < CONNECTION_DIST) {
+            var alpha = (1 - dist / CONNECTION_DIST) * 0.25;
+            ctx.strokeStyle = 'rgba(59,191,191,' + alpha + ')';
+            ctx.lineWidth = 0.5;
+            ctx.beginPath();
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(particles[j].x, particles[j].y);
+            ctx.stroke();
+          }
+        }
+
+        // Mouse proximity glow
+        var mdx = particles[i].x - mouseX;
+        var mdy = particles[i].y - mouseY;
+        var mDist = Math.sqrt(mdx * mdx + mdy * mdy);
+        if (mDist < 180) {
+          var glow = (1 - mDist / 180) * 0.4;
+          ctx.fillStyle = 'rgba(59,191,191,' + glow + ')';
+          ctx.beginPath();
+          ctx.arc(particles[i].x, particles[i].y, particles[i].r + 2, 0, Math.PI * 2);
+          ctx.fill();
+        }
+      }
+
+      // Draw particles
+      for (var k = 0; k < particles.length; k++) {
+        var p = particles[k];
+        ctx.fillStyle = 'rgba(200,220,240,' + p.opacity + ')';
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
+
+    function update() {
+      for (var i = 0; i < particles.length; i++) {
+        var p = particles[i];
+        p.x += p.vx;
+        p.y += p.vy;
+
+        // Wrap around edges
+        if (p.x < -10) p.x = canvas.width + 10;
+        if (p.x > canvas.width + 10) p.x = -10;
+        if (p.y < -10) p.y = canvas.height + 10;
+        if (p.y > canvas.height + 10) p.y = -10;
+      }
+    }
+
+    function loop() {
+      update();
+      draw();
+      raf = requestAnimationFrame(loop);
+    }
+
+    // Track mouse over hero
+    canvas.parentElement.addEventListener('mousemove', function (e) {
+      var rect = canvas.getBoundingClientRect();
+      mouseX = e.clientX - rect.left;
+      mouseY = e.clientY - rect.top;
+    });
+    canvas.parentElement.addEventListener('mouseleave', function () {
+      mouseX = -9999;
+      mouseY = -9999;
+    });
+
+    window.addEventListener('resize', function () {
+      resize();
+    });
+
+    // Robust init — retry until hero has layout dimensions
+    function startParticles() {
+      var hero = canvas.closest('.hero') || canvas.parentElement;
+      var w = hero.clientWidth || hero.offsetWidth;
+      var h = hero.clientHeight || hero.offsetHeight;
+      if (w < 50 || h < 50) {
+        setTimeout(startParticles, 250);
+        return;
+      }
+      canvas.width = w;
+      canvas.height = h;
+      canvas.style.width = w + 'px';
+      canvas.style.height = h + 'px';
+      particles = [];
+      for (var i = 0; i < PARTICLE_COUNT; i++) {
+        particles.push(createParticle());
+      }
+      loop();
+    }
+    startParticles();
+
+    // Pause when not visible
+    document.addEventListener('visibilitychange', function () {
+      if (document.hidden) {
+        cancelAnimationFrame(raf);
+      } else {
+        loop();
+      }
+    });
+  })();
+
+  // ================================================================
   // COOKIE & CONSENT UTILITIES
   // ================================================================
 

@@ -281,7 +281,7 @@ p { max-width: 65ch; } /* optimal reading width */
   gap: var(--sp-8);
   align-items: center;
 }
-.hero-content { /* text side — no change needed */ }
+.hero-content { text-align: center; }
 
 .hero-visual {
   display: flex; align-items: center; justify-content: center;
@@ -327,17 +327,18 @@ p { max-width: 65ch; } /* optimal reading width */
 .hero-desc {
   font-size: clamp(1rem, 1.8vw, 1.15rem);
   color: rgba(255,255,255,.72);
+  margin-left: auto; margin-right: auto;
   max-width: 600px; margin-bottom: var(--sp-10);
   line-height: 1.8;
 }
-.hero-actions { display: flex; gap: var(--sp-4); flex-wrap: wrap; }
+.hero-actions { display: flex; gap: var(--sp-4); flex-wrap: wrap; justify-content: center; }
 
 /* Trust badge row under hero */
 .hero-trust {
   display: flex; align-items: center; gap: var(--sp-6);
   margin-top: var(--sp-12); padding-top: var(--sp-6);
   border-top: 1px solid rgba(255,255,255,.1);
-  flex-wrap: wrap;
+  flex-wrap: wrap; justify-content: center;
 }
 .hero-trust-item {
   display: flex; align-items: center; gap: var(--sp-2);

@@ -816,8 +816,9 @@ p { max-width: 65ch; font-size: 1.0625rem; } /* 17px — optimal legibility */
 }
 .footer-brand { max-width: 360px; }
 .footer-brand img {
-  height: 38px; margin-bottom: var(--sp-3);
-  opacity: .8;
+  height: 48px; width: auto; margin-bottom: var(--sp-3);
+  filter: brightness(1.8) contrast(.9);
+  opacity: .85;
 }
 .footer-brand p { font-size: .88rem; line-height: 1.65; }
 

@@ -1,685 +1,580 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Security Headers -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.skypack.dev https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https: blob:; connect-src 'self' https://formspree.io https://api.github.com; frame-src 'self' https://www.google.com;">
-    <meta http-equiv="X-Content-Type-Options" content="nosniff">
-    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
-    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
-    <meta name="referrer" content="strict-origin-when-cross-origin">
-    <title>ASPL Fusion | Powering India's Future</title>
-    <meta name="description" content="ASPL Fusion is commercializing fusion energy through a disciplined, phased strategy to solve critical national challenges in healthcare, industry, and energy security.">
-    <link rel="canonical" href="https://dugy-jha.github.io/">
-    
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "ASPL Fusion",
-        "alternateName": "Agnira Sanlayan Pvt. Ltd.",
-        "url": "https://dugy-jha.github.io/",
-        "logo": "https://dugy-jha.github.io/assets/images/Logo-t-removebg-preview.png",
-        "description": "ASPL Fusion is commercializing fusion energy through a disciplined, phased strategy to solve critical national challenges in healthcare, industry, and energy security.",
-        "foundingDate": "2024",
-        "address": {
-            "@type": "PostalAddress",
-            "addressCountry": "IN",
-            "addressRegion": "India"
-        },
-        "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+91-XXX-XXX-XXXX",
-            "contactType": "customer service",
-            "email": "info@asplfusion.com"
-        },
-        "sameAs": [
-            "https://www.linkedin.com/company/aspl-fusion",
-            "https://twitter.com/asplfusion",
-            "https://www.facebook.com/asplfusion",
-            "https://www.instagram.com/asplfusion"
-        ],
-        "industry": "Energy Technology",
-        "keywords": "fusion energy, plasma physics, sustainable power, clean energy, nuclear fusion"
-    }
-    </script>
-    
-    <!-- SEO Meta Tags -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://dugy-jha.github.io/">
-    <meta property="og:title" content="ASPL Fusion | Powering India's Future">
-    <meta property="og:description" content="Commercializing fusion energy through a disciplined, phased strategy for India's energy sovereignty.">
-    <meta property="og:image" content="hero-background.jpg">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="icon" href="Logo-t-removebg-preview.png" type="image/png">    
-    <!-- PWA & Favicon -->
-    <link rel="manifest" href="/manifest.json">
-    <link rel="apple-touch-icon" sizes="180x180" href="Logo-t-removebg-preview.png">
-    <meta name="theme-color" content="#0055c4">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="apple-mobile-web-app-title" content="ASPL Fusion">
-    <meta name="msapplication-TileImage" content="Logo-t-removebg-preview.png">
-    <meta name="msapplication-TileColor" content="#0055c4">
-    <link rel="stylesheet" href="assets/css/style.css">
-    
-    <!-- Schema.org structured data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "ASPL Fusion",
-      "url": "https://dugy-jha.github.io/",
-      "logo": "https://dugy-jha.github.io/Logo-t-removebg-preview.png",
-      "description": "ASPL Fusion is commercializing fusion energy through a disciplined, phased strategy to solve critical national challenges in healthcare, industry, and energy security."
-    }
-    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ====== SEO: Primary Meta ====== -->
+  <title>ASPL Fusion — Fusion-Derived Neutron Technology for Medicine &amp; Clean Energy | India</title>
+  <meta name="description" content="ASPL Fusion (Agnira Sanlayan Pvt. Ltd.) develops fusion-derived neutron sources for medical isotope production, BNCT cancer therapy, and clean fusion energy. DPIIT-recognised deep-tech startup based in Gujarat, India.">
+  <meta name="keywords" content="ASPL Fusion, Agnira Sanlayan, fusion energy India, medical isotopes, BNCT, Boron Neutron Capture Therapy, neutron source, Mo-99, nuclear medicine, clean energy, deep tech startup, Gujarat, fusion technology, plasma physics, cancer treatment India">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="ASPL Fusion — Agnira Sanlayan Pvt. Ltd.">
+  <link rel="canonical" href="https://asplfusion.com/">
+
+  <!-- ====== GEO: Local/Regional SEO (dual location) ====== -->
+  <meta name="geo.region" content="IN-GJ">
+  <meta name="geo.placename" content="Gandhinagar, Gujarat, India">
+  <meta name="geo.position" content="23.2156;72.6369">
+  <meta name="ICBM" content="23.2156, 72.6369">
+  <meta name="geo.region" content="IN-DL">
+  <meta name="geo.placename" content="New Delhi, India">
+  <meta name="geo.position" content="28.6139;77.2090">
+  <meta name="ICBM" content="28.6139, 77.2090">
+  <meta name="language" content="English">
+  <meta name="coverage" content="India">
+  <meta name="distribution" content="global">
+
+  <!-- ====== Open Graph (Facebook, LinkedIn, WhatsApp) ====== -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ASPL Fusion">
+  <meta property="og:locale" content="en_IN">
+  <meta property="og:url" content="https://asplfusion.com/">
+  <meta property="og:title" content="ASPL Fusion — Fusion in the Service of Humanity">
+  <meta property="og:description" content="Pioneering fusion-derived neutron technology for medical isotope production, BNCT cancer therapy, and clean energy in India.">
+  <meta property="og:image" content="https://asplfusion.com/images/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="ASPL Fusion logo — Fusion in the Service of Humanity">
+
+  <!-- ====== Twitter Card ====== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ASPL Fusion — Fusion in the Service of Humanity">
+  <meta name="twitter:description" content="Developing fusion-derived neutron technology for medicine and clean energy in India.">
+  <meta name="twitter:image" content="https://asplfusion.com/images/og-image.png">
+  <meta name="twitter:image:alt" content="ASPL Fusion logo — Fusion in the Service of Humanity">
+
+  <!-- ====== AEO/AIO: Structured Data (Schema.org) ====== -->
+  <!-- Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "ASPL Fusion",
+    "legalName": "Agnira Sanlayan Pvt. Ltd.",
+    "alternateName": ["ASPL", "Agnira Sanlayan", "ASPL Fusion Energy"],
+    "url": "https://asplfusion.com",
+    "logo": "https://asplfusion.com/images/logo-round.png",
+    "image": "https://asplfusion.com/images/og-image.png",
+    "description": "ASPL Fusion develops fusion-derived neutron technology for medical isotope production, BNCT cancer therapy, and clean fusion energy in India.",
+    "foundingDate": "2024",
+    "foundingLocation": {
+      "@type": "Place",
+      "name": "Gujarat, India"
+    },
+    "address": [
+      {
+        "@type": "PostalAddress",
+        "addressRegion": "Gujarat",
+        "addressCountry": "IN"
+      },
+      {
+        "@type": "PostalAddress",
+        "addressLocality": "New Delhi",
+        "addressRegion": "Delhi",
+        "addressCountry": "IN"
+      }
+    ],
+    "email": "info@asplfusion.com",
+    "sameAs": [],
+    "knowsAbout": [
+      "Fusion Energy",
+      "Medical Isotope Production",
+      "Boron Neutron Capture Therapy",
+      "Neutron Source Design",
+      "Nuclear Medicine",
+      "Mo-99 Production",
+      "Plasma Physics",
+      "Gas Dynamic Trap",
+      "Monte Carlo Neutron Transport Simulation",
+      "Clean Energy Technology"
+    ],
+    "member": [
+      {
+        "@type": "Person",
+        "name": "Prof. Prabhat Ranjan",
+        "jobTitle": "Founder"
+      },
+      {
+        "@type": "Person",
+        "name": "Abhay K. Jha",
+        "jobTitle": "Co-founder"
+      },
+      {
+        "@type": "Person",
+        "name": "Abhinav Jha",
+        "jobTitle": "Operations Director"
+      }
+    ],
+    "award": "DPIIT Recognised Startup (DIPP222699)",
+    "naics": "541715",
+    "isicV4": "7219"
+  }
+  </script>
+
+  <!-- WebSite (for sitelinks search box in Google) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "ASPL Fusion",
+    "alternateName": "Agnira Sanlayan Pvt. Ltd.",
+    "url": "https://asplfusion.com"
+  }
+  </script>
+
+  <!-- FAQPage (AEO: triggers rich snippets / AI answer citations) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What does ASPL Fusion do?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "ASPL Fusion (Agnira Sanlayan Pvt. Ltd.) develops fusion-derived neutron technologies. Phase 1 focuses on medical isotope production and Boron Neutron Capture Therapy (BNCT) for cancer treatment. Phase 2 aims to develop compact fusion energy systems for India's power grid."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is BNCT and how does ASPL Fusion use it?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Boron Neutron Capture Therapy (BNCT) is a precision cancer treatment that delivers radiation at the cellular level while sparing healthy tissue. ASPL Fusion is building neutron sources optimised for BNCT to address cancer treatment needs in India."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where is ASPL Fusion based?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "ASPL Fusion is based in Gujarat and New Delhi, India. It is a DPIIT-recognised startup (DIPP222699) incorporated as Agnira Sanlayan Pvt. Ltd."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is fusion energy and why does it matter for India?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Fusion energy replicates the process that powers the sun, producing clean electricity with no carbon emissions, no long-lived radioactive waste, and virtually unlimited fuel. For India, fusion represents a pathway to energy independence and climate goal achievement."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- ====== Security ====== -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
+  <!-- ====== Favicon & Icons ====== -->
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="images/logo-round.png">
+
+  <!-- ====== Styles ====== -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- ====== reCAPTCHA v3 ====== -->
+  <script src="https://www.google.com/recaptcha/api.js?render=6LcR9pUsAAAAAFsjmudLfjevaon45Nssh5_Dq-KT" async defer></script>
+
 </head>
 <body>
-    <!-- Skip Navigation Link -->
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-    
-    <header>
-        <nav class="navbar">
-            <div class="container">
-                <a href="index.html" class="logo">
-                    <img src="assets/images/Logo-t-removebg-preview.png" loading="eager" alt="ASPL Fusion Logo" class="logo-img">
-                    <span>ASPL<span class="highlight">Fusion</span></span>
-                </a>
-                <button id="mobile-menu-button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
-                    <i class="fas fa-bars"></i>
-                </button>
-                <ul class="nav-links" id="mobile-menu" aria-label="Main navigation" role="menubar">
-                    <li role="none"><a href="pages/mission.html" role="menuitem">Our Mission</a></li>
-                    <li role="none"><a href="pages/technology.html" role="menuitem">Technology</a></li>
-                    <li role="none"><a href="pages/roadmap.html" role="menuitem">Roadmap</a></li>
-                    <li role="none"><a href="pages/applications.html" role="menuitem">Applications</a></li>
-                    <li role="none"><a href="pages/casestudies.html" role="menuitem">Case Studies</a></li>
-                    <li role="none"><a href="pages/team.html" role="menuitem">Team</a></li>
-                    <li role="none"><a href="pages/news.html" role="menuitem">News</a></li>
-                    <li role="none"><a href="pages/faq.html" role="menuitem">FAQ</a></li>
-                    <li role="none"><a href="pages/contact.html" class="cta-button" role="menuitem">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>    <!-- Main Content -->
-    <main id="main-content">
-        <section class="hero" id="hero-section">
-            <div class="hero-content container">
-                <h1 id="hero-headline">A Pragmatic Path to India's Energy Sovereignty</h1>
-                <p class="subtitle">ASPL Fusion is commercializing fusion technology through a disciplined, phased approach that ensures financial viability and systematic de-risking at every stage.</p>
-                <a href="pages/roadmap.html" class="cta-button electric-border">
-                    <span class="electric-border-content">Explore Our Strategy</span>
-                </a>
-            </div>
-        </section>
 
-        <section class="content-section">
-            <div class="container">
-                <h2>Solving India's Defining Challenge</h2>
-                <p>India stands at a critical juncture of exponential economic growth and increasing energy demand. Our nation's commitment to decarbonization creates an urgent need for a new source of clean, 24/7 baseload power that renewables alone cannot satisfy. Fusion energy is the ultimate solution.</p>
-                <div class="text-center">
-                    <a href="pages/mission.html" class="learn-more-button electric-border">
-                        <span class="electric-border-content">Discover Our Mission</span>
-                    </a>
-                </div>
-            </div>
-        </section>
+  <a href="#main" class="skip-link">Skip to main content</a>
 
-        <section class="content-section alt-bg">
-            <div class="container">
-                <h2>Simplicity by Design: The Advanced Magnetic Mirror</h2>
-                <p>We are focusing on advanced linear magnetic mirror systems, a technology path known for its high plasma stability. This approach avoids the complexities of toroidal tokamaks, making it simpler to build, maintain, and scale for commercial power plants. Recent breakthroughs in High-Temperature Superconducting (HTS) magnets make this the superior architecture for reliable, economical fusion power.</p>
-                <div class="text-center">
-                    <a href="pages/technology.html" class="learn-more-button electric-border">
-                        <span class="electric-border-content">Learn About Our Technology</span>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <section class="content-section">
-            <div class="container">
-                <h2>A Roadmap Built on Pragmatism</h2>
-                <p>Our four-phase strategy is a carefully architected journey from early revenue to national-scale impact. By generating revenue from adjacent markets first, we de-risk the path to commercial fusion and build a robust, self-funding enterprise.</p>
-                <div class="text-center">
-                    <a href="pages/roadmap.html" class="learn-more-button electric-border">
-                        <span class="electric-border-content">View Our Four-Phase Plan</span>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <section class="content-section alt-bg">
-            <div class="container">
-                <h2>Technology for a Nation</h2>
-                <p>Our work creates immense economic and social value by addressing critical national needs in clean energy, healthcare, and strategic security. From producing life-saving medical isotopes to strengthening India's energy independence, our impact extends far beyond the grid.</p>
-                <div class="text-center">
-                    <a href="pages/applications.html" class="learn-more-button electric-border">
-                        <span class="electric-border-content">See Our Applications</span>
-                    </a>
-                </div>
-            </div>
-        </section>
-    </main>
-    <!-- FAQ Section -->
-    <section id="faq" class="section-modern bg-light">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-12 reveal">
-                <h2 class="text-3xl md:text-4xl font-bold gradient-text mb-4">Frequently Asked Questions</h2>
-                <p class="text-lg text-secondary max-w-3xl mx-auto">Common questions about fusion energy and our approach.</p>
-            </div>
-            <div class="max-w-3xl mx-auto reveal-stagger">
-                <div class="card-electric p-6 mb-4">
-                    <button class="faq-toggle flex justify-between items-center w-full text-left font-bold text-xl" aria-expanded="false" aria-controls="faq1">
-                        <span>What is fusion energy and how does it work?</span>
-                        <i class="fas fa-plus text-purple-600"></i>
-                    </button>
-                    <div class="faq-content hidden mt-4 text-secondary" id="faq1" role="region" aria-hidden="true">
-                        <p>Fusion is the process that powers the sun and stars. It occurs when atomic nuclei combine to form a heavier nucleus, releasing enormous amounts of energy. Unlike nuclear fission, fusion produces no long-lived radioactive waste and uses fuel derived from water, making it virtually limitless and domestically available.</p>
-                        <p>Our advanced magnetic mirror technology creates the extreme conditions needed for fusion by using powerful magnetic fields to confine and heat plasma to temperatures exceeding 100 million degrees Celsius.</p>
-                    </div>
-                </div>
-                <div class="card-electric p-6 mb-4">
-                    <button class="faq-toggle flex justify-between items-center w-full text-left font-bold text-xl" aria-expanded="false" aria-controls="faq2">
-                        <span>How is ASPL Fusion different from other fusion startups?</span>
-                        <i class="fas fa-plus text-purple-600"></i>
-                    </button>
-                    <div class="faq-content hidden mt-4 text-secondary" id="faq2" role="region" aria-hidden="true">
-                        <p>We focus on a phased, de-risked approach: first solving India's medical isotope needs, then scaling to grid power. Our technology is modular, scalable, and designed for commercial viability from day one.</p>
-                        <p>Unlike tokamak-based approaches, our linear magnetic mirror system is simpler to build, maintain, and scale. We're also targeting adjacent markets first to generate early revenue and validate our technology before pursuing grid-scale power.</p>
-                    </div>
-                </div>
-                <div class="card-electric p-6 mb-4">
-                    <button class="faq-toggle flex justify-between items-center w-full text-left font-bold text-xl" aria-expanded="false" aria-controls="faq3">
-                        <span>Why are you starting with medical isotope production?</span>
-                        <i class="fas fa-plus text-purple-600"></i>
-                    </button>
-                    <div class="faq-content hidden mt-4 text-secondary" id="faq3" role="region" aria-hidden="true">
-                        <p>Medical isotope production provides an ideal entry point for several reasons:</p>
-                        <ul class="mt-2 ml-4">
-                            <li>High-value market with stable demand</li>
-                            <li>Validates our core technology in a regulated environment</li>
-                            <li>Generates early revenue to fund further development</li>
-                            <li>Serves critical national healthcare needs</li>
-                            <li>Builds operational expertise for future power plants</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="card-electric p-6 mb-4">
-                    <button class="faq-toggle flex justify-between items-center w-full text-left font-bold text-xl" aria-expanded="false" aria-controls="faq4">
-                        <span>Is fusion energy safe for the environment?</span>
-                        <i class="fas fa-plus text-purple-600"></i>
-                    </button>
-                    <div class="faq-content hidden mt-4 text-secondary" id="faq4" role="region" aria-hidden="true">
-                        <p>Yes, fusion is inherently safe and environmentally friendly:</p>
-                        <ul class="mt-2 ml-4">
-                            <li>No risk of runaway chain reactions or meltdowns</li>
-                            <li>No long-lived radioactive waste</li>
-                            <li>No greenhouse gas emissions</li>
-                            <li>Fuel is derived from water (deuterium) and lithium</li>
-                            <li>If the system fails, the plasma cools in seconds</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="card-electric p-6 mb-4">
-                    <button class="faq-toggle flex justify-between items-center w-full text-left font-bold text-xl" aria-expanded="false" aria-controls="faq5">
-                        <span>What is your timeline for commercial fusion power?</span>
-                        <i class="fas fa-plus text-purple-600"></i>
-                    </button>
-                    <div class="faq-content hidden mt-4 text-secondary" id="faq5" role="region" aria-hidden="true">
-                        <p>Our phased approach spans over a decade:</p>
-                        <ul class="mt-2 ml-4">
-                            <li><strong>Phase 1 (2025-2028):</strong> Medical isotope production</li>
-                            <li><strong>Phase 2 (2028-2031):</strong> Industrial heat applications</li>
-                            <li><strong>Phase 3 (2031-2035):</strong> Hydrogen production</li>
-                            <li><strong>Phase 4 (2035+):</strong> Grid-scale fusion power</li>
-                        </ul>
-                        <p>This timeline allows us to de-risk the technology while generating revenue and building expertise at each stage.</p>
-                    </div>
-                </div>
-                <div class="card-electric p-6 mb-4">
-                    <button class="faq-toggle flex justify-between items-center w-full text-left font-bold text-xl" aria-expanded="false" aria-controls="faq6">
-                        <span>How can I get involved with ASPL Fusion?</span>
-                        <i class="fas fa-plus text-purple-600"></i>
-                    </button>
-                    <div class="faq-content hidden mt-4 text-secondary" id="faq6" role="region" aria-hidden="true">
-                        <p>We welcome various forms of collaboration:</p>
-                        <ul class="mt-2 ml-4">
-                            <li><strong>Investors:</strong> Join our mission to commercialize fusion energy</li>
-                            <li><strong>Partners:</strong> Collaborate on technology development or market applications</li>
-                            <li><strong>Talent:</strong> Join our team of plasma physicists, engineers, and business professionals</li>
-                            <li><strong>Suppliers:</strong> Provide components and services for our systems</li>
-                        </ul>
-                        <p>Please use our contact form to reach out and discuss how you can contribute to India's energy future!</p>
-                    </div>
-                </div>
-            </div>
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a href="#" class="logo-link" aria-label="ASPL Fusion — Home">
+        <img src="images/logo-round.png" alt="ASPL Fusion logo" width="42" height="42">
+        <div class="logo-text">
+          ASPL Fusion
+          <span>Agnira Sanlayan Pvt. Ltd.</span>
         </div>
+      </a>
+
+      <nav class="main-nav" aria-label="Primary navigation">
+        <a href="#mission">Mission</a>
+        <a href="#focus">Focus Areas</a>
+        <a href="#technology">Technology</a>
+        <a href="#team">Team</a>
+        <a href="#contact" class="nav-cta">Contact</a>
+      </nav>
+
+      <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open navigation menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+
+      <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation">
+        <a href="#mission">Mission</a>
+        <a href="#focus">Focus Areas</a>
+        <a href="#technology">Technology</a>
+        <a href="#team">Team</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" aria-labelledby="hero-heading">
+    <div class="hero-bg-pattern" aria-hidden="true"></div>
+    <div class="container">
+      <p class="hero-tagline">Fusion in the Service of Humanity</p>
+      <p class="hero-hindi" lang="hi">मानव सेवा में संलयन</p>
+      <h1 id="hero-heading">Advancing Medicine &amp; Energy Through Fusion Science</h1>
+      <p class="hero-desc">
+        ASPL Fusion develops fusion-derived neutron technologies to address
+        critical gaps in healthcare and clean energy — beginning with medical
+        applications that save lives today, building toward limitless power
+        for tomorrow.
+      </p>
+      <div class="hero-actions">
+        <a href="#mission" class="btn btn-primary">
+          Our Mission
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+        </a>
+        <a href="#contact" class="btn btn-outline">Get in Touch</a>
+      </div>
+
+      <!-- Trust signals -->
+      <div class="hero-trust">
+        <div class="hero-trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span>DPIIT Recognised Startup</span>
+        </div>
+        <div class="hero-trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <span>Incorporated in India</span>
+        </div>
+        <div class="hero-trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <span>Deep-Tech R&amp;D</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MAIN ============ -->
+  <main id="main">
+
+    <!-- Impact Bar -->
+    <div class="impact-bar" aria-label="Key figures">
+      <div class="container">
+        <div class="impact-stats">
+          <div class="impact-stat reveal">
+            <strong data-count="2">0</strong>
+            <span>Technology Tracks</span>
+          </div>
+          <div class="impact-stat reveal reveal-delay-1">
+            <strong>30M+</strong>
+            <span>Indians needing nuclear medicine annually</span>
+          </div>
+          <div class="impact-stat reveal reveal-delay-2">
+            <strong data-count="0">0</strong>
+            <span>Carbon emissions from fusion</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mission -->
+    <section id="mission" class="section section-alt" aria-labelledby="mission-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-label">Our Approach</p>
+          <h2 id="mission-heading">A Phased Path to Impact</h2>
+          <p>We follow a disciplined two-phase strategy — generating near-term value through medical applications while advancing toward grid-scale fusion energy.</p>
+        </div>
+        <div class="phases">
+          <div class="phase-card phase-1 reveal">
+            <p class="phase-num">Phase 1 — Near Term</p>
+            <h3>Medical Isotopes &amp; Cancer Therapy</h3>
+            <p>
+              India depends almost entirely on imports for critical medical
+              isotopes used in cancer diagnostics. We are building domestic
+              production capability using advanced neutron sources, paired with
+              next-generation Boron Neutron Capture Therapy (BNCT) — a
+              precision cancer treatment with minimal side effects.
+            </p>
+          </div>
+          <div class="phase-card phase-2 reveal reveal-delay-1">
+            <p class="phase-num">Phase 2 — Long Term</p>
+            <h3>Clean Fusion Energy</h3>
+            <p>
+              Revenue and operational expertise from Phase 1 fund the development
+              of a compact fusion device capable of contributing to India's
+              energy grid. Our approach provides a commercially de-risked
+              pathway to fusion power — not dependent on a single breakthrough,
+              but built step by step.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Case Studies Section -->
-    <section id="case-studies" class="section-modern">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-12 reveal">
-                <h2 class="text-3xl md:text-4xl font-bold gradient-text mb-4">Case Studies</h2>
-                <p class="text-lg text-secondary max-w-3xl mx-auto">Real-world impact of our technology and approach.</p>
-            </div>
-            <div class="grid md:grid-cols-2 gap-8 reveal-stagger">
-                <div class="card-electric p-6" onclick="window.location.href='pages/casestudies.html#medical-isotopes'">
-                    <h3 class="text-xl font-bold mb-2">Medical Isotope Supply Chain</h3>
-                    <p class="text-secondary">By developing a domestic source of Mo-99, we reduce India's reliance on aging foreign reactors, ensuring a stable supply for cancer diagnostics and treatment.</p>
-                    <div class="mt-4">
-                        <span class="text-primary font-semibold">Read Case Study →</span>
-                    </div>
-                </div>
-                <div class="card-electric p-6" onclick="window.location.href='pages/casestudies.html#clean-energy'">
-                    <h3 class="text-xl font-bold mb-2">Fusion for Clean Energy</h3>
-                    <p class="text-secondary">Our modular GDT device paves the way for scalable, carbon-free power, supporting India's energy independence and climate goals.</p>
-                    <div class="mt-4">
-                        <span class="text-primary font-semibold">Read Case Study →</span>
-                    </div>
-                </div>
-            </div>
+    <!-- Focus Areas -->
+    <section id="focus" class="section" aria-labelledby="focus-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-label">What We Do</p>
+          <h2 id="focus-heading">Three Pillars of Impact</h2>
+          <p>Our work sits at the intersection of medicine, energy, and deep technology — each reinforcing the other.</p>
         </div>
+        <div class="focus-grid">
+          <div class="focus-card reveal">
+            <div class="focus-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="26" height="26"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+            <h3>Healthcare Sovereignty</h3>
+            <p>Securing India's supply of medical isotopes for cancer diagnostics and developing BNCT — a targeted radiation therapy that treats tumours at the cellular level while sparing healthy tissue.</p>
+          </div>
+          <div class="focus-card reveal reveal-delay-1">
+            <div class="focus-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="26" height="26"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            </div>
+            <h3>Clean Energy</h3>
+            <p>Working toward compact fusion energy systems that produce no carbon emissions, no long-lived radioactive waste, and use abundant fuel — contributing to India's climate goals and energy independence.</p>
+          </div>
+          <div class="focus-card reveal reveal-delay-2">
+            <div class="focus-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="26" height="26"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>
+            </div>
+            <h3>Deep Technology</h3>
+            <p>Building proprietary simulation tools, nuclear knowledge systems, and advanced materials expertise — creating intellectual property with applications across nuclear science, industrial inspection, and beyond.</p>
+          </div>
+        </div>
+      </div>
     </section>
 
-        <!-- Mission Section -->
-        <section id="mission" class="section-modern bg-light">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-12 reveal">
-                    <h2 class="text-3xl md:text-4xl font-bold gradient-text mb-4">Our Phased Mission</h2>
-                    <p class="text-lg text-secondary max-w-3xl mx-auto">A strategic, two-phase approach to build a sustainable fusion enterprise.</p>
-                </div>
-                <div class="grid md:grid-cols-2 gap-8 items-center reveal-stagger">
-                    <!-- Phase 1 Card -->
-                    <div class="card-electric p-8" onclick="window.location.href='pages/mission.html#phase1'">
-                        <div class="flex items-center mb-4">
-                            <div class="icon-modern text-3xl mr-4">
-                                <i class="fa-solid fa-star gradient-text"></i>
-                            </div>
-                            <h3 class="text-2xl font-bold">Phase 1: Medical Isotope Production</h3>
-                        </div>
-                        <p class="text-secondary">Address the critical shortage of medical isotopes like Molybdenum-99 by developing a compact, efficient fusion device. This generates early revenue and validates our core technology in a vital, regulated market.</p>
-                        <div class="mt-4">
-                            <span class="text-primary font-semibold">Learn More →</span>
-                        </div>
-                    </div>
-                    <!-- Phase 2 Card -->
-                    <div class="card-electric p-8" onclick="window.location.href='pages/mission.html#phase2'">
-                        <div class="flex items-center mb-4">
-                            <div class="icon-modern text-3xl mr-4">
-                                <i class="fa-solid fa-rocket gradient-text"></i>
-                            </div>
-                            <h3 class="text-2xl font-bold">Phase 2: Grid-Scale Fusion Power</h3>
-                        </div>
-                        <p class="text-secondary">Leverage our proven technology, operational expertise, and established supply chains to build and commercialize fusion power plants. Our goal is to provide clean, safe, and limitless energy for India and the world.</p>
-                        <div class="mt-4">
-                            <span class="text-primary font-semibold">Learn More →</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Technology Section -->
-        <section id="technology" class="section-modern">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-12 reveal">
-                    <h2 class="text-3xl md:text-4xl font-bold gradient-text mb-4">Core Technology</h2>
-                    <p class="text-lg text-secondary max-w-3xl mx-auto">Our innovation lies in a novel approach to fusion, optimized for efficiency and commercial viability.</p>
-                </div>
-                <div class="grid md:grid-cols-3 gap-8 text-center reveal-stagger">
-                    <!-- Tech Card 1 -->
-                    <div class="card-electric p-6" onclick="window.location.href='pages/technology.html#gdt-device'">
-                        <div class="icon-modern text-4xl mb-4">
-                            <img src="assets/images/icon-gdt.png" loading="lazy" alt="GDT Icon" class="h-16 w-16 mx-auto">
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Advanced GDT Device</h3>
-                        <p class="text-secondary">Utilizing a Gas-Dynamic Trap (GDT) configuration, which offers superior plasma stability and a simpler, more linear design compared to complex toroidal systems.</p>
-                        <div class="mt-4">
-                            <span class="text-primary font-semibold">Learn More →</span>
-                        </div>
-                    </div>
-                    <!-- Tech Card 2 -->
-                    <div class="card-electric p-6" onclick="window.location.href='pages/technology.html#neutron-source'">
-                        <div class="icon-modern text-4xl mb-4">
-                             <img src="assets/images/icon-energy.png" loading="lazy" alt="Energy Icon" class="h-16 w-16 mx-auto">
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">High-Efficiency Neutron Source</h3>
-                        <p class="text-secondary">Our device is designed to be a powerful neutron source, making it ideal for breeding medical isotopes and testing materials for future power plants.</p>
-                        <div class="mt-4">
-                            <span class="text-primary font-semibold">Learn More →</span>
-                        </div>
-                    </div>
-                    <!-- Tech Card 3 -->
-                    <div class="card-electric p-6" onclick="window.location.href='pages/technology.html#modular-design'">
-                        <div class="icon-modern text-4xl mb-4">
-                            <img src="assets/images/icon-medical.png" loading="lazy" alt="Medical Icon" class="h-16 w-16 mx-auto">
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Modular & Scalable</h3>
-                        <p class="text-secondary">The linear architecture allows for modular construction and scalability, reducing construction time and enabling incremental upgrades.</p>
-                        <div class="mt-4">
-                            <span class="text-primary font-semibold">Learn More →</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Visual Showcase Section -->
-        <section id="showcase" class="section-modern bg-light">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-12 reveal">
-                    <h2 class="text-3xl md:text-4xl font-bold gradient-text mb-4">Technology Visualization</h2>
-                    <p class="text-lg text-secondary max-w-3xl mx-auto">Exploring the science behind fusion energy</p>
-                </div>
-                <div class="grid md:grid-cols-2 gap-8 reveal-stagger">
-                    <div class="card-electric p-6">
-                        <img src="assets/images/placeholder-fusion-reactor.svg" alt="Fusion Reactor Visualization" class="w-full h-64 object-contain mb-4">
-                        <h3 class="text-xl font-bold mb-2">Advanced Magnetic Mirror</h3>
-                        <p class="text-secondary">Our linear magnetic confinement system provides superior plasma stability and simplified maintenance compared to traditional tokamak designs.</p>
-                    </div>
-                    <div class="card-electric p-6">
-                        <img src="assets/images/placeholder-isotope.svg" alt="Medical Isotope Visualization" class="w-full h-64 object-contain mb-4">
-                        <h3 class="text-xl font-bold mb-2">Medical Isotope Production</h3>
-                        <p class="text-secondary">Producing critical medical isotopes like Mo-99 for cancer diagnostics, serving millions of patients annually.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- History of Fusion Section -->
-        <section id="history" class="section-modern">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-16 reveal">
-                    <h2 class="text-3xl md:text-4xl font-bold gradient-text mb-4">A Legacy of Innovation</h2>
-                    <p class="text-lg text-secondary max-w-3xl mx-auto">Fusion energy is built on nearly a century of scientific breakthroughs and relentless engineering.</p>
-                </div>
-                <div class="timeline-modern max-w-4xl mx-auto reveal">
-                    <!-- Timeline Item 1 -->
-                    <div class="timeline-item-modern flex md:grid md:grid-cols-2 gap-8">
-                        <div class="md:text-right">
-                            <h3 class="text-xl font-bold">1920s-1930s: The Dawn of an Idea</h3>
-                            <p class="text-secondary mt-2">Arthur Eddington proposes that stars are powered by fusing hydrogen into helium. Hans Bethe later details the proton-proton chain, the specific fusion process in stars, earning a Nobel Prize.</p>
-                        </div>
-                        <div class="hidden md:block"></div>
-                    </div>
-                    <!-- Timeline Item 2 -->
-                    <div class="timeline-item-modern flex md:grid md:grid-cols-2 gap-8">
-                        <div class="hidden md:block"></div>
-                        <div>
-                            <h3 class="text-xl font-bold">1950s: The First Machines</h3>
-                            <p class="text-secondary mt-2">The Cold War accelerates fusion research. The "Tokamak" concept is developed in the Soviet Union, and the "Stellarator" at Princeton. The first fusion neutrons are produced in a lab.</p>
-                        </div>
-                    </div>
-                    <!-- Timeline Item 3 -->
-                    <div class="timeline-item-modern flex md:grid md:grid-cols-2 gap-8">
-                        <div class="md:text-right">
-                            <h3 class="text-xl font-bold">1980s-1990s: Major Breakthroughs</h3>
-                            <p class="text-secondary mt-2">The Joint European Torus (JET) in the UK achieves the world's first controlled release of fusion power in 1991, followed by significant power output from TFTR at Princeton in 1994.</p>
-                        </div>
-                        <div class="hidden md:block"></div>
-                    </div>
-                    <!-- Timeline Item 4 -->
-                    <div class="timeline-item-modern flex md:grid md:grid-cols-2 gap-8">
-                        <div class="hidden md:block"></div>
-                        <div>
-                            <h3 class="text-xl font-bold">2000s-Present: The Age of Collaboration & Commercialization</h3>
-                            <p class="text-secondary mt-2">The international ITER project begins construction in France, aiming to demonstrate a burning plasma. Simultaneously, a vibrant private fusion industry emerges, with companies like ASPL Fusion pioneering new, commercially-focused approaches.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Applications/Timeline Section -->
-        <section id="applications" class="section-modern bg-light">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-16 reveal">
-                    <h2 class="text-3xl md:text-4xl font-bold gradient-text mb-4">Our Roadmap</h2>
-                    <p class="text-lg text-secondary max-w-3xl mx-auto">From critical near-term applications to long-term energy independence.</p>
-                </div>
-                <div class="timeline-modern max-w-4xl mx-auto reveal">
-                    <!-- Timeline Item 1 -->
-                    <div class="timeline-item-modern flex md:grid md:grid-cols-2 gap-8">
-                        <div class="md:text-right">
-                            <h3 class="text-xl font-bold">Year 1-2: R&D and Prototyping</h3>
-                            <p class="text-secondary mt-2">Finalize physics design, build and test the initial low-beta GDT prototype. Secure seed funding and key partnerships.</p>
-                        </div>
-                        <div class="hidden md:block"></div>
-                    </div>
-                    <!-- Timeline Item 2 -->
-                    <div class="timeline-item-modern flex md:grid md:grid-cols-2 gap-8">
-                        <div class="hidden md:block"></div>
-                        <div>
-                            <h3 class="text-xl font-bold">Year 3-4: Isotope Production Validation</h3>
-                            <p class="text-secondary mt-2">Construct a full-scale device capable of producing commercially viable quantities of Mo-99. Begin regulatory approval process.</p>
-                        </div>
-                    </div>
-                    <!-- Timeline Item 3 -->
-                    <div class="timeline-item-modern flex md:grid md:grid-cols-2 gap-8">
-                        <div class="md:text-right">
-                            <h3 class="text-xl font-bold">Year 5-7: Commercial Isotope Sales</h3>
-                            <p class="text-secondary mt-2">Achieve first revenue through sales of medical isotopes to hospitals and pharmaceutical companies, establishing a self-sustaining business model.</p>
-                        </div>
-                        <div class="hidden md:block"></div>
-                    </div>
-                    <!-- Timeline Item 4 -->
-                    <div class="timeline-item-modern flex md:grid md:grid-cols-2 gap-8">
-                        <div class="hidden md:block"></div>
-                        <div>
-                            <h3 class="text-xl font-bold">Year 8+: Fusion Power Development</h3>
-                            <p class="text-secondary mt-2">Re-invest revenue into R&D for a net-energy-gain fusion device. Design and build India's first commercial fusion power demonstrator.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Impact Section -->
-        <section id="impact" class="section-modern">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-12 reveal">
-                    <h2 class="text-3xl md:text-4xl font-bold gradient-text mb-4">Broader Impact</h2>
-                    <p class="text-lg text-secondary max-w-3xl mx-auto">Our technology is a catalyst for sustainable development, healthcare innovation, and economic growth.</p>
-                </div>
-                <div class="grid md:grid-cols-3 gap-8 text-center reveal-stagger">
-                    <!-- Impact Card 1 -->
-                    <div class="card-modern p-6">
-                        <div class="icon-modern text-4xl mb-4">
-                            <i class="fa-solid fa-seedling gradient-text"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Carbon Credits & SDGs</h3>
-                        <p class="text-secondary">By providing a reliable, carbon-free energy source, we directly support UN Sustainable Development Goals (SDGs) 7 and 13. Our projects will generate high-value carbon credits, creating an additional revenue stream and incentivizing clean energy adoption.</p>
-                    </div>
-                    <!-- Impact Card 2 -->
-                    <div class="card-modern p-6">
-                        <div class="icon-modern text-4xl mb-4">
-                            <i class="fa-solid fa-briefcase-medical gradient-text"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Nuclear Medicine & Healthcare</h3>
-                        <p class="text-secondary">Our initial focus on medical isotopes will stabilize the supply chain for cancer diagnostics and treatment in India, saving lives and fostering a domestic high-tech medical industry. This reduces reliance on aging foreign reactors.</p>
-                    </div>
-                    <!-- Impact Card 3 -->
-                    <div class="card-modern p-6">
-                        <div class="icon-modern text-4xl mb-4">
-                            <i class="fa-solid fa-chart-line gradient-text"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Economic & Industrial Growth</h3>
-                        <p class="text-secondary">Fusion energy will power India's economic ambitions, from manufacturing to digital infrastructure. We are building a new industrial ecosystem, creating high-skilled jobs, and driving technological self-reliance.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Team Section -->
-        <section id="team" class="section-modern">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-12 reveal">
-                    <h2 class="text-3xl md:text-4xl font-bold gradient-text mb-4">Our Team</h2>
-                    <p class="text-lg text-secondary max-w-3xl mx-auto">Driven by a shared passion for science, engineering, and India's future.</p>
-                </div>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center reveal-stagger">
-                    <!-- Team Member 1 -->
-                    <div class="team-member">
-                        <img src="https://via.placeholder.com/150.webp?text=Dr.+A.+K.+Jha" alt="Dr. A. K. Jha" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg" loading="lazy">
-                        <h3 class="text-xl font-bold">Dr. A. K. Jha</h3>
-                        <p class="text-secondary">Founder & CEO</p>
-                    </div>
-                    <!-- Team Member 2 -->
-                    <div class="team-member">
-                        <img src="https://via.placeholder.com/150.webp?text=Dr.+S.+Mukherjee" alt="Dr. S. Mukherjee" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg" loading="lazy">
-                        <h3 class="text-xl font-bold">Dr. S. Mukherjee</h3>
-                        <p class="text-secondary">Chief Scientist</p>
-                    </div>
-                    <!-- Team Member 3 -->
-                    <div class="team-member">
-                        <img src="https://via.placeholder.com/150.webp?text=R.+Sharma" alt="R. Sharma" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg" loading="lazy">
-                        <h3 class="text-xl font-bold">R. Sharma</h3>
-                        <p class="text-secondary">Lead Engineer</p>
-                    </div>
-                    <!-- Team Member 4 -->
-                    <div class="team-member">
-                        <img src="https://via.placeholder.com/150.webp?text=P.+Singh" alt="P. Singh" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg" loading="lazy">
-                        <h3 class="text-xl font-bold">P. Singh</h3>
-                        <p class="text-secondary">Business Development</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Stats Section -->
-        <section id="stats" class="section-modern bg-light">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-12 reveal">
-                    <h2 class="text-3xl md:text-4xl font-bold gradient-text mb-4">By the Numbers</h2>
-                    <p class="text-lg text-secondary max-w-3xl mx-auto">Key metrics and milestones that demonstrate our progress and impact.</p>
-                </div>
-                <div class="grid md:grid-cols-4 gap-8 text-center reveal-stagger">
-                    <!-- Stat 1 -->
-                    <div class="card-electric p-6">
-                        <div class="stat-counter count-up" data-target="100">0</div>
-                        <div class="stat-label">Million Degrees</div>
-                        <p class="text-sm text-secondary mt-2">Plasma temperature achieved in our GDT device</p>
-                    </div>
-                    <!-- Stat 2 -->
-                    <div class="card-electric p-6">
-                        <div class="stat-counter count-up" data-target="25">0</div>
-                        <div class="stat-label">Tesla</div>
-                        <p class="text-sm text-secondary mt-2">Magnetic field strength using HTS magnets</p>
-                    </div>
-                    <!-- Stat 3 -->
-                    <div class="card-electric p-6">
-                        <div class="stat-counter count-up" data-target="80">0</div>
-                        <div class="stat-label">Percent</div>
-                        <p class="text-sm text-secondary mt-2">Of nuclear medicine procedures using Mo-99</p>
-                    </div>
-                    <!-- Stat 4 -->
-                    <div class="card-electric p-6">
-                        <div class="stat-counter count-up" data-target="2035">0</div>
-                        <div class="stat-label">Target Year</div>
-                        <p class="text-sm text-secondary mt-2">For first commercial fusion power plant</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="section-modern bg-light">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-12 reveal">
-                    <h2 class="text-3xl md:text-4xl font-bold gradient-text mb-4">Join Our Mission</h2>
-                    <p class="text-lg text-secondary max-w-3xl mx-auto">We are seeking partners, investors, and talented individuals to help us build the future of energy. Let's connect.</p>
-                </div>
-                <div class="max-w-2xl mx-auto card-modern p-8 reveal">
-                    <form id="homepage-contact-form" action="https://formspree.io/f/mwkgrgqg" method="POST" aria-label="Contact form">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                            <input type="text" name="name" placeholder="Your Name" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
-                            <input type="email" name="email" placeholder="Your Email" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
-                        </div>
-                        <input type="hidden" name="_subject" value="New contact from ASPL Fusion website">
-                        <input type="hidden" name="_next" value="https://dugy-jha.github.io/index.html?contact=success">
-                        <textarea name="message" placeholder="Your Message" rows="5" required class="w-full p-3 border border-gray-300 rounded-lg mb-6 focus:outline-none focus:ring-2 focus:ring-purple-500"></textarea>
-                        <div class="text-center">
-                            <button type="submit" class="btn-primary" aria-label="Send message">Send Message</button>
-                        </div>
-                        <div id="form-status" class="mt-4 text-center text-sm"></div>
-                    </form>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-        <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <a href="index.html" class="logo">
-                        <img src="assets/images/Logo-t-removebg-preview.png" loading="eager" alt="ASPL Fusion Logo" class="logo-img">
-                        <span>ASPL<span class="highlight">Fusion</span></span>
-                    </a>
-                    <p>Agnira Sanlayan Pvt. Ltd.</p>
-                    <p>Powering India's future through fusion innovation.</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="pages/mission.html">Our Mission</a></li>
-                        <li><a href="pages/technology.html">Technology</a></li>
-                        <li><a href="pages/roadmap.html">Roadmap</a></li>
-                        <li><a href="pages/applications.html">Applications</a></li>
-                        <li><a href="pages/casestudies.html">Case Studies</a></li>
-                        <li><a href="pages/team.html">Team</a></li>
-                        <li><a href="pages/news.html">News</a></li>
-                        <li><a href="pages/faq.html">FAQ</a></li>
-                        <li><a href="pages/contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact">
-                    <h4>Contact</h4>
-                    <p><i class="fas fa-envelope"></i> <a href="mailto:info@asplfusion.com">info@asplfusion.com</a></p>
-                    <p><i class="fas fa-phone"></i> <a href="tel:+9101141519899">+91 (011)-4151-9899</a></p>
-                    <p><i class="fas fa-map-marker-alt"></i> 101 Mercantile House, 15 Kastoorba Gandhi Marg, New Delhi - 110001, India</p>
-                </div>
-                <div class="footer-social">
-                    <h4>Connect</h4>
-                    <div class="social-icons">
-                        <a href="https://www.linkedin.com/company/aspl-fusion" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://twitter.com/asplfusion" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Agnira Sanlayan Pvt. Ltd. (ASPL Fusion). All Rights Reserved.</p>
-                <div class="legal-links">
-                    <a href="pages/privacy.html">Privacy Policy</a>
-                    <a href="pages/terms.html">Terms of Service</a>
-                </div>
-            </div>
+    <!-- Technology -->
+    <section id="technology" class="section section-alt" aria-labelledby="tech-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-label">Our Technology</p>
+          <h2 id="tech-heading">Built on Proven Physics</h2>
+          <p>Our technology platform draws on decades of plasma physics research, adapted for near-term commercial applications.</p>
         </div>
-    </footer>
+        <div class="tech-grid">
+          <div class="tech-item reveal">
+            <div class="tech-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" width="26" height="26"><circle cx="12" cy="12" r="3"/><path d="M12 1v4m0 14v4m-9.66-5.66 2.83-2.83m11.66-3.66 2.83-2.83M1 12h4m14 0h4m-5.66 9.66-2.83-2.83M6.34 6.34 3.51 3.51"/></svg>
+            </div>
+            <h3>Neutron Source Design</h3>
+            <p>Advanced moderator and reflector assemblies optimised through Monte Carlo simulation for medical-grade neutron beams.</p>
+          </div>
+          <div class="tech-item reveal reveal-delay-1">
+            <div class="tech-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" width="26" height="26"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            </div>
+            <h3>Modular Architecture</h3>
+            <p>Linear device geometry enables modular construction, incremental upgrades, and reduced build times compared to toroidal systems.</p>
+          </div>
+          <div class="tech-item reveal reveal-delay-2">
+            <div class="tech-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" width="26" height="26"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <h3>Computational Tools</h3>
+            <p>Proprietary simulation and nuclear knowledge graph platforms that accelerate R&amp;D and serve the broader nuclear science community.</p>
+          </div>
+          <div class="tech-item reveal reveal-delay-3">
+            <div class="tech-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" width="26" height="26"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3>Safety by Design</h3>
+            <p>Inherently safe fusion processes with no risk of meltdown, no weapons-grade materials, and minimal waste — designed for regulatory confidence.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <!-- Dark Mode Toggle Button -->
-    <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Toggle dark mode">
-        <i class="fas fa-moon"></i>
-        <i class="fas fa-sun"></i>
-    </button>
+    <!-- Team -->
+    <section id="team" class="section" aria-labelledby="team-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-label">Our People</p>
+          <h2 id="team-heading">Led by Deep Expertise</h2>
+          <p>Our team brings together nuclear physics, engineering, and enterprise leadership.</p>
+        </div>
+        <!-- Leadership -->
+        <h3 class="team-tier-label reveal">Leadership</h3>
+        <div class="team-grid team-grid-leadership">
+          <div class="team-card reveal">
+            <img src="images/Dr-Prabhat-Ranjan.png" alt="Portrait of Prof. Prabhat Ranjan" class="team-photo" width="120" height="120" loading="lazy">
+            <h3>Prof. Prabhat Ranjan</h3>
+            <p class="role">Founder</p>
+          </div>
+          <div class="team-card reveal reveal-delay-1">
+            <img src="images/Abhay-K-Jha.jpeg" alt="Portrait of Abhay K. Jha" class="team-photo" width="120" height="120" loading="lazy">
+            <h3>Abhay K. Jha</h3>
+            <p class="role">Co-founder</p>
+          </div>
+          <div class="team-card reveal reveal-delay-2">
+            <img src="images/Abhinav-Jha.jpeg" alt="Portrait of Abhinav Jha" class="team-photo" width="120" height="120" loading="lazy">
+            <h3>Abhinav Jha</h3>
+            <p class="role">Operations Director</p>
+          </div>
+        </div>
 
-    <!-- Scroll to Top Button -->
-    <button class="scroll-to-top" id="scroll-to-top" aria-label="Scroll to top">
-        <i class="fas fa-arrow-up"></i>
-    </button>
+        <!-- Advisors -->
+        <h3 class="team-tier-label reveal">Advisors</h3>
+        <div class="team-grid team-grid-advisors">
+          <div class="team-card reveal">
+            <img src="images/Yogesh-Saxena.png" alt="Portrait of Prof. Y. C. Saxena" class="team-photo" width="120" height="120" loading="lazy">
+            <h3>Prof. Y. C. Saxena</h3>
+            <p class="role">Advisor</p>
+          </div>
+          <div class="team-card reveal reveal-delay-1">
+            <img src="images/Deepak-Gupta.jpeg" alt="Portrait of Dr. Deepak Gupta" class="team-photo" width="120" height="120" loading="lazy">
+            <h3>Dr. Deepak Gupta</h3>
+            <p class="role">Advisor</p>
+          </div>
+        </div>
 
-    <!-- Particle background removed - using Liquid Ether CSS animation instead -->
-    <script src="assets/js/script.js" defer></script>
+        <!-- Research & Engineering -->
+        <h3 class="team-tier-label reveal">Research &amp; Engineering</h3>
+        <div class="team-grid">
+          <div class="team-card reveal">
+            <img src="images/Nilormi-Das.jpeg" alt="Portrait of Nilormi Das" class="team-photo" width="120" height="120" loading="lazy">
+            <h3>Nilormi Das</h3>
+            <p class="role">Research Scientist, Nuclear Fusion</p>
+          </div>
+          <div class="team-card reveal reveal-delay-1">
+            <img src="images/Varun-Savadi.jpg" alt="Portrait of Dr. Varun Vijay Savadi" class="team-photo" width="120" height="120" loading="lazy">
+            <h3>Dr. Varun Vijay Savadi</h3>
+            <p class="role">Neutronics Scientist</p>
+          </div>
+          <div class="team-card reveal reveal-delay-2">
+            <img src="images/Chandresh-Shah.jpg" alt="Portrait of Chandresh Shah" class="team-photo" width="120" height="120" loading="lazy">
+            <h3>Chandresh Shah</h3>
+            <p class="role">R&amp;D Engineer</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- Contact -->
+    <section id="contact" class="section section-alt" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-label">Get in Touch</p>
+          <h2 id="contact-heading">Let's Build the Future Together</h2>
+          <p>We welcome conversations with researchers, clinicians, investors, and anyone passionate about fusion's potential for humanity.</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-info reveal">
+            <h3>Reach Us</h3>
+            <p>Whether you're exploring collaboration, investment, or simply curious about our work — we'd love to hear from you.</p>
+            <div class="contact-detail">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <a href="mailto:info@asplfusion.com">info@asplfusion.com</a>
+            </div>
+            <div class="contact-detail">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>New Delhi &amp; Gujarat, India</span>
+            </div>
+            <div class="contact-detail">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+              <span>DPIIT Recognised Startup (DIPP222699)</span>
+            </div>
+          </div>
+          <form class="contact-form reveal reveal-delay-1" action="https://formspree.io/f/mwkgrgqg" method="POST" aria-label="Contact form">
+            <div class="form-row">
+              <div>
+                <label for="name" class="sr-only">Your name</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required autocomplete="name">
+              </div>
+              <div>
+                <label for="email" class="sr-only">Your email</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required autocomplete="email">
+              </div>
+            </div>
+            <div>
+              <label for="message" class="sr-only">Your message</label>
+              <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+            </div>
+
+            <!-- Hidden tracking fields (populated by JS) -->
+            <input type="hidden" name="_replyto" id="f-replyto">
+            <input type="hidden" name="_subject" value="New enquiry via asplfusion.com">
+            <input type="hidden" name="__timestamp" id="f-timestamp">
+            <input type="hidden" name="__timezone" id="f-timezone">
+            <input type="hidden" name="__referrer" id="f-referrer">
+            <input type="hidden" name="__page_url" id="f-pageurl">
+            <input type="hidden" name="__utm_source" id="f-utm-source">
+            <input type="hidden" name="__utm_medium" id="f-utm-medium">
+            <input type="hidden" name="__utm_campaign" id="f-utm-campaign">
+            <input type="hidden" name="__screen" id="f-screen">
+            <input type="hidden" name="__language" id="f-language">
+            <input type="hidden" name="__visit_count" id="f-visits">
+            <input type="hidden" name="__first_visit" id="f-first-visit">
+            <input type="hidden" name="__consent" id="f-consent">
+            <!-- reCAPTCHA v3 token (populated by JS before submit) -->
+            <input type="hidden" name="g-recaptcha-response" id="f-recaptcha">
+            <!-- Honeypot (spam trap — hidden from humans) -->
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+
+            <button type="submit" class="btn btn-secondary" style="align-self:start;">
+              Send Message
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </button>
+            <p class="form-status" aria-live="polite"></p>
+            <p class="form-privacy">This form is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a> and <a href="https://policies.google.com/terms" target="_blank" rel="noopener">Terms of Service</a> apply. We collect basic session data (visit count, referrer, timezone) to improve communications. No other third-party tracking. <a href="mailto:info@asplfusion.com">Privacy questions?</a></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <img src="images/logo-round.png" alt="ASPL Fusion" width="38" height="38">
+          <p>Agnira Sanlayan Pvt. Ltd. — pioneering fusion-derived technologies for medicine and clean energy in India.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Navigate</h4>
+          <a href="#mission">Mission</a>
+          <a href="#focus">Focus Areas</a>
+          <a href="#technology">Technology</a>
+          <a href="#team">Team</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-links">
+          <h4>Connect</h4>
+          <a href="mailto:info@asplfusion.com">info@asplfusion.com</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Agnira Sanlayan Pvt. Ltd. (ASPL Fusion). All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-to-top" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <!-- Cookie consent banner -->
+  <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-describedby="cookie-desc" hidden>
+    <div class="cookie-inner">
+      <p id="cookie-desc">We use a small cookie to remember your visit count and improve your experience. No third-party trackers.</p>
+      <div class="cookie-actions">
+        <button class="btn btn-primary btn-sm" id="cookie-accept">Accept</button>
+        <button class="cookie-decline" id="cookie-decline">Decline</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>

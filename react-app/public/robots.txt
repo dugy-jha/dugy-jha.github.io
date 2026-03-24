@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://dugy-jha.github.io/sitemap.xml

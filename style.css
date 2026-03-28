@@ -321,7 +321,7 @@ p { max-width: 65ch; font-size: 1.0625rem; } /* 17px — optimal legibility */
   opacity: .9;
 }
 .hero-hindi {
-  font-size: .85rem; color: rgba(255,255,255,.45);
+  font-size: .85rem; color: rgba(255,255,255,.6);
   margin-bottom: var(--sp-8);
   letter-spacing: .02em;
 }
@@ -348,7 +348,7 @@ p { max-width: 65ch; font-size: 1.0625rem; } /* 17px — optimal legibility */
 }
 .hero-trust-item {
   display: flex; align-items: center; gap: var(--sp-2);
-  font-size: .8rem; color: rgba(255,255,255,.5);
+  font-size: .8rem; color: rgba(255,255,255,.6);
 }
 .hero-trust-item svg {
   width: 16px; height: 16px; color: var(--teal); opacity: .7;
@@ -459,7 +459,7 @@ p { max-width: 65ch; font-size: 1.0625rem; } /* 17px — optimal legibility */
 }
 .impact-stat span {
   display: block; margin-top: var(--sp-2);
-  font-size: .85rem; color: rgba(255,255,255,.55);
+  font-size: .85rem; color: rgba(255,255,255,.65);
   line-height: 1.4;
 }
 
@@ -863,7 +863,7 @@ p { max-width: 65ch; font-size: 1.0625rem; } /* 17px — optimal legibility */
 
 .cookie-decline {
   background: none; border: none; cursor: pointer;
-  color: rgba(255,255,255,.4); font-size: .82rem; font-weight: 500;
+  color: rgba(255,255,255,.6); font-size: .82rem; font-weight: 500;
   padding: .5rem .75rem; border-radius: var(--radius-sm);
   transition: color var(--t-fast);
 }
@@ -873,7 +873,7 @@ p { max-width: 65ch; font-size: 1.0625rem; } /* 17px — optimal legibility */
    FOOTER
    ================================================================ */
 .site-footer {
-  background: var(--darker); color: rgba(255,255,255,.5);
+  background: var(--darker); color: rgba(255,255,255,.6);
   padding: var(--sp-12) 0 var(--sp-6);
 }
 .footer-inner {
@@ -894,7 +894,7 @@ p { max-width: 65ch; font-size: 1.0625rem; } /* 17px — optimal legibility */
   letter-spacing: .08em;
 }
 .footer-links a:not(.footer-social-icon) {
-  display: block; color: rgba(255,255,255,.55);
+  display: block; color: rgba(255,255,255,.65);
   font-size: .88rem; padding: var(--sp-1) 0;
   cursor: pointer;
   transition: color var(--t-fast), padding-left var(--t-fast);
@@ -918,7 +918,7 @@ a.footer-social-icon:hover {
 .footer-bottom {
   border-top: 1px solid rgba(255,255,255,.12);
   padding-top: var(--sp-6); text-align: center;
-  font-size: .78rem; color: rgba(255,255,255,.45);
+  font-size: .78rem; color: rgba(255,255,255,.6);
 }
 
 /* ================================================================

@@ -1007,7 +1007,7 @@ a.app-card-link .app-card { cursor: pointer; }
 
 /* Landing hero */
 .landing-hero {
-  background: linear-gradient(135deg, var(--dark) 0%, var(--navy) 50%, var(--blue) 100%);
+  background: linear-gradient(135deg, var(--darker) 0%, var(--dark) 40%, var(--navy) 100%);
   color: var(--white);
   padding: calc(80px + var(--sp-16)) 0 var(--sp-16);
   position: relative;
@@ -1015,12 +1015,12 @@ a.app-card-link .app-card { cursor: pointer; }
 
 .landing-breadcrumb {
   display: flex; align-items: center; gap: var(--sp-2);
-  font-size: .8rem; color: rgba(255,255,255,.5);
+  font-size: .82rem; color: rgba(255,255,255,.6);
   margin-bottom: var(--sp-6);
 }
-.landing-breadcrumb a { color: rgba(255,255,255,.6); text-decoration: none; }
+.landing-breadcrumb a { color: rgba(255,255,255,.7); text-decoration: none; }
 .landing-breadcrumb a:hover { color: var(--teal); }
-.landing-breadcrumb span[aria-current] { color: rgba(255,255,255,.85); }
+.landing-breadcrumb span[aria-current] { color: rgba(255,255,255,.9); }
 
 .landing-category {
   display: inline-block;
@@ -1036,11 +1036,13 @@ a.app-card-link .app-card { cursor: pointer; }
   font-weight: 700; line-height: 1.15;
   margin-bottom: var(--sp-4);
   max-width: 720px;
+  color: var(--white);
+  text-shadow: 0 2px 12px rgba(0,0,0,.3);
 }
 
 .landing-tagline {
   font-size: 1.1rem; line-height: 1.6;
-  color: rgba(255,255,255,.75);
+  color: rgba(255,255,255,.85);
   max-width: 600px;
   margin-bottom: var(--sp-8);
 }
@@ -1051,6 +1053,10 @@ a.app-card-link .app-card { cursor: pointer; }
 
 /* Narrow container for text-heavy sections */
 .container-narrow { max-width: var(--max-w-narrow); margin: 0 auto; }
+
+/* Tighter section spacing for landing pages (less content per section than homepage) */
+.landing-hero ~ .section { padding: var(--sp-16) 0; }
+.landing-hero ~ .section-alt { background: #F1F5F9; }
 
 /* Body text in landing sections */
 .landing-body {
@@ -1138,6 +1144,7 @@ a.app-card-link .app-card { cursor: pointer; }
 .landing-cta-bar {
   background: var(--navy);
   padding: var(--sp-10) 0;
-  display: flex; justify-content: center; gap: var(--sp-4);
 }
-.landing-cta-bar .btn { margin: 0 var(--sp-2); }
+.landing-cta-bar .container {
+  display: flex; justify-content: center; gap: var(--sp-4); flex-wrap: wrap;
+}

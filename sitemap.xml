@@ -6,6 +6,7 @@
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
+  <url><loc>https://asplfusion.com/privacy.html</loc><lastmod>2026-03-28</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url><loc>https://asplfusion.com/applications/bnct-cancer-therapy.html</loc><lastmod>2026-03-28</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://asplfusion.com/applications/medical-isotope-production.html</loc><lastmod>2026-03-28</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://asplfusion.com/applications/sealed-source-production.html</loc><lastmod>2026-03-28</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>

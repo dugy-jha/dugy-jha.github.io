@@ -4,6 +4,13 @@
    Principles: Trust & Authority · Zero CDN · WCAG AA · 4-breakpoint
    ============================================================ */
 
+/* --- Font-display fallback (ensures text visible while Google Fonts loads) --- */
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-display: swap;
+  src: local('IBM Plex Sans');
+}
+
 /* --- Reset & Base --- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 

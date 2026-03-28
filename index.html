@@ -216,6 +216,73 @@
   }
   </script>
 
+  <!-- LocalBusiness + ContactPoint (local search) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ResearchOrganization",
+    "name": "ASPL Fusion",
+    "url": "https://asplfusion.com",
+    "logo": "https://asplfusion.com/images/logo-round.png",
+    "email": "info@asplfusion.com",
+    "telephone": "+91-011-4151-9899",
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "telephone": "+91-011-4151-9899",
+        "email": "info@asplfusion.com",
+        "contactType": "general enquiries",
+        "availableLanguage": ["English", "Hindi"],
+        "areaServed": "IN"
+      }
+    ],
+    "address": [
+      {
+        "@type": "PostalAddress",
+        "streetAddress": "102 Mercantile House, 15 Kastoorba Gandhi Marg",
+        "addressLocality": "New Delhi",
+        "addressRegion": "Delhi",
+        "postalCode": "110001",
+        "addressCountry": "IN"
+      },
+      {
+        "@type": "PostalAddress",
+        "addressLocality": "Gandhinagar",
+        "addressRegion": "Gujarat",
+        "addressCountry": "IN"
+      }
+    ],
+    "geo": [
+      {
+        "@type": "GeoCoordinates",
+        "latitude": "28.6139",
+        "longitude": "77.2090"
+      },
+      {
+        "@type": "GeoCoordinates",
+        "latitude": "23.2156",
+        "longitude": "72.6369"
+      }
+    ]
+  }
+  </script>
+
+  <!-- BreadcrumbList (homepage) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://asplfusion.com/"
+      }
+    ]
+  }
+  </script>
+
   <!-- ====== Security ====== -->
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
   <meta name="referrer" content="strict-origin-when-cross-origin">
@@ -232,8 +299,23 @@
   <!-- ====== Styles ====== -->
   <link rel="stylesheet" href="style.css">
 
-  <!-- ====== reCAPTCHA v3 ====== -->
-  <script src="https://www.google.com/recaptcha/api.js?render=6LcR9pUsAAAAAFsjmudLfjevaon45Nssh5_Dq-KT" async defer></script>
+  <!-- ====== reCAPTCHA v3 (lazy-loaded when contact form enters viewport) ====== -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var loaded = false;
+      var observer = new IntersectionObserver(function(entries) {
+        if (entries[0].isIntersecting && !loaded) {
+          loaded = true;
+          var s = document.createElement('script');
+          s.src = 'https://www.google.com/recaptcha/api.js?render=6LcR9pUsAAAAAFsjmudLfjevaon45Nssh5_Dq-KT';
+          document.head.appendChild(s);
+          observer.disconnect();
+        }
+      }, { rootMargin: '200px' });
+      var form = document.querySelector('#contact');
+      if (form) observer.observe(form);
+    });
+  </script>
 
 </head>
 <body>
@@ -615,17 +697,17 @@
         <h3 class="team-tier-label reveal">Leadership</h3>
         <div class="team-grid team-grid-leadership">
           <div class="team-card reveal">
-            <img src="images/Dr-Prabhat-Ranjan.jpeg" alt="Portrait of Prof. Prabhat Ranjan" class="team-photo" width="120" height="120" loading="lazy">
+            <picture><source srcset="images/Dr-Prabhat-Ranjan.webp" type="image/webp"><img src="images/Dr-Prabhat-Ranjan.jpeg" alt="Portrait of Prof. Prabhat Ranjan" class="team-photo" width="120" height="120" loading="lazy"></picture>
             <h3>Prof. Prabhat Ranjan</h3>
             <p class="role">Founder</p>
           </div>
           <div class="team-card reveal reveal-delay-1">
-            <img src="images/Abhay-K-Jha.jpeg" alt="Portrait of Abhay K. Jha" class="team-photo" width="120" height="120" loading="lazy">
+            <picture><source srcset="images/Abhay-K-Jha.webp" type="image/webp"><img src="images/Abhay-K-Jha.jpeg" alt="Portrait of Abhay K. Jha" class="team-photo" width="120" height="120" loading="lazy"></picture>
             <h3>Abhay K. Jha</h3>
             <p class="role">Co-founder</p>
           </div>
           <div class="team-card reveal reveal-delay-2">
-            <img src="images/Abhinav-Jha.jpeg" alt="Portrait of Abhinav Jha" class="team-photo" width="120" height="120" loading="lazy">
+            <picture><source srcset="images/Abhinav-Jha.webp" type="image/webp"><img src="images/Abhinav-Jha.jpeg" alt="Portrait of Abhinav Jha" class="team-photo" width="120" height="120" loading="lazy"></picture>
             <h3>Abhinav Jha</h3>
             <p class="role">Operations Director</p>
           </div>
@@ -635,7 +717,7 @@
         <h3 class="team-tier-label reveal">Advisors</h3>
         <div class="team-grid team-grid-advisors">
           <div class="team-card reveal">
-            <img src="images/YC-Saxena.jpg" alt="Portrait of Prof. Y. C. Saxena" class="team-photo" width="120" height="120" loading="lazy">
+            <picture><source srcset="images/YC-Saxena.webp" type="image/webp"><img src="images/YC-Saxena.jpg" alt="Portrait of Prof. Y. C. Saxena" class="team-photo" width="120" height="120" loading="lazy"></picture>
             <h3>Prof. Y. C. Saxena</h3>
             <p class="role">Advisor</p>
           </div>
@@ -645,17 +727,17 @@
         <h3 class="team-tier-label reveal">Research &amp; Engineering</h3>
         <div class="team-grid">
           <div class="team-card reveal">
-            <img src="images/Nilormi-Das.jpeg" alt="Portrait of Nilormi Das" class="team-photo" width="120" height="120" loading="lazy">
+            <picture><source srcset="images/Nilormi-Das.webp" type="image/webp"><img src="images/Nilormi-Das.jpeg" alt="Portrait of Nilormi Das" class="team-photo" width="120" height="120" loading="lazy"></picture>
             <h3>Nilormi Das</h3>
             <p class="role">Research Scientist</p>
           </div>
           <div class="team-card reveal reveal-delay-1">
-            <img src="images/Varun-Savadi.jpg" alt="Portrait of Dr. Varun Vijay Savadi" class="team-photo" width="120" height="120" loading="lazy">
+            <picture><source srcset="images/Varun-Savadi.webp" type="image/webp"><img src="images/Varun-Savadi.jpg" alt="Portrait of Dr. Varun Vijay Savadi" class="team-photo" width="120" height="120" loading="lazy"></picture>
             <h3>Dr. Varun Vijay Savadi</h3>
             <p class="role">Senior Research Scientist</p>
           </div>
           <div class="team-card reveal reveal-delay-2">
-            <img src="images/Chandresh-Shah.jpg" alt="Portrait of Chandresh Shah" class="team-photo" width="120" height="120" loading="lazy">
+            <picture><source srcset="images/Chandresh-Shah.webp" type="image/webp"><img src="images/Chandresh-Shah.jpg" alt="Portrait of Chandresh Shah" class="team-photo" width="120" height="120" loading="lazy"></picture>
             <h3>Chandresh Shah</h3>
             <p class="role">R&amp;D Engineer</p>
           </div>

@@ -1009,8 +1009,9 @@ a.footer-social-icon:hover {
    ================================================================ */
 
 /* Clickable app cards on index.html */
-a.app-card-link { text-decoration: none; color: inherit; display: block; }
-a.app-card-link .app-card { cursor: pointer; }
+a.app-card-link { text-decoration: none; color: inherit; display: block; height: 100%; }
+a.app-card-link .app-card { cursor: pointer; height: 100%; display: flex; flex-direction: column; }
+a.app-card-link .app-card p { flex: 1; }
 
 /* Landing hero */
 .landing-hero {

@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Careers — ASPL Fusion | Build the Future of Fusion</title>
+  <meta name="description" content="Join ASPL Fusion and help build India's domestic applied neutron-systems capability. Open positions in nuclear physics, plasma physics, medical physics, software engineering, and more.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://asplfusion.com/careers.html">
+  <link rel="icon" href="images/favicon.png" type="image/png">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://asplfusion.com/careers.html">
+  <meta property="og:title" content="Careers at ASPL Fusion — Build the Future of Fusion">
+  <meta property="og:description" content="Join a mission-driven team building India's applied neutron-systems capability for medicine and industry.">
+  <meta property="og:image" content="https://asplfusion.com/images/og-image.png">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Careers at ASPL Fusion — Build the Future of Fusion">
+  <meta name="twitter:description" content="Join a mission-driven team building India's applied neutron-systems capability.">
+  <meta name="twitter:image" content="https://asplfusion.com/images/og-image.png">
+
+  <!-- Structured Data: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "ASPL Fusion",
+    "url": "https://asplfusion.com",
+    "logo": "https://asplfusion.com/images/logo-round.png",
+    "description": "Applied plasma and neutron-systems company working on medical and industrial neutron applications in India."
+  }
+  </script>
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- reCAPTCHA v3 -->
+  <script src="https://www.google.com/recaptcha/api.js?render=6LcR9pUsAAAAAFsjmudLfjevaon45Nssh5_Dq-KT" async defer></script>
+
+  <style>
+    /* --- Careers page-specific styles --- */
+    .careers-hero {
+      padding: 8rem 0 4rem;
+      background: linear-gradient(135deg, var(--dark) 0%, var(--navy) 100%);
+      color: var(--white);
+      text-align: center;
+    }
+    .careers-hero h1 { color: var(--white); margin-bottom: var(--sp-4); }
+    .careers-hero p {
+      color: rgba(255,255,255,.75); font-size: 1.15rem;
+      max-width: 600px; margin: 0 auto var(--sp-8);
+    }
+
+    .why-section {
+      padding: var(--sp-20) 0;
+      background: var(--light);
+    }
+    .why-section h2 { text-align: center; margin-bottom: var(--sp-12); }
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: var(--sp-6);
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 var(--sp-6);
+    }
+    .why-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: var(--sp-8);
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border);
+      transition: transform var(--t-base), box-shadow var(--t-base);
+    }
+    .why-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+    .why-card .icon {
+      width: 48px; height: 48px;
+      background: var(--teal-soft);
+      border-radius: var(--radius-sm);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: var(--sp-4);
+      color: var(--navy);
+    }
+    .why-card .icon svg { width: 24px; height: 24px; }
+    .why-card h3 { margin-bottom: var(--sp-2); font-size: 1.1rem; }
+    .why-card p { color: var(--gray); font-size: .95rem; line-height: 1.7; }
+
+    .positions-section {
+      padding: var(--sp-20) 0;
+    }
+    .positions-section h2 { text-align: center; margin-bottom: var(--sp-4); }
+    .positions-subtitle {
+      text-align: center; color: var(--gray); font-size: 1rem;
+      max-width: 550px; margin: 0 auto var(--sp-12);
+    }
+
+    .filter-bar {
+      display: flex; flex-wrap: wrap; gap: var(--sp-2);
+      justify-content: center;
+      margin-bottom: var(--sp-8);
+      padding: 0 var(--sp-6);
+    }
+    .filter-btn {
+      background: var(--lighter);
+      border: 1px solid var(--border);
+      color: var(--gray);
+      padding: .45rem 1.1rem;
+      border-radius: 999px;
+      font-size: .85rem;
+      font-weight: 500;
+      cursor: pointer;
+      font-family: var(--font);
+      transition: all var(--t-fast);
+    }
+    .filter-btn:hover { border-color: var(--blue); color: var(--blue); }
+    .filter-btn.active {
+      background: var(--navy); color: var(--white);
+      border-color: var(--navy);
+    }
+
+    .jobs-list {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 var(--sp-6);
+      display: flex; flex-direction: column; gap: var(--sp-4);
+    }
+
+    .job-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: var(--sp-6) var(--sp-8);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--sp-6);
+      transition: border-color var(--t-fast), box-shadow var(--t-fast);
+    }
+    .job-card:hover {
+      border-color: var(--blue);
+      box-shadow: var(--shadow);
+    }
+    .job-info h3 { margin-bottom: var(--sp-2); font-size: 1.15rem; }
+    .job-meta {
+      display: flex; flex-wrap: wrap; gap: var(--sp-4);
+      color: var(--gray); font-size: .88rem;
+    }
+    .job-meta span {
+      display: inline-flex; align-items: center; gap: var(--sp-1);
+    }
+    .job-meta svg { width: 14px; height: 14px; flex-shrink: 0; }
+    .job-tag {
+      display: inline-block;
+      background: var(--teal-soft);
+      color: var(--navy);
+      font-size: .75rem;
+      font-weight: 600;
+      padding: .2rem .6rem;
+      border-radius: 999px;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      margin-top: var(--sp-2);
+    }
+    .job-tag.urgent {
+      background: #FEF3C7;
+      color: #92400E;
+    }
+
+    .apply-btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      background: var(--navy); color: var(--white);
+      padding: .6rem 1.5rem;
+      border: none;
+      border-radius: var(--radius-sm);
+      font-weight: 600; font-size: .88rem;
+      white-space: nowrap;
+      cursor: pointer;
+      font-family: var(--font);
+      transition: background var(--t-fast), transform var(--t-fast);
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+    .apply-btn:hover {
+      background: var(--blue); color: var(--white);
+      transform: translateY(-1px);
+    }
+
+    .no-jobs {
+      text-align: center; color: var(--gray);
+      padding: var(--sp-12) var(--sp-6);
+      font-size: 1rem;
+      display: none;
+    }
+
+    /* Loading state */
+    .jobs-loading {
+      text-align: center;
+      padding: var(--sp-12) var(--sp-6);
+      color: var(--gray);
+    }
+    .loading-spinner {
+      width: 36px; height: 36px;
+      border: 3px solid var(--border);
+      border-top-color: var(--navy);
+      border-radius: 50%;
+      animation: spin .8s linear infinite;
+      margin: 0 auto var(--sp-4);
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .process-section {
+      padding: var(--sp-20) 0;
+      background: var(--light);
+    }
+    .process-section h2 { text-align: center; margin-bottom: var(--sp-12); }
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: var(--sp-6);
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 var(--sp-6);
+    }
+    .process-step {
+      text-align: center;
+      padding: var(--sp-6);
+    }
+    .step-number {
+      width: 48px; height: 48px;
+      background: var(--navy); color: var(--white);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem; font-weight: 700;
+      margin: 0 auto var(--sp-4);
+    }
+    .process-step h3 { margin-bottom: var(--sp-2); font-size: 1rem; }
+    .process-step p { color: var(--gray); font-size: .9rem; }
+
+    .cta-section {
+      padding: var(--sp-20) 0;
+      text-align: center;
+    }
+    .cta-section h2 { margin-bottom: var(--sp-4); }
+    .cta-section p {
+      color: var(--gray); font-size: 1rem;
+      max-width: 500px; margin: 0 auto var(--sp-8);
+    }
+    .cta-btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      background: var(--navy); color: var(--white);
+      padding: .75rem 2rem;
+      border-radius: var(--radius-sm);
+      font-weight: 600; font-size: 1rem;
+      transition: background var(--t-fast), transform var(--t-fast), box-shadow var(--t-fast);
+      text-decoration: none;
+    }
+    .cta-btn:hover {
+      background: var(--blue); color: var(--white);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-navy);
+    }
+
+    /* ---- APPLICATION MODAL ---- */
+    .apply-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity .25s ease, visibility .25s ease;
+    }
+    .apply-modal.open {
+      opacity: 1;
+      visibility: visible;
+    }
+    .modal-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(11,31,51,.65);
+      backdrop-filter: blur(4px);
+    }
+    .modal-content {
+      position: relative;
+      background: var(--white);
+      border-radius: var(--radius);
+      width: 95%;
+      max-width: 640px;
+      max-height: 90vh;
+      overflow-y: auto;
+      box-shadow: 0 25px 50px -12px rgba(0,0,0,.3);
+      padding: var(--sp-8);
+      z-index: 1;
+    }
+    .modal-close {
+      position: absolute;
+      top: var(--sp-4); right: var(--sp-4);
+      background: none; border: none;
+      cursor: pointer; color: var(--gray);
+      width: 32px; height: 32px;
+      display: flex; align-items: center; justify-content: center;
+      border-radius: var(--radius-sm);
+      transition: background var(--t-fast), color var(--t-fast);
+    }
+    .modal-close:hover {
+      background: var(--lighter);
+      color: var(--navy);
+    }
+    .modal-close svg { width: 20px; height: 20px; }
+    .modal-job-title {
+      font-size: 1.25rem;
+      color: var(--navy);
+      margin-bottom: var(--sp-4);
+      padding-right: var(--sp-8);
+    }
+    .modal-job-detail {
+      font-size: .92rem;
+      color: var(--gray);
+      line-height: 1.7;
+      margin-bottom: var(--sp-6);
+      max-height: 220px;
+      overflow-y: auto;
+      padding-right: var(--sp-2);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: var(--sp-6);
+    }
+    .modal-job-detail h4 {
+      color: var(--navy);
+      font-size: .88rem;
+      font-weight: 600;
+      margin-top: var(--sp-4);
+      margin-bottom: var(--sp-2);
+    }
+    .modal-job-detail ul {
+      list-style: disc;
+      padding-left: var(--sp-6);
+      margin-bottom: var(--sp-2);
+    }
+    .modal-job-detail li {
+      margin-bottom: var(--sp-1);
+    }
+    .modal-about {
+      font-style: italic;
+      margin-bottom: var(--sp-3);
+    }
+
+    .apply-form label {
+      display: block;
+      font-size: .85rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: var(--sp-1);
+      margin-top: var(--sp-4);
+    }
+    .apply-form label:first-of-type { margin-top: 0; }
+    .apply-form input,
+    .apply-form textarea {
+      width: 100%;
+      padding: .6rem .8rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      font-family: var(--font);
+      font-size: .95rem;
+      color: var(--dark);
+      transition: border-color var(--t-fast);
+      box-sizing: border-box;
+    }
+    .apply-form input:focus,
+    .apply-form textarea:focus {
+      outline: none;
+      border-color: var(--blue);
+      box-shadow: 0 0 0 3px rgba(21,119,186,.12);
+    }
+    .apply-form textarea { resize: vertical; min-height: 80px; }
+    .apply-form .form-hint {
+      font-size: .78rem;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+    .apply-form .submit-btn {
+      display: block;
+      width: 100%;
+      background: var(--navy);
+      color: var(--white);
+      border: none;
+      padding: .75rem;
+      border-radius: var(--radius-sm);
+      font-family: var(--font);
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: var(--sp-6);
+      transition: background var(--t-fast), transform var(--t-fast);
+    }
+    .apply-form .submit-btn:hover {
+      background: var(--blue);
+      transform: translateY(-1px);
+    }
+    .apply-form .submit-btn:disabled {
+      opacity: .6;
+      cursor: not-allowed;
+    }
+    .apply-status {
+      text-align: center;
+      font-size: .9rem;
+      margin-top: var(--sp-4);
+      min-height: 1.4em;
+    }
+    .apply-status.success { color: #059669; }
+    .apply-status.error { color: #DC2626; }
+
+    /* Mobile responsive */
+    @media (max-width: 768px) {
+      .careers-hero { padding: 7rem 1.5rem 3rem; }
+      .job-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--sp-4);
+      }
+      .apply-btn { width: 100%; justify-content: center; }
+      .modal-content { padding: var(--sp-6); }
+    }
+  </style>
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header scrolled" role="banner">
+    <div class="header-inner">
+      <a href="/" class="logo-link" aria-label="ASPL Fusion — Home">
+        <img src="images/logo-round.png" alt="ASPL Fusion logo" width="42" height="42">
+        <div class="logo-text">
+          ASPL Fusion
+          <span>Agnira Sanlayan Pvt. Ltd.</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" aria-label="Primary navigation">
+        <a href="/#mission">Mission</a>
+        <a href="/#focus">Applications</a>
+        <a href="/#technology">Technology</a>
+        <a href="/#team">Team</a>
+        <a href="/careers.html" class="active">Careers</a>
+        <a href="/#contact" class="nav-cta">Contact</a>
+      </nav>
+
+      <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open navigation menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+
+      <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation">
+        <a href="/#mission">Mission</a>
+        <a href="/#focus">Applications</a>
+        <a href="/#technology">Technology</a>
+        <a href="/#team">Team</a>
+        <a href="/careers.html">Careers</a>
+        <a href="/#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="careers-hero">
+      <div class="container">
+        <h1>Work on Applied Neutron Systems</h1>
+        <p>Join the team building India's applied neutron-systems capability &mdash; from near-term work on BNCT and medical isotopes to long-horizon fusion-class applications.</p>
+      </div>
+    </section>
+
+    <!-- ============ WHY ASPL ============ -->
+    <section class="why-section">
+      <div class="container">
+        <h2>Why ASPL Fusion?</h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </div>
+          <h3>Work that matters</h3>
+          <p>Your work contributes directly to BNCT cancer therapy &mdash; a targeted treatment designed to kill tumour cells while sparing healthy tissue &mdash; and to domestic medical-isotope capacity that reaches Indian hospitals.</p>
+        </div>
+        <div class="why-card">
+          <div class="icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+          </div>
+          <h3>Domestic capability</h3>
+          <p>India is significantly import-dependent for medical isotopes. We are working on domestic production capability for Tc-99m, Lu-177, Cu-64, and other critical isotopes &mdash; improving resilience of the healthcare system.</p>
+        </div>
+        <div class="why-card">
+          <div class="icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <h3>Small team, long horizon</h3>
+          <p>You join a small founding team at an early stage of a long-horizon programme, with room to take meaningful responsibility. The programme spans medical and industrial applications now; fusion-class applications sit at the far horizon.</p>
+        </div>
+        <div class="why-card">
+          <div class="icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          </div>
+          <h3>Real Science</h3>
+          <p>Publish papers, present at conferences, and work on problems across nuclear physics, plasma physics, and medical technology. Co-authorship on published work is the default.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ OPEN POSITIONS ============ -->
+    <section class="positions-section" id="positions">
+      <h2>Open Positions</h2>
+      <p class="positions-subtitle">We are hiring across nuclear physics, engineering, medical physics, chemistry, and software. Filter by department below.</p>
+
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">All Roles</button>
+        <button class="filter-btn" data-filter="physics">Physics</button>
+        <button class="filter-btn" data-filter="engineering">Engineering</button>
+        <button class="filter-btn" data-filter="clinical">Clinical</button>
+        <button class="filter-btn" data-filter="software">Software</button>
+        <button class="filter-btn" data-filter="operations">Operations</button>
+      </div>
+
+      <!-- Job cards are loaded dynamically by careers.js from /jobs/active/ -->
+      <div class="jobs-list" id="jobs-list"></div>
+
+      <p class="no-jobs" id="no-jobs">No open positions right now. Check back soon or send us a general application below.</p>
+    </section>
+
+    <!-- ============ HIRING PROCESS ============ -->
+    <section class="process-section">
+      <h2>Our Hiring Process</h2>
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="step-number">1</div>
+          <h3>Application</h3>
+          <p>Submit your CV and a brief cover note. We review every application within one week.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">2</div>
+          <h3>Technical Screen</h3>
+          <p>A 45-minute call with the working group lead. Domain-specific questions tailored to your expertise.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">3</div>
+          <h3>Domain Assessment</h3>
+          <p>A take-home problem or on-site exercise relevant to the role. We value how you think, not just what you know.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">4</div>
+          <h3>Culture & Offer</h3>
+          <p>Meet the founders. Discuss mission alignment, growth, and compensation. Reference checks and offer within one week.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GENERAL CTA ============ -->
+    <section class="cta-section" id="apply-general">
+      <h2>Don't See Your Role?</h2>
+      <p>Send us a general application. We are always looking for exceptional people who share our mission.</p>
+      <a href="mailto:careers@asplfusion.com?subject=General%20Application%20-%20ASPL%20Fusion" class="cta-btn">
+        Send General Application
+      </a>
+      <p style="margin-top: var(--sp-4); font-size: .88rem; color: var(--muted);">
+        Or email directly: <a href="mailto:careers@asplfusion.com">careers@asplfusion.com</a>
+      </p>
+    </section>
+
+  </main>
+
+  <!-- ============ APPLICATION MODAL ============ -->
+  <div class="apply-modal" id="apply-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-overlay" id="modal-overlay"></div>
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Close application form">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+
+      <h2 class="modal-job-title" id="modal-title">Apply for Position</h2>
+
+      <!-- Job description shown inside modal -->
+      <div class="modal-job-detail"></div>
+
+      <!-- Application form — submits to Formspree -->
+      <form class="apply-form" action="https://formspree.io/f/mjgandye" method="POST">
+        <!-- Hidden fields -->
+        <input type="hidden" name="job-id" value="">
+        <input type="hidden" name="job-title" value="">
+        <input type="hidden" name="submitted-at" value="">
+        <input type="hidden" name="g-recaptcha-response" value="">
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+
+        <label for="apply-name">Full Name *</label>
+        <input type="text" id="apply-name" name="name" required autocomplete="name" placeholder="Your full name">
+
+        <label for="apply-email">Email *</label>
+        <input type="email" id="apply-email" name="email" required autocomplete="email" placeholder="you@example.com">
+
+        <label for="apply-phone">Phone</label>
+        <input type="tel" id="apply-phone" name="phone" autocomplete="tel" placeholder="+91 98765 43210">
+
+        <label for="apply-resume">Resume / CV Link *</label>
+        <input type="url" id="apply-resume" name="resume-link" required placeholder="https://drive.google.com/... or LinkedIn URL">
+        <p class="form-hint">Google Drive, Dropbox, or LinkedIn profile link. Please ensure it is publicly viewable.</p>
+
+        <label for="apply-note">Cover Note</label>
+        <textarea id="apply-note" name="cover-note" rows="4" placeholder="Brief note about why you're interested in this role and what you'd bring to the team."></textarea>
+
+        <button type="submit" class="submit-btn">Submit Application</button>
+      </form>
+
+      <p class="apply-status"></p>
+    </div>
+  </div>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <p>Agnira Sanlayan Pvt. Ltd. — applied neutron systems for medicine and industry in India.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Navigate</h4>
+          <a href="/#mission">Mission</a>
+          <a href="/#focus">Applications</a>
+          <a href="/#technology">Technology</a>
+          <a href="/#team">Team</a>
+          <a href="/careers.html">Careers</a>
+          <a href="/#contact">Contact</a>
+        </div>
+        <div class="footer-links">
+          <h4>Connect</h4>
+          <div class="footer-connect-row">
+            <a href="mailto:info@asplfusion.com">info@asplfusion.com</a>
+            <a href="https://www.linkedin.com/company/aspl-fusion/" target="_blank" rel="noopener" aria-label="ASPL Fusion on LinkedIn" class="footer-social-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/asplfusion/" target="_blank" rel="noopener" aria-label="ASPL Fusion on Instagram" class="footer-social-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Agnira Sanlayan Pvt. Ltd. (ASPL Fusion). All rights reserved. &middot; <a href="privacy.html">Privacy Policy</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Header scroll + mobile menu (standalone, since this page doesn't load script.js) -->
+  <script>
+    (function() {
+      var toggle = document.querySelector('.menu-toggle');
+      var mobileNav = document.getElementById('mobile-nav');
+      if (toggle && mobileNav) {
+        toggle.addEventListener('click', function() {
+          var expanded = this.getAttribute('aria-expanded') === 'true';
+          this.setAttribute('aria-expanded', !expanded);
+          mobileNav.classList.toggle('open');
+        });
+        mobileNav.querySelectorAll('a').forEach(function(a) {
+          a.addEventListener('click', function() {
+            mobileNav.classList.remove('open');
+            toggle.setAttribute('aria-expanded', 'false');
+          });
+        });
+      }
+      var header = document.querySelector('.site-header');
+      if (header) {
+        window.addEventListener('scroll', function() {
+          header.classList.toggle('scrolled', window.scrollY > 10);
+        });
+      }
+    })();
+  </script>
+
+  <!-- Dynamic job loader + application form -->
+  <script src="careers.js"></script>
+
+</body>
+</html>

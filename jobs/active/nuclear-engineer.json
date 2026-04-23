@@ -1,0 +1,43 @@
+{
+  "id": "nuclear-engineer",
+  "title": "Nuclear Engineer — Neutron Transport Simulation",
+  "department": "physics",
+  "location": "Gandhinagar, Gujarat",
+  "type": "Full-time",
+  "positions": 1,
+  "workingGroup": "WG-SIM (Simulation)",
+  "experience": "2+ years",
+  "tag": "Hiring Now",
+  "tagType": "urgent",
+  "posted": "2026-04-10",
+  "about": "ASPL Fusion is working to establish accelerator-based neutron-source capability in India for Boron Neutron Capture Therapy (BNCT) and medical isotope production. The neutron transport simulation role is central to accelerator target design and shielding optimisation.",
+  "description": "Design, execute, and validate Monte Carlo neutron/photon transport simulations for ASPL's accelerator-driven neutron source. You will own the simulation pipeline from geometry modelling through to dose calculations, working directly with the accelerator physics and medical physics teams.",
+  "responsibilities": [
+    "Build and validate Monte Carlo models (OpenMC/MCNP/PHITS/FLUKA) of the accelerator target, moderator assembly, and beam shaping assembly",
+    "Perform neutron spectrum optimisation for BNCT epithermal beam quality",
+    "Design radiation shielding for the treatment room and facility",
+    "Collaborate with mechanical engineering on target thermal-hydraulic coupling",
+    "Develop automated simulation workflows and post-processing pipelines",
+    "Support regulatory submissions with simulation-backed safety analyses"
+  ],
+  "requirements": [
+    "M.Sc. or Ph.D. in Nuclear Engineering, Physics, or related field",
+    "Proficiency in at least one Monte Carlo code (OpenMC, MCNP, PHITS, or FLUKA)",
+    "Strong foundation in neutron physics, cross-section libraries, and transport theory",
+    "Programming skills in Python; familiarity with HPC clusters",
+    "2+ years of experience in radiation transport simulation (academic or industry)"
+  ],
+  "preferred": [
+    "Experience with BNCT beam design or medical accelerator shielding",
+    "Familiarity with CAD-to-geometry conversion tools (e.g., DAGMC)",
+    "Publications in nuclear science or medical physics journals",
+    "Experience with AERB regulatory framework"
+  ],
+  "benefits": [
+    "Co-authorship on research papers and patents",
+    "Conference travel support (national and international)",
+    "Direct mentorship from IPR and BARC alumni",
+    "Health insurance coverage",
+    "Relocation assistance to Gandhinagar"
+  ]
+}

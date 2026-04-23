@@ -1,0 +1,43 @@
+{
+  "id": "software-engineer-imaging",
+  "title": "Software Engineer — Medical Imaging & Treatment Planning",
+  "department": "software",
+  "location": "Gandhinagar, Gujarat",
+  "type": "Full-time",
+  "positions": 2,
+  "workingGroup": "WG-BNCT (Clinical)",
+  "experience": "2+ years",
+  "tag": "Hiring Now",
+  "tagType": "urgent",
+  "posted": "2026-04-10",
+  "about": "ASPL Fusion is developing a complete BNCT treatment planning system — from medical image ingestion through dose calculation to treatment delivery. This is greenfield software development for a system that will directly impact cancer patient outcomes.",
+  "description": "Build the software stack for ASPL's BNCT treatment planning system, including DICOM image processing, 3D visualisation, dose calculation integration, and clinical workflow tools. You will work at the intersection of medical imaging, scientific computing, and clinical software.",
+  "responsibilities": [
+    "Develop DICOM RT ingestion and processing pipelines for CT/MRI/PET imaging",
+    "Build 3D visualisation tools for treatment planning (beam placement, dose overlays)",
+    "Integrate Monte Carlo dose calculation engines with the treatment planning frontend",
+    "Implement clinical workflow features: patient management, plan comparison, reporting",
+    "Ensure compliance with medical device software standards (IEC 62304)",
+    "Write comprehensive tests and documentation for clinical software validation"
+  ],
+  "requirements": [
+    "B.Tech/M.Tech in Computer Science, Biomedical Engineering, or related field",
+    "Strong proficiency in Python and/or C++",
+    "2+ years of software development experience",
+    "Familiarity with medical imaging formats (DICOM) or scientific visualisation",
+    "Experience with version control (Git) and CI/CD practices"
+  ],
+  "preferred": [
+    "Experience with medical imaging libraries (ITK, VTK, 3D Slicer, pydicom)",
+    "Knowledge of radiation therapy treatment planning workflows",
+    "Experience with GPU computing (CUDA/OpenCL) for scientific applications",
+    "Familiarity with IEC 62304 or FDA software validation requirements"
+  ],
+  "benefits": [
+    "Co-authorship on research papers and patents",
+    "Conference travel support",
+    "Health insurance coverage",
+    "Flexible working hours with hybrid option",
+    "Relocation assistance to Gandhinagar"
+  ]
+}

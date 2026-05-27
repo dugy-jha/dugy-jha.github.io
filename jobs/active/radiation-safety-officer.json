@@ -1,0 +1,42 @@
+{
+  "id": "radiation-safety-officer",
+  "title": "Radiation Safety Officer",
+  "department": "operations",
+  "location": "Gandhinagar, Gujarat (with New Delhi presence)",
+  "type": "Full-time",
+  "positions": 1,
+  "workingGroup": "WG-REG (Regulatory & Safety)",
+  "experience": "3+ years",
+  "tag": "Hiring Now",
+  "tagType": "urgent",
+  "posted": "2026-04-23",
+  "about": "ASPL Fusion (Agnira Sanlayan Pvt. Ltd.) is an applied plasma and neutron-systems company working on accelerator-based BNCT, domestic medical-isotope production, and industrial neutron applications, within established Indian regulatory and safety frameworks. A proton-accelerator-based neutron source for BNCT and isotope production sits in the AERB Category-II classification. The Radiation Safety Officer is the lead regulatory and operational-safety role at the facility.",
+  "description": "Own all radiation protection and AERB regulatory compliance at ASPL's accelerator facility. Scope includes personnel dosimetry, area monitoring, emergency response planning, waste management, and AERB Category-II licence documentation.",
+  "responsibilities": [
+    "Develop and implement the facility radiation-protection programme",
+    "Manage personnel dosimetry (TLD / OSL badges), area monitoring, and contamination surveys",
+    "Prepare AERB Category-II licence applications and compliance documentation",
+    "Design shielding verification protocols for the accelerator facility",
+    "Develop emergency-response procedures for radiation incidents",
+    "Train all facility staff in radiation-safety practices",
+    "Maintain regulatory records and submit periodic reports to AERB"
+  ],
+  "requirements": [
+    "AERB-certified Radiation Safety Officer (RSO) — mandatory",
+    "BARC Radiation Safety Training (1-year programme) or equivalent",
+    "3+ years RSO experience at an accelerator or reactor facility",
+    "Working knowledge of AERB regulations, safety codes, and licensing procedures",
+    "Experience with radiation-survey instruments (ion chambers, neutron dosimeters, GM counters)"
+  ],
+  "preferred": [
+    "Experience with neutron-facility safety specifically (vs gamma / X-ray only)",
+    "Prior involvement in AERB licensing applications from scratch"
+  ],
+  "benefits": [
+    "Co-authorship on ASPL publications and patent filings (the default for technical roles)",
+    "Conference travel support (ANS, IEEE NPSS, IPAC, ASTRO, IAEA technical meetings and equivalent)",
+    "Direct mentorship from Prof. Prabhat Ranjan and Prof. Y.C. Saxena, plus weekly working-group technical syncs",
+    "Founding-team scope: shape your domain end-to-end as part of a small team scaling up",
+    "Core collaboration hours 10:00–18:00 IST with flexibility outside that window"
+  ]
+}

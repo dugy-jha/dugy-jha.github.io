@@ -1,1 +1,12 @@
-[]
+[
+  "plasma-physicist-gdt.json",
+  "accelerator-physicist.json",
+  "nuclear-engineer.json",
+  "cryogenics-engineer-hts.json",
+  "mechanical-engineer-target.json",
+  "senior-chemist-bpa.json",
+  "medical-physicist-bnct.json",
+  "software-engineer-imaging.json",
+  "radiation-safety-officer.json",
+  "hospital-franchise-manager-bnct.json"
+]

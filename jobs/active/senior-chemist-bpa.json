@@ -1,0 +1,44 @@
+{
+  "id": "senior-chemist-bpa",
+  "title": "Senior Chemist — Pharmaceutical Synthesis (BPA / Boron Chemistry)",
+  "department": "engineering",
+  "location": "Gandhinagar, Gujarat (with New Delhi presence)",
+  "type": "Full-time",
+  "positions": 1,
+  "workingGroup": "WG-BNCT (Clinical)",
+  "experience": "3+ years",
+  "tag": "Hiring Now",
+  "tagType": "urgent",
+  "posted": "2026-04-23",
+  "about": "ASPL Fusion (Agnira Sanlayan Pvt. Ltd.) is an applied plasma and neutron-systems company working on accelerator-based BNCT, domestic medical-isotope production, and industrial neutron applications, within established Indian regulatory and safety frameworks. The boron pharmaceutical pathway is a critical component of any BNCT clinical programme. BPA (boronophenylalanine) is currently imported into India; developing an indigenous, GMP-grade synthesis pathway is a domain-defining engineering research project.",
+  "description": "Lead ASPL's indigenous BPA synthesis programme. Develop a synthesis pathway, scale from laboratory bench through to a GMP pilot, and establish the analytical, regulatory, and documentation infrastructure required for clinical-grade production.",
+  "responsibilities": [
+    "Design and optimise a BPA synthesis pathway",
+    "Develop the BPA–fructose conjugation protocol for clinical use",
+    "Scale from laboratory synthesis to a GMP pilot",
+    "Establish analytical methods for BPA purity and boron-content verification",
+    "Prepare CDSCO drug master file documentation",
+    "Coordinate with GMP QA for facility certification",
+    "Publish synthesis methodology (patent-first, then journal)"
+  ],
+  "requirements": [
+    "PhD in Organic Chemistry, Medicinal Chemistry, or Pharmaceutical Chemistry",
+    "Experience with amino-acid synthesis, boronic-acid chemistry, or boron-containing compounds",
+    "GMP pharmaceutical manufacturing knowledge",
+    "Analytical chemistry proficiency (HPLC, NMR, MS for purity analysis)",
+    "Understanding of Indian drug regulatory pathways (CDSCO preferred)",
+    "3+ years of relevant research or industrial experience"
+  ],
+  "preferred": [
+    "Direct BPA or BNCT-drug experience",
+    "Process-chemistry scale-up experience",
+    "Patent or publication record in pharmaceutical synthesis"
+  ],
+  "benefits": [
+    "Co-authorship on ASPL publications and patent filings (the default for technical roles)",
+    "Conference travel support (ANS, IEEE NPSS, IPAC, ASTRO, IAEA technical meetings and equivalent)",
+    "Direct mentorship from Prof. Prabhat Ranjan and Prof. Y.C. Saxena, plus weekly working-group technical syncs",
+    "Founding-team scope: shape your domain end-to-end as part of a small team scaling up",
+    "Core collaboration hours 10:00–18:00 IST with flexibility outside that window"
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "id": "plasma-physicist-gdt",
+  "title": "Plasma Physicist — Gas Dynamic Trap Fusion Device",
+  "department": "physics",
+  "location": "Gandhinagar, Gujarat (with New Delhi presence)",
+  "type": "Full-time",
+  "positions": 1,
+  "workingGroup": "WG-GDT (Plasma & Confinement)",
+  "experience": "5+ years",
+  "tag": "Hiring Now",
+  "tagType": "urgent",
+  "posted": "2026-04-23",
+  "about": "ASPL Fusion (Agnira Sanlayan Pvt. Ltd.) is an applied plasma and neutron-systems company working on accelerator-based BNCT, domestic medical-isotope production, and industrial neutron applications, within established Indian regulatory and safety frameworks. Our medium-horizon programme phase introduces a Gas Dynamic Trap (GDT) — an axisymmetric linear-mirror neutron source — with REBCO HTS magnets in the 8–12 T range, neutral-beam-injection heating in the multi-MW class, and a multi-target isotope-irradiation carousel.",
+  "description": "Lead plasma design, commissioning, and operations for ASPL's GDT — optimising confinement for neutron yield, characterising and mitigating MHD instabilities in mirror geometry, and working toward first plasma.",
+  "responsibilities": [
+    "Lead GDT D-D plasma design, commissioning, and operations",
+    "Optimise plasma confinement for maximum neutron yield",
+    "Characterise and mitigate MHD instabilities in mirror geometry",
+    "Design and interpret plasma diagnostic systems (Thomson scattering, spectroscopy, neutron detection)",
+    "Develop real-time plasma control algorithms",
+    "Achieve and sustain the first-plasma milestone",
+    "Plan the medium-horizon transition from D-D to D-T operation"
+  ],
+  "requirements": [
+    "PhD in Plasma Physics, Fusion Science, or equivalent",
+    "Hands-on experience with magnetic mirror / GDT devices or with tokamak / stellarator plasmas",
+    "MHD instability analysis and mitigation",
+    "Plasma diagnostics (Thomson scattering, spectroscopy, neutron detection)",
+    "Neutral beam injection physics",
+    "5+ years of relevant research or operational experience"
+  ],
+  "preferred": [
+    "Direct GDT experience (Budker Institute alumni particularly welcome)",
+    "REBCO / HTS magnet system experience",
+    "Prior D-T plasma operations experience",
+    "Publications in plasma physics or fusion engineering journals"
+  ],
+  "benefits": [
+    "Co-authorship on ASPL publications and patent filings (the default for technical roles)",
+    "Conference travel support (ANS, IEEE NPSS, IPAC, ASTRO, IAEA technical meetings and equivalent)",
+    "Direct mentorship from Prof. Prabhat Ranjan and Prof. Y.C. Saxena, plus weekly working-group technical syncs",
+    "Founding-team scope: shape your domain end-to-end as part of a small team scaling up",
+    "Core collaboration hours 10:00–18:00 IST with flexibility outside that window"
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "id": "mechanical-engineer-target",
+  "title": "Mechanical Engineer — Nuclear Target Systems",
+  "department": "engineering",
+  "location": "Gandhinagar, Gujarat (with New Delhi presence)",
+  "type": "Full-time",
+  "positions": 1,
+  "workingGroup": "WG-ACC (Accelerator)",
+  "experience": "2+ years",
+  "tag": "Hiring Now",
+  "tagType": "urgent",
+  "posted": "2026-04-23",
+  "about": "ASPL Fusion (Agnira Sanlayan Pvt. Ltd.) is an applied plasma and neutron-systems company working on accelerator-based BNCT, domestic medical-isotope production, and industrial neutron applications, within established Indian regulatory and safety frameworks. The target and moderator assemblies sit at the centre of the neutron source — high heat flux, vacuum, radiation environment, precision moderation requirements all at once.",
+  "description": "Design and build the mechanical systems at the heart of ASPL's neutron source: the lithium target assembly with micro-channel cooling, the Beam Shaping Assembly (BSA) moderator structure, and the integration with biological shielding.",
+  "responsibilities": [
+    "Design the target assembly with micro-channel cooling (managing ~5–30 kW beam power on target)",
+    "Engineer the BSA mechanical structure",
+    "Design and specify biological shielding for the accelerator room",
+    "Create engineering drawings (SolidWorks / CATIA) for fabrication",
+    "Coordinate with accelerator physicists on beam–target geometry",
+    "Support thermal-hydraulic analysis (CFD for target cooling)",
+    "Manage fabrication and assembly of mechanical components"
+  ],
+  "requirements": [
+    "M.Tech in Mechanical Engineering (thermal-fluid systems, nuclear components, or precision engineering)",
+    "Experience with high-heat-flux component design (target systems, heat exchangers, or similar)",
+    "Proficiency in SolidWorks, CATIA, or equivalent CAD",
+    "CFD / FEA simulation experience (ANSYS Fluent, COMSOL, or equivalent)",
+    "Understanding of vacuum systems and ultra-clean manufacturing",
+    "2+ years of relevant engineering experience"
+  ],
+  "preferred": [
+    "Prior experience in nuclear or accelerator environments",
+    "Knowledge of neutron-moderator materials",
+    "Publications or patents on thermal-management or precision-mechanical systems"
+  ],
+  "benefits": [
+    "Co-authorship on ASPL publications and patent filings (the default for technical roles)",
+    "Conference travel support (ANS, IEEE NPSS, IPAC, ASTRO, IAEA technical meetings and equivalent)",
+    "Direct mentorship from Prof. Prabhat Ranjan and Prof. Y.C. Saxena, plus weekly working-group technical syncs",
+    "Founding-team scope: shape your domain end-to-end as part of a small team scaling up",
+    "Core collaboration hours 10:00–18:00 IST with flexibility outside that window"
+  ]
+}

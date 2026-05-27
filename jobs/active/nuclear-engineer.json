@@ -1,0 +1,45 @@
+{
+  "id": "nuclear-engineer",
+  "title": "Nuclear Engineer — Neutron Transport Simulation",
+  "department": "physics",
+  "location": "Gandhinagar, Gujarat (with New Delhi presence)",
+  "type": "Full-time",
+  "positions": 1,
+  "workingGroup": "WG-SIM (Simulation)",
+  "experience": "4+ years",
+  "tag": "Hiring Now",
+  "tagType": "urgent",
+  "posted": "2026-04-23",
+  "about": "ASPL Fusion (Agnira Sanlayan Pvt. Ltd.) is an applied plasma and neutron-systems company working on accelerator-based BNCT, domestic medical-isotope production, and industrial neutron applications, within established Indian regulatory and safety frameworks. The simulation team owns the Monte Carlo neutron-transport pipeline from target geometry through to dose calculations, supporting both accelerator design and regulatory submissions.",
+  "description": "Join the founding simulation team. Design and optimise the Beam Shaping Assembly using Monte Carlo neutron-transport codes, model isotope-production yields via Bateman-equation frameworks, and benchmark simulations against experimental neutron data from IPR beam-time campaigns.",
+  "responsibilities": [
+    "Run MCNP6 and OpenMC simulations for Beam Shaping Assembly (BSA) optimisation",
+    "Model neutron spectra from the proton-lithium source",
+    "Calculate isotope-production yields using Bateman-equation framework",
+    "Benchmark simulated results against experimental data from IPR campaigns",
+    "Contribute to the Nuclear Knowledge Graph (NuKG) platform",
+    "Support patent filings with simulation evidence",
+    "Support regulatory submissions with simulation-backed safety analyses"
+  ],
+  "requirements": [
+    "M.Tech or PhD in Nuclear Engineering, Nuclear Physics, or equivalent",
+    "Hands-on proficiency in MCNP6 and/or OpenMC",
+    "Strong foundation in neutron transport, moderation, and shielding physics",
+    "Familiarity with nuclear cross-section databases (ENDF, JEFF, JENDL)",
+    "Programming skills in Python; C/C++ or Fortran helpful",
+    "4+ years of experience in radiation-transport simulation (academic or industry)"
+  ],
+  "preferred": [
+    "Experience with PHITS, FLUKA, or Geant4",
+    "Publications in neutron physics or medical physics",
+    "Experience with the AERB regulatory framework",
+    "Familiarity with CAD-to-geometry conversion tools (e.g. DAGMC)"
+  ],
+  "benefits": [
+    "Co-authorship on ASPL publications and patent filings (the default for technical roles)",
+    "Conference travel support (ANS, IEEE NPSS, IPAC, ASTRO, IAEA technical meetings and equivalent)",
+    "Direct mentorship from Prof. Prabhat Ranjan and Prof. Y.C. Saxena, plus weekly working-group technical syncs",
+    "Founding-team scope: shape your domain end-to-end as part of a small team scaling up",
+    "Core collaboration hours 10:00–18:00 IST with flexibility outside that window"
+  ]
+}

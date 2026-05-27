@@ -1,0 +1,42 @@
+{
+  "id": "cryogenics-engineer-hts",
+  "title": "Cryogenics Engineer — REBCO HTS Magnets",
+  "department": "engineering",
+  "location": "Gandhinagar, Gujarat (with New Delhi presence)",
+  "type": "Full-time",
+  "positions": 1,
+  "workingGroup": "WG-GDT (Plasma & Confinement)",
+  "experience": "3+ years",
+  "tag": "Hiring Now",
+  "tagType": "urgent",
+  "posted": "2026-04-23",
+  "about": "ASPL Fusion (Agnira Sanlayan Pvt. Ltd.) is an applied plasma and neutron-systems company working on accelerator-based BNCT, domestic medical-isotope production, and industrial neutron applications, within established Indian regulatory and safety frameworks. Our Gas Dynamic Trap requires a high-field superconducting magnet system using REBCO HTS technology — the same generation of conductor enabling compact-fusion programmes globally.",
+  "description": "Design, build, and commission the REBCO HTS magnet system for ASPL's GDT. Target central field is in the 8–12 T range using high-temperature superconducting coils in a mirror configuration.",
+  "responsibilities": [
+    "Design REBCO HTS coil geometry for the GDT mirror configuration",
+    "Develop quench-protection and detection systems",
+    "Design and specify cryogenic cooling systems (conduction-cooled or cryocooler-based)",
+    "Procure REBCO tape and manage coil winding (in-house or vendor)",
+    "Commission the magnet system to target field strength",
+    "Monitor magnet performance during plasma operations"
+  ],
+  "requirements": [
+    "M.Tech or PhD in Cryogenics, Superconducting Magnet Engineering, or Applied Physics",
+    "Hands-on experience with HTS (REBCO/YBCO) magnet systems",
+    "Quench-protection system design",
+    "Cryogenic system design in the 4 K–77 K operating range",
+    "3+ years of relevant engineering experience"
+  ],
+  "preferred": [
+    "Experience with fusion-class magnet systems (ITER, compact-fusion programmes)",
+    "REBCO tape characterisation and joint technology",
+    "Publications in applied superconductivity"
+  ],
+  "benefits": [
+    "Co-authorship on ASPL publications and patent filings (the default for technical roles)",
+    "Conference travel support (ANS, IEEE NPSS, IPAC, ASTRO, IAEA technical meetings and equivalent)",
+    "Direct mentorship from Prof. Prabhat Ranjan and Prof. Y.C. Saxena, plus weekly working-group technical syncs",
+    "Founding-team scope: shape your domain end-to-end as part of a small team scaling up",
+    "Core collaboration hours 10:00–18:00 IST with flexibility outside that window"
+  ]
+}

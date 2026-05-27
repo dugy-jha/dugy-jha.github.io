@@ -1,0 +1,183 @@
+{
+  "prabhat-ranjan": {
+    "name": "Prof. Prabhat Ranjan",
+    "role": "Founder & Chief Scientist",
+    "photo": "Dr-Prabhat-Ranjan",
+    "tagline": "Nuclear fusion scientist, futurist, educator and innovator with nearly two decades of contribution to fusion research at Indian and US national labs.",
+    "highlights": [
+      "Executive Director (CEO), Technology Information, Forecasting & Assessment Council (TIFAC) — India's Technology Think Tank — 2013–2018; led the development of <em>Technology Vision 2035</em>, launched by the Hon'ble Prime Minister",
+      "Founding Vice Chancellor, D. Y. Patil International University, Pune (2018–2025); currently Chairman (Research, Innovation and International Relations), Dr. D. Y. Patil Pratishthan, Kolhapur",
+      "Nearly two decades of contribution to nuclear fusion research at Saha Institute of Nuclear Physics, Lawrence Berkeley Laboratory, and Institute for Plasma Research (IPR) — Project Leader on Aditya and SST-1 Tokamak reactors",
+      "Designed the Lunar Surface and Subsurface Explorer (LuSSeX) for India's Chandrayaan-II mission",
+      "Vice Chair of the Council, International Institute for Applied Systems Analysis (IIASA), Vienna (2015–2017)",
+      "Chairman, AICTE IDEA Lab National Steering Committee (2020); represents India at ISO JTC/SC43 on Brain–Computer Interface standardisation",
+      "Recognition includes Maharashtra Ratna Gaurav Puraskar (2024), listed among <em>100 Great IITians – Dedicated to the Service of the Nation</em> (2024), Rani Lakshmi Bai Nari Shakti Puraskar from the President of India (2015), and the National Science Talent Search Award (1976)"
+    ],
+    "education": [
+      "PhD (Physics), University of California, Berkeley — 1986",
+      "M.Sc. (Physics), Delhi University — 1981",
+      "B.Sc. (Physics), IIT Kharagpur — 1979",
+      "Secondary, Netarhat School, Netarhat — 1975 (Bihar state topper, Netarhat School Admission Test, 1970)"
+    ],
+    "links": [
+      {"label": "ranjan.in", "url": "https://ranjan.in/"}
+    ]
+  },
+
+  "abhay-k-jha": {
+    "name": "Abhay K. Jha",
+    "role": "Co-founder",
+    "photo": "Abhay-K-Jha",
+    "tagline": "Founder and Managing Director of ESSI Integrated Technologies, with over two decades delivering integrated security and surveillance programmes for India's most sensitive institutions.",
+    "highlights": [
+      "Founder and Managing Director, ESSI Integrated Technologies (2001–present) — systems integration for security, surveillance, smart-city, and transportation infrastructure",
+      "Project portfolio includes Parliament House; Prime Minister's Residence and Office; BARC; DRDO and its Advanced Systems Laboratory; National Defence College; National Police Academy; Reserve Bank of India; Delhi Secretariat; IOCL; Airport Authority of India",
+      "Current engagements include UT-wide surveillance in Jammu & Kashmir, RBI headquarters and branch deployments, Railway works at Badnera, and ongoing Ministry of Defence and IOCL programmes",
+      "A decade at sea (1985–1995) with Great Eastern Shipping (Bombay), East Asiatic Company (Copenhagen), and Teekay Shipping (Vancouver), culminating in a Chief Engineer's Licence"
+    ],
+    "education": [
+      "Marine Engineering, Marine Engineering Research Institute, Calcutta — First Class — All-India JEE topper for Marine Engineering, 1985",
+      "Chief Engineer's Licence (equivalent in rigour to an M.Tech)",
+      "Secondary, Netarhat Vidyalaya — Bihar state Class 10 top-20"
+    ]
+  },
+
+  "abhinav-jha": {
+    "name": "Abhinav Jha",
+    "role": "Co-founder & Operations Director",
+    "photo": "Abhinav-Jha",
+    "tagline": "Operations leader pairing systems-integration delivery experience with research exposure at Stanford's Intelligent Systems Lab and UCLA's Condensed Matter Physics Lab.",
+    "highlights": [
+      "Co-founder and Operations Director, ASPL Fusion — owns phased programme execution, milestone and budget governance, and strategic partnerships",
+      "Director, ESSI Integrated Technologies — delivery of multi-million-dollar systems-integration programmes across R&D, technology sales, delivery, and design",
+      "Cross-disciplinary leadership across civil and electrical engineering, networking and telecom, software, premises infrastructure, and critical control-centre operations",
+      "Established executive-level engagement with Government leadership for mission-critical programmes",
+      "Research exposure at Stanford's Intelligent Systems Lab and UCLA's Condensed Matter Physics Lab"
+    ],
+    "education": [
+      "Research exposure: Stanford University (Intelligent Systems Lab)",
+      "Research exposure: UCLA (Condensed Matter Physics Lab)"
+    ]
+  },
+
+  "varun-vijay-savadi": {
+    "name": "Dr. Varun Vijay Savadi",
+    "role": "Senior Research Scientist",
+    "photo": "Varun-Savadi",
+    "photoExt": "jpg",
+    "tagline": "Post-doctoral neutronics researcher with five-plus years across academia, research, and industry — Monte Carlo simulation, experimental nuclear physics, and accelerator-based tritium-titanium target studies.",
+    "highlights": [
+      "Post-Doctoral Research Fellow, Institute for Plasma Research, Gandhinagar (2023–2025) — Optimisation of tritium losses in solid tritium-titride targets generated through D-T reaction in the 14 MeV neutron generator facility",
+      "Executed a DST-SERB funded project (INR 16 Lakhs) during PhD studies",
+      "Lead/first author on six peer-reviewed papers covering tritium-target degradation (<em>Physica Scripta</em> 2025), alpha-particle irradiation, thin-layer activation analysis, and 14 MeV neutron reactions",
+      "Trained at the World Institute of Nuclear Security Academy (Texas A&M, ORNL); nuclear-security design vulnerability assessment; IUAC School on Nuclear Reactions (2019)",
+      "Simulation toolchain: MCNP, PACE4, Cascade, SDTrimSP, SRIM/TRIM, Geant4, ANSYS, SolidWorks"
+    ],
+    "education": [
+      "PhD (Engineering Sciences), University of Petroleum & Energy Studies, Dehradun — 2019–2023",
+      "M.Tech. (Nuclear Science & Technology), University of Petroleum & Energy Studies, Dehradun — 2013–2015",
+      "B.E. (Mechanical Engineering), Visvesvaraya Technological University, Belagavi — 2007–2011"
+    ]
+  },
+
+  "nilormi-das": {
+    "name": "Nilormi Das",
+    "role": "Research Scientist",
+    "photo": "Nilormi-Das",
+    "tagline": "Nuclear scientist with project experience across the IAEA, ITER, IRFM-CEA, IPR and IUAC — focused on fusion neutronics, nuclear safety, and the institutional questions around deploying fusion plants.",
+    "highlights": [
+      "Marie Skłodowska-Curie Fellow (FUSION-EP) — European Master of Science in Nuclear Fusion and Engineering Physics",
+      "Intern, International Atomic Energy Agency (IAEA), Vienna (2023–2024) — key participant in the INPRO Fusion Study; contributed to the IAEA Nuclear Energy Series publication on <em>Legal and institutional issues of prospective deployment of fusion facilities</em>",
+      "Master's thesis at IRFM-CEA Cadarache and Aix-Marseille University: neutronics analysis of a magnetic fusion reactor using OpenMC; site visits to ITER and the WEST tokamak",
+      "Selected for the 2-week International School on Nuclear Security at IAEA Vienna (2023)",
+      "Executive Committee Member, Women in Nuclear (WiN) IAEA Chapter (2024–present)",
+      "Published in <em>American Nuclear Society</em> Transactions (2024) and the METO Student Journal of WMD Disarmament (2025); poster at ICTP-IAEA INPRO School (2024)"
+    ],
+    "education": [
+      "M.Sc. (FUSION-EP), University of Stuttgart and Aix-Marseille University — 2024",
+      "Dual B.Tech + M.Tech (Nuclear Science and Technology), Amity Institute of Nuclear Science and Technology, Noida — 2017",
+      "6-month Mentorship Programme, Black Sea Women in Nuclear Network (BSWN) — 2025"
+    ]
+  },
+
+  "chandresh-shah": {
+    "name": "Chandresh Shah",
+    "role": "Engineering & Innovation",
+    "photo": "Chandresh-Shah",
+    "photoExt": "jpg",
+    "tagline": "R&D and innovation engineer with nine-plus years across nuclear fusion devices, robotics, medical-device development, and digital fabrication.",
+    "highlights": [
+      "Founder, Shreeji Engineering & Consultancy (2024–present) — official vendor for Tata Gotion Green Energy; battery management testing systems for 1–120 cell configurations; medical-device firmware and hardware (cervical-cancer detection, endoscopic injection pumps)",
+      "Innovation Officer, D. Y. Patil International University, Pune (2022–2024) — mentored 800+ students in design thinking and embedded systems; built a 10-foot 3D holographic display; created a 3D bio-printer using bio-inks",
+      "Scientist / R&D Engineer, Albot Technologies (2021–2022) — IEC device design; oxygen-concentrator design and fabrication during COVID-19; 3D-printed tokamak study model",
+      "Earlier research at Institute for Plasma Research as PSSI Scholar (2017–2018) and Academic Project (2019) — Inertial Electrostatic Fusion (IEC) confinement device, Langmuir probe design, high-voltage power-supply development",
+      "Built a 40 kV DC power supply, ultra-high-vacuum chamber, and electrostatically-confined plasma device that achieved neutron yield from deuterium"
+    ],
+    "education": [
+      "B.E. (Automobile Engineering), LD Engineering College, Ahmedabad — 2019",
+      "Diploma (Automobile Engineering), LJ Polytechnic, Ahmedabad — 2016"
+    ]
+  },
+
+  "yc-saxena": {
+    "name": "Prof. Y. C. Saxena",
+    "role": "Advisor",
+    "photo": "YC-Saxena",
+    "photoExt": "jpg",
+    "tagline": "Founder member of the Institute for Plasma Research; pioneer of experimental plasma physics at PRL Ahmedabad.",
+    "highlights": [
+      "Senior Professor (Retd.), Institute for Plasma Research (IPR), Gandhinagar — one of the founder members of IPR",
+      "Faculty at Physical Research Laboratory (PRL), Ahmedabad — instrumental in starting experimental plasma physics research at PRL",
+      "Member, past President and Secretary of the Plasma Science Society of India",
+      "Fellow, Gujarat Science Academy",
+      "Past General Secretary, Asian Plasma & Fusion Association"
+    ],
+    "education": [
+      "PhD (Cosmic Rays), under the supervision of Dr. Bibha Chowdhuri"
+    ]
+  },
+
+  "srinivasan-ganesan": {
+    "name": "Prof. Srinivasan Ganesan",
+    "role": "Advisor",
+    "photo": "Srinivasan-Ganesan",
+    "tagline": "Ex-Raja Ramanna Fellow (DAE), former IAEA Vienna nuclear physicist, and creator of FENDL-1 — the Fusion Evaluated Nuclear Data file for ITER applications.",
+    "highlights": [
+      "Ex-Raja Ramanna Fellow (Honorary), Department of Atomic Energy",
+      "Ex-Scientific Consultant (Honorary), Office of the Principal Scientific Adviser to the Prime Minister, Government of India (2012–2017)",
+      "Former Staff Member, Nuclear Physicist, International Atomic Energy Agency (IAEA), Vienna (1990–1994)",
+      "Creator of FENDL-1, the Fusion Evaluated Nuclear Data file for ITER applications — foundational reference for fusion neutronics worldwide"
+    ],
+    "education": [
+      "Doctoral research in nuclear physics; specialist career in evaluated nuclear data"
+    ],
+    "links": [
+      {"label": "ResearchGate", "url": "http://www.researchgate.net/profile/S_Ganesan/publications"},
+      {"label": "LinkedIn", "url": "https://www.linkedin.com/in/srinivasan-ganesan-a302432b"}
+    ]
+  },
+
+  "cvs-rao": {
+    "name": "Prof. C. V. Srinivasa Rao",
+    "role": "Advisor",
+    "photo": "CVS-Rao",
+    "tagline": "Founder of fusion neutronics research at IPR; 35 years at the Institute for Plasma Research and specialist member of the ITER Governing Council's Scientific & Technical Advisory Committee.",
+    "highlights": [
+      "Scientist SG (Retd.), Institute for Plasma Research (IPR), Gandhinagar — 35 years (1982–2017); Head, Plasma Diagnostics Group; Incharge, Fusion Neutronics Laboratory",
+      "Senior Professor, DAE–Homi Bhabha National Institute",
+      "Initiated Fusion Neutronics activities at IPR in 2006, following India's full partnership in the ITER Organization",
+      "Specialist Member, Scientific & Technical Advisory Committee (STAC) to the ITER Governing Council (2011–2015)",
+      "Task force leader for Indian participation in Nuclear Technologies for Fusion Reactors (NTFR)",
+      "Developed Soft X-ray Tomography and Hard X-ray diagnostic systems for the Aditya tokamak",
+      "Currently Visiting Professor, Institute of Natural Sciences, Adichunchanagiri University, Mysore (2018–present)"
+    ],
+    "education": [
+      "Post-Doctoral Fellow, IIT Kanpur — Neutron-Induced Reactions using the Van-de Graaff Accelerator (1978–1982)",
+      "PhD, Swamy Jnananda Laboratories for Nuclear Research, Andhra University — Nuclear Reactions induced by 14 MeV Neutrons (1973–1978)"
+    ],
+    "links": [
+      {"label": "Google Scholar", "url": "https://scholar.google.com/citations?user=3UhCOyEAAAAJ"},
+      {"label": "LinkedIn", "url": "https://www.linkedin.com/in/c-v-srinivasa-rao-8621aa14/"}
+    ]
+  }
+}

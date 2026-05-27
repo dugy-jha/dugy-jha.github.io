@@ -1,0 +1,45 @@
+{
+  "id": "software-engineer-imaging",
+  "title": "Software Engineer — Medical Imaging & Treatment Planning",
+  "department": "software",
+  "location": "Gandhinagar, Gujarat (with New Delhi presence)",
+  "type": "Full-time",
+  "positions": 2,
+  "workingGroup": "WG-BNCT (Clinical)",
+  "experience": "2+ years",
+  "tag": "Hiring Now",
+  "tagType": "urgent",
+  "posted": "2026-04-23",
+  "about": "ASPL Fusion (Agnira Sanlayan Pvt. Ltd.) is an applied plasma and neutron-systems company working on accelerator-based BNCT, domestic medical-isotope production, and industrial neutron applications, within established Indian regulatory and safety frameworks. The IGRT (Image-Guided Radiation Therapy) Treatment Planning System is the software that plans BNCT treatments — DICOM image ingestion, dose-engine integration, 3-D visualisation, and the clinical workflow tools that wrap them.",
+  "description": "Architect and build the BNCT treatment-planning system. Greenfield software development across DICOM image processing, 3-D visualisation, dose-engine integration, and clinical workflow tools. Work at the intersection of medical imaging, scientific computing, and clinical software.",
+  "responsibilities": [
+    "Architect and develop the BNCT treatment-planning software",
+    "Implement dose-calculation algorithms (Monte Carlo–based neutron dose in tissue)",
+    "Build 3-D patient visualisation (CT / MRI data, organ segmentation, dose overlays)",
+    "Integrate boron-concentration imaging (PET-based BPA distribution mapping)",
+    "Develop 6-DoF robotic couch positioning algorithms",
+    "Ensure DICOM compliance for hospital integration",
+    "Validate dose accuracy against phantom measurements with the medical-physics team",
+    "Work to medical-device software standards (IEC 62304)"
+  ],
+  "requirements": [
+    "B.Tech / M.Tech in Computer Science, Biomedical Engineering, or equivalent",
+    "2+ years building medical-imaging or scientific-visualisation software",
+    "Experience with the DICOM standard and medical image processing",
+    "Strong 3-D graphics / visualisation skills (VTK, ITK, Three.js, or equivalent)",
+    "Python and/or C++ proficiency",
+    "Understanding of radiation dose-calculation concepts"
+  ],
+  "preferred": [
+    "Experience with radiation-therapy TPS systems (Eclipse, RayStation, or equivalent)",
+    "GPU computing (CUDA / OpenCL) for Monte Carlo acceleration",
+    "Familiarity with IEC 62304 or FDA software validation requirements"
+  ],
+  "benefits": [
+    "Co-authorship on ASPL publications and patent filings (the default for technical roles)",
+    "Conference travel support (ANS, IEEE NPSS, IPAC, ASTRO, IAEA technical meetings and equivalent)",
+    "Direct mentorship from Prof. Prabhat Ranjan and Prof. Y.C. Saxena, plus weekly working-group technical syncs",
+    "Founding-team scope: shape your domain end-to-end as part of a small team scaling up",
+    "Core collaboration hours 10:00–18:00 IST with flexibility outside that window"
+  ]
+}

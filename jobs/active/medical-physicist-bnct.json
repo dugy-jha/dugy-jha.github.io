@@ -1,0 +1,43 @@
+{
+  "id": "medical-physicist-bnct",
+  "title": "Medical Physicist — Boron Neutron Capture Therapy (BNCT)",
+  "department": "clinical",
+  "location": "Gandhinagar, Gujarat (with New Delhi presence)",
+  "type": "Full-time",
+  "positions": 1,
+  "workingGroup": "WG-BNCT (Clinical)",
+  "experience": "3+ years",
+  "tag": "Hiring Now",
+  "tagType": "urgent",
+  "posted": "2026-04-23",
+  "about": "ASPL Fusion (Agnira Sanlayan Pvt. Ltd.) is an applied plasma and neutron-systems company working on accelerator-based BNCT, domestic medical-isotope production, and industrial neutron applications, within established Indian regulatory and safety frameworks. The clinical-physics lead is the bridge between the accelerator/BSA engineering and the cancer-treatment workflow — commissioning the treatment room, leading dosimetry for the Phase I trial in recurrent head-and-neck cancer (rH&NC), and training clinical staff.",
+  "description": "Be the clinical-physics lead for ASPL's BNCT programme. Commission the treatment room, develop treatment protocols, lead dosimetry for Phase I clinical trials, and train clinical staff. This role works alongside oncologists, patients, and engineers daily.",
+  "responsibilities": [
+    "Commission the BNCT treatment room (neutron-beam characterisation, in-phantom dosimetry)",
+    "Develop BNCT treatment protocols for the Phase I clinical trial (rH&NC)",
+    "Perform patient-specific treatment planning using the IGRT TPS",
+    "Lead clinical dosimetry — boron-concentration measurement, neutron-fluence verification",
+    "Collaborate with CDSCO on clinical-trial regulatory documentation",
+    "Train clinical staff (oncologists, nurses, technicians) on BNCT procedures",
+    "Publish clinical results as part of the standard publication workflow"
+  ],
+  "requirements": [
+    "M.Sc or PhD in Medical Physics",
+    "AERB certification in radiation-therapy physics",
+    "3+ years of clinical medical-physics experience",
+    "Experience with radiation-therapy treatment planning",
+    "Understanding of neutron dosimetry (preferred — we will train the right candidate)"
+  ],
+  "preferred": [
+    "Prior BNCT experience (rare globally — strongly welcomed)",
+    "Phase I / II clinical-trial experience",
+    "Familiarity with BPA pharmacokinetics"
+  ],
+  "benefits": [
+    "Co-authorship on ASPL publications and patent filings (the default for technical roles)",
+    "Conference travel support (ANS, IEEE NPSS, IPAC, ASTRO, IAEA technical meetings and equivalent)",
+    "Direct mentorship from Prof. Prabhat Ranjan and Prof. Y.C. Saxena, plus weekly working-group technical syncs",
+    "Founding-team scope: shape your domain end-to-end as part of a small team scaling up",
+    "Core collaboration hours 10:00–18:00 IST with flexibility outside that window"
+  ]
+}

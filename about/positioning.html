@@ -33,15 +33,15 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="image" href="../images/logo-round.png" fetchpriority="high">
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/style.css?v=20260527-advisor">
+  <link rel="stylesheet" href="/style.css?v=20260527-headerunify">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header" role="banner">
-    <div class="container header-inner">
-      <a href="/" class="logo" aria-label="ASPL Fusion home">
-        <img src="/images/logo-round.png" alt="" class="logo-icon" width="36" height="36">
+    <div class="header-inner">
+      <a href="/" class="logo-link" aria-label="ASPL Fusion — Home">
+        <img src="/images/logo-round.png" alt="ASPL Fusion logo" width="42" height="42" fetchpriority="high">
         <div class="logo-text">
           ASPL Fusion
           <span>Agnira Sanlayan Pvt. Ltd.</span>
@@ -53,7 +53,22 @@
         <a href="/#technology">Technology</a>
         <a href="/insights/">Insights</a>
         <a href="/#team">Team</a>
+        <a href="/careers.html">Careers</a>
         <a href="/#contact" class="nav-cta">Contact</a>
+      </nav>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open navigation menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+      <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation">
+        <a href="/#mission">Mission</a>
+        <a href="/#focus">Applications</a>
+        <a href="/#technology">Technology</a>
+        <a href="/insights/">Insights</a>
+        <a href="/#team">Team</a>
+        <a href="/careers.html">Careers</a>
+        <a href="/#contact">Contact</a>
       </nav>
     </div>
   </header>

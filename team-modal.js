@@ -112,6 +112,15 @@
   document.querySelectorAll('.team-card[data-team-id]').forEach(function (card) {
     var teamId = card.getAttribute('data-team-id');
 
+    // Inject the "View bio" CTA button if not already present
+    if (!card.querySelector('.team-card-cta')) {
+      var cta = document.createElement('span');
+      cta.className = 'team-card-cta';
+      cta.setAttribute('aria-hidden', 'true');
+      cta.textContent = 'View bio';
+      card.appendChild(cta);
+    }
+
     card.addEventListener('click', function () { openModal(teamId); });
 
     card.addEventListener('keydown', function (e) {

@@ -826,31 +826,41 @@
             <p class="role">R&amp;D Engineer</p>
           </div>
         </div>
-        <p class="team-hint" aria-hidden="true">Tap any card for professional and educational highlights.</p>
       </div>
     </section>
 
     <!-- Team modal -->
     <div class="team-modal" id="team-modal" role="dialog" aria-modal="true" aria-labelledby="team-modal-title" hidden>
       <div class="team-modal-overlay" id="team-modal-overlay"></div>
-      <div class="team-modal-content" role="document">
+      <article class="team-modal-content" role="document">
         <button class="team-modal-close" id="team-modal-close" aria-label="Close">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
         </button>
-        <div class="team-modal-header">
-          <picture><source id="team-modal-photo-webp" srcset="" type="image/webp"><img id="team-modal-photo" src="" alt="" width="96" height="96"></picture>
-          <div>
+
+        <header class="team-modal-hero">
+          <picture class="team-modal-photo-wrap">
+            <source id="team-modal-photo-webp" srcset="" type="image/webp">
+            <img id="team-modal-photo" src="" alt="" width="144" height="144">
+          </picture>
+          <div class="team-modal-hero-text">
             <h2 id="team-modal-title"></h2>
             <p class="team-modal-role" id="team-modal-role"></p>
+            <p class="team-modal-tagline" id="team-modal-tagline"></p>
           </div>
+        </header>
+
+        <div class="team-modal-body">
+          <section class="team-modal-section team-modal-section--primary">
+            <h3 class="team-modal-section-label">Professional highlights</h3>
+            <ul class="team-modal-list" id="team-modal-highlights"></ul>
+          </section>
+          <section class="team-modal-section team-modal-section--secondary">
+            <h3 class="team-modal-section-label">Education</h3>
+            <ul class="team-modal-list" id="team-modal-education"></ul>
+            <div class="team-modal-links" id="team-modal-links"></div>
+          </section>
         </div>
-        <p class="team-modal-tagline" id="team-modal-tagline"></p>
-        <h3 class="team-modal-section-label">Professional highlights</h3>
-        <ul class="team-modal-list" id="team-modal-highlights"></ul>
-        <h3 class="team-modal-section-label">Education</h3>
-        <ul class="team-modal-list" id="team-modal-education"></ul>
-        <div class="team-modal-links" id="team-modal-links"></div>
-      </div>
+      </article>
     </div>
 
     <!-- FAQ -->

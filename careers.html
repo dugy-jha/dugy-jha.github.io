@@ -35,7 +35,7 @@
   </script>
 
   <link rel="preload" as="image" href="images/logo-round.png" fetchpriority="high">
-  <link rel="stylesheet" href="style.css?v=20260527-uxpolish-2">
+  <link rel="stylesheet" href="style.css?v=20260527-a11y">
 
   <!-- reCAPTCHA v3 -->
   <script src="https://www.google.com/recaptcha/api.js?render=6LcR9pUsAAAAAFsjmudLfjevaon45Nssh5_Dq-KT" async defer></script>
@@ -601,7 +601,7 @@
         <input type="hidden" name="job-title" value="">
         <input type="hidden" name="submitted-at" value="">
         <input type="hidden" name="g-recaptcha-response" value="">
-        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
 
         <label for="apply-name">Full Name *</label>
         <input type="text" id="apply-name" name="name" required autocomplete="name" placeholder="Your full name">
@@ -613,8 +613,8 @@
         <input type="tel" id="apply-phone" name="phone" autocomplete="tel" placeholder="+91 98765 43210">
 
         <label for="apply-resume">Resume / CV Link *</label>
-        <input type="url" id="apply-resume" name="resume-link" required placeholder="https://drive.google.com/... or LinkedIn URL">
-        <p class="form-hint">Google Drive, Dropbox, or LinkedIn profile link. Please ensure it is publicly viewable.</p>
+        <input type="text" inputmode="url" id="apply-resume" name="resume-link" required pattern="(https?:\/\/)?[^\s]+\.[^\s]+" placeholder="https://drive.google.com/... or linkedin.com/in/yourname">
+        <p class="form-hint">Google Drive, Dropbox, or LinkedIn profile link. Please ensure it is publicly viewable. (We&rsquo;ll add <code>https://</code> if you forget.)</p>
 
         <label for="apply-note">Cover Note</label>
         <textarea id="apply-note" name="cover-note" rows="4" placeholder="Brief note about why you're interested in this role and what you'd bring to the team."></textarea>
@@ -634,7 +634,7 @@
           <p>Agnira Sanlayan Pvt. Ltd. — applied neutron systems for medicine and industry in India.</p>
         </div>
         <div class="footer-links">
-          <h4>Navigate</h4>
+          <h3>Navigate</h3>
           <a href="/#mission">Mission</a>
           <a href="/#focus">Applications</a>
           <a href="/#technology">Technology</a>
@@ -643,7 +643,7 @@
           <a href="/#contact">Contact</a>
         </div>
         <div class="footer-links">
-          <h4>Connect</h4>
+          <h3>Connect</h3>
           <div class="footer-connect-row">
             <a href="mailto:info@asplfusion.com">info@asplfusion.com</a>
             <a href="https://www.linkedin.com/company/aspl-fusion/" target="_blank" rel="noopener" aria-label="ASPL Fusion on LinkedIn" class="footer-social-icon">
@@ -689,7 +689,7 @@
   </script>
 
   <!-- Dynamic job loader + application form -->
-  <script src="careers.js?v=20260527-uxpolish-2"></script>
+  <script src="careers.js?v=20260527-a11y"></script>
 
 </body>
 </html>

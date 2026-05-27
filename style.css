@@ -895,6 +895,7 @@ p { max-width: 65ch; font-size: 1.0625rem; } /* 17px — optimal legibility */
 }
 .footer-brand p { font-size: .88rem; line-height: 1.65; }
 
+.footer-links h3,
 .footer-links h4 {
   color: rgba(255,255,255,.8); font-size: .78rem; font-weight: 600;
   margin-bottom: var(--sp-3); text-transform: uppercase;
@@ -1271,6 +1272,7 @@ a.app-card-link .app-card p { flex: 1; }
   letter-spacing: .08em; color: var(--teal);
   margin-bottom: var(--sp-2);
 }
+.insights-card h2,
 .insights-card h3 {
   font-size: 1.1rem; font-weight: 600;
   color: var(--navy);
@@ -1324,6 +1326,7 @@ a.app-card-link .app-card p { flex: 1; }
 .positioning-column.is-affirmative { border-top: 3px solid var(--teal); }
 .positioning-column.is-negative { border-top: 3px solid #B45309; }
 
+.positioning-column h2,
 .positioning-column h3 {
   font-size: 1.05rem; font-weight: 600;
   color: var(--navy);
@@ -1361,6 +1364,7 @@ a.app-card-link .app-card p { flex: 1; }
   padding: var(--sp-6) var(--sp-6);
   margin-bottom: var(--sp-5);
 }
+.framework-card h2,
 .framework-card h3 {
   font-size: 1.05rem; font-weight: 600;
   color: var(--navy);

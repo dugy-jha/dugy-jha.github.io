@@ -770,17 +770,17 @@
         <!-- Leadership -->
         <h3 class="team-tier-label reveal">Leadership</h3>
         <div class="team-grid team-grid-leadership">
-          <div class="team-card reveal">
+          <div class="team-card reveal" data-team-id="prabhat-ranjan" role="button" tabindex="0" aria-haspopup="dialog">
             <picture><source srcset="images/Dr-Prabhat-Ranjan.webp" type="image/webp"><img src="images/Dr-Prabhat-Ranjan.jpeg" alt="Portrait of Prof. Prabhat Ranjan" class="team-photo" width="120" height="120" loading="lazy"></picture>
             <h3>Prof. Prabhat Ranjan</h3>
             <p class="role">Founder</p>
           </div>
-          <div class="team-card reveal reveal-delay-1">
+          <div class="team-card reveal reveal-delay-1" data-team-id="abhay-k-jha" role="button" tabindex="0" aria-haspopup="dialog">
             <picture><source srcset="images/Abhay-K-Jha.webp" type="image/webp"><img src="images/Abhay-K-Jha.jpeg" alt="Portrait of Abhay K. Jha" class="team-photo" width="120" height="120" loading="lazy"></picture>
             <h3>Abhay K. Jha</h3>
             <p class="role">Co-founder</p>
           </div>
-          <div class="team-card reveal reveal-delay-2">
+          <div class="team-card reveal reveal-delay-2" data-team-id="abhinav-jha" role="button" tabindex="0" aria-haspopup="dialog">
             <picture><source srcset="images/Abhinav-Jha.webp" type="image/webp"><img src="images/Abhinav-Jha.jpeg" alt="Portrait of Abhinav Jha" class="team-photo" width="120" height="120" loading="lazy"></picture>
             <h3>Abhinav Jha</h3>
             <p class="role">Operations Director</p>
@@ -790,17 +790,17 @@
         <!-- Advisors -->
         <h3 class="team-tier-label reveal">Advisors</h3>
         <div class="team-grid team-grid-advisors">
-          <div class="team-card reveal">
+          <div class="team-card reveal" data-team-id="yc-saxena" role="button" tabindex="0" aria-haspopup="dialog">
             <picture><source srcset="images/YC-Saxena.webp" type="image/webp"><img src="images/YC-Saxena.jpg" alt="Portrait of Prof. Y. C. Saxena" class="team-photo" width="120" height="120" loading="lazy"></picture>
             <h3>Prof. Y. C. Saxena</h3>
             <p class="role">Advisor</p>
           </div>
-          <div class="team-card reveal reveal-delay-1">
+          <div class="team-card reveal reveal-delay-1" data-team-id="srinivasan-ganesan" role="button" tabindex="0" aria-haspopup="dialog">
             <picture><source srcset="images/Srinivasan-Ganesan.webp" type="image/webp"><img src="images/Srinivasan-Ganesan.jpeg" alt="Portrait of Prof. Srinivasan Ganesan" class="team-photo" width="120" height="120" loading="lazy"></picture>
             <h3>Prof. Srinivasan Ganesan</h3>
             <p class="role">Advisor</p>
           </div>
-          <div class="team-card reveal reveal-delay-2">
+          <div class="team-card reveal reveal-delay-2" data-team-id="cvs-rao" role="button" tabindex="0" aria-haspopup="dialog">
             <picture><source srcset="images/CVS-Rao.webp" type="image/webp"><img src="images/CVS-Rao.jpeg" alt="Portrait of Prof. C. V. Srinivasa Rao" class="team-photo" width="120" height="120" loading="lazy"></picture>
             <h3>Prof. C. V. Srinivasa Rao</h3>
             <p class="role">Advisor</p>
@@ -810,24 +810,48 @@
         <!-- Research & Engineering -->
         <h3 class="team-tier-label reveal">Research &amp; Engineering</h3>
         <div class="team-grid">
-          <div class="team-card reveal">
+          <div class="team-card reveal" data-team-id="nilormi-das" role="button" tabindex="0" aria-haspopup="dialog">
             <picture><source srcset="images/Nilormi-Das.webp" type="image/webp"><img src="images/Nilormi-Das.jpeg" alt="Portrait of Nilormi Das" class="team-photo" width="120" height="120" loading="lazy"></picture>
             <h3>Nilormi Das</h3>
             <p class="role">Research Scientist</p>
           </div>
-          <div class="team-card reveal reveal-delay-1">
+          <div class="team-card reveal reveal-delay-1" data-team-id="varun-vijay-savadi" role="button" tabindex="0" aria-haspopup="dialog">
             <picture><source srcset="images/Varun-Savadi.webp" type="image/webp"><img src="images/Varun-Savadi.jpg" alt="Portrait of Dr. Varun Vijay Savadi" class="team-photo" width="120" height="120" loading="lazy"></picture>
             <h3>Dr. Varun Vijay Savadi</h3>
             <p class="role">Senior Research Scientist</p>
           </div>
-          <div class="team-card reveal reveal-delay-2">
+          <div class="team-card reveal reveal-delay-2" data-team-id="chandresh-shah" role="button" tabindex="0" aria-haspopup="dialog">
             <picture><source srcset="images/Chandresh-Shah.webp" type="image/webp"><img src="images/Chandresh-Shah.jpg" alt="Portrait of Chandresh Shah" class="team-photo" width="120" height="120" loading="lazy"></picture>
             <h3>Chandresh Shah</h3>
             <p class="role">R&amp;D Engineer</p>
           </div>
         </div>
+        <p class="team-hint" aria-hidden="true">Tap any card for professional and educational highlights.</p>
       </div>
     </section>
+
+    <!-- Team modal -->
+    <div class="team-modal" id="team-modal" role="dialog" aria-modal="true" aria-labelledby="team-modal-title" hidden>
+      <div class="team-modal-overlay" id="team-modal-overlay"></div>
+      <div class="team-modal-content" role="document">
+        <button class="team-modal-close" id="team-modal-close" aria-label="Close">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+        <div class="team-modal-header">
+          <picture><source id="team-modal-photo-webp" srcset="" type="image/webp"><img id="team-modal-photo" src="" alt="" width="96" height="96"></picture>
+          <div>
+            <h2 id="team-modal-title"></h2>
+            <p class="team-modal-role" id="team-modal-role"></p>
+          </div>
+        </div>
+        <p class="team-modal-tagline" id="team-modal-tagline"></p>
+        <h3 class="team-modal-section-label">Professional highlights</h3>
+        <ul class="team-modal-list" id="team-modal-highlights"></ul>
+        <h3 class="team-modal-section-label">Education</h3>
+        <ul class="team-modal-list" id="team-modal-education"></ul>
+        <div class="team-modal-links" id="team-modal-links"></div>
+      </div>
+    </div>
 
     <!-- FAQ -->
     <section id="faq" class="section" aria-labelledby="faq-heading">
@@ -1021,5 +1045,6 @@
   </div>
 
   <script src="script.js"></script>
+  <script src="team-modal.js" defer></script>
 </body>
 </html>

@@ -10,11 +10,10 @@
   var JOBS_INDEX = '/jobs/active/index.json';
   var JOBS_BASE  = '/jobs/active/';
 
-  // Formspree endpoint for job applications
-  // TODO: Create a NEW Formspree form at https://formspree.io/forms
-  //       and replace this with the new endpoint. Keep mjgandye for the
-  //       contact form only.
-  var FORMSPREE_ENDPOINT = 'https://formspree.io/f/mjgandye';
+  // Form endpoint is read from the form's `action` attribute on submit —
+  // this keeps a single source of truth in careers.html and means swapping
+  // to a dedicated Formspree form (separate from the contact form) is a
+  // one-attribute HTML change, no JS edit needed.
 
   var RECAPTCHA_SITE_KEY = '6LcR9pUsAAAAAFsjmudLfjevaon45Nssh5_Dq-KT';
 
@@ -388,7 +387,7 @@
       applyStatus.className = 'apply-status';
     }
 
-    fetch(FORMSPREE_ENDPOINT, {
+    fetch(applyForm.action, {
       method: 'POST',
       body: new FormData(applyForm),
       headers: { 'Accept': 'application/json' }

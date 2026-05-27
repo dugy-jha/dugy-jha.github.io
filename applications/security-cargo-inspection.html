@@ -99,16 +99,19 @@
   <link rel="apple-touch-icon" href="../images/logo-round.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="image" href="../images/logo-round.png" fetchpriority="high">
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../style.css">
   <script src="https://www.google.com/recaptcha/api.js?render=6LcR9pUsAAAAAFsjmudLfjevaon45Nssh5_Dq-KT" async defer></script>
 </head>
 <body>
 
+  <a href="#main" class="skip-link">Skip to main content</a>
+
   <header class="site-header" role="banner">
     <div class="header-inner">
       <a href="/" class="logo-link" aria-label="ASPL Fusion — Home">
-        <img src="../images/logo-round.png" alt="ASPL Fusion logo" width="42" height="42">
+        <img src="../images/logo-round.png" alt="ASPL Fusion logo" width="42" height="42" fetchpriority="high">
         <div class="logo-text">
           ASPL Fusion
           <span>Agnira Sanlayan Pvt. Ltd.</span>
@@ -116,7 +119,7 @@
       </a>
       <nav class="main-nav" aria-label="Primary navigation">
         <a href="/#mission">Mission</a>
-        <a href="/#focus">Applications</a>
+        <a href="/#focus" aria-current="page">Applications</a>
         <a href="/#technology">Technology</a>
         <a href="/#team">Team</a>
         <a href="/#contact" class="nav-cta">Contact</a>
@@ -128,7 +131,7 @@
       </button>
       <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation">
         <a href="/#mission">Mission</a>
-        <a href="/#focus">Applications</a>
+        <a href="/#focus" aria-current="page">Applications</a>
         <a href="/#technology">Technology</a>
         <a href="/#team">Team</a>
         <a href="/#contact">Contact</a>
@@ -136,7 +139,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="main">
     <!-- Landing Hero -->
     <section class="landing-hero" aria-labelledby="landing-title">
       <div class="container">

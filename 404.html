@@ -6,6 +6,7 @@
   <title>Page Not Found — ASPL Fusion</title>
   <meta name="robots" content="noindex">
   <link rel="icon" href="/images/favicon.png" type="image/png">
+  <link rel="preload" as="image" href="/images/logo-round.png" fetchpriority="high">
   <link rel="stylesheet" href="/style.css">
   <style>
     .error-page {
@@ -28,9 +29,11 @@
   </style>
 </head>
 <body>
-  <main class="error-page">
+
+  <a href="#main" class="skip-link">Skip to main content</a>
+  <main id="main" class="error-page">
     <div class="error-content">
-      <img src="/images/logo-round.png" alt="ASPL Fusion" width="64" height="64" class="error-logo">
+      <img src="/images/logo-round.png" alt="ASPL Fusion" width="64" height="64" class="error-logo" fetchpriority="high">
       <p class="error-code">404</p>
       <h1>This page doesn't exist</h1>
       <p>The page you're looking for may have been moved or removed. Let's get you back on track.</p>

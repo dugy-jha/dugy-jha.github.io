@@ -8,6 +8,7 @@
   <meta name="robots" content="noindex, follow">
   <link rel="canonical" href="https://asplfusion.com/privacy.html">
   <link rel="icon" href="images/favicon.png" type="image/png">
+  <link rel="preload" as="image" href="images/logo-round.png" fetchpriority="high">
   <link rel="stylesheet" href="style.css">
   <style>
     .legal { max-width: 760px; margin: 0 auto; padding: 7rem 1.5rem 4rem; }
@@ -25,10 +26,12 @@
 </head>
 <body>
 
+  <a href="#main" class="skip-link">Skip to main content</a>
+
   <header class="site-header scrolled" role="banner">
     <div class="header-inner">
       <a href="/" class="logo-link" aria-label="ASPL Fusion — Home">
-        <img src="images/logo-round.png" alt="ASPL Fusion logo" width="44" height="44">
+        <img src="images/logo-round.png" alt="ASPL Fusion logo" width="44" height="44" fetchpriority="high">
         <div class="logo-text">ASPL Fusion<span>Agnira Sanlayan Pvt. Ltd.</span></div>
       </a>
       <nav class="main-nav" aria-label="Primary navigation">
@@ -41,7 +44,7 @@
     </div>
   </header>
 
-  <main class="legal">
+  <main id="main" class="legal">
     <h1>Privacy Policy</h1>
     <p class="updated">Last updated: 26 March 2026</p>
 

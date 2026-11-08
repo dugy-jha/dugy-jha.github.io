@@ -20,10 +20,12 @@
       "Secondary, Netarhat School, Netarhat — 1975 (Bihar state topper, Netarhat School Admission Test, 1970)"
     ],
     "links": [
-      {"label": "ranjan.in", "url": "https://ranjan.in/"}
+      {
+        "label": "ranjan.in",
+        "url": "https://ranjan.in/"
+      }
     ]
   },
-
   "abhay-k-jha": {
     "name": "Abhay K. Jha",
     "role": "Co-founder",
@@ -41,7 +43,6 @@
       "Secondary, Netarhat Vidyalaya — Bihar state Class 10 top-20"
     ]
   },
-
   "abhinav-jha": {
     "name": "Abhinav Jha",
     "role": "Co-founder & Operations Director",
@@ -59,7 +60,6 @@
       "Research exposure: UCLA (Condensed Matter Physics Lab)"
     ]
   },
-
   "varun-vijay-savadi": {
     "name": "Dr. Varun Vijay Savadi",
     "role": "Senior Research Scientist",
@@ -79,7 +79,6 @@
       "B.E. (Mechanical Engineering), Visvesvaraya Technological University, Belagavi — 2007–2011"
     ]
   },
-
   "nilormi-das": {
     "name": "Nilormi Das",
     "role": "Research Scientist",
@@ -99,7 +98,6 @@
       "6-month Mentorship Programme, Black Sea Women in Nuclear Network (BSWN) — 2025"
     ]
   },
-
   "chandresh-shah": {
     "name": "Chandresh Shah",
     "role": "Engineering & Innovation",
@@ -118,25 +116,22 @@
       "Diploma (Automobile Engineering), LJ Polytechnic, Ahmedabad — 2016"
     ]
   },
-
   "yc-saxena": {
     "name": "Prof. Y. C. Saxena",
     "role": "Advisor",
     "photo": "YC-Saxena",
     "photoExt": "jpg",
-    "tagline": "Founder member of the Institute for Plasma Research; pioneer of experimental plasma physics at PRL Ahmedabad.",
+    "tagline": "Founder member of the Institute for Plasma Research and pioneer of experimental plasma physics at PRL Ahmedabad; past President of the Plasma Science Society of India.",
     "highlights": [
       "Senior Professor (Retd.), Institute for Plasma Research (IPR), Gandhinagar — one of the founder members of IPR",
       "Faculty at Physical Research Laboratory (PRL), Ahmedabad — instrumental in starting experimental plasma physics research at PRL",
-      "Member, past President and Secretary of the Plasma Science Society of India",
-      "Fellow, Gujarat Science Academy",
-      "Past General Secretary, Asian Plasma & Fusion Association"
+      "Member, past President and Secretary of the Plasma Science Society of India; past General Secretary, Asian Plasma & Fusion Association",
+      "Fellow, Gujarat Science Academy"
     ],
     "education": [
       "PhD (Cosmic Rays), under the supervision of Dr. Bibha Chowdhuri"
     ]
   },
-
   "srinivasan-ganesan": {
     "name": "Prof. Srinivasan Ganesan",
     "role": "Advisor",
@@ -152,32 +147,57 @@
       "Doctoral research in nuclear physics; specialist career in evaluated nuclear data"
     ],
     "links": [
-      {"label": "ResearchGate", "url": "http://www.researchgate.net/profile/S_Ganesan/publications"},
-      {"label": "LinkedIn", "url": "https://www.linkedin.com/in/srinivasan-ganesan-a302432b"}
+      {
+        "label": "ResearchGate",
+        "url": "http://www.researchgate.net/profile/S_Ganesan/publications"
+      },
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/srinivasan-ganesan-a302432b"
+      }
     ]
   },
-
   "cvs-rao": {
     "name": "Prof. C. V. Srinivasa Rao",
     "role": "Advisor",
     "photo": "CVS-Rao",
-    "tagline": "Founder of fusion neutronics research at IPR; 35 years at the Institute for Plasma Research and specialist member of the ITER Governing Council's Scientific & Technical Advisory Committee.",
+    "tagline": "Founder of fusion neutronics research at IPR after 35 years at the Institute for Plasma Research; specialist member of the ITER Council's Scientific and Technical Advisory Committee.",
     "highlights": [
       "Scientist SG (Retd.), Institute for Plasma Research (IPR), Gandhinagar — 35 years (1982–2017); Head, Plasma Diagnostics Group; Incharge, Fusion Neutronics Laboratory",
-      "Senior Professor, DAE–Homi Bhabha National Institute",
       "Initiated Fusion Neutronics activities at IPR in 2006, following India's full partnership in the ITER Organization",
       "Specialist Member, Scientific & Technical Advisory Committee (STAC) to the ITER Governing Council (2011–2015)",
-      "Task force leader for Indian participation in Nuclear Technologies for Fusion Reactors (NTFR)",
-      "Developed Soft X-ray Tomography and Hard X-ray diagnostic systems for the Aditya tokamak",
-      "Currently Visiting Professor, Institute of Natural Sciences, Adichunchanagiri University, Mysore (2018–present)"
+      "Senior Professor, DAE–Homi Bhabha National Institute; Visiting Professor, Institute of Natural Sciences, Adichunchanagiri University, Mysore (2018–present)"
     ],
     "education": [
       "Post-Doctoral Fellow, IIT Kanpur — Neutron-Induced Reactions using the Van-de Graaff Accelerator (1978–1982)",
       "PhD, Swamy Jnananda Laboratories for Nuclear Research, Andhra University — Nuclear Reactions induced by 14 MeV Neutrons (1973–1978)"
     ],
     "links": [
-      {"label": "Google Scholar", "url": "https://scholar.google.com/citations?user=3UhCOyEAAAAJ"},
-      {"label": "LinkedIn", "url": "https://www.linkedin.com/in/c-v-srinivasa-rao-8621aa14/"}
+      {
+        "label": "Google Scholar",
+        "url": "https://scholar.google.com/citations?user=3UhCOyEAAAAJ"
+      },
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/c-v-srinivasa-rao-8621aa14/"
+      }
+    ]
+  },
+  "vv-pande": {
+    "name": "Shri V. V. Pande",
+    "role": "Advisor",
+    "photo": "VV-Pande",
+    "photoExt": "jpg",
+    "tagline": "Former Head of the Industrial Plants Safety Division at the Atomic Energy Regulatory Board; 22 years in nuclear safety regulation after 16 years operating heavy-water plants.",
+    "highlights": [
+      "Head, Industrial Plants Safety Division, Atomic Energy Regulatory Board (AERB), 1995–2017 — regulatory oversight, safety reviews and administration of safety legislation for industrial plants of the Department of Atomic Energy",
+      "Heavy Water Plant, Kota, 1979–1995 — Shift Superintendent; Engineer-in-charge, Technology and Training",
+      "Expertise in chemical plant construction, commissioning and operation; quantitative and probabilistic risk analysis; industrial and fire safety; occupational health",
+      "Since superannuation in October 2017, assists AERB as Vice Chairman of two of its committees"
+    ],
+    "education": [
+      "B.Tech, Chemical Engineering, Indian Institute of Technology Kanpur (1978)",
+      "BARC Training School, 22nd batch, Nuclear Engineering (1978–1979) — overall topper of the batch"
     ]
   }
 }

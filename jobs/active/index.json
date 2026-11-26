@@ -1,11 +1,12 @@
 [
-  "plasma-physicist-gdt.json",
-  "accelerator-physicist.json",
   "nuclear-engineer.json",
-  "cryogenics-engineer-hts.json",
-  "mechanical-engineer-target.json",
-  "senior-chemist-bpa.json",
   "medical-physicist-bnct.json",
+  "accelerator-physicist.json",
+  "mechanical-engineer-target.json",
+  "neutron-measurement-physicist.json",
+  "plasma-physicist-gdt.json",
+  "cryogenics-engineer-hts.json",
+  "senior-chemist-bpa.json",
   "software-engineer-imaging.json",
   "radiation-safety-officer.json",
   "hospital-franchise-manager-bnct.json"

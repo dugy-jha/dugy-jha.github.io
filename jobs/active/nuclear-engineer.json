@@ -1,6 +1,6 @@
 {
   "id": "nuclear-engineer",
-  "title": "Nuclear Engineer — Neutron Transport Simulation",
+  "title": "Neutronics Engineer — Neutron Transport Simulation",
   "department": "physics",
   "location": "Gandhinagar, Gujarat (with New Delhi presence)",
   "type": "Full-time",
@@ -9,7 +9,7 @@
   "experience": "4+ years",
   "tag": "Hiring Now",
   "tagType": "urgent",
-  "posted": "2026-04-23",
+  "posted": "2026-11-26",
   "about": "ASPL Fusion (Agnira Sanlayan Pvt. Ltd.) is an applied plasma and neutron-systems company working on accelerator-based BNCT, domestic medical-isotope production, and industrial neutron applications, within established Indian regulatory and safety frameworks. The simulation team owns the Monte Carlo neutron-transport pipeline from target geometry through to dose calculations, supporting both accelerator design and regulatory submissions.",
   "description": "Join the founding simulation team. Design and optimise the Beam Shaping Assembly using Monte Carlo neutron-transport codes, model isotope-production yields via Bateman-equation frameworks, and benchmark simulations against experimental neutron data from IPR beam-time campaigns.",
   "responsibilities": [

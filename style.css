@@ -1952,3 +1952,17 @@ body.team-modal-open { overflow: hidden; }
   width: 14px; height: 14px;
   opacity: .65;
 }
+
+/* Team: expanding our team (26 Nov 2026) */
+#team .team-grid:not(.team-grid-leadership):not(.team-grid-advisors) { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 760px; margin-left: auto; margin-right: auto; }
+.team-hiring { margin-top: var(--sp-12); padding: var(--sp-8); background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg); text-align: center; }
+.team-hiring-roles { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: var(--sp-6); list-style: none; padding: 0; margin: 0 0 var(--sp-8); }
+.team-hiring-roles li { display: flex; flex-direction: column; align-items: center; gap: var(--sp-3); min-width: 0; color: var(--navy); line-height: 1.5; }
+.team-hiring-badge { display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; flex-shrink: 0; border-radius: 50%; background: var(--teal-soft); color: var(--navy); }
+.team-hiring-badge svg { width: 24px; height: 24px; }
+@media (max-width: 1023px) { .team-hiring-roles { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 600px) {
+  .team-hiring { padding: var(--sp-6); }
+  .team-hiring-roles { grid-template-columns: minmax(0, 1fr); }
+  .team-hiring-roles li { flex-direction: row; text-align: left; }
+}

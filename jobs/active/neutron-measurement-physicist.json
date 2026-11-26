@@ -1,0 +1,43 @@
+{
+  "id": "neutron-measurement-physicist",
+  "title": "Neutron Measurement Physicist — Beam and Dosimetry Measurements",
+  "department": "physics",
+  "location": "Gandhinagar, Gujarat (with New Delhi presence)",
+  "type": "Full-time",
+  "positions": 1,
+  "experience": "3+ years",
+  "tag": "Hiring Now",
+  "tagType": "urgent",
+  "posted": "2026-11-26",
+  "about": "ASPL Fusion (Agnira Sanlayan Pvt. Ltd.) is an applied plasma and neutron-systems company working on accelerator-based BNCT, domestic medical-isotope production, and industrial neutron applications, within established Indian regulatory and safety frameworks. Our near-term proton-lithium (p-Li) accelerator is the engineering anchor of Phase 1: a clinical BNCT source by day, a particle neutron source for industrial NDE off-clinical-hours.",
+  "description": "Plan and carry out the measurements that test ASPL's neutron-source and beam-shaping calculations: neutron yield and spectrum from the lithium target, beam quality at the treatment position, and dose in phantoms. The role builds the measurement programme from first benchmark experiments at host facilities through to commissioning measurements on ASPL's own beam.",
+  "responsibilities": [
+    "Design the measurement campaign that validates ASPL's neutron-source and beam-shaping calculations, with a stated uncertainty budget for each quantity",
+    "Measure neutron yield, energy spectrum, and angular distribution from proton-lithium targets — activation foils, Bonner spheres, proton-recoil and time-of-flight methods",
+    "Characterise the therapy beam at the treatment position against the IAEA's recommended figures of merit for BNCT beams",
+    "Measure neutron and gamma dose components in phantoms — paired ionisation chambers, activation detectors, and passive dosimeters",
+    "Specify, procure, and calibrate detectors and beam monitors, with traceability to national standards",
+    "Compare measured results with Monte Carlo transport calculations (MCNP®, OpenMC, Geant4, PHITS) and feed the differences back into the design",
+    "Prepare measurement evidence for design reviews and for AERB licensing documentation"
+  ],
+  "requirements": [
+    "PhD in Experimental Nuclear Physics, Neutron Physics, or Radiation Metrology — or M.Sc./M.Tech. with equivalent research experience",
+    "3+ years of hands-on neutron measurements at an accelerator, reactor, or neutron-generator facility",
+    "Neutron spectrometry and activation analysis, including spectrum unfolding",
+    "Gamma spectroscopy with HPGe detectors, including efficiency calibration",
+    "Rigorous uncertainty analysis and clear written reporting of measured results"
+  ],
+  "preferred": [
+    "Experience with BNCT beam characterisation or epithermal neutron beams",
+    "Working knowledge of a Monte Carlo transport code for experiment design",
+    "Experience with dosimetry intercomparisons or a calibration laboratory",
+    "Publications in neutron measurement or dosimetry"
+  ],
+  "benefits": [
+    "Co-authorship on ASPL publications and patent filings (the default for technical roles)",
+    "Conference travel support (ANS, IEEE NPSS, IPAC, ASTRO, IAEA technical meetings and equivalent)",
+    "Direct mentorship from Prof. Prabhat Ranjan and Prof. Y.C. Saxena, plus weekly working-group technical syncs",
+    "Founding-team scope: shape your domain end-to-end as part of a small team scaling up",
+    "Core collaboration hours 10:00–18:00 IST with flexibility outside that window"
+  ]
+}

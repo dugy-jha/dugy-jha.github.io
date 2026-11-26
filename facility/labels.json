@@ -1,0 +1,702 @@
+[
+  {
+    "id": "label-0",
+    "room": "accelerator_hall",
+    "node": "OBJ_accelerator",
+    "name": "Proton accelerator",
+    "line": "Speeds protons up to the energy needed to make neutrons.",
+    "priority": 100,
+    "overview": true,
+    "kind": "item"
+  },
+  {
+    "id": "label-1",
+    "room": "accelerator_hall",
+    "node": "Ion source",
+    "name": "Proton source",
+    "line": "Where the protons are produced before they enter the accelerator.",
+    "priority": 99,
+    "overview": false,
+    "kind": "item"
+  },
+  {
+    "id": "label-2",
+    "room": "accelerator_hall",
+    "node": "RF amplifier cabinet",
+    "name": "Radio-frequency supply",
+    "line": "Supplies radio-frequency power to accelerate the protons.",
+    "priority": 98,
+    "overview": false,
+    "kind": "item"
+  },
+  {
+    "id": "label-3",
+    "room": "accelerator_hall",
+    "node": "Machine waveguide",
+    "name": "Waveguide",
+    "line": "Carries radio-frequency power from the supply to the accelerator.",
+    "priority": 97,
+    "overview": false,
+    "kind": "item"
+  },
+  {
+    "id": "label-4",
+    "room": "accelerator_hall",
+    "node": "OBJ_beam_line",
+    "name": "Beam line",
+    "line": "A vacuum pipe with magnets that steers the protons from the accelerator to the target.",
+    "priority": 96,
+    "overview": false,
+    "kind": "item"
+  },
+  {
+    "id": "label-5",
+    "room": "accelerator_hall",
+    "node": "Vacuum pump",
+    "name": "Vacuum pump",
+    "line": "Keeps the beam pipe empty of air so the protons travel freely.",
+    "priority": 95,
+    "overview": false,
+    "kind": "item"
+  },
+  {
+    "id": "label-6",
+    "room": "accelerator_hall",
+    "node": "Cooling manifold",
+    "name": "Cooling manifold",
+    "line": "Distributes cooling water to equipment during beam production.",
+    "priority": 94,
+    "overview": false,
+    "kind": "item"
+  },
+  {
+    "id": "label-7",
+    "room": "accelerator_hall",
+    "node": "Bridge crane",
+    "name": "Overhead crane",
+    "line": "Lifts heavy equipment in and out for maintenance.",
+    "priority": 93,
+    "overview": false,
+    "kind": "item"
+  },
+  {
+    "id": "label-8",
+    "room": "accelerator_hall",
+    "node": "Hall area monitor",
+    "name": "Area radiation monitor",
+    "line": "Displays the radiation level for staff in the hall.",
+    "priority": 92,
+    "overview": false,
+    "kind": "item"
+  },
+  {
+    "id": "label-9",
+    "room": "accelerator_hall",
+    "node": "Hall sliding door",
+    "name": "Hall access door",
+    "line": "Provides access for staff and equipment maintenance.",
+    "priority": 91,
+    "overview": false,
+    "kind": "item"
+  },
+  {
+    "id": "label-10",
+    "room": "accelerator_hall",
+    "node": "Cable tray",
+    "name": "Cable tray",
+    "line": "Carries cables that supply power and signals to the equipment.",
+    "priority": 90,
+    "overview": false,
+    "kind": "item"
+  },
+  {
+    "id": "label-11",
+    "room": "target_station",
+    "node": "OBJ_target_station",
+    "name": "Target",
+    "line": "The proton beam strikes the target here to produce the neutrons used for treatment.",
+    "priority": 89,
+    "overview": true,
+    "kind": "item"
+  },
+  {
+    "id": "label-12",
+    "room": "target_station",
+    "node": "OBJ_beam_port",
+    "name": "Beam-shaping assembly",
+    "line": "Slows fast neutrons from the target into a clinical epithermal beam: neutrons in the energy range used for treatment.",
+    "priority": 88,
+    "overview": true,
+    "kind": "item"
+  },
+  {
+    "id": "label-13",
+    "room": "treatment_room",
+    "node": "OBJ_treatment_couch",
+    "name": "Treatment couch",
+    "line": "Holds the patient in the planned position at the beam opening.",
+    "priority": 87,
+    "overview": true,
+    "kind": "item"
+  },
+  {
+    "id": "label-14",
+    "room": "treatment_room",
+    "node": "OBJ_beam_port",
+    "name": "Beam-shaping assembly",
+    "line": "Slows fast neutrons from the target into a clinical epithermal beam: neutrons in the energy range used for treatment.",
+    "priority": 86,
+    "overview": false,
+    "kind": "item"
+  },
+  {
+    "id": "label-15",
+    "room": "treatment_room",
+    "node": "Thermoplastic mask",
+    "name": "Head mask",
+    "line": "A moulded mask that keeps the head still during treatment.",
+    "priority": 85,
+    "overview": false,
+    "kind": "item"
+  },
+  {
+    "id": "label-16",
+    "room": "treatment_room",
+    "node": "Alignment laser box",
+    "name": "Alignment lasers",
+    "line": "Light lines used to set the patient in the planned position.",
+    "priority": 84,
+    "overview": false,
+    "kind": "item"
+  },
+  {
+    "id": "label-17",
+    "room": "treatment_room",
+    "node": "Ceiling camera dome",
+    "name": "Observation camera",
+    "line": "Lets staff watch the patient from the control room throughout treatment.",
+    "priority": 83,
+    "overview": false,
+    "kind": "item"
+  },
+  {
+    "id": "label-18",
+    "room": "treatment_room",
+    "node": "Intercom",
+    "name": "Intercom",
+    "line": "Patient and staff can speak to each other during treatment.",
+    "priority": 82,
+    "overview": false,
+    "kind": "item"
+  },
+  {
+    "id": "label-19",
+    "room": "treatment_room",
+    "node": "Emergency mushroom",
+    "name": "Emergency stop",
+    "line": "Lets staff stop the beam.",
+    "priority": 81,
+    "overview": false,
+    "kind": "item"
+  },
+  {
+    "id": "label-20",
+    "room": "treatment_room",
+    "node": "Accessory cabinet",
+    "name": "Positioning aid storage",
+    "line": "Keeps positioning aids available when staff prepare the patient.",
+    "priority": 80,
+    "overview": false,
+    "kind": "item"
+  },
+  {
+    "id": "label-21",
+    "room": "treatment_room",
+    "node": "Vault east",
+    "name": "Shielding wall",
+    "line": "Part of the room's radiation shielding.",
+    "priority": 79,
+    "overview": false,
+    "kind": "item"
+  },
+  {
+    "id": "label-26",
+    "room": "maze",
+    "node": "FLOOR_maze",
+    "name": "Maze",
+    "line": "The bent corridor into the treatment room; its turns are designed to reduce radiation reaching the door.",
+    "priority": 74,
+    "overview": false,
+    "kind": "item"
+  },
+  {
+    "id": "label-27",
+    "room": "maze",
+    "node": "Maze sliding door",
+    "name": "Shielded door",
+    "line": "Closes the entrance to the treatment area during irradiation, when the beam is on.",
+    "priority": 73,
+    "overview": false,
+    "kind": "item"
+  },
+  {
+    "id": "label-28",
+    "room": "maze",
+    "node": "Area monitor",
+    "name": "Area radiation monitor",
+    "line": "Displays the radiation level for staff near the treatment entrance.",
+    "priority": 72,
+    "overview": false,
+    "kind": "item"
+  },
+  {
+    "id": "label-29",
+    "room": "maze",
+    "node": "Emergency mushroom sl",
+    "name": "Emergency stop",
+    "line": "Lets staff stop the beam.",
+    "priority": 71,
+    "overview": false,
+    "kind": "item"
+  },
+  {
+    "id": "label-30",
+    "room": "control_room",
+    "node": "Console desk",
+    "name": "Control desk",
+    "line": "Staff start, watch and stop the treatment from here.",
+    "priority": 100,
+    "overview": true,
+    "kind": "item"
+  },
+  {
+    "id": "label-31",
+    "room": "control_room",
+    "node": "Control status screen",
+    "name": "Treatment status display",
+    "line": "Lets staff follow the progress of treatment.",
+    "priority": 99,
+    "overview": false,
+    "kind": "item"
+  },
+  {
+    "id": "label-32",
+    "room": "control_room",
+    "node": "CCTV monitor",
+    "name": "Patient observation display",
+    "line": "Lets staff watch the patient during treatment.",
+    "priority": 98,
+    "overview": false,
+    "kind": "item"
+  },
+  {
+    "id": "label-33",
+    "room": "control_room",
+    "node": "Interlock panel",
+    "name": "Safety interlock panel",
+    "line": "Designed so that the beam can run only when the room is clear and the door is closed.",
+    "priority": 97,
+    "overview": false,
+    "kind": "item"
+  },
+  {
+    "id": "label-34",
+    "room": "control_room",
+    "node": "Interlock indicator",
+    "name": "Interlock status indicator",
+    "line": "Tells staff whether the safety interlock conditions, the checks needed before the beam can run, are satisfied.",
+    "priority": 96,
+    "overview": false,
+    "kind": "item"
+  },
+  {
+    "id": "label-35",
+    "room": "preparation",
+    "node": "Infusion recliner seat",
+    "name": "Infusion chair",
+    "line": "The patient receives the boron drug here before treatment.",
+    "priority": 95,
+    "overview": false,
+    "kind": "item"
+  },
+  {
+    "id": "label-36",
+    "room": "preparation",
+    "node": "IV bag",
+    "name": "Infusion bag",
+    "line": "Holds fluid for delivery to the patient during preparation.",
+    "priority": 94,
+    "overview": false,
+    "kind": "item"
+  },
+  {
+    "id": "label-37",
+    "room": "preparation",
+    "node": "IV pole",
+    "name": "Infusion stand",
+    "line": "Holds the infusion bag beside the patient.",
+    "priority": 93,
+    "overview": false,
+    "kind": "item"
+  },
+  {
+    "id": "label-38",
+    "room": "preparation",
+    "node": "Nurse counter",
+    "name": "Nursing preparation counter",
+    "line": "Gives staff a work surface for preparing patient care.",
+    "priority": 92,
+    "overview": false,
+    "kind": "item"
+  },
+  {
+    "id": "label-39",
+    "room": "preparation",
+    "node": "Privacy curtain",
+    "name": "Privacy curtain",
+    "line": "Gives the patient privacy during preparation.",
+    "priority": 91,
+    "overview": false,
+    "kind": "item"
+  },
+  {
+    "id": "label-40",
+    "room": "planning",
+    "node": "Planning display",
+    "name": "Treatment planning workstation",
+    "line": "Staff plan the dose to the tumour from the patient's images.",
+    "priority": 90,
+    "overview": false,
+    "kind": "item"
+  },
+  {
+    "id": "label-41",
+    "room": "positioning",
+    "node": "Positioning couch",
+    "name": "Positioning couch",
+    "line": "Supports the patient while staff prepare the treatment position.",
+    "priority": 89,
+    "overview": false,
+    "kind": "item"
+  },
+  {
+    "id": "label-42",
+    "room": "positioning",
+    "node": "Mask rack",
+    "name": "Mask storage",
+    "line": "Keeps patient positioning masks ready for use.",
+    "priority": 88,
+    "overview": false,
+    "kind": "item"
+  },
+  {
+    "id": "label-43",
+    "room": "lobby",
+    "node": "Accessible reception counter",
+    "name": "Reception counter",
+    "line": "Patients and visitors speak with reception staff here.",
+    "priority": 87,
+    "overview": false,
+    "kind": "item"
+  },
+  {
+    "id": "label-44",
+    "room": "lobby",
+    "node": "Reception armchair",
+    "name": "Waiting chair",
+    "line": "Gives patients and visitors a place to rest before their appointment.",
+    "priority": 86,
+    "overview": false,
+    "kind": "item"
+  },
+  {
+    "id": "label-45",
+    "room": "lobby",
+    "node": "DOORS_glass",
+    "name": "Main entrance doors",
+    "line": "Connect the arrival area to reception.",
+    "priority": 85,
+    "overview": false,
+    "kind": "item"
+  },
+  {
+    "id": "label-47",
+    "room": "lobby",
+    "node": "Entrance_canopy",
+    "name": "Entrance canopy",
+    "line": "Shelters patients and visitors as they approach the entrance.",
+    "priority": 83,
+    "overview": false,
+    "kind": "item"
+  },
+  {
+    "id": "label-48",
+    "room": "lobby",
+    "node": "Entrance promenade",
+    "name": "Entrance path",
+    "line": "Connects the arrival area to the patient entrance.",
+    "priority": 82,
+    "overview": false,
+    "kind": "item"
+  },
+  {
+    "id": "label-49",
+    "room": "lobby",
+    "node": "Drop off lay by",
+    "name": "Drop-off area",
+    "line": "Lets patients leave their vehicle close to the entrance.",
+    "priority": 81,
+    "overview": false,
+    "kind": "item"
+  },
+  {
+    "id": "label-50",
+    "room": "recovery",
+    "node": "Recovery Infusion recliner seat",
+    "name": "Recovery chair",
+    "line": "The patient rests here and is observed after treatment.",
+    "priority": 80,
+    "overview": false,
+    "kind": "item"
+  },
+  {
+    "id": "label-53",
+    "room": "recovery",
+    "node": "Washroom basin",
+    "name": "Handwashing basin",
+    "line": "Lets patients wash their hands near the recovery space.",
+    "priority": 77,
+    "overview": false,
+    "kind": "item"
+  },
+  {
+    "id": "label-54",
+    "room": "imaging",
+    "node": "OBJ_ct_scanner",
+    "name": "CT scanner",
+    "line": "Images the patient so the treatment can be planned.",
+    "priority": 76,
+    "overview": true,
+    "kind": "item"
+  },
+  {
+    "id": "label-55",
+    "room": "boron_lab",
+    "node": "Boron measurement bench",
+    "name": "Boron measurement bench",
+    "line": "Staff measure how much boron is in the patient's blood before treatment.",
+    "priority": 75,
+    "overview": false,
+    "kind": "item"
+  },
+  {
+    "id": "label-56",
+    "room": "qa_lab",
+    "node": "OBJ_water_phantom",
+    "name": "Water phantom",
+    "line": "A water tank used to measure the beam and check it before patients are treated.",
+    "priority": 74,
+    "overview": false,
+    "kind": "item"
+  },
+  {
+    "id": "label-57",
+    "room": "accelerator_hall",
+    "node": "FLOOR_accelerator_hall",
+    "name": "Beam generation",
+    "line": "Houses the accelerator and the proton beam line.",
+    "priority": 200,
+    "overview": true,
+    "kind": "room"
+  },
+  {
+    "id": "label-58",
+    "room": "treatment_room",
+    "node": "FLOOR_treatment_room",
+    "name": "Treatment room",
+    "line": "The patient receives the neutron beam here.",
+    "priority": 200,
+    "overview": true,
+    "kind": "room"
+  },
+  {
+    "id": "label-59",
+    "room": "control_room",
+    "node": "FLOOR_control_room",
+    "name": "Control room",
+    "line": "Staff supervise treatment from outside the treatment room.",
+    "priority": 200,
+    "overview": true,
+    "kind": "room"
+  },
+  {
+    "id": "label-60",
+    "room": "lobby",
+    "node": "FLOOR_lobby",
+    "name": "Reception",
+    "line": "Patients and visitors arrive and ask for assistance here.",
+    "priority": 200,
+    "overview": true,
+    "kind": "room"
+  },
+  {
+    "id": "label-61",
+    "room": "recovery",
+    "node": "FLOOR_recovery",
+    "name": "Recovery",
+    "line": "Patients rest under observation after treatment.",
+    "priority": 200,
+    "overview": true,
+    "kind": "room"
+  },
+  {
+    "id": "label-62",
+    "room": "imaging",
+    "node": "FLOOR_imaging",
+    "name": "Imaging",
+    "line": "Patient images support treatment planning.",
+    "priority": 200,
+    "overview": true,
+    "kind": "room"
+  },
+  {
+    "id": "label-63",
+    "room": "boron_lab",
+    "node": "FLOOR_boron_lab",
+    "name": "Boron laboratory",
+    "line": "Measures how much boron is in the patient's blood.",
+    "priority": 200,
+    "overview": true,
+    "kind": "room"
+  },
+  {
+    "id": "label-64",
+    "room": "qa_lab",
+    "node": "FLOOR_qa_lab",
+    "name": "Quality-assurance laboratory",
+    "line": "Staff check the beam here before patients are treated.",
+    "priority": 200,
+    "overview": true,
+    "kind": "room"
+  },
+  {
+    "id": "label-65",
+    "room": "consultation",
+    "node": "FLOOR_consultation",
+    "name": "Consultation",
+    "line": "Patients discuss their care with clinical staff.",
+    "priority": 200,
+    "overview": true,
+    "kind": "room"
+  },
+  {
+    "id": "label-66",
+    "room": "follow_up",
+    "node": "FLOOR_follow_up",
+    "name": "Follow-up",
+    "line": "Staff review patient progress after treatment.",
+    "priority": 200,
+    "overview": true,
+    "kind": "room"
+  },
+  {
+    "id": "label-67",
+    "room": "services",
+    "node": "FLOOR_cooling",
+    "name": "Cooling plant",
+    "line": "Cooling equipment removes heat from treatment equipment.",
+    "priority": 200,
+    "overview": true,
+    "kind": "room"
+  },
+  {
+    "id": "label-68",
+    "room": "electrical",
+    "node": "FLOOR_electrical",
+    "name": "Electrical plant",
+    "line": "Electrical equipment supplies the facility systems.",
+    "priority": 200,
+    "overview": true,
+    "kind": "room"
+  },
+  {
+    "id": "label-69",
+    "room": "maintenance_bay",
+    "node": "FLOOR_maintenance",
+    "name": "Maintenance",
+    "line": "Staff service equipment here.",
+    "priority": 200,
+    "overview": true,
+    "kind": "room"
+  },
+  {
+    "id": "label-70",
+    "room": "preparation",
+    "node": "FLOOR_preparation",
+    "name": "Infusion",
+    "line": "Patients receive the boron drug before treatment.",
+    "priority": 200,
+    "overview": true,
+    "kind": "room"
+  },
+  {
+    "id": "label-71",
+    "room": "planning",
+    "node": "FLOOR_planning",
+    "name": "Treatment planning",
+    "line": "Staff prepare the treatment plan using patient images.",
+    "priority": 200,
+    "overview": true,
+    "kind": "room"
+  },
+  {
+    "id": "label-72",
+    "room": "positioning",
+    "node": "FLOOR_positioning",
+    "name": "Positioning",
+    "line": "Staff prepare the patient position before treatment.",
+    "priority": 200,
+    "overview": true,
+    "kind": "room"
+  },
+  {
+    "id": "label-73",
+    "room": "maze",
+    "node": "FLOOR_maze",
+    "name": "Maze access",
+    "line": "The turning entrance leads to the treatment room.",
+    "priority": 200,
+    "overview": true,
+    "kind": "room"
+  },
+  {
+    "id": "label-74",
+    "room": "staff_room",
+    "node": "FLOOR_staff_room",
+    "name": "Staff room",
+    "line": "Staff take breaks away from patient care spaces.",
+    "priority": 200,
+    "overview": true,
+    "kind": "room"
+  },
+  {
+    "id": "label-75",
+    "room": "staff_offices",
+    "node": "FLOOR_staff_offices",
+    "name": "Staff offices",
+    "line": "Staff coordinate patient care and facility work here.",
+    "priority": 200,
+    "overview": true,
+    "kind": "room"
+  },
+  {
+    "id": "label-76",
+    "room": "recovery",
+    "node": "Washroom door",
+    "name": "Washroom",
+    "line": "Provides a nearby toilet and handwashing space for patients.",
+    "priority": 200,
+    "overview": true,
+    "kind": "room"
+  }
+]

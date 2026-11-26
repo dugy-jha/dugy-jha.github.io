@@ -1,0 +1,634 @@
+{
+  "schema": "facility3d.cards/v1",
+  "model": "assets/facility_v5e.glb",
+  "illustrative": true,
+  "notice": "Illustrative, not to scale; the facility is not yet built",
+  "anchor_rule": "Each card opens at the glTF node named HS_<card id>; the viewer reads the node's world position from the loaded model, so positions are never duplicated in this file.",
+  "tour": [
+    {
+      "chapter": "shot_0",
+      "title": "Arrival",
+      "cards": [
+        "arrival"
+      ]
+    },
+    {
+      "chapter": "shot_1",
+      "title": "Reception",
+      "cards": [
+        "arrival"
+      ]
+    },
+    {
+      "chapter": "shot_2",
+      "title": "Infusion",
+      "cards": [
+        "preparation"
+      ]
+    },
+    {
+      "chapter": "shot_3",
+      "title": "Planning",
+      "cards": [
+        "planning"
+      ]
+    },
+    {
+      "chapter": "shot_4",
+      "title": "Positioning",
+      "cards": [
+        "positioning"
+      ]
+    },
+    {
+      "chapter": "shot_5",
+      "title": "Maze",
+      "cards": [
+        "maze"
+      ]
+    },
+    {
+      "chapter": "shot_6",
+      "title": "Treatment room",
+      "cards": [
+        "treatment_room"
+      ]
+    },
+    {
+      "chapter": "shot_7",
+      "title": "Control room",
+      "cards": [
+        "control_room"
+      ]
+    },
+    {
+      "chapter": "shot_8",
+      "title": "Beam generation",
+      "cards": [
+        "accelerator_hall"
+      ]
+    },
+    {
+      "chapter": "shot_9",
+      "title": "Recovery and follow-up",
+      "cards": [
+        "recovery"
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "id": "arrival",
+      "kind": "space",
+      "space": "lobby",
+      "label": "Reception",
+      "title": "Arrival and reception",
+      "text": "In this concept, this is a hospital wing for boron neutron capture therapy (BNCT), a form of cancer radiotherapy. Patients and families are welcomed here, and a coloured line on the floor guides them through each step of the visit.",
+      "teaches": "The building is organised around the patient's day.",
+      "measured": "Arrival and appointment records would be kept; no physical measurement is illustrated.",
+      "stages": []
+    },
+    {
+      "id": "consultation",
+      "kind": "space",
+      "space": "consultation",
+      "label": "Consultation",
+      "title": "Consultation",
+      "text": "In the proposed centre, the treating team explains the treatment, reviews the patient's earlier scans and assesses whether BNCT suits the patient's condition. Accelerator-based BNCT is approved in Japan for unresectable locally advanced or recurrent head-and-neck cancer.",
+      "teaches": "Who BNCT is for, and that the decision is a clinical one made with the patient.",
+      "measured": "The patient’s history and imaging would be reviewed, and consent recorded.",
+      "stages": []
+    },
+    {
+      "id": "preparation",
+      "kind": "space",
+      "space": "preparation",
+      "label": "Infusion",
+      "title": "Preparation and boron infusion",
+      "text": "In this concept, on the treatment day the patient receives a boron drug through a drip in this room, and the drug gathers preferentially in tumour cells. The room sits across the corridor from patient positioning, because the time between infusion and treatment matters.",
+      "teaches": "When a neutron is captured by boron, the particles released travel only a very short distance, so the effect is concentrated where the boron is.",
+      "measured": "Blood samples would be taken to measure boron concentration.",
+      "stages": []
+    },
+    {
+      "id": "boron_lab",
+      "kind": "space",
+      "space": "boron_lab",
+      "label": "Boron lab",
+      "title": "Boron measurement laboratory",
+      "text": "In the proposed centre, blood samples taken during infusion and just before treatment are analysed here to find how much boron is in the patient's blood. The treating team uses the result, with the plan, to set how long the beam stays on for that patient.",
+      "teaches": "BNCT depends on the boron being in the right place at the right level, so it is measured for every patient.",
+      "measured": "The boron concentration in blood samples.",
+      "stages": []
+    },
+    {
+      "id": "imaging",
+      "kind": "space",
+      "space": "imaging",
+      "label": "Imaging",
+      "title": "Imaging and simulation",
+      "text": "In this concept, the patient is scanned here in the weeks before treatment, usually with CT and, where available, PET-CT. The CT scan gives the planners a model of the patient's anatomy. A PET scan with a tracer related to the boron drug can show whether the tumour takes it up.",
+      "teaches": "Treatment is planned on the patient's own anatomy, and imaging helps decide who will benefit.",
+      "measured": "Images of the anatomy and, with PET, tracer uptake in the tumour compared with normal tissue.",
+      "stages": []
+    },
+    {
+      "id": "ct_scanner",
+      "kind": "object",
+      "space": "imaging",
+      "label": "CT scanner",
+      "title": "CT scanner",
+      "text": "In the proposed centre, the scanner takes the images from which the model of the patient's anatomy is built.",
+      "teaches": "Every treatment plan starts from images of the patient.",
+      "measured": "Cross-sectional images of the patient's anatomy.",
+      "stages": []
+    },
+    {
+      "id": "planning",
+      "kind": "space",
+      "space": "planning",
+      "label": "Planning",
+      "title": "Treatment planning and physics",
+      "text": "In this concept, medical physicists calculate dose on a model of the patient’s anatomy and check it against the prescription and healthy-organ limits. This is where a simulation and planning workflow connects to clinical care.",
+      "teaches": "Dose is calculated before it is delivered, and its uncertainties are stated.",
+      "measured": "Plans would be calculated and checked using measurements made elsewhere.",
+      "stages": []
+    },
+    {
+      "id": "qa_lab",
+      "kind": "space",
+      "space": "qa_lab",
+      "label": "Dosimetry and QA",
+      "title": "Dosimetry and quality assurance",
+      "text": "In the proposed centre, calibrated detectors in water phantoms check whether the delivered dose matches the plan.",
+      "teaches": "Physical measurements would be compared with calculated doses.",
+      "measured": "The beam's output and the dose in a standard water phantom, compared with the calculation.",
+      "stages": []
+    },
+    {
+      "id": "water_phantom",
+      "kind": "object",
+      "space": "qa_lab",
+      "label": "Water phantom",
+      "title": "Water phantom",
+      "text": "In this concept, a tank of water stands in for the human body when the beam is checked. Detectors moved through the water record how the dose changes with depth.",
+      "teaches": "Reference dosimetry ties every calculation to a measurement that others can repeat.",
+      "measured": "Dose at points in water, compared with the calculated values.",
+      "stages": []
+    },
+    {
+      "id": "positioning",
+      "kind": "space",
+      "space": "positioning",
+      "label": "Positioning",
+      "title": "Patient positioning",
+      "text": "In the proposed centre, just before treatment the patient is set up on a couch here, in the same position as in the plan, often with a fitted mask. An imaging check confirms the set-up before the patient goes through the heavy door into the treatment room. Some centres move the couch top between the rooms automatically.",
+      "teaches": "Careful set-up outside the treatment room keeps the position the same as in the plan.",
+      "measured": "The patient's position, compared with the plan on the imaging check.",
+      "stages": []
+    },
+    {
+      "id": "maze",
+      "kind": "space",
+      "space": "maze",
+      "label": "Maze",
+      "title": "The maze",
+      "text": "In this concept, the passage into the treatment room turns a corner, a standard way to reduce the radiation that reaches the door. With the shielded door, it is designed to protect staff working outside.",
+      "teaches": "Why radiotherapy rooms are entered through a bent passage behind a heavy door.",
+      "measured": "Area monitors would check conditions before staff enter.",
+      "stages": []
+    },
+    {
+      "id": "treatment_room",
+      "kind": "space",
+      "space": "treatment_room",
+      "label": "Treatment room",
+      "title": "Treatment room",
+      "text": "In the proposed centre, the patient lies on a couch positioned precisely in front of the beam opening, guided by lasers and cameras. During treatment the patient is alone in the room and is watched continuously from the control room.",
+      "teaches": "Precision of set-up, and that the patient is watched throughout.",
+      "measured": "Cameras and bedside monitors would follow the patient’s condition.",
+      "stages": []
+    },
+    {
+      "id": "treatment_couch",
+      "kind": "object",
+      "space": "treatment_room",
+      "label": "Treatment couch",
+      "title": "Treatment couch",
+      "text": "In this concept, the couch moves the patient into the planned position in front of the beam opening. Lasers on the walls and cameras help the team confirm the position.",
+      "teaches": "In most BNCT rooms the beam opening is fixed, so the patient is brought to the beam.",
+      "measured": "The couch position, compared with the plan.",
+      "stages": []
+    },
+    {
+      "id": "beam_port",
+      "kind": "object",
+      "space": "treatment_room",
+      "label": "Beam opening",
+      "title": "Beam opening",
+      "text": "In the proposed centre, the beam-shaping assembly ends at the beam opening. The model shows it as a generic symbol.",
+      "teaches": "The beam opening marks the treatment beam.",
+      "measured": "The field at the opening would be measured against beam-quality criteria.",
+      "stages": []
+    },
+    {
+      "id": "control_room",
+      "kind": "space",
+      "space": "control_room",
+      "label": "Control room",
+      "title": "Control room",
+      "text": "In this concept, operators and medical physicists run the treatment from here, watching the patient on camera throughout. The beam controls are located in this room. It sits beside the treatment room and next to patient positioning, so the team stays close to the patient.",
+      "teaches": "Who runs a treatment, and how the patient is watched.",
+      "measured": "Machine delivery would be recorded during treatment.",
+      "stages": []
+    },
+    {
+      "id": "control_console",
+      "kind": "object",
+      "space": "control_room",
+      "label": "Treatment console",
+      "title": "Treatment console",
+      "text": "In the proposed centre, the console shows the plan, the patient on camera and the state of the machine.",
+      "teaches": "Treatment is a team task run from outside the room.",
+      "measured": "A log of what the machine delivers during each treatment.",
+      "stages": []
+    },
+    {
+      "id": "accelerator_hall",
+      "kind": "space",
+      "space": "accelerator_hall",
+      "label": "Accelerator hall",
+      "title": "Accelerator hall",
+      "text": "In this concept, the accelerator hall contains a proton accelerator and its supporting equipment. The beam line leads towards the wall beside the treatment room.",
+      "teaches": "The accelerator and clinical spaces have different roles.",
+      "measured": "Radiation levels would be checked before staff enter.",
+      "stages": []
+    },
+    {
+      "id": "accelerator",
+      "kind": "object",
+      "space": "accelerator_hall",
+      "label": "Proton accelerator",
+      "title": "Proton accelerator",
+      "text": "In the proposed centre, a proton accelerator drives a neutron-producing target. The model shows them as a simple schematic.",
+      "teaches": "Accelerator-based neutron production for BNCT.",
+      "measured": "The proton beam would be monitored during operation.",
+      "stages": []
+    },
+    {
+      "id": "beam_line",
+      "kind": "object",
+      "space": "accelerator_hall",
+      "label": "Beam line",
+      "title": "Beam line",
+      "text": "In this concept, the beam line carries the proton beam from the accelerator towards a neutron-producing target inside the dividing wall. The treatment opening is on the other side.",
+      "teaches": "The proton beam line stays on the accelerator side of the wall.",
+      "measured": "The beam’s position would be monitored.",
+      "stages": []
+    },
+    {
+      "id": "target_station",
+      "kind": "object",
+      "space": "accelerator_hall",
+      "label": "Target station",
+      "title": "Target station",
+      "text": "In the proposed centre, a proton accelerator drives a neutron-producing target. The model shows them as a simple schematic.",
+      "teaches": "Accelerator-based neutron production for BNCT.",
+      "measured": "Neutron output would be compared with calculations.",
+      "stages": []
+    },
+    {
+      "id": "services",
+      "kind": "space",
+      "space": "cooling",
+      "label": "Cooling and ventilation",
+      "title": "Plant and services",
+      "text": "In this concept, cooling water and ventilation for the machine and the building come from this plant room, beside the electrical room. A dependable treatment day depends on them as much as on the beam.",
+      "teaches": "A treatment day depends on plant as much as on physics.",
+      "measured": "Plant conditions would be monitored.",
+      "stages": []
+    },
+    {
+      "id": "electrical",
+      "kind": "space",
+      "space": "electrical",
+      "label": "Electrical",
+      "title": "Electrical and power supplies",
+      "text": "In the proposed centre, power supplies, switchgear and a backup supply for the machine and the clinic sit here, away from patient areas.",
+      "teaches": "Reliable power supports the treatment schedule.",
+      "measured": "Power supply conditions would be monitored.",
+      "stages": []
+    },
+    {
+      "id": "maintenance_bay",
+      "kind": "space",
+      "space": "maintenance",
+      "label": "Maintenance bay",
+      "title": "Maintenance bay and store",
+      "text": "In this concept, parts removed from the machine during maintenance are checked, stored and sent on from here. It opens off the staff route, to keep this work apart from patient areas.",
+      "teaches": "Maintenance is planned into the building, with its own route.",
+      "measured": "Parts would be surveyed before storage or transfer.",
+      "stages": []
+    },
+    {
+      "id": "staff_route",
+      "kind": "space",
+      "space": "staff_route",
+      "label": "Staff route",
+      "title": "Staff and equipment route",
+      "text": "In the proposed centre, staff and equipment reach the accelerator vault, the plant rooms and the maintenance bay along this route, apart from the patient corridor.",
+      "teaches": "Patient and technical routes are kept apart.",
+      "measured": "Entry would be controlled and logged.",
+      "stages": []
+    },
+    {
+      "id": "staff_room",
+      "kind": "space",
+      "space": "staff_room",
+      "label": "Staff room",
+      "title": "Staff room and changing",
+      "text": "In this concept, staff change, take breaks and keep their belongings here, with their own entrance from outside. A BNCT team includes doctors, nurses, medical physicists, radiation therapists, a pharmacist and machine operators.",
+      "teaches": "BNCT is delivered by a team of many professions.",
+      "measured": "Personal radiation monitors would be issued and collected.",
+      "stages": []
+    },
+    {
+      "id": "staff_offices",
+      "kind": "space",
+      "space": "staff_offices",
+      "label": "Offices",
+      "title": "Staff offices and records",
+      "text": "In the proposed centre, clinical records, scheduling and day-to-day management are handled here, close to planning and quality assurance. It is a staff-only area.",
+      "teaches": "Records follow each patient from consultation to follow-up.",
+      "measured": "Results would be recorded; no physical measurement is illustrated.",
+      "stages": []
+    },
+    {
+      "id": "patient_corridor",
+      "kind": "space",
+      "space": "corridor",
+      "label": "Patient corridor",
+      "title": "Patient corridor",
+      "text": "In this concept, every clinical room opens onto this corridor, so a patient's day runs along one line from arrival to follow-up. Technical rooms open off it only through staff doors.",
+      "teaches": "Separate routes for patients and staff help separate activities in the layout.",
+      "measured": "No physical measurement is illustrated.",
+      "stages": []
+    },
+    {
+      "id": "recovery",
+      "kind": "space",
+      "space": "recovery",
+      "label": "Recovery",
+      "title": "Recovery",
+      "text": "In the proposed centre, after treatment the patient rests here while the nursing team keeps watch. When the team is satisfied, the patient goes home or returns to the ward.",
+      "teaches": "Care continues straight after the beam stops.",
+      "measured": "Vital signs and immediate side effects would be checked.",
+      "stages": []
+    },
+    {
+      "id": "follow_up",
+      "kind": "space",
+      "space": "follow_up",
+      "label": "Follow-up",
+      "title": "Follow-up and aftercare",
+      "text": "In this concept, response and side effects are reviewed at planned follow-up visits, and what is learned informs how future treatments are planned. The patient path in this model ends here rather than at the treatment room, because follow-up is part of the treatment.",
+      "teaches": "Aftercare is part of the treatment.",
+      "measured": "Tumour response and side effects over time.",
+      "stages": []
+    }
+  ],
+  "anchors": {
+    "arrival": {
+      "node": "FLOOR_lobby",
+      "fallback": [
+        5,
+        1.7000000476837158,
+        -3
+      ]
+    },
+    "consultation": {
+      "node": "FLOOR_consultation",
+      "fallback": [
+        13,
+        1.7000000476837158,
+        -3.5999999046325684
+      ]
+    },
+    "preparation": {
+      "node": "FLOOR_preparation",
+      "fallback": [
+        29,
+        1.7000000476837158,
+        -3.5999999046325684
+      ]
+    },
+    "boron_lab": {
+      "node": "FLOOR_boron_lab",
+      "fallback": [
+        12.5,
+        1.7000000476837158,
+        -14.600000381469727
+      ]
+    },
+    "imaging": {
+      "node": "FLOOR_imaging",
+      "fallback": [
+        22.600000381469727,
+        1.899999976158142,
+        -4.599999904632568
+      ]
+    },
+    "ct_scanner": {
+      "node": "OBJ_ct_scanner",
+      "fallback": [
+        19.5,
+        2.450000047683716,
+        -3.4000000953674316
+      ]
+    },
+    "planning": {
+      "node": "FLOOR_planning",
+      "fallback": [
+        5,
+        1.7000000476837158,
+        -13.600000381469727
+      ]
+    },
+    "qa_lab": {
+      "node": "FLOOR_qa_lab",
+      "fallback": [
+        4.5,
+        1.7999999523162842,
+        -21.399999618530273
+      ]
+    },
+    "water_phantom": {
+      "node": "OBJ_water_phantom",
+      "fallback": [
+        4,
+        1.75,
+        -19.799999237060547
+      ]
+    },
+    "positioning": {
+      "node": "FLOOR_positioning",
+      "fallback": [
+        32,
+        1.899999976158142,
+        -15.600000381469727
+      ]
+    },
+    "maze": {
+      "node": "FLOOR_maze",
+      "fallback": [
+        24.5,
+        1.7000000476837158,
+        -12.5
+      ]
+    },
+    "treatment_room": {
+      "node": "FLOOR_treatment_room",
+      "fallback": [
+        19.600000381469727,
+        2,
+        -18.600000381469727
+      ]
+    },
+    "treatment_couch": {
+      "node": "OBJ_treatment_couch",
+      "fallback": [
+        23.5,
+        1.350000023841858,
+        -21.200000762939453
+      ]
+    },
+    "beam_port": {
+      "node": "OBJ_beam_port",
+      "fallback": [
+        23.5,
+        1.899999976158142,
+        -22.850000381469727
+      ]
+    },
+    "control_room": {
+      "node": "FLOOR_control_room",
+      "fallback": [
+        32.400001525878906,
+        1.7000000476837158,
+        -21.399999618530273
+      ]
+    },
+    "control_console": {
+      "node": "FLOOR_control_room",
+      "fallback": [
+        29.799999237060547,
+        1.5499999523162842,
+        -21.799999237060547
+      ]
+    },
+    "accelerator_hall": {
+      "node": "FLOOR_accelerator_hall",
+      "fallback": [
+        28.5,
+        3,
+        -30.200000762939453
+      ]
+    },
+    "accelerator": {
+      "node": "OBJ_accelerator",
+      "fallback": [
+        8.199999809265137,
+        2.5999999046325684,
+        -29
+      ]
+    },
+    "beam_line": {
+      "node": "OBJ_beam_line",
+      "fallback": [
+        17.649999618530273,
+        2.0999999046325684,
+        -29
+      ]
+    },
+    "target_station": {
+      "node": "OBJ_target_station",
+      "fallback": [
+        23.5,
+        2.450000047683716,
+        -26.100000381469727
+      ]
+    },
+    "services": {
+      "node": "FLOOR_cooling",
+      "fallback": [
+        43.25,
+        2.799999952316284,
+        -29.600000381469727
+      ]
+    },
+    "electrical": {
+      "node": "FLOOR_electrical",
+      "fallback": [
+        43.75,
+        2.799999952316284,
+        -18
+      ]
+    },
+    "maintenance_bay": {
+      "node": "FLOOR_maintenance",
+      "fallback": [
+        37.25,
+        1.7000000476837158,
+        -31.600000381469727
+      ]
+    },
+    "staff_route": {
+      "node": "FLOOR_staff_route",
+      "fallback": [
+        37.25,
+        1.7000000476837158,
+        -18
+      ]
+    },
+    "staff_room": {
+      "node": "FLOOR_staff_room",
+      "fallback": [
+        43.75,
+        1.7000000476837158,
+        -13
+      ]
+    },
+    "staff_offices": {
+      "node": "FLOOR_staff_offices",
+      "fallback": [
+        12,
+        1.7000000476837158,
+        -20.600000381469727
+      ]
+    },
+    "patient_corridor": {
+      "node": "FLOOR_corridor",
+      "fallback": [
+        24,
+        2.200000047683716,
+        -8.5
+      ]
+    },
+    "recovery": {
+      "node": "FLOOR_recovery",
+      "fallback": [
+        37,
+        1.7000000476837158,
+        -3.5999999046325684
+      ]
+    },
+    "follow_up": {
+      "node": "FLOOR_follow_up",
+      "fallback": [
+        44,
+        1.7000000476837158,
+        -4.199999809265137
+      ]
+    }
+  }
+}

@@ -102,6 +102,21 @@
   <link rel="preload" as="image" href="../images/ASPL-Logo.svg" fetchpriority="high" type="image/svg+xml">
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../style.css?v=20260529-svglogo">
+  <style>
+    /* Proposed centre: feature block leading to /facility/ (scoped) */
+    .facility-teaser{background:linear-gradient(135deg,var(--darker),var(--navy));color:var(--white);padding:var(--sp-20,5rem) 0}
+    .facility-teaser .container{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:3.5rem;align-items:center}
+    .facility-teaser-media{position:relative;display:block;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-xl);outline-offset:4px;background:var(--dark)}
+    .facility-teaser-media img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;transition:transform var(--t-slow)}
+    .facility-teaser-media:hover img,.facility-teaser-media:focus-visible img{transform:scale(1.03)}
+    .facility-teaser-badge{position:absolute;left:14px;bottom:14px;background:rgba(7,21,37,.85);color:var(--white);font-size:.78rem;font-weight:600;letter-spacing:.04em;padding:.4rem .8rem;border-radius:100px}
+    .facility-teaser h2{color:var(--white);margin-bottom:1rem}
+    .facility-teaser .landing-body{color:rgba(255,255,255,.84);margin-bottom:2rem}
+    .facility-teaser .section-label{background:rgba(59,191,191,.16)}
+    .facility-teaser-note{margin-top:1rem;font-size:.85rem;color:rgba(255,255,255,.66)}
+    @media (max-width:860px){.facility-teaser{padding:var(--sp-16,4rem) 0}.facility-teaser .container{grid-template-columns:1fr;gap:2rem}}
+    @media (prefers-reduced-motion:reduce){.facility-teaser-media img{transition:none}.facility-teaser-media:hover img,.facility-teaser-media:focus-visible img{transform:none}}
+  </style>
   <script src="https://www.google.com/recaptcha/api.js?render=6LcR9pUsAAAAAFsjmudLfjevaon45Nssh5_Dq-KT" async defer></script>
 </head>
 <body>
@@ -200,6 +215,23 @@ India sees a large annual burden of recurrent head-and-neck (rH&amp;NC) and GBM 
           <a class="nukg-callout-cta" href="/applications/nukg-knowledge-platform.html">Explore the NuKG platform</a>
         </div>
       </aside>
+      </div>
+    </section>
+
+    <!-- Proposed centre: concept model -->
+    <section id="facility-teaser" class="facility-teaser" aria-labelledby="facility-teaser-heading">
+      <div class="container">
+        <a class="facility-teaser-media" href="/facility/" aria-label="Explore the proposed BNCT centre, an interactive concept model">
+          <img src="/facility/assets/overview-960.webp" srcset="/facility/assets/overview-480.webp 480w, /facility/assets/overview-960.webp 960w, /facility/assets/overview-1600.webp 1600w" sizes="(max-width: 860px) 100vw, 600px" alt="Concept image: the proposed BNCT Reference Centre seen from above, with its rooms open to view" width="960" height="540" loading="lazy" decoding="async">
+          <span class="facility-teaser-badge">Interactive concept model</span>
+        </a>
+        <div>
+          <p class="section-label">See the concept</p>
+          <h2 id="facility-teaser-heading">Walk through the proposed BNCT Reference Centre</h2>
+          <p class="landing-body">Follow a patient&rsquo;s day from arrival to aftercare, room by room: consultation, boron infusion, positioning, the treatment room with the control room beside it, and the accelerator behind the wall. Every room and the main equipment are labelled in plain words.</p>
+          <a href="/facility/" class="btn btn-primary">Explore the proposed centre</a>
+          <p class="facility-teaser-note">Concept visual. The facility is not built.</p>
+        </div>
       </div>
     </section>
 

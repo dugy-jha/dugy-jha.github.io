@@ -120,7 +120,25 @@
           <li>The application domains we work on &mdash; see <a href="/#focus">Applications</a></li>
           <li>Long-form thinking on the problems &mdash; see <a href="/insights/">Insights</a></li>
           <li>Our team and advisors &mdash; see <a href="/#team">Team</a></li>
+          <li>Our public releases &mdash; see <a href="#releases">Releases</a> below</li>
         </ul>
+
+
+        <h2 id="releases" style="font-size:1.4rem;font-weight:700;color:var(--navy);margin:var(--sp-10) 0 var(--sp-4);">Releases</h2>
+        <article id="ar1-day0" style="border-left:3px solid var(--teal);padding-left:var(--sp-5);margin-bottom:var(--sp-6);">
+          <p style="color:var(--gray);font-size:.9rem;margin:0 0 var(--sp-2);">27 November 2026</p>
+          <h3 style="font-size:1.15rem;font-weight:700;color:var(--navy);margin:0 0 var(--sp-3);line-height:1.35;">Code and full audit trail from a guarded AI research loop on a public radiation-transport benchmark</h3>
+          <p class="landing-body">We have released code, a technical note and an audit trail from an AI research loop that we ran on NVIDIA&#x27;s public Linear Radiation Transport dataset. On the public test, which we scored once, error was 0.00224 versus 0.00308 for a tuned Gaussian process: ratio 1.37, about 27% lower. The metric is mean 90th-percentile absolute log error over three seeds. The result is in-distribution: two families, one dataset. Validation guided selection. The public-test folder held labels; frozen code did not read them. Isolation was detection only under the founder&#x27;s own account: access was not prevented. The transcript was checked afterwards; no access beyond submit was found. Concealed access cannot be excluded. No NVIDIA endorsement is implied.</p>
+          <p class="landing-body" style="margin-top:var(--sp-4);"><strong>How this was produced.</strong> The work was led by Abhinav Jha, Co-founder &amp; Director. In our loop, an AI agent (gpt-6.1-sol) submitted 40 versions in 28 minutes; our runner scored 39, refused one and kept 9. AI coding agents built and checked the runner under our direction and review.</p>
+          <ul style="margin:var(--sp-4) 0 var(--sp-4) var(--sp-6);color:var(--slate);font-size:1rem;line-height:1.8;">
+            <li>Model: <a href="https://huggingface.co/asplfusion/ar1-d0-guarded-autoresearch">https://huggingface.co/asplfusion/ar1-d0-guarded-autoresearch</a></li>
+            <li>Audit: <a href="https://huggingface.co/datasets/asplfusion/ar1-d0-audit-trail">https://huggingface.co/datasets/asplfusion/ar1-d0-audit-trail</a></li>
+            <li>Note: <a href="https://doi.org/10.5281/zenodo.24557382">https://doi.org/10.5281/zenodo.24557382</a></li>
+            <li>DOI: 10.5281/zenodo.24557382</li>
+          </ul>
+          <p class="landing-body" style="font-size:.95rem;color:var(--gray);"><strong>About ASPL Fusion.</strong> Agnira Sanlayan Private Limited (ASPL Fusion). Fusion research and development for India. We are building evidence tools and learned transport models to support engineering decisions. ASPL Fusion is a member of the NVIDIA Inception program, and our team has used NVIDIA Deep Learning Institute training through it.</p>
+          <p class="landing-body" style="font-size:.95rem;color:var(--gray);">Spokesperson: Abhinav Jha, Co-founder &amp; Director. General enquiries: info@asplfusion.com.</p>
+        </article>
 
         <div class="callout" style="margin-top:var(--sp-10);">
           <strong>A note on tone.</strong> We publish this page because clarity about what is on-record and off-record helps everyone &mdash; journalists, regulators, employees, and us. If anything here needs sharpening, tell us. We prefer the feedback.
